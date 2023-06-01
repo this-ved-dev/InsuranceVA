@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script type="text/javascript" src="https://sasserver.demo.sas.com/messagingUtil.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <!-- <link href="./init-alpine.js"> -->
+    <style>
+        button {
+            padding-top: 6%;
+            padding-bottom: 10%;
+            display: inline-block;
+            outline: 0;
+            border: 0;
+            cursor: pointer;
+            background-color: rgb(3, 120, 205);
+            border-radius: 4px;
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: 700;
+            color: white;
+            line-height: 16px;
+
+        }
+    </style>
+
+    <title>Create ODS HTML output from VA Data</title>
+
+
+    <script>
+        var csrftoken = "";
+        var sampleData = {
+            data:
+                [
+                    [1, '', 27, 4000, 5000, 0.00505068831944534, 8.217187313450598, 10.682343507485779, 2.4651561940351803],
+                    [2, '', 4633, 4000, 5000, 0.015399744210082021, 26.834251492521798, 34.88452694027836, 8.05027544775654],
+                    [3, '', 703, 1500, 2500, 0.026463132417610245, 6.986714925382451, 9.082729402997185, 2.096014477614735],
+                    [4, '', 1015, 1000, 4000, 0.03662024851127093, 13.967026865722348, 18.15713492543906, 4.190108059716706],
+                    [5, '', 3757, 1500, 3500, 0.04593085941072666, 65.12404402989812, 84.66125723886749, 19.53721320896943],
+                    [6, '', 7909, 4000, 6000, 0.05575926160074353, 165.45687462696463, 215.0939370150539, 49.63706238808919],
+                    [7, '', 5648, 4000, 6000, 0.06565422709399081, 140.09198059701518, 182.11957477611975, 42.02759417910455],
+                    [8, '', 13574, 5000, 10000, 0.07656618557431723, 396.2407902987787, 515.113027388412, 118.87223708963282]
+                ]
+        };
+
+        /* EVENT HANDLERS */
+        var self = this;
+        var sampleColumnInfo = [{ label: "Risk Category", type: "number" },
+        { label: "Policy Slider", type: "number" },
+        { label: "Policies", type: "number" },
+        { label: "Min Policies", type: "number" },
+        { label: "Max Policies", type: "number" },
+        { label: "Risk Percentage", type: "number" },
+        { label: "VAR_Millions", type: "number" },
+        { label: "Premium_Millions", type: "number" },
+        { label: "Fees_Millions", type: "number" }
+        ];
+
+        if (window.addEventListener) {
+            // For standards-compliant web browsers
+            window.addEventListener("message", onMessage, false);
+        } else {
+            window.attachEvent("onmessage", onMessage);
+        }
+
+        function onMessage(evt) {
+            $.get({
+                url: "/SASJobExecution/csrf",
+                success: function (result) {
+                    console.log('csrf');
+                    csrftoken = result;
+
+                }
+            }
+            );
+            if (evt && evt.data) {
+                var results = null;
+                var columnInfo = null;
+
+                self.resultName = evt.data.resultName;
+                //console.log(evt.data.availableRowCount);
+                if (evt.data.availableRowCount >= 0) {
+                    results = evt.data;
+                    columnInfo = evt.data.columns;
+
+                }
+                else if (evt.data.availableRowCount == undefined) {
+                    results = sampleData;
+                    columnInfo = sampleColumnInfo;
+                    console.log("sample");
+                }
+                if (results) {
+                    jsonToTable(columnInfo, results.data);
+                }
+
+            }
+        }
+
+
+
+        /*  TABLE CREATION  */
+
+        // Create an HTML DOM element of the given type containing the given text
+        function createElementWithText(element, text, format, hide) {
+            var e = document.createElement(element);
+            // if (hide==true) {
+            //     e.setAttribute('style', "display:none;");
+            // }
+
+            if (format.name === 'PERCENT' && element == 'td') {
+                text = (text * 100).toFixed(format.precision);
+
+            }
+            else if (format.name === 'COMMA' && element == 'td') {
+                text = text.toFixed(format.precision)
+            }
+
+
+            e.appendChild(document.createTextNode(text));
+
+            return e;
+        }
+
+        function tableToJson(table) {
+            var data = [];
+            var tabHead = [];
+            //var inputCols = document.getElementsByName("input");
+            //console.log(table);
+            for (h = 0; h < table.rows[0].cells.length; h++) {
+                tabHead.push(table.rows[0].cells[h].innerHTML);
+            }
+            for (var i = 1; i < table.rows.length; i++) {
+                var tableRow = table.rows[i];
+                var rowData = {};
+                for (var j = 0; j < tableRow.cells.length; j++) {
+                    // console.log(tableRow.cells[j].firstChild.name);
+                    if (tableRow.cells[j].firstChild.name == 'userinput') {
+                        rowData[tabHead[j]] = tableRow.cells[j].firstChild.value;
+                    }
+                    else {
+                        rowData[tabHead[j]] = tableRow.cells[j].innerHTML;
+                        //rowData.push(tableRow.cells[j].innerHTML); 
+                    }
+                }
+                //rowData[tabHead[j-1]]=tableRow.cells[j-1].innerHTML.value;
+                //rowData[tabHead[j]]=tableRow.cells[j-1].innerHTML.value;
+                data.push(rowData);
+            }
+
+
+            return data;
+        }
+
+
+        // function callJob(resultData) {
+        //     var jsonBlob = new Blob([JSON.stringify(resultData)], { type: 'application/json' });
+        //     var formData = new FormData();
+        //     formData.append("_program", "/Public/Insurance Project/OptModelJob");
+        //     formData.append("_action", "execute");
+        //     formData.append("_output_type", "ods_html5");
+        //     formData.append("myjsonfile", jsonBlob);
+        //     // formData.append("_csrf", "$CSRF$");
+        //     // formData.append("_debug", "log");
+
+        //     // var stringifiedJSON = JSON.stringify(resultData);
+        //     // var paramStr = "?_program=/Public/Insurance Project/OptModelJob"
+        //     //     + "&_action=execute"
+        //     //     + "&_output_type=ods_html5"
+        //     //     //+ "&_csrf=$CSRF$"
+        //     //     //+ "&myjsonfile="+stringifiedJSON
+        //     //     + "&_debug=log";
+        //     return $.ajax({
+        //         "method": "GET",
+        // 		"url": "/SASJobExecution/?_program=/Public/Insurance%20Project/OptModelJob&_action=execute&_output_type=ods_html5",//&myjsonfile="+jsonBlob, 
+        //         "async": true,
+        //         "crossDomain": true,
+        // 		"data": {"myjsonfile":JSON.stringify(resultData)}, 
+        // 		"contentType": false, // do not send content-type
+        // 		"processData": false, // do not transform data to fit to the default content-type application/x-www-form-urlencoded
+        // 		"headers":{"X-CSRF-TOKEN": "$CSRF$"
+        //                 , "Accept":"text/html"
+        //                 ,"cache-control": "no-cache"}
+        //         })
+        //         .done(function (jobOutput) {
+        //             console.log("Job success");
+        //             document.getElementById("JobResults").innerHTML = jobOutput;
+        //         })
+        //         .fail(function (jqXHR, textStatus, errorThrown) {
+        //             document.getElementById("JobResults").innerHTML = textStatus+errorThrown+ jqXHR.responseText;
+        //             console.log("************Job Error*********");
+        //             console.log("jqXHR:", jqXHR);
+        //             console.log("textStatus:", textStatus);
+        //             console.log("errorThrown:", errorThrown);
+        //         });
+
+        //     // var formData = new FormData();
+        //     // formData.append("_program", "/Public/Insurance Project/OptModelJob");
+        //     // formData.append("_output_type", "ods_html5");
+        //     // formData.append("_action", "execute");
+        //     // formData.append("_csrf", "$CSRF$");
+        //     // formData.append("_debug", "log");
+        //     // var blob = new Blob([JSON.stringify(resultData)], { type: 'application/json' });
+        //     // //console.log(JSON.stringify(resultData));
+        //     // formData.append("myjsonfile", blob);
+        //     // // Create the input parameter for the JSON data
+        //     // //new Response(formData).text().then(console.log);
+        //     // // Create the request object
+        //     // var request = new XMLHttpRequest();
+        //     // console.log("calling Job");
+        //     // //request.addEventListener("error", function (event) { alert("Something went wrong."); });
+
+        //     // request.onreadystatechange = function () {
+        //     //     //console.log(this);
+        //     //     if (this.readyState == 4) {
+        //     //         if (this.status == 200) {
+        //     //             // Display the results in the DIV
+        //     //             console.log(this);
+        //     //             document.getElementById("JobResults").innerHTML = this.status;
+        //     //         }
+        //     //         else {
+        //     //             document.getElementById("JobResults").innerHTML = "Status: " + this.status+"\n" + this.responseText;
+        //     //         }
+        //     //     }
+        //     // };
+        //     // // Submit the form
+        //     // request.open("GET", "/SASJobExecution/", true);
+        //     // request.setRequestHeader("X-CSRF-TOKEN","$CSRF$");
+        //     // request.setRequestHeader("Accept","text/html");
+        //     // request.send(formData);
+        //     // console.log("job called");
+        //     // // Display a temporary message in the DIV
+        //     // document.getElementById("JobResults").innerHTML = "Waiting for job to finish...";
+        // }
+
+        // function getCSRF(){
+        //     // var requestcsrf = new XMLHttpRequest();
+        //     // console.log(requestcsrf);
+        //     // requestcsrf.onreadystatechange = function() {
+        //     //     if (this.readyState == 4 && this.status == 200) {
+        //     //         // Display the results in the DIV
+        //     //         console.log("csrftoken2");
+        //     //         console.log(this.responseText);
+        //     //         return this.responseText;
+        //     //     }
+        //     //     else {
+        //     //         console.log(this);
+        //     //         document.getElementById("JobResults").innerHTML = "Status: " + this.status;
+        //     //     }
+        //     // };
+        //     // requestcsrf.open("get", "/SASJobExecution/csrf");
+        //     // // Submit the form
+        //     // requestcsrf.send();
+        // }
+
+        function callJob(resultData) {
+            console.log(resultData);
+            var formData = new FormData();
+            // Your large JSON object here
+            // console.log(JSON.stringify(resultData));
+            var blob = new Blob([JSON.stringify(resultData)], { type: 'application/json' });
+            // Create the input parameter for the JSON data
+            formData.append("myjsonfile", blob);
+            // Create other input parameters
+            formData.append("_program", "/Public/Insurance Project/OptModelJob");
+            formData.append("_output_type", "ods_html5");
+            formData.append("_action", "execute");
+            //formData.append("_csrf" , csrftoken);
+            //formData.append("_debug" , "log");
+            // Create the request object
+            var request = new XMLHttpRequest();
+            //request.addEventListener("error", function(event) {alert("Something went wrong.");});
+
+            request.onreadystatechange = function () {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+                        // Display the results in the DIV
+                        //document.getElementById("sample").innerHTML = "Results Displayed";
+                        document.getElementById("JobResults").innerHTML = this.responseText;
+                    }
+                    else {
+                        console.log(this);
+                        document.getElementById("JobResults").innerHTML = "Status: " + this.status;
+                    }
+                }
+            };
+            console.log("calling Job");
+            request.open("POST", "/SASJobExecution/");
+            //var csrftoken=getCSRF();
+            console.log("csrftoken");
+            console.log(csrftoken);
+            request.setRequestHeader("X-CSRF-TOKEN", csrftoken);
+            request.setRequestHeader("Accept", "text/html");
+            // Submit the form
+            request.send(formData);
+            console.log("job called");
+            // Display a temporary message in the DIV
+            document.getElementById("JobResults").innerHTML = "Waiting for job to finish...";
+        }
+
+        function sendInput() {
+            var mytable = document.getElementById("inputtable");
+            var jsontable = tableToJson(mytable);
+            document.getElementById("JobResults").innerHTML = "calling Job..";
+            callJob(jsontable);
+        }
+
+
+        // Process the array of CSV data and create a table
+        function jsonToTable(columnInfo, jsonData) {
+
+            // Create table
+            var tableDivId = 'sample'; // identifier for the table's parent/container
+            var tableDiv = document.getElementById(tableDivId);
+
+            // If a table already exists in our custom div, remove it
+            tableDiv.innerHTML = "";
+            tableDiv.classList.add("width-full", "mx-5", "my-5", "overflow-x-auto", "shadow-md", "sm:rounded-lg");
+
+            var table = tableDiv.appendChild(document.createElement('table'));
+            var tb_style = document.getElementsByTagName('table')[0];
+            tb_style.setAttribute("id", "inputtable");
+            tb_style.classList.add("w-full", "whitespace-no-wrap");
+            var lastColumnIsSelectionData = false;
+            // Create headers from column info
+            addHeaderRow(columnInfo.map(function (c) {
+                return c.label;
+            }));
+
+            // Create table body for incoming data
+            var tableBody = table.appendChild(document.createElement('tbody'));
+            document.getElementsByTagName('tbody')[0].classList.add("bg-white", "divide-y", "dark:divide-gray-700", "dark:bg-gray-800");
+            //console.log(columnInfo);
+            // Add remaining rows to table body
+            if (jsonData) {
+                for (var i = 0; i < jsonData.length; i++) {
+
+                    addDataRow(jsonData[i], columnInfo);
+
+                }
+            }
+
+            // Append a header row to the table
+            function addHeaderRow(columnLabels) {
+                // Create table row
+                var tableHead = document.createElement('thead');
+                var tr = document.createElement('tr');
+                tr.classList.add("text-m", "mx-3", "font-bold", "tracking-wide", "text-center", "text-white", "uppercase", "border-b", "bg-purple-700");
+
+                var visiblecols = 11;
+                var col = 1;
+                // Add a header cell for each column heading
+                columnLabels.forEach(function (header) {
+
+                    if (header == 'Min Policies' || header == 'Max Policies' ) {
+                        tr.appendChild(createElementWithText('th', header, '', true));
+                        col = col + 1;
+                    }
+                    else if (header != 'Product_Info_Multiplier') {
+                        tr.appendChild(createElementWithText('th', header, '', false));
+                        col = col + 1;
+                    }
+
+                });
+
+
+                tableHead.appendChild(tr);
+
+                table.appendChild(tableHead);
+            }
+
+            // Append a data row to the table
+            function addDataRow(dataFields, format) {
+
+                addDataRow.rowNum = ++addDataRow.rowNum || 0;
+                var tr = document.createElement('tr');
+
+                // Add table cell for each data field
+                var valinput = document.createElement('input');
+                var valoutput = document.createElement('output');
+                valoutput.setAttribute('id', `output${addDataRow.rowNum}`);
+                valinput.type = 'range';
+                valinput.setAttribute('id', `policy${addDataRow.rowNum}`);
+                valinput.setAttribute('name', 'userinput');
+                valinput.setAttribute('oninput', `updater(${addDataRow.rowNum})`);
+                var min = dataFields[3];
+                var max = dataFields[4];
+
+                valinput.setAttribute('min', min);
+                valinput.setAttribute('max', max);
+
+                // valinput.addEventListener('change', sendInput);
+                var valinputCell = document.createElement('td');
+
+
+                // Add table cell for each data field
+                // var valinput2 = document.createElement('input');
+                // valinput2.type = 'number';
+                // valinput2.setAttribute('id', addDataRow.rowNum);
+                // valinput2.setAttribute('name', 'userinput');
+                //valinput.addEventListener('change', sendInput);
+                // var valinputCell2 = document.createElement('td');
+                var visiblecols = 14;
+
+                dataFields.forEach(function (field, index) {
+                    let unique = '';
+                    let pmult = '';
+                    let risk = '';
+                    if (format[index].label == "Policy Slider" && field == "") {
+
+                        valinput.setAttribute('value', field[3]);
+
+                        valinputCell.appendChild(valinput);
+                        valinputCell.appendChild(valoutput);
+                        valinputCell.className = "bg-gray-100 text-center";
+                        tr.appendChild(valinputCell);
+                        return;
+                    }
+                    if (format[index].label == "Product_Info_Multiplier") {
+                        return;
+                    }
+                    
+
+                    if (format[index].label == 'Revised VAR') {
+                        unique = 'rv' + `${addDataRow.rowNum}`;
+                        pmult = dataFields[12].toFixed(format[index].format.precision);
+                        risk = (dataFields[5] * 100).toFixed(2);
+
+                    }
+                    else if (format[index].label == 'Revised Premium') {
+                        unique = 'rp' + `${addDataRow.rowNum}`;
+
+
+                    }
+                    else if (format[index].label == 'Revised Fees') {
+                        unique = 'rf' + `${addDataRow.rowNum}`;
+
+                    }
+                    else if (format[index].label == 'Risk Percentage') {
+                        unique = 'risk' + `${addDataRow.rowNum}`;
+                    }
+                    if (format[index].label == "Min Policies" || format[index].label == "Max Policies"){
+                        var td = createElementWithText('td', field, format[index].format,true);
+                    }
+                    else{
+                        var td = createElementWithText('td', field, format[index].format, false);
+                        // (visiblecols < index + 1)
+                    }
+    
+                    if (!isNaN(field)) {
+                        td.className = 'numeric font-semibold bg-gray-100 text-center px-4 py-3 text-sm text-black'; // Set numeric class to align numeric cells
+                        td.setAttribute('id', unique);
+                        td.setAttribute('pmult', `${pmult}`);
+                        td.setAttribute('risk', `${risk}`);
+
+                    }
+                    tr.appendChild(td);
+
+                });
+
+
+                // valinput2.setAttribute('value',dataFields[dataFields.length-1]);
+                // valinputCell2.appendChild(valinput2);
+                // tr.appendChild(valinputCell2);
+
+                tableBody.appendChild(tr);
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <button type="button"
+        class="mt-5 mb-5 px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+        onclick="sendInput()">
+        Call Optimization Job
+    </button>
+    <button type="button"
+        class="px-4 mt-5 mb-5 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+        onclick="location.reload()">
+        Reset Values
+    </button>
+    <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
+        <div class="w-full overflow-x-auto">
+            <table class="w-full whitespace-no-wrap">
+                <thead>
+                    <tr
+                        class="text-center font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                        <th class="px-4 py-3">Total Revised VAR</th>
+                        <th class="px-4 py-3">Total Revised Premium</th>
+                        <th class="px-4 py-3">Total Revised Fee</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                    <tr class="text-center dark:text-gray-400">
+                        <td id="totalvar" class="px-4 py-3">
+                            $ 863.45
+                        </td>
+                        <td id="totalprem" class="px-4 py-3">
+                            $ 863.45
+                        </td>
+                        <td id="totalfee" class="px-4 py-3">
+                            $ 863.45
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="sample"></div>
+
+    <script>
+        function updater(unique) {
+            var x = document.getElementById(`policy${unique}`).value;
+            var pmult = document.getElementById(`rv${unique}`).getAttribute('pmult');
+            var risk = document.getElementById(`rv${unique}`).getAttribute('risk');
+            var rv = risk * (1 - (pmult * 0.01)) * 0.005 * x;
+            document.getElementById('totalvar').innerHTML = total_var
+            rv = rv.toFixed(2);
+            var rp = 1.3 * rv;
+            rp = rp.toFixed(2);
+            var rf = rp - rv;
+            rf = rf.toFixed(2);
+
+
+
+
+            document.getElementById(`output${unique}`).innerHTML = x;
+            document.getElementById(`rv${unique}`).innerHTML = rv;
+            document.getElementById(`rp${unique}`).innerHTML = rp;
+            document.getElementById(`rf${unique}`).innerHTML = rf;
+            var total_var = 0;
+            var total_prem = 0;
+            var total_fee = 0;
+            var total_policy = 0;
+            for (var i = 0; i < 8; i++) {
+                var temp = document.getElementById(`rv${i}`).innerHTML;
+                total_var = total_var + parseInt(temp);
+
+                var premtemp = document.getElementById(`rp${i}`).innerHTML;
+                total_prem = total_prem + parseInt(premtemp);
+
+                var feetemp = document.getElementById(`rf${i}`).innerHTML;
+                total_fee = total_fee + parseInt(feetemp);
+
+                var politemp = document.getElementById(`output${i}`).innerHTML;
+                total_policy = total_policy + parseInt(politemp);
+
+            }
+            document.getElementById("totalvar").innerHTML = total_var;
+            document.getElementById("totalprem").innerHTML = total_prem;
+            document.getElementById("totalfee").innerHTML = total_fee;
+        }
+    </script>
+    <br>
+    <div id="JobResults"></div>
+
+</body>
+
+</html>

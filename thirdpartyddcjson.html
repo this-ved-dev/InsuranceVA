@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <!-- <link href="./init-alpine.js"> -->
+
+
+    <title>Create ODS HTML output from VA Data</title>
+    <!-- <style>
+        html, body, #JobResults {
+            width: 100%;
+            height: 10%;
+            margin: 0;
+            padding: 0;
+        }
+        #JobResults {
+            position: relative;
+			font-family: "Albany AMT";
+			font-size:10pt;
+        }
+        body {
+            font-family: AvenirNext, Helvetica, Arial, sans-serif;
+            font-size: .8889rem;
+            background-color: #FFFFFF;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        th, td {
+            padding: 0.25rem .5rem;
+        }
+
+        tbody, tr + tr {
+            border-top: 1px solid rgb(231, 231, 231);
+        }
+
+        th + th, td + td {
+            border-left: 1px solid rgb(231, 231, 231);
+        }
+
+        .numeric {
+            text-align: right;
+        }
+
+        body::-webkit-scrollbar {
+            width: 0.5em;
+        }
+
+        body::-webkit-scrollbar:horizontal {
+            height: 0.5em;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: darkgrey;
+            outline: 1px solid slategrey;
+        }
+
+        body::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        #sample {
+            padding-top: 10%;
+            display: block;
+        }
+        #button {
+            padding-top: 10%;
+            display: block;
+        }
+        #sample {
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 90%;
+        }
+        
+        #sample td, #sample th {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+        
+        #sample tr:nth-child(even){background-color: #f2f2f2;}
+        
+        #sample tr:hover {background-color: #ddd;}
+        
+        #sample th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #2004aa;
+          color: white;
+        }
+
+  </style> -->
+
+    <script>
+
+        var sampleData = {
+            data:
+                [
+                    [1, '', 4327, 4000, 5000, 0.00505068831944534, 8.217187313450598, 10.682343507485779, 2.4651561940351803],
+                    [2, '', 4633, 4000, 5000, 0.015399744210082021, 26.834251492521798, 34.88452694027836, 8.05027544775654],
+                    [3, '', 703, 1500, 2500, 0.026463132417610245, 6.986714925382451, 9.082729402997185, 2.096014477614735],
+                    [4, '', 1015, 1000, 4000, 0.03662024851127093, 13.967026865722348, 18.15713492543906, 4.190108059716706],
+                    [5, '', 3757, 1500, 3500, 0.04593085941072666, 65.12404402989812, 84.66125723886749, 19.53721320896943],
+                    [6, '', 7909, 4000, 6000, 0.05575926160074353, 165.45687462696463, 215.0939370150539, 49.63706238808919],
+                    [7, '', 5648, 4000, 6000, 0.06565422709399081, 140.09198059701518, 182.11957477611975, 42.02759417910455],
+                    [8, '', 13574, 5000, 10000, 0.07656618557431723, 396.2407902987787, 515.113027388412, 118.87223708963282]
+                ]
+        };
+
+        /* EVENT HANDLERS */
+        var self = this;
+        var sampleColumnInfo = [{ label: "Risk Category", type: "number" },
+        { label: "Policy Slider", type: "number" },
+        { label: "Policies", type: "number" },
+        { label: "Min Policies", type: "number" },
+        { label: "Max Policies", type: "number" },
+        { label: "Risk Percentage", type: "number" },
+        { label: "VAR_Millions", type: "number" },
+        { label: "Premium_Millions", type: "number" },
+        { label: "Fees_Millions", type: "number" }
+        ];
+
+        if (window.addEventListener) {
+            // For standards-compliant web browsers
+            window.addEventListener("message", onMessage, false);
+        } else {
+            window.attachEvent("onmessage", onMessage);
+        }
+
+        function onMessage(evt) {
+            if (evt && evt.data) {
+                var results = null;
+                var columnInfo = null;
+
+                self.resultName = evt.data.resultName;
+                console.log(evt.data.availableRowCount);
+                if (evt.data.availableRowCount >= 0) {
+                    results = evt.data;
+                    columnInfo = evt.data.columns;
+                    
+                    console.log(columnInfo)
+                }
+                else if (evt.data.availableRowCount == undefined) {
+                    results = sampleData;
+                    columnInfo = sampleColumnInfo;
+                }
+                if (results) {
+                    jsonToTable(columnInfo, results.data);
+                }
+
+            }
+        }
+
+        // Update the object's selection when a row is checked/unchecked
+        function sendSelection(evt) {
+            var selectedRows = document.querySelectorAll(':checked');
+            var selection = [];
+            for (var i = 0; i < selectedRows.length; i++) {
+                var row = selectedRows[i];
+                selection.push({ row: row.id });
+            }
+
+            var message = {
+                resultName: self.resultName,
+                selections: selection
+            };
+
+            sendMessage(message);
+        }
+
+        function sendMessage(message) {
+            var url = (window.location != window.parent.location)
+                ? document.referrer
+                : document.location.href;
+
+            window.parent.postMessage(message, url);
+        }
+        function tableToJson(table) {
+            var data = [];
+            var tabHead = [];
+            //var inputCols = document.getElementsByName("input");
+            //console.log(table);
+            for (h = 0; h < table.rows[0].cells.length; h++) {
+                tabHead.push(table.rows[0].cells[h].innerHTML);
+            }
+            for (var i = 1; i < table.rows.length; i++) {
+                var tableRow = table.rows[i];
+                var rowData = {};
+                for (var j = 0; j < tableRow.cells.length; j++) {
+                    console.log(tableRow.cells[j].firstChild.name);
+                    if (tableRow.cells[j].firstChild.name == 'userinput') {
+                        rowData[tabHead[j]] = tableRow.cells[j].firstChild.value;
+                    }
+                    else {
+                        rowData[tabHead[j]] = tableRow.cells[j].innerHTML;
+                        //rowData.push(tableRow.cells[j].innerHTML); 
+                    }
+                }
+                //rowData[tabHead[j-1]]=tableRow.cells[j-1].innerHTML.value;
+                //rowData[tabHead[j]]=tableRow.cells[j-1].innerHTML.value;
+                data.push(rowData);
+            }
+
+
+            return data;
+        }
+
+        function sendInput() {
+            var mytable = document.querySelector("table");
+            var jsontable = tableToJson(mytable);
+            document.getElementById("JobResults").innerHTML = "calling Job..";
+            callJob(jsontable);
+
+        }
+
+
+        //window.va=window.parent.;
+        function callJob(resultData) {
+            //var stringifiedJSON = JSON.stringify(resultData);
+            var formData = new FormData();
+            // Your large JSON object here
+            console.log(JSON.stringify(resultData));
+            var blob = new Blob([JSON.stringify(resultData)], { type: 'application/json' });
+            // Create the input parameter for the JSON data
+            formData.append("myjsonfile", blob);
+            // Create other input parameters
+            formData.append("_program", "/Public/DDC/OptJobInput");
+            formData.append("_output_type", "ods_html5");
+            formData.append("_action", "execute");
+            formData.append("_csrf", "$CSRF$");
+            //formData.append("_debug" , "log");
+            // Create the request object
+            var request = new XMLHttpRequest();
+            //request.addEventListener("error", function(event) {alert("Something went wrong.");});
+
+            request.onreadystatechange = function () {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+                        // Display the results in the DIV
+                        document.getElementById("JobResults").innerHTML = this.responseText;
+                    }
+                    else {
+                        console.log(this);
+                        document.getElementById("JobResults").innerHTML = "Status: " + this.status;
+                    }
+                }
+            };
+            console.log("calling Job");
+            request.open("post", "/SASJobExecution/");
+            // Submit the form
+            request.send(formData);
+            console.log("job called");
+            // Display a temporary message in the DIV
+            document.getElementById("JobResults").innerHTML = "Waiting for job to finish...";
+        }
+
+        /*  TABLE CREATION  */
+
+        // Create an HTML DOM element of the given type containing the given text
+        function createElementWithText(element, text, hide) {
+            var e = document.createElement(element);
+            if (hide) {
+                e.setAttribute('style', "display:none;");
+            }
+            e.appendChild(document.createTextNode(text));
+            return e;
+        }
+
+        // Process the array of CSV data and create a table
+        function jsonToTable(columnInfo, jsonData) {
+
+            // Create table
+            var tableDivId = 'sample'; // identifier for the table's parent/container
+            var tableDiv = document.getElementById(tableDivId);
+
+            // If a table already exists in our custom div, remove it
+            tableDiv.innerHTML = " ";
+            tableDiv.classList.add("width-full","mx-5","my-5", "overflow-x-auto", "shadow-md", "sm:rounded-lg");
+
+            var table = tableDiv.appendChild(document.createElement('table'));
+            var tb_style = document.getElementsByTagName('table')[0];
+            tb_style.classList.add("w-full", "whitespace-no-wrap");
+            var lastColumnIsSelectionData = false;
+            // Create headers from column info
+            addHeaderRow(columnInfo.map(function (c) {
+                return c.label;
+            }));
+
+            // Create table body for incoming data
+            var tableBody = table.appendChild(document.createElement('tbody'));
+            document.getElementsByTagName('tbody')[0].classList.add("bg-white", "divide-y", "dark:divide-gray-700", "dark:bg-gray-800");
+            //console.log(jsonData);
+            // Add remaining rows to table body
+            if (jsonData) {
+                for (var i = 0; i < jsonData.length; i++) {
+                    addDataRow(jsonData[i]);
+                }
+            }
+
+            // Append a header row to the table
+            function addHeaderRow(columnLabels) {
+                // Create table row
+                var tableHead = document.createElement('thead');
+                var tr = document.createElement('tr');
+                tr.classList.add("text-m","mx-3", "font-bold", "tracking-wide", "text-center", "text-white", "uppercase", "border-b", "bg-purple-700");
+
+                var visiblecols = 11;
+                var col = 1;
+                // Add a header cell for each column heading
+                columnLabels.forEach(function (header) {
+                    
+                    tr.appendChild(createElementWithText('th', header, col > visiblecols));
+                    col = col + 1;
+                });
+
+
+                tableHead.appendChild(tr);
+
+                table.appendChild(tableHead);
+            }
+
+            // Append a data row to the table
+            function addDataRow(dataFields) {
+                addDataRow.rowNum = ++addDataRow.rowNum || 0;
+                var tr = document.createElement('tr');
+
+
+                // Add table cell for each data field
+                var valinput = document.createElement('input');
+                var valoutput = document.createElement('output');
+                valoutput.setAttribute('id', `output${addDataRow.rowNum}`);
+                valinput.type = 'range';
+                valinput.setAttribute('id', `policy${addDataRow.rowNum}`);
+                valinput.setAttribute('name', 'userinput');
+                valinput.setAttribute('oninput', `updater(${addDataRow.rowNum})`);
+                var min = dataFields[3];
+                var max = dataFields[4];
+
+                valinput.setAttribute('min', min);
+                valinput.setAttribute('max', max);
+
+                // valinput.addEventListener('change', sendInput);
+                var valinputCell = document.createElement('td');
+
+
+                // Add table cell for each data field
+                // var valinput2 = document.createElement('input');
+                // valinput2.type = 'number';
+                // valinput2.setAttribute('id', addDataRow.rowNum);
+                // valinput2.setAttribute('name', 'userinput');
+                //valinput.addEventListener('change', sendInput);
+                // var valinputCell2 = document.createElement('td');
+                var visiblecols = 11;
+                dataFields.forEach(function (field, index) {
+                    if (field == "" ) {
+
+                        valinput.setAttribute('value', (max + min) / 2);
+                        console.log(max, min)
+                        valinputCell.appendChild(valinput);
+                        valinputCell.appendChild(valoutput);
+                        valinputCell.className = "bg-gray-100 text-center";
+                        tr.appendChild(valinputCell);
+                        return;
+                    }
+                    var td = createElementWithText('td', field, (visiblecols < index + 1));
+                    if (!isNaN(field)) {
+                        td.className = 'numeric font-semibold bg-gray-100 text-center px-4 py-3 text-sm text-black'; // Set numeric class to align numeric cells
+                    }
+                    tr.appendChild(td);
+                });
+
+
+                // valinput2.setAttribute('value',dataFields[dataFields.length-1]);
+                // valinputCell2.appendChild(valinput2);
+
+
+                // tr.appendChild(valinputCell2);
+
+                tableBody.appendChild(tr);
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="sendInput()">Calculate Revised Loss Ratio</button>
+    <button type="button" onclick="location.reload()">Reset Values</button>
+    <div id="sample"></div>
+    <div id="JobResults"></div>
+    <script>
+        function updater(unique) {
+            var x = document.getElementById(`policy${unique}`).value;
+            document.getElementById(`output${unique}`).innerHTML = x;
+        }
+
+    </script>
+</body>
+
+</html>

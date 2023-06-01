@@ -1,0 +1,29 @@
+{
+    "name": "@sassoftware/va-report-components",
+    "version": "1.11.0",
+    "description": "The SAS Visual Analytics SDK is a set of JavaScript APIs and web components that enable SAS Visual Analytics report content to be easily embedded in a third-party application or web page.",
+    "keywords": [
+        "SAS",
+        "Viya",
+        "Visual",
+        "Analytics",
+        "VA",
+        "SDK",
+        "VASDK",
+        "va-sdk",
+        "VA-SDK",
+        "report",
+        "component"
+    ],
+    "homepage": "https://github.com/sassoftware/sas-viya-sdk-js/tree/main/sdk/va-report-components",
+    "bugs": {
+        "url": "https://github.com/sassoftware/sas-viya-sdk-js/issues"
+    },
+    "license": "SEE LICENSE IN LICENSE",
+    "author": "SAS",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sassoftware/sas-viya-sdk-js.git",
+        "directory": "sdk/va-report-components"
+    }
+}

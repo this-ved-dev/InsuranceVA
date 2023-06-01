@@ -1,0 +1,3073 @@
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+#
+# These will most likely be surfaced to users and should be reviewed and translated.
+# Karen and Julie received the same file from Greg Stelmack and Kerry Trout. 
+#
+#  4.17.19   JGS & KLM: Updated terminology (variants of subscribe->add; unsubscribe->remove); corrected other errors. 
+#  7.10.14   KLM reviewed for grammar, spelling, & SAS Style   
+#
+warning.network.unavailable.txt = Síť není v současné době dostupná. Zkontrolujte připojení.
+warning.server.unavailable.txt = Nelze se připojit k serveru. Ověřte, jestli jsou server a port správně zadané. Pokud ne, nemusí být server nebo síť k dispozici.
+warning.server.version.not.supported.txt = Vybraný server nepodporuje verzi SAS Visual Analytics App instalovanou na tomto zařízení. Nainstalujte nejnovější verzi SAS Visual Analytics App a potom se připojte k tomuto serveru.
+warning.certificate.error.txt = Bezpečné připojení s tímto serverem se nepodařilo navázat. Ověřte, zda byly nainstalovány všechny povinné certifikáty.
+warning.unsupported.request.txt = Požadavek není na tomto serveru podporován.
+warning.unauthorized.txt = Přihlášení se nezdařilo. Identifikátor uživatele nebo heslo není správné.
+
+# these two use obsolete terminology and are no longer used by the code
+warning.blacklisted.txt = Server zablokoval přístup k tomuto zařízení.
+warning.not.in.whitelist.txt = Přístup z tohoto zařízení nebyl na tomto serveru povolen.
+# these two are now used instead
+warning.denylisted.txt = Server zablokoval přístup k tomuto zařízení.
+warning.not.in.allowlist.txt = Přístup z tohoto zařízení nebyl na tomto serveru povolen.
+
+warning.resource.not.found.txt = Požadovaný zdroj nebyl na serveru nalezen.
+warning.resource.not.accessible.txt = Nelze přistupovat k požadovanému zdroji na serveru. Obraťte se na svého správce SAS.
+warning.invalid.media.txt = Data vrácená serverem jsou poškozená.
+warning.duplicate.connection.txt = Server s tímto identifikátorem uživatele je již přidán.
+warning.duplicate.connection.description.txt = Server s tímto popisem již existuje.
+warning.duplicate.report.txt = Report s tímto názvem již existuje.
+warning.duplicate.folder.txt = Složka s tímto názvem již existuje.
+warning.duplicate.collection.txt = Kolekce s tímto názvem již existuje.
+warning.duplicate.insight.txt = Poznatek s tímto názvem již existuje.
+warning.service.failure.txt = Při pokusu o splnění požadavku došlo k neočekávané chybě.
+warning.password.storage.failed.txt = Nepodařilo se uložit pověření.
+warning.password.lookup.failed.txt = Nepodařilo se vyhledat heslo.
+warning.report.cannot.downgrade.txt = Nelze přistupovat k reportu. Bylo to vytvořeno v novější verzi SAS Visual Analytics. Obraťte se na svého správce SAS.
+warning.request.cancelled.txt = Požadavek byl zrušen.
+warning.system.quiesced.txt = Požadavek byl zrušen, protože se aplikace vypíná.
+warning.timeout.txt = Vypršel časový limit požadavku.
+warning.report.already.updating.txt = Aplikace nemůže v tuto chvíli zpracovat váš požadavek a přidat nebo aktualizovat tento report. Automatizované přidání nebo aktualizace již probíhá. Zkuste to znovu později. Pokud problém přetrvává, obraťte se na správce SAS ve své organizaci.
+warning.report.save.failed.msg = Report nebylo možné uložit na server.
+warning.connection.user.mismatch.msg = Zadali jste jiný identifikátor uživatele. Tato instance serveru očekává, že se přihlásíte jako {0}.
+
+# These messages will probably only be used internally
+warning.invalid.arguments.txt = Není dostatek informací ke splnění požadavku.
+warning.local.resource.expired.txt = Lokální zdroj použitý k inicializaci tohoto požadavku již není dostupný.
+warning.unable.to.cancel.request.complete.txt = Pokus o zrušení požadavku nebyl úspěšný, protože požadavek byl dokončen.
+warning.configuration.error.txt = Byla zjištěna chyba konfigurace.
+warning.complete.with.warnings.txt = Požadavek skončil s upozorněními.
+warning.status.unavailable.txt = Status není pro tento požadavek k dispozici.
+
+# Custom warnings for specific report save failures
+warning.report.save.cannot.write.to.folder.msg = Ke složce nelze přistupovat nebo neexistuje. Zadejte jinou složku.
+warning.report.save.report.exists.msg = Zadaný název reportu již existuje. Vyberte jiný název.
+
+# This is displayed in places that describe that reports are on the local device
+# For example, it is used in a header when showing search results
+search.headers.localhost.txt = V Moje reporty
+
+# These are errors used in the search view when a search does not get results
+search.cells.infocell.error.txt = Při hledání tohoto připojení došlo k chybě.
+search.cells.infocell.noresults.txt = Hledání nevrátilo žádné výsledky pro toto připojení.
+search.cells.infocell.nofilterresults.txt = V tomto připojení serveru nejsou žádné reporty, které odpovídají aktuálním kritériím hledání a filtru.
+search.cells.infocell.servernotsupported.txt = Funkce hledání není v tomto připojení serveru podporována.
+search.cells.infocell.portfolio.noresults.txt = Hledání nevrátilo žádné výsledky z portfolia.
+search.cells.infocell.portfolio.nofilterresults.txt = Neexistují žádné reporty vyhovující kritériím a filtru aktuálního hledání.
+
+# this is used to filter search results and appears in each category (author, date, location)
+# to indicate to use all available authers/dates/locations for this search
+search.filters.all.txt = Vše
+
+# these are specific date ranges for filtering in search results
+search.filters.lastday.txt = Posledních 24 hodin
+search.filters.lastweek.txt = Poslední týden
+search.filters.lastmonth.txt = Poslední měsíc
+
+# this is used when filtering the search results to subscribed reports
+search.filters.portfolio.txt = Moje reporty
+
+# these are used for accessibility (voiceover)
+search.filters.unselectedHint.txt = Přepne výběr.
+search.filters.selectedHint.txt = Přepne výběr.
+search.filters.selected.txt = Vybráno
+
+# these are used for "narrow by"
+search.filters.narrowby.locations = Místo
+search.filters.narrowby.authors = Autor
+search.filters.narrowby.date = Datum
+search.filters.narrowby.delimiter = ,
+
+# these are the titles used in the different sections of the search filter
+# some platforms uppercase all the letters in the titles, and these should
+# be translated in the appropriate way for each language
+search.filters.title.location.txt = Místo
+search.filters.title.location.uppercase.txt = MÍSTO
+search.filters.title.author.txt = Autor
+search.filters.title.author.uppercase.txt = AUTOR
+search.filters.title.modifieddate.txt = Datum aktualizováno
+search.filters.title.modifieddate.uppercase.txt = DATUM AKTUALIZOVÁNO
+
+# add connection controller
+addconnectioncontroller.button.next.txt = Další
+addconnectioncontroller.error.fallback.txt = Při pokusu o nastavení připojení došlo k neočekávané chybě.
+addconnectioncontroller.successfulconnectionadded.txt = Připojení bylo úspěšně přidáno.
+
+# These 3 are obsolete
+addconnectioncontroller.whitelist.messagedialog.title.txt = Pokud znáte e-mailovou adresu správce systému, můžete odeslat e-mail požadující přístup k tomuto serveru.
+addconnectioncontroller.whitelist.messagedialog.button.positive.txt = Odeslat e-mail
+addconnectioncontroller.whitelist.messagedialog.button.negative.txt = Zrušit
+# They have been replaced by:
+addconnectioncontroller.allowlist.messagedialog.title.txt = Pokud znáte e-mailovou adresu správce systému, můžete odeslat e-mail požadující přístup k tomuto serveru.
+addconnectioncontroller.allowlist.messagedialog.button.positive.txt = Odeslat e-mail
+addconnectioncontroller.allowlist.messagedialog.button.negative.txt = Zrušit
+
+# connection details controller
+connectiondetailscontroller.editconnectiondescriptionmessage.success.txt = Připojení bylo úspěšně aktualizováno.
+
+# portfolio controller
+portfoliocontroller.title.txt = Portfolio
+portfoliocontroller.subscribed.title.txt = Moje reporty
+portfoliocontroller.history.title.txt = Poslední
+portfoliocontroller.favorites.title.txt = Oblíbené
+
+# expanded controller
+expandedcontroller.title.subscribed.txt = Moje reporty
+expandedcontroller.title.history.txt = Poslední reporty
+expandedcontroller.title.favorites.txt = Oblíbené reporty
+
+expandedcontroller.sortby.txt = Seřadit podle:
+
+expandedcontroller.sortorder.name.title.txt = Název
+expandedcontroller.sortorder.server.title.txt = Připojení
+expandedcontroller.sortorder.subscriptiondate.title.txt = Přidané datum
+expandedcontroller.sortorder.lastupdateddate.title.txt = Poslední aktualizace
+expandedcontroller.sortorder.mostrecentlyviewed.title.txt = Naposledy zobrazeno
+expandedcontroller.sortorder.default.title.txt = Relevance
+expandedcontroller.sortorder.historyrelevance.title.txt = Naposledy zobrazeno
+expandedcontroller.sortorder.frequentlyviewed.title.txt = Často zobrazené
+
+expandedcontroller.sortorder.name.description.txt = Seřadit reporty podle názvu, potom podle data aktualizace.
+expandedcontroller.sortorder.server.description.txt = Seřadit reporty podle asociovaného připojení, potom podle názvu, potom podle data aktualizace.
+expandedcontroller.sortorder.subscriptiondate.description.txt = Třídit reporty podle přidaného data, poté podle názvu.
+expandedcontroller.sortorder.lastupdateddate.description.txt = Seřadit reporty podle poslední úspěšné aktualizace, potom podle názvu.
+expandedcontroller.sortorder.mostrecentlyviewed.description.txt = Seřadit reporty podle data posledního přístupu na tomto zařízení, potom podle názvu.
+expandedcontroller.sortorder.default.description.txt = Seřadit reporty podle relevance hledání, která je určena připojením.
+expandedcontroller.sortorder.historyrelevance.description.txt = Seřadit reporty podle data posledního zobrazení napříč všemi zařízeními.
+expandedcontroller.sortorder.frequentlyviewed.description.txt = Třídit reporty podle počtu zobrazení, poté podle názvu.
+
+# subscription controller
+reportsubscription.author.title.txt = Autor
+reportsubscription.createdon.title.txt = Vytvořeno
+reportsubscription.updatedon.title.txt = Upraveno
+reportsubscription.location.title.txt = Umístěno
+reportsubscription.description.title.txt = Popis
+reportsubscription.description.contents.notavailable.txt = (Neposkytnuto)
+reportsubscription.reportunavailable.title.txt = Report není k dispozici
+reportsubscription.reportunavailable.contents.txt = Tento report není na serveru aktuálně k dispozici.
+reportsubscription.reportunavailable.button.title.txt = Odebrat
+reportsubscription.subscribereport.button.subscribe.txt = Přidat
+reportsubscription.subscribereport.button.subscribing.txt = Přidání
+reportsubscription.subscribereport.button.open.txt = Otevřít
+
+# settings controller
+settingscontroller.title.txt = Nastavení
+settingscontroller.connectionsection.title.txt = připojení
+settingscontroller.addconnectionbutton.title.txt = Přidat připojení
+
+# connection details controller
+connectiondetailscontroller.connectiondetailssection.title.txt = Připojení
+connectiondetailscontroller.connectiondetailssection.server.title.txt = Server
+connectiondetailscontroller.connectiondetailssection.port.title.txt = Port
+connectiondetailscontroller.connectiondetailssection.secureconnection.title.txt = Zabezpečené připojení
+
+connectiondetailscontroller.authenticationdetailssection.title.txt = Autentizace
+connectiondetailscontroller.authenticationdetailssection.guest.logonasguest.title.txt = Přihlásit se jako host
+connectiondetailscontroller.authenticationdetailssection.guest.loggedon.userid.title.txt = Identifikátor uživatele
+connectiondetailscontroller.authenticationdetailssection.guest.loggedon.password.title.txt = Heslo
+
+connectiondetailscontroller.miscellaneousdetailssection.title.txt = Různé
+connectiondetailscontroller.miscellaneousdetailssection.description.title.txt = Popis
+connectiondetailscontroller.miscellaneousdetailssection.descriptioncontents.placeholder.txt = ukázkový text
+connectiondetailscontroller.miscellaneousdetailssection.descriptioncontents.guest.user.txt = host
+
+connectiondetailscontroller.clearhistory.button.title.txt = Vymazat poslední reporty k připojení
+connectiondetailscontroller.clearhistory.shortmessage.txt = Vymazat poslední obsah tohoto připojení zobrazený v posledním zobrazení.
+connectiondetailscontroller.clearhistory.longmessage.txt = Vymazat reporty zobrazené v posledním zobrazení. Historie posledních reportů je vymazána na serveru a na mobilním zařízení.
+
+connectiondetailscontroller.removeconnection.button.title.txt = Odebrat připojení
+
+connectiondetailscontroller.removeconnectiondialog.title.txt = Odebrat připojení
+connectiondetailscontroller.removeconnectiondialog.message.txt = Odebrání tohoto připojení odebere všechny dokumenty stažené z tohoto serveru.
+connectiondetailscontroller.removeconnectiondialog.cancelbutton.txt = Zrušit
+connectiondetailscontroller.removeconnectiondialog.removebutton.txt = Odebrat
+
+# library controller
+
+librarycontroller.node.folder.contents.nocontents.txt = Tato složka nemá žádný obsah.
+librarycontroller.node.root.title.txt = Všechna připojení
+librarycontroller.node.favorites.title.txt = Oblíbené
+librarycontroller.node.history.title.txt = Poslední
+
+# allowlist, denylist - the first two are obsolete and no longer used
+whitelist.messagedialog.message.txt = „__HOSTITEL__“ vyžaduje, aby byla zařízení zaregistrována správcem před povolením přístupu k obsahu.\nPřístup byl zakázán.\nReporty byly z tohoto zařízení odstraněny.\nObraťte se na správce SAS.
+blacklist.messagedialog.message.txt = „__HOSTITEL__“ zrušil váš přístup ke svému obsahu.\nVšechny reporty asociované s tímto serverem byly odebrány z tohoto mobilního zařízení.\nObraťte se na správce SAS.
+# these are now used by the code.
+allowlist.messagedialog.message.txt = „__HOSTITEL__“ vyžaduje, aby byla zařízení zaregistrována správcem před povolením přístupu k obsahu.\nPřístup byl zakázán.\nReporty byly z tohoto zařízení odstraněny.\nObraťte se na správce SAS.
+denylist.messagedialog.message.txt = „__HOSTITEL__“ zrušil váš přístup ke svému obsahu.\nVšechny reporty asociované s tímto serverem byly odebrány z tohoto mobilního zařízení.\nObraťte se na správce SAS.
+
+# base report view model
+
+basereportviewmodel.reportstatus.unsubscribed.txt = Odebrané
+basereportviewmodel.reportstatus.subscribing.txt = Přidání
+basereportviewmodel.reportstatus.downloading.txt = Stahování
+basereportviewmodel.reportstatus.unavailable.txt = Není k dispozici
+basereportviewmodel.reportstatus.normal.txt = Normální
+basereportviewmodel.reportstatus.new.txt = Nový
+basereportviewmodel.reportstatus.updated.txt = Aktualizováno
+
+# commons
+ok.txt = OK
+close.txt = Zavřít
+
+# report sort order list
+reportsortorderlist.title.txt = SEŘADIT PODLE:
+
+# collection date groupings
+collection.dategroup.today = Dnes
+collection.dategroup.yesterday = Včera
+collection.dategroup.thisweek = Tento týden
+collection.dategroup.unavailable = Nedatováno
+
+# User names
+user.name.not.found = není k dispozici
+user.name.sas = SAS
+user.name.same.user = Já
+
+# Comments
+comment.no.subject = (bez předmětu)
+
+# Folders
+folder.my.folder.label.txt = Moje složka
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+com.sas.graphics.gtl.core.itemRenderer.NodeLinkDiagramItem.LABELVALUE.txt= {0}:
+
+com.sas.graphics.gtl.nodeLinkDiagram.lineageDiagram.txt=Diagram následnictví
+
+com.sas.graphics.gtl.nodeLinkDiagram.networkDiagram.txt=Síťový diagram
+
+com.sas.graphics.gtl.nodeLinkDiagram.nodeLinkDiagram.txt=Diagram propojení uzlů
+
+com.sas.graphics.gtl.nodeLinkDiagram.pfd.txt=Diagram procesního toku
+
+com.sas.graphics.gtl.nodeLinkDiagram.sankeyDiagram.txt=Sankeyův diagram
+
+com.sas.graphics.gtl.nodeLinkDiagram.treeDiagram.txt=Stromový diagram
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+
+com.sas.graphics.gtl.impl.util.TickValueUtil.TRILLIONS.txt=biliony
+com.sas.graphics.gtl.impl.util.TickValueUtil.BILLIONS.txt=miliardy
+com.sas.graphics.gtl.impl.util.TickValueUtil.MILLIONS.txt=miliony
+com.sas.graphics.gtl.impl.util.TickValueUtil.THOUSANDS.txt=tisíce
+com.sas.graphics.gtl.impl.util.TickValueUtil.TRILLIONTHS.txt=biliontiny
+com.sas.graphics.gtl.impl.util.TickValueUtil.BILLIONTHS.txt=miliardtiny
+com.sas.graphics.gtl.impl.util.TickValueUtil.MILLIONTHS.txt=miliontiny
+com.sas.graphics.gtl.impl.util.TickValueUtil.THOUSANDTHS.txt=tisíciny
+
+com.sas.graphics.gtl.impl.data.Variable.PERCENT_LABEL.txt=Procenta
+com.sas.graphics.gtl.impl.data.Variable.FREQUENCY_LABEL.txt=Frekvence
+
+com.sas.graphics.gtl.impl.legend.SizeLegendRenderer.POSITIVE.txt = Kladný
+com.sas.graphics.gtl.impl.legend.SizeLegendRenderer.NEGATIVE.txt = Záporný
+
+com.sas.graphics.gtl.impl.legend.LayoutGlobalLegendRenderer.LEGEND_DROPPED.txt = Legenda se nezobrazuje kvůli nedostatku místa.
+com.sas.graphics.gtl.impl.legend.LayoutGlobalLegendController.LEGEND_TRUNCATED.txt = Není zobrazena celá legenda.
+
+com.sas.graphics.gtl.missingValueWarning.txt= Tento graf obsahuje chybějící nebo neplatné hodnoty, které nelze správně zobrazit.
+com.sas.graphics.gtl.duplicateKeyFrameWarning.txt=Data v tomto grafu nejsou platná pro animaci. Data nemohou obsahovat žádnou duplikovanou kategorii ani kombinaci datumů.
+
+com.sas.graphics.gtl.scatterPlotMatrix.scatterPlotMatrix.txt=Matice bodového grafu
+
+com.sas.graphics.gtl.impl.DataAnimationRenderer.SLOW.txt = Pomalu
+com.sas.graphics.gtl.impl.DataAnimationRenderer.FAST.txt = Rychle
+com.sas.graphics.gtl.impl.DataAnimationRenderer.NORMAL.txt = Normální
+com.sas.graphics.gtl.impl.DataAnimationRenderer.LOOP.txt = Smyčka
+com.sas.graphics.gtl.impl.DataAnimationRenderer.SPEED.txt = Rychlost
+com.sas.graphics.gtl.impl.DataAnimationRenderer.FORWARD.txt = Vpřed
+com.sas.graphics.gtl.impl.DataAnimationRenderer.BACK.txt = Zpět
+com.sas.graphics.gtl.impl.DataAnimationRenderer.PLAY.txt = Přehrát
+com.sas.graphics.gtl.impl.DataAnimationRenderer.PAUSE.txt = Pozastavit
+com.sas.graphics.gtl.impl.DataAnimationRenderer.MENU.txt = Nabídka
+
+com.sas.graphics.gtl.CELLS_ARE_TOO_SMALL.txt=Příliš mnoho řádků mřížky nebo sloupců.
+com.sas.graphics.gtl.impl.renderer.CELL_HEADER_LABEL_EQUALS_VALUE.fmt.txt = {0} = {1}
+
+com.sas.graphics.gtl.impl.OverviewAxisRenderer.LOWER_LIMIT.fmt.txt = Přehled osy: Levý/pravý úchyt spodního limitu stránky s podrobnostmi, hodnota: {0}, pro zvýšení nebo snížení použijte klávesy se šipkami.
+com.sas.graphics.gtl.impl.OverviewAxisRenderer.UPPER_LIMIT.fmt.txt = Přehled osy: Levý/pravý úchyt horního limitu stránky s podrobnostmi, hodnota: {0}, pro zvýšení nebo snížení použijte klávesy se šipkami.
+com.sas.graphics.gtl.impl.OverviewAxisRenderer.DETAIL_RANGE.fmt.txt = Přehled osy: Stránka s podrobnostmi, hodnota: {0} až {1}, pro přesun rozsahu podrobností použijte klávesy se šipkami.
+# UX recommends two (non-breaking) spaces before and after 'to' for English
+com.sas.graphics.gtl.RANGE_TO.txt= {0}  až  {1}
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+com.sas.graphics.gtl.layoutOverlay.waterfallChart.txt=Vodopádový diagram
+com.sas.graphics.gtl.layoutOverlay.waterfallChart.finalBar.txt=Koncový
+com.sas.graphics.gtl.layoutOverlay.waterfallChart.initialBar.txt=Počáteční
+com.sas.graphics.gtl.layoutOverlay.waterfallChart.legendEntry.increasing.txt=Stoupající
+com.sas.graphics.gtl.layoutOverlay.waterfallChart.legendEntry.decreasing.txt=Klesající
+com.sas.graphics.gtl.layoutOverlay.waterfallChart.legendEntry.noChange.txt=Beze změny
+
+com.sas.graphics.gtl.layoutOverlay.horizontal.txt=Vodorovně
+com.sas.graphics.gtl.layoutOverlay.vertical.txt=Svisle
+
+com.sas.graphics.gtl.layoutOverlay.barchart.txt=Sloupcový graf
+com.sas.graphics.gtl.layoutOverlay.barchart.warning.duplicate.bar.classification.values.txt=Ve sloupcovém grafu došlo k duplicitní klasifikaci datových hodnot sloupce a nelze ho zobrazit.
+
+com.sas.graphics.gtl.layoutOverlay.bandPlot.txt=Pásmový graf
+
+com.sas.graphics.gtl.layoutOverlay.boxPlot.txt=Krabicový graf
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.MAX.txt=Maximální vous
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.MEAN.txt=Střední hodnota
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.MEDIAN.txt=Medián
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.MIN.txt=Minimální vous
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.N.txt=N
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.Q1.txt=První kvartil
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.Q3.txt=Třetí kvartil
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.STD.txt=Směrodatná odchylka dat
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.RANGE.txt=Rozsah
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.IQR.txt=Mezikvartilové rozpětí
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.OUTLIER.txt=Pozorování vně spodní a horní hranice
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.FAROUTLIER.txt=Pozorování vně spodní a horní vzdálené hranice
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.BOXWIDTH.txt=Šířka krabice
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.TRUE_MAX.txt=Maximum včetně extrémních hodnot
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.TRUE_MIN.txt=Minimum včetně extrémních hodnot
+
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.MAX.txt=Maximum
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.MEAN.txt=Střední hodnota
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.MEDIAN.txt=Medián
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.MIN.txt=Minimum
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.N.txt=NoObs
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.Q1.txt=Q1
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.Q3.txt=Q3
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.STD.txt=Stand.
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.RANGE.txt=Rozsah
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.IQR.txt=MEZIKVARTILOVÉ ROZPĚTÍ
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.DATA_MIN.txt=DataMin
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.DATA_MAX.txt=DataMax
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.TRUE_MIN.txt=TrueMin
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.TRUE_MAX.txt=TrueMax
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.SUMWGT.txt=SumWgt
+
+com.sas.graphics.gtl.layoutOverlay.bubblePlot.txt=Bublinový graf
+
+com.sas.graphics.gtl.layoutOverlay.contourPlot.txt=Obrysový graf
+com.sas.graphics.gtl.layoutOverlay.contourPlot.ContourPlotRenderState.Warn.FlatContour.txt=Data nelze zobrazit, protože minimální a maximální hodnoty odezvy jsou stejné.
+com.sas.graphics.gtl.layoutOverlay.contourPlot.ContourPlotRenderState.Warn.InvalidDataContour.txt=Data nelze zobrazit, protože jsou neplatná nebo protože neobsahují dostatek hodnot.
+
+com.sas.graphics.gtl.layoutOverlay.ellipseParm.txt=Elipsa
+
+com.sas.graphics.gtl.layoutOverlay.gauge.txt=Měřítko
+
+com.sas.graphics.gtl.layoutOverlay.heatBox.txt=Teplotní pole
+
+com.sas.graphics.gtl.layoutOverlay.heatMap.txt=Teplotní mapa
+
+com.sas.graphics.gtl.layoutOverlay.highLowPlot.txt=Graf vysokých a nízkých hodnot
+
+com.sas.graphics.gtl.layoutOverlay.histogram.txt=Histogram
+
+com.sas.graphics.gtl.layoutOverlay.lineChart.txt=Čárový graf
+com.sas.graphics.gtl.layoutOverlay.lineChart.LineChartRenderState.Warn.UNABLE_TO_STACK_NEGATIVE_VALUES.txt=Čáry nelze skládat v důsledku záporných hodnot.
+com.sas.graphics.gtl.layoutOverlay.lineChart.LineChartRenderState.Warn.UNABLE_TO_STACK_NEGATIVE_VALUES1.txt=Upozornění: Nelze skládat čáry
+com.sas.graphics.gtl.layoutOverlay.lineChart.LineChartRenderState.Warn.UNABLE_TO_STACK_NEGATIVE_VALUES2.txt=z důvodu záporných hodnot.
+com.sas.graphics.gtl.layoutOverlay.lineChart.LineChartRenderState.Warn.UNABLE_TO_STACK_MISSING_VALUES2.txt=z důvodu chybějících hodnot.
+com.sas.graphics.gtl.layoutOverlay.lineChart.LineChartRenderState.Warn.DUPLICATE_LINE_CLASSIFICATION_VALUES.txt=U čárového grafu došlo k duplicitě klasifikace datových hodnot a nelze jej zobrazit.
+
+com.sas.graphics.gtl.layoutOverlay.mapLayer.txt=Mapa
+
+com.sas.graphics.gtl.layoutOverlay.mapRegionLayer.txt=Mapa regionu
+com.sas.graphics.gtl.layoutOverlay.mapLineLayer.txt=Liniová vrstva mapy
+com.sas.graphics.gtl.layoutOverlay.overlayDataInset.txt=Vložení dat překryvu
+
+com.sas.graphics.gtl.layoutOverlay.mixed.txt=Smíšený typ grafu
+
+com.sas.graphics.gtl.layoutOverlay.needlePlot.txt=Jehlový graf
+
+com.sas.graphics.gtl.layoutOverlay.networkPlot.txt=Síťový graf
+
+com.sas.graphics.gtl.layoutOverlay.onMap.txt={0} na mapě
+
+com.sas.graphics.gtl.layoutOverlay.mapWithRegion.txt=Mapa s mapou regionu
+
+com.sas.graphics.gtl.layoutOverlay.onMapRegion.txt={0} na mapě regionu
+
+com.sas.graphics.gtl.layoutOverlay.onMapWtihRegion.txt={0} na mapě s mapou regionu
+
+com.sas.graphics.gtl.layoutOverlay.referenceLine.txt=Referenční čára
+
+com.sas.graphics.gtl.overlayDataInset.cell.max.fmt.txt=Některá data jsou zkrácena, protože objekt dokáže zobrazit jen {0} vložených grafů.
+
+com.sas.graphics.gtl.layoutOverlay.seriesPlot.AbstractSeriesPlotRenderer.Warn.UNABLE_TO_STACK_NEGATIVE_VALUES.txt=Čáry nelze skládat v důsledku záporných hodnot.
+com.sas.graphics.gtl.layoutOverlay.seriesPlot.AbstractSeriesPlotRenderer.Warn.UNABLE_TO_STACK_NEGATIVE_VALUES1.txt=Upozornění: Nelze skládat čáry
+com.sas.graphics.gtl.layoutOverlay.seriesPlot.AbstractSeriesPlotRenderer.Warn.UNABLE_TO_STACK_NEGATIVE_VALUES2.txt=z důvodu záporných hodnot.
+
+com.sas.graphics.gtl.layoutOverlay.scatterPlot.txt=Bodový graf
+com.sas.graphics.gtl.layoutOverlay.scatterPlotMatrix.txt=Matice bodového grafu
+
+com.sas.graphics.gtl.layoutOverlay.scheduleChart.txt=Graf plánování
+
+com.sas.graphics.gtl.layoutOverlay.stepPlot.txt=Stupňový graf
+
+com.sas.graphics.gtl.layoutOverlay.timeSeriesPlot.AbstractSeriesPlotRenderer.Warn.DUPLICATE_CLASSIFICATION_VALUES.txt=V grafu časových řad došlo k duplicitě klasifikace datových hodnot a nelze ho zobrazit.
+
+com.sas.graphics.gtl.layoutOverlay.vectorPlot.txt=Vektorový graf
+
+com.sas.graphics.gtl.layoutOverlay.Overlay.Warn.NUMBER_OF_LABELS_EXCEED_MAXIMUM_THRESHOLD.txt=Značky se nezobrazí, protože byl překročen práh.
+com.sas.graphics.gtl.layoutOverlay.Overlay.Warn.INVALID_HISTOGRAM_X_VALUES_WARNING.txt = Neplatné hodnoty X histogramu. Všechny hodnoty X jsou stejné nebo všechny chybí.
+com.sas.graphics.gtl.layoutOverlay.waterfallChart.WaterfallChartRenderState.Warn.DUPLICATE_CLASSIFICATION_VALUES.txt=U vodopádového grafu došlo k duplicitě klasifikace datových hodnot a nelze jej zobrazit.
+com.sas.graphics.gtl.layoutOverlay.waterfallChart.DUPLICATE_FINAL_BAR_VALUE=Označení koncového sloupce je stejné jako u datové hodnoty.
+com.sas.graphics.gtl.layoutOverlay.waterfallChart.DUPLICATE_INITIAL_BAR_VALUE=Označení počátečního sloupce je stejné jako u datové hodnoty.
+
+com.sas.graphics.gtl.layoutOverlay.heatBoxParm.BinTipEnum.FREQUENCY.txt=Frekvence
+com.sas.graphics.gtl.layoutOverlay.heatBoxParm.BinTipEnum.LOWER.txt=(spodní)
+com.sas.graphics.gtl.layoutOverlay.heatBoxParm.BinTipEnum.UPPER.txt=(horní)
+
+com.sas.graphics.gtl.layoutOverlay.seriesPlot.txt=Řadový graf
+
+com.sas.graphics.gtl.layoutOverlay.scatterPlot.numItemsInCluster.txt=Počet položek
+
+com.sas.graphics.gtl.layoutOverlay.textPlot.txt=Textový graf
+
+com.sas.graphics.gtl.layoutOverlayMap.OpenStreetMapProvider.Copyright.txt=Map data © OpenStreetMap
+com.sas.graphics.gtl.layoutOverlayMap.Pin.Name.txt=Název
+com.sas.graphics.gtl.layoutOverlayMap.Pin.Name.default.fmt.txt=Bod umístění {0}
+com.sas.graphics.gtl.layoutOverlayMap.Pin.Address.txt=Adresa
+com.sas.graphics.gtl.layoutOverlayMap.route.From.txt = Z
+com.sas.graphics.gtl.layoutOverlayMap.route.To.txt = do
+com.sas.graphics.gtl.layoutOverlayMap.route.Distance.txt = Vzdálenost
+com.sas.graphics.gtl.layoutOverlayMap.route.Time.txt = Čas
+com.sas.graphics.gtl.layoutOverlayMap.route.Waypoint.txt = Průchozí bod trasy
+com.sas.graphics.gtl.layoutOverlayMap.route.Begin.txt = Začátek trasy
+com.sas.graphics.gtl.layoutOverlayMap.route.End.txt = Konec trasy
+com.sas.graphics.gtl.layoutOverlayMap.route.type.direct.txt = Rovná čára
+com.sas.graphics.gtl.layoutOverlayMap.route.type.driveDistance.txt = Nejkratší vzdálenost jízdy
+com.sas.graphics.gtl.layoutOverlayMap.route.type.driveTime.txt = Nejrychlejší doba jízdy
+com.sas.graphics.gtl.layoutOverlayMap.route.type.walkDistance.txt = Nejkratší vzdálenost chůze
+com.sas.graphics.gtl.layoutOverlayMap.route.type.walkTime.txt = Nejrychlejší doba chůze
+com.sas.graphics.gtl.layoutOverlayMap.route.type.truckDistance.txt = Nejkratší vzdálenost přepravy
+com.sas.graphics.gtl.layoutOverlayMap.route.type.truckTime.txt = Nejrychlejší doba přepravy
+com.sas.graphics.gtl.layoutOverlayMap.route.type.txt = Režim stanovení trasy
+com.sas.graphics.gtl.layoutOverlayMap.selection.type.txt = Metoda výběru
+com.sas.graphics.gtl.layoutOverlayMap.buffer.Breaks.txt = Přestávky
+com.sas.graphics.gtl.layoutOverlayMap.buffer.time.fmt.txt = {0} min
+com.sas.graphics.gtl.layoutOverlayMap.buffer.miles.fmt.txt = {0} mi
+com.sas.graphics.gtl.layoutOverlayMap.buffer.km.fmt.txt = {0} km
+com.sas.graphics.gtl.layoutOverlayMap.buffer.meters.fmt.txt = {0} m
+com.sas.graphics.gtl.layoutOverlayMap.clusteredDataBounds.txt = Reclusterování pozastaveno.  Aktuální hranice mapy překračují prostor souřadnic dat.
+com.sas.graphics.gtl.layoutOverlayMap.region.warning.multiple.classification.values.txt=Některé regiony na mapě mají vícečetné klasifikační hodnoty.  Je zobrazena pouze první hodnota.
+com.sas.graphics.gtl.layoutOverlayMap.lines.warning.multiple.classification.values.txt=Některé čáry na mapě mají vícečetné klasifikační hodnoty.  Je zobrazena pouze první hodnota.
+
+com.sas.graphics.gtl.layoutOverlayPolar.PolarRadarChart.PolarRadarChartRenderState.Warn.UNABLE_TO_STACK_NEGATIVE_VALUES.txt=Radary nelze skládat v důsledku záporných hodnot.
+com.sas.graphics.gtl.layoutOverlayPolar.PolarRadarChart.PolarRadarChartRenderState.Warn.UNABLE_TO_FILL_MISSING_VALUES.txt=Styly výplně vyžadují nechybějící datové body pro všechny osy.
+com.sas.graphics.gtl.layoutOverlayPolar.PolarRadarChart.PolarRadarChartRenderState.Warn.LESS_THAN_THREE_CATEGOTY_VALUES.txt=Datová položka, která je přiřazena k roli Kategorie, musí mít alespoň tři odlišné hodnoty.
+com.sas.graphics.gtl.layoutOverlayPolar.PolarRadarChart.PolarRadarChartRenderState.Warn.LESS_THAN_THREE_RESPONSE_ROLES.txt=Pokud role Kategorie není přiřazena, musí být k roli Osa přiřazeny alespoň tři ukazatele.
+com.sas.graphics.gtl.layoutOverlayPolar.PolarRadarChart.PolarRadarChartRenderState.Warn.RESPONSE_ALL_MISSING_VALUES.txt=Nejméně jeden ukazatel byl odebrán z role Osa, protože všechny řádky v aktuálním dotazu obsahují chybějící hodnoty.
+com.sas.graphics.gtl.layoutOverlayPolar.PolarRadarChart.PolarRadarChartRenderState.Warn.DUPLICATE_CLASSIFICATION_VALUES.txt=Graf obsahuje duplicitní hodnoty klasifikace a nelze ho zobrazit.
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+#Log messages for framework
+com.sas.graphics.gtl.impl.axis.AbstractAxisRenderer.INVALIDTIMEAXIS.txt=Časová osa nemůže podporovat formát z dat grafu. Typ osy bude změněn na LINEÁRNÍ.
+com.sas.graphics.gtl.impl.axis.AbstractAxisRenderer.INVALIDLOGAXIS.txt=Osa protokolu nemůže podporovat nulové nebo záporné hodnoty osy pro data grafu nebo v důsledku výchozí nebo přidělené hodnoty BASELINEINTERCEPT. Typ osy bude změněn na LINEÁRNÍ.
+com.sas.graphics.gtl.impl.axis.AbstractAxisRenderer.INVALIDLOGVIEWPORT.fmt.txt=Osa protokolu nemůže obsahovat nulové nebo záporné hodnoty pro {0} ({1}). Bude použita výchozí možnost pro {0}.
+com.sas.graphics.gtl.impl.axis.AbstractAxisRenderer.INVALIDVIEWPORT.fmt.txt=Hodnota VIEWMAX ({0}) musí být vyšší než hodnota VIEWMIN ({1}). Budou použity výchozí hodnoty obou možností.
+com.sas.graphics.gtl.impl.axis.AbstractAxisRenderer.INVALIDVIEWPORTMAX.fmt.txt=Hodnota VIEWMAX ({0}) je nižší než datové minimum. Bude použita výchozí hodnota možnosti VIEWMAX.
+com.sas.graphics.gtl.impl.axis.AbstractAxisRenderer.INVALIDVIEWPORTMIN.fmt.txt=Hodnota VIEWMIN ({0}) je vyšší než datové minimum. Bude použita výchozí hodnota možnosti VIEWMIN.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayLayoutPane.INCOMPATIBLEOVERLAY.fmt.txt={0} příkaz je konfliktní s typem osy. Graf nebude vykreslen.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayLayoutPane.INCOMPATIBLEINNERMARGINOVERLAY.fmt.txt={0} příkaz nelze vložit do bloku INNERMARGIN. Graf nebude vykreslen.
+com.sas.graphics.gtl.impl.renderer.ContentLayoutPane.LEGENDAREAMAX.fmt.txt=Legenda byla vynechána kvůli omezené velikosti. Aby se zobrazila legenda, nastavte LEGENDAREAMAX na větší hodnotu.
+com.sas.graphics.gtl.impl.renderer.layoutOverlay.highlowPlot.HighLowPlotRenderer.HIGHLOWDATA.txt=Schodový graf nelze správně vykreslit. Sloupce pro NÍZKÉ hodnoty vyšší než VYSOKÁ hodnota nebudou vykresleny.
+com.sas.graphics.gtl.impl.renderer.layoutOverlay.highlowPlot.HighLowPlotRenderer.ENDCAPDISPLAY.txt=ENDCAPDISPLAY={0} není podporován, pokud je použit TYPE=BAR. Možnost bude ignorována.
+com.sas.graphics.gtl.impl.renderer.layoutOverlay.heatBoxParm.HeatBoxParmRenderer.INVALIDBOX.txt=Data polí jsou neúplná nebo neplatná. Některá pole nebudou vykreslena.
+com.sas.graphics.gtl.impl.renderer.layoutOverlay.bubblePlot.BubblePlotRenderer.BUBBLERADIUSMINMAX.txt=BUBBLERADIUSMAX musí být vyšší než BUBBLERADIUSMIN. Budou použity výchozí hodnoty obou možností.
+com.sas.graphics.gtl.impl.renderer.layoutOverlay.barchart.note.error.bar.invalid.values.txt=Chybové pruhy jsou potlačeny, pokud je použita možnost GROUPDISPLAY=STACK nebo GROUP100=POSITIVE|MAGNITUDE
+com.sas.graphics.gtl.impl.renderer.layoutOverlay.barChart.BarChartRenderer.BASELINEINTERCEPT.txt=BASELINEINTERCEPT=možnost je ignorována, když je použita možnost GROUPDISPLAY=STACK nebo GROUP100=POSITIVE|MAGNITUDE. Základna bude nakreslena na výchozí hodnotě.
+com.sas.graphics.gtl.impl.renderer.layoutOverlay.waterfallChart.note.duplicateInitialBar.txt=Hodnota počátečního sloupce „INITIALBARTICKVALUE={0}“ duplikuje hodnotu kategorie.
+com.sas.graphics.gtl.impl.renderer.layoutOverlay.waterfallChart.note.duplicateFinalBar.txt=Hodnota koncového sloupce „FINALBARTICKVALUE={0}“ duplikuje hodnotu kategorie.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.REQUIREDROLEMISSING.fmt.txt=Požadované {1} v příkazu {0} chybí. Graf nebude vykreslen.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.REQUIREDROLEINVALID.fmt.txt=Požadované {1} ({2}) v příkazu {0} neplatí. Graf nebude vykreslen.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.REQUIREDDATETIMEROLEINVALID.fmt.txt=Požadované {1} ({2}) v příkazu {0} neplatí. Možnost očekává sloupec data s časem. Graf nebude vykreslen.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.REQUIREDPOSROLEINVALID.fmt.txt=Požadované {1} ({2}) v příkazu {0} neplatí. Možnost očekává v příkazu nenulové kladné hodnoty. Graf nebude vykreslen.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.REQUIREDNONEGROLEINVALID.fmt.txt=Požadované {1} ({2}) v příkazu {0} neplatí. Možnost neočekává sloupec se zápornou hodnotou. Graf nebude vykreslen.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.REQUIREDNUMROLEINVALID.fmt.txt=Požadované {1} ({2}) v příkazu {0} neplatí. Možnost očekává sloupec s číselnými hodnotami. Graf nebude vykreslen.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.REQUIREDSTRINGROLEINVALID.fmt.txt=Požadované {1} ({2}) v příkazu {0} neplatí. Možnost očekává sloupec s hodnotami řetězce. Graf nebude vykreslen.
+com.sas.graphics.gtl.impl.renderer.AbstractAnnotationRenderer.INVALIDDRAWSPACE.fmt.txt={0} je neplatný. Příkaz kreslení byl zahozen.
+
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.NONREQUIREDROLEINVALID.fmt.txt={1} ({2}) v příkazu {0} neplatí. Přiřazení bude ignorováno.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.NONREQUIREDPOSROLEINVALID.fmt.txt={1} ({2}) v příkazu {0} neplatí. Možnost očekává v příkazu nenulové kladné hodnoty. Přiřazení bude ignorováno.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.NONREQUIREDNONEGROLEINVALID.fmt.txt={1} ({2}) v příkazu {0} neplatí. Možnost neočekává sloupec se zápornou hodnotou. Přiřazení bude ignorováno.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.NONREQUIREDNUMROLEINVALID.fmt.txt={1} ({2}) v příkazu {0} neplatí. Možnost očekává sloupec s číselnými hodnotami. Přiřazení bude ignorováno.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.NONREQUIREDSTRINGROLEINVALID.fmt.txt={1} ({2}) v příkazu {0} neplatí. Možnost očekává sloupec s hodnotami řetězce. Přiřazení bude ignorováno.
+com.sas.graphics.gtl.impl.renderer.DataRenderer.UNKNOWN.txt=Není známo
+com.sas.graphics.gtl.impl.renderer.layoutOverlay.dropLine.DropLineRenderer.INCOMPATIBLE_XY_LABEL.txt=Počet hodnot pro (X, Y) a role OZNAČENÍ se liší. Označení se nezobrazí.
+
+com.sas.graphics.gtl.impl.util.ImageMapUtilities.tooltip.fmt.txt=Informace k datům HTML byly vypnuty, protože bylo dosaženo mezní hodnoty. Můžete nastavit TIPMAX={0} v příkazu ODS GRAPHICS k vytváření informací k datům.
+
+com.sas.graphics.gtl.layoutRegion.piechart.Warning.txt= Koláčový graf obsahuje některé záporné nebo chybějící hodnoty, které nelze zobrazit.
+com.sas.graphics.gtl.layoutRegion.piechart.allZeroOrNegativeWarning.txt= Kruhový diagram obsahuje samé nuly nebo záporné hodnoty, takže nemůže být zobrazen.
+com.sas.graphics.gtl.layoutRegion.piechart.smallMultipleSomeNegativeOrMissingWarning.txt= Některé koláčové grafy obsahují některé záporné nebo chybějící hodnoty, které nelze zobrazit.
+com.sas.graphics.gtl.layoutRegion.piechart.smallMultipleAllZeroOrNegativeWarning.txt= Některé koláčové grafy obsahují pouze nulové nebo záporné hodnoty a nelze je zobrazit.
+
+com.sas.graphics.gtl.xml.ModelParser.invalidXmlAttributeValue.fmt.txt={0}={1} je neplatné. Bude použit výchozí.
+com.sas.graphics.gtl.impl.util.GTLSASLogger.minCannotBeGreaterThanMax.fmt.txt={0} nesmí být větší než {1}. Možnosti {0} a {1} jsou ignorovány.
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+com.sas.graphics.gtl.layoutRegion.iciclePlot.txt=Rampouchový graf
+
+com.sas.graphics.gtl.layoutRegion.pieChart.PieOtherSliceOptions.LABEL.txt=Jiné
+
+com.sas.graphics.gtl.layoutRegion.piechart.Warning.txt= Koláčový graf obsahuje některé záporné nebo chybějící hodnoty, které nelze zobrazit.
+com.sas.graphics.gtl.layoutRegion.piechart.allZeroOrNegativeWarning.txt= Kruhový diagram obsahuje samé nuly nebo záporné hodnoty, takže nemůže být zobrazen.
+com.sas.graphics.gtl.layoutRegion.piechart.smallMultipleSomeNegativeOrMissingWarning.txt= Některé koláčové grafy obsahují některé záporné nebo chybějící hodnoty, které nelze zobrazit.
+com.sas.graphics.gtl.layoutRegion.piechart.smallMultipleAllZeroOrNegativeWarning.txt= Některé koláčové grafy obsahují pouze nulové nebo záporné hodnoty a nelze je zobrazit.
+com.sas.graphics.gtl.layoutRegion.piechart.Warn.DUPLICATE_CLASSIFICATION_VALUES.txt= U výsečového grafu došlo k duplicitě klasifikace datových hodnot a nelze jej zobrazit.
+com.sas.graphics.gtl.layoutRegion.insetPiechart.Warn.DUPLICATE_CLASSIFICATION_VALUES.txt= U některých výsečových grafů došlo k duplicitě klasifikace datových hodnot a nelze je zobrazit.
+
+
+com.sas.graphics.gtl.layoutRegion.treeMap.Warning.txt=Dlaždicový graf obsahuje nulové nebo záporné hodnoty, které nelze zobrazit. Byly převedeny na frekvenční hodnoty.
+com.sas.graphics.gtl.layoutRegion.treeMap.AllMissingWarning.txt=Dlaždicový graf obsahuje chybějící hodnoty, které nelze zobrazit. Byly převedeny na frekvenční hodnoty.
+com.sas.graphics.gtl.layoutRegion.treeMap.Warn.DUPLICATE_CLASSIFICATION_VALUES.txt=V dlaždicovém grafu došlo k duplicitní klasifikaci datových hodnot a nelze ho zobrazit.
+com.sas.graphics.gtl.layoutRegion.treeMap.Warn.MISSING_SIZE_VALUES.txt=Dlaždicový graf obsahuje chybějící hodnoty rozměrů, které nelze řádně zobrazit.
+
+com.sas.graphics.gtl.layoutRegion.wordCloud.termWarning.txt= Nezobrazují se všechny termíny.
+com.sas.graphics.gtl.layoutRegion.wordCloud.missingValueWarning.txt= Cloud slov obsahuje chybějící nebo neplatné hodnoty, které nelze správně zobrazit.
+
+com.sas.graphics.gtl.layoutRegion.gauge.valueoutofbound.txt= Měřítko obsahuje hodnotu mimo rozsah.
+com.sas.graphics.gtl.layoutRegion.gauge.targetoutofbound.txt= Měřítko obsahuje target mimo rozsah, který se nezobrazuje.
+
+com.sas.graphics.gtl.layoutRegion.nld.missingValueWarning.txt= Tento diagram obsahuje chybějící nebo neplatné hodnoty, které nelze správně zobrazit.
+
+com.sas.graphics.gtl.layoutRegion.keyValue.txt=Hodnota klíče
+com.sas.graphics.gtl.layoutRegion.keyValue.duplicateValue.txt=V hodnotě klíče došlo k duplicitním hodnotám kategorie a nelze ho zobrazit.
+com.sas.graphics.gtl.layoutRegion.gauge.duplicateValue.txt=V měřítku došlo k duplicitním hodnotám kategorie a nelze ho zobrazit.
+
+// KeyValue labels shown on the component
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.SUM.txt=Součet
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.MEAN.txt=Průměr
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.FREQ.txt=Čet.
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.PCT.txt=Pct.
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.FIRST.txt=První
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.MIN.txt=Min.
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.MAX.txt=Max.
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.MEDIAN.txt=Mdn.
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.FREQUENCY_WITH_MISSING.txt=Čet. u chybějících
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.COUNT_DISTINCT.txt=Odlišný
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.STANDARD_DEVIATION.txt=SD
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.STANDARD_ERROR.txt=SE
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.VARIANCE.txt=Odchylka
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.MODE.txt=Režim
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.COUNT_MISSING.txt=Chybějící
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.FIRST_QUARTILE.txt=Q1
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.THIRD_QUARTILE.txt=Q3
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.SKEW.txt=Šikmost
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.KURTOSIS.txt=Špičatost
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.COEFFICIENT_OF_VARIATION.txt=CV
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.UNCORRECTED_SUM_OF_SQUARES.txt=USS
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.CORRECTED_SUM_OF_SQUARES.txt=CSS
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.T_STATISTIC.txt=t
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.P_VALUE.txt=p
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.UNKNOWN.txt=Neznámé
+
+// KeyValue tooltip will contain longer value for statistic
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.SUM.txt=Součet
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.MEAN.txt=Průměr
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.FREQ.txt=Frekvence
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.PCT.txt=Procenta
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.FIRST.txt=První
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.MIN.txt=Minimum
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.MAX.txt=Maximum
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.MEDIAN.txt=Medián
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.FREQUENCY_WITH_MISSING.txt=Frekvence s chybějícími
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.COUNT_DISTINCT.txt=Počet odlišných
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.STANDARD_DEVIATION.txt=Směrodatná odchylka
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.STANDARD_ERROR.txt=Standardní chyba
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.VARIANCE.txt=Rozptyl
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.MODE.txt=Režim
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.COUNT_MISSING.txt=Počet chybějících
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.FIRST_QUARTILE.txt=První kvartil
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.THIRD_QUARTILE.txt=Třetí kvartil
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.SKEW.txt=Šikmost
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.KURTOSIS.txt=Špičatost
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.COEFFICIENT_OF_VARIATION.txt=Variační koeficient
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.UNCORRECTED_SUM_OF_SQUARES.txt=Nekorigovaný součet druhých mocnin
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.CORRECTED_SUM_OF_SQUARES.txt=Korigovaný součet druhých mocnin
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.T_STATISTIC.txt=Statistika T
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.P_VALUE.txt=P-hodnota
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.UNKNOWN.txt=Neznámá statistika
+
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.STATTIPLABEL.txt=Statistika
+com.sas.graphics.gtl.layoutRegion.keyValue.NoTextFits.txt=Text nelze zobrazit. Nejsou nastaveny platné role nebo je kontejner příliš malý.
+
+com.sas.graphics.gtl.layoutRegion.kpiChart.txt=Graf KPI
+
+com.sas.graphics.gtl.layoutRegion.parallelCoordinatesPlot.txt=Graf s paralelními souřadnicemi
+com.sas.graphics.gtl.layoutRegion.pcp.INVALID_BIN_METADATA.txt = Neplatná specifikace metadat binu.
+com.sas.graphics.gtl.layoutRegion.pcp.INVALID_BIN_OPTIONS.txt = Zadána neplatná operace binu.
+
+com.sas.graphics.gtl.layoutRegion.pieChart.txt=Koláčový graf
+
+com.sas.graphics.gtl.layoutRegion.treeMap.txt=Dlaždicový graf
+
+com.sas.graphics.gtl.layoutRegion.wordCloud.txt=Cloud slov
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+#
+# sas_graphbuilder_resources.properties
+#
+# en_US
+#
+
+graph.txt = Graf
+
+axisOptions.txt = Osa
+
+# Data Visualizations
+dataVisualizations.BarChart.txt = Sloupcový graf
+dataVisualizations.WaterfallChart.txt = Vodopádový graf
+dataVisualizations.LineChart.txt = Čárový graf
+dataVisualizations.PieChart.txt = Koláčový graf
+dataVisualizations.ScheduleChart.txt = Graf plánování
+dataVisualizations.ScatterPlot.txt = Bodový graf
+dataVisualizations.TimeSeriesPlot.txt = Graf časových řad
+dataVisualizations.BubblePlot.txt = Bublinový graf
+dataVisualizations.BandPlot.txt = Pásmový graf
+dataVisualizations.NeedlePlot.txt = Jehlový graf
+dataVisualizations.StepPlot.txt = Stupňový graf
+dataVisualizations.SeriesPlot.txt = Řadový graf
+dataVisualizations.VectorPlot.txt = Vektorový graf
+dataVisualizations.Treemap.txt = Dlaždicový graf
+dataVisualizations.TreeMap.txt = Dlaždicový graf
+dataVisualizations.LayoutDataMatrix.txt = Zaměřené na data
+dataVisualizations.MapLayer.txt = Geografická mapa
+dataVisualizations.MapRegionLayer.txt = Regionový graf (pouze geografie)
+dataVisualizations.ContourPlot.txt = Obrysový graf (pouze geografie)
+dataVisualizations.MapRegionLayer.titleInReport.txt = Regionový graf
+dataVisualizations.ContourPlot.titleInReport.txt = Obrysový graf
+
+# Proxies
+proxies.label.alignment.txt = Zarovnání
+proxies.label.arrangement.txt = Uspořádání
+proxies.label.arrowHeads.txt = Šipky
+proxies.label.arrowHeadShape.txt = Tvar
+proxies.label.attrPriority.txt = Obrácení stylu datového prvku
+proxies.label.axisLabel.txt = Štítek osy
+proxies.label.axisLine.txt = Čára osy
+proxies.label.background.txt = Pozadí
+proxies.label.backgroundColor.txt = Barva pozadí
+proxies.label.barLabelColor.txt = Barva označení sloupce
+proxies.label.baselineStyle.txt = Styl Baseline
+proxies.label.border.txt = Ohraničení
+proxies.label.breakOnMissingValues.txt = Přerušit u chybějící hodnoty
+proxies.label.categoricalValuesOverlapHandling.txt = Správa překryvů kategorických hodnot
+proxies.label.colorByValueChangeDirection.txt = Barva dle směru změny hodnoty
+proxies.label.combineIntoOther.txt = Zkombinovat vyloučené buňky do „Všech ostatních“
+proxies.label.connectLines.txt = Spojit čáry
+proxies.label.connectOrder.txt = Spojit pořadí
+proxies.label.dataLabelCategory.txt = Kategorie
+proxies.label.dataLabelLocation.txt = Místo
+proxies.label.dataLabelPercent.txt = Procento celku
+proxies.label.dataLabels.txt = Označení dat
+proxies.label.dataLabelTextStyle.txt = Styl textu označení dat
+proxies.label.dataLabelValue.txt = Skutečná hodnota
+proxies.label.dataPointAlignment.txt = Zarovnání datového bodu
+proxies.label.decreasingColor.txt = Ustupující barva
+proxies.label.direction.txt = Směr
+proxies.label.donutHole.txt = Donut hole
+proxies.label.donutHoleDiameter.txt = Průměr
+proxies.label.emptyFill.txt = Vyplňte pro regiony bez odezvy
+proxies.label.emptyOutline.txt = Obrys pro regiony bez odezvy
+proxies.label.extractScale.txt = Měřítko extrakce
+proxies.label.fillBaseline.txt = Vyplnit základnu
+proxies.label.fillColor.txt = Barva výplně
+proxies.label.fillStyle.txt = Styl výplně
+proxies.label.finalBar.txt = Finální (kumulativní) sloupec
+proxies.label.fixedBaseline.txt = Pevná základna
+proxies.label.fixedLabel.txt = Pevné označení
+proxies.label.fixedMaximum.txt = Pevné maximum
+proxies.label.fixedMinimum.txt = Pevné minimum
+proxies.label.fixedTitle.txt = Pevný nadpis
+proxies.label.g100.txt = Měřítko seskupení
+proxies.label.gridLines.txt = Čáry mřížky
+proxies.label.groupingStyle.txt = Styl seskupení
+proxies.label.groupLabelBackgroundColor.txt = Barva pozadí označení skupiny
+proxies.label.displayInLegend.txt = Zobrazit v legendě
+proxies.label.increasingColor.txt = Zvýrazňující se barva
+proxies.label.initialBar.txt = Úvodní sloupec
+proxies.label.integersOnly.txt = Pouze celá čísla
+proxies.label.label.txt = Označení
+proxies.label.labelPosition.txt = Poloha označení
+proxies.label.labelTextColor.txt = Barva textu označení
+proxies.label.largestBubble.txt = Největší bublina
+proxies.label.levelIndicator.txt = Indikátor úrovně
+proxies.label.levelIndicatorColor.txt = Barva textu
+proxies.label.line.txt = Čára
+proxies.label.lineColor.txt = Barva čáry
+proxies.label.lineLabelBaseline.horizontal.txt = Vodorovně
+proxies.label.lineLabelBaseline.tangent.txt = Sledovat čáru obrysu
+proxies.label.lineLabelBaseline.txt = Orientace
+proxies.label.lineLabelPosition.middle.txt = Střed
+proxies.label.lineLabelPosition.begin.txt = Začátek
+proxies.label.lineLabelPosition.end.txt = Konec
+proxies.label.lineLabelPosition.txt = Poloha
+proxies.label.linePattern.txt = Vzor čáry
+proxies.label.lineThickness.txt = Tloušťka čáry
+proxies.label.lineStyle.txt = Styl čáry
+proxies.label.markerColor.txt = Barva značky
+proxies.label.markers.txt = Značky
+proxies.label.markerStyle.txt = Styl označení
+proxies.label.measureValuesOverlapHandling.txt = Správa překryvů hodnot ukazatele
+proxies.label.offset.txt = Posun
+proxies.label.otherColor.txt = Jiná barva
+proxies.label.otherMinimum.txt = Minimální počet procent pro „Jiné“
+proxies.label.otherSlice.txt = Vytvořit „Ostatní“ část pro minimální hodnoty.
+proxies.label.outline.txt = Obrys
+proxies.label.outlineStyle.txt = Styl obrysu
+proxies.label.outlineColor.txt = Barva obrysu
+proxies.label.overlaidGraphColors.txt = Vrstvené barvy grafu
+proxies.label.overlapHandling.txt = Správa překryvů
+proxies.label.overviewAxis.txt = Přehled osy
+proxies.label.overviewAxis.contents.txt = Obsah
+proxies.label.overviewAxis.graphElements.txt = Prvky grafu
+proxies.label.pieLabel.txt = Označení koláče
+proxies.label.placement.txt = Umístění
+proxies.label.position.txt = Poloha
+proxies.label.reverseOrder.txt = Obrátit pořadí
+proxies.label.shortFixedLabel.txt = Krátké pevné označení
+proxies.label.showLegend.txt = Zobrazit legendu
+proxies.label.smallestBubble.txt = Nejmenší bublina
+proxies.label.spacing.txt = Mezery
+proxies.label.splitTimeValues.txt = Rozdělit časové hodnoty
+proxies.label.startingPoint.txt = Počáteční bod (stupně)
+proxies.label.textColor.txt = Barva textu
+proxies.label.textStyle.txt = Styl textu
+proxies.label.textStyle.dataLabel.txt = Styl textu označení dat
+proxies.label.textStyle.dataValue.txt = Styl textu hodnot dat
+proxies.label.tickAlignment.txt = Zarovnání
+proxies.label.tickMarks.txt = Fajfky
+proxies.label.tickValues.txt = Zaškrtnout hodnoty
+proxies.label.timeDataInterval.txt = Interval časových dat
+proxies.label.title.txt = Nadpis
+proxies.label.titleTextStyle.txt = Styl textu nadpisu
+proxies.label.transparency.txt = Průhlednost
+proxies.label.value.txt = Hodnota
+proxies.label.visibility.txt = Viditelnost
+proxies.label.visibility.map.txt = Pozadí mapy
+proxies.label.wallColor.txt = Barva zdi
+proxies.label.wallOutline.txt = Obrys zdi
+proxies.label.xAxisRange.txt = Rozsah osy X
+proxies.label.yaxis.txt = Osa Y
+proxies.label.yAxisRange.txt = Rozsah osy Y
+proxies.label.levels.txt = Úrovně
+
+# {0} is an integer used to identify unique colors
+proxies.colors.default.txt = Automatické (default)
+proxies.colors.fill.background.txt = Barva pozadí
+proxies.colors.fill.confidence.txt = Barva Confidence
+proxies.colors.fill.confidence2.txt = 2. barva Confidence
+proxies.colors.fill.dataDecrease.txt = Barva úbytku dat
+proxies.colors.fill.dataIncrease.txt = Barva přírůstku dat
+proxies.colors.fill.error.txt = Barva chyby
+proxies.colors.fill.final.txt = Barva koncové hodnoty
+proxies.colors.fill.graphData.txt = Barva dat {0}
+proxies.colors.fill.headerBackground.txt = Barva pozadí hlavičky
+proxies.colors.fill.initial.txt = Barva počáteční hodnoty
+proxies.colors.fill.kpiOverflow.txt = Barva přetečení KPI
+proxies.colors.fill.kpiRange.txt = Barva rozsahu KPI {0}
+proxies.colors.fill.kpiUnderflow.txt = Barva podtečení KPI
+proxies.colors.fill.legendBackground.txt = Barva pozadí legendy
+proxies.colors.fill.missing.txt = Barva chybějících dat
+proxies.colors.fill.other.txt = Barva ostatních dat
+proxies.colors.fill.outlier.txt = Barva hodnoty mimo
+proxies.colors.fill.overflow.txt = Barva přetečení
+proxies.colors.fill.predictionLimits.txt = Barva limitů predikce
+proxies.colors.fill.underflow.txt = Barva podtečení
+proxies.colors.fill.wallBackground.txt = Barva pozadí zdi
+proxies.colors.line.axis.txt = Barva čáry osy
+proxies.colors.line.border.txt = Barva čáry ohraničení
+proxies.colors.line.box.txt = Barva čáry políčka
+proxies.colors.line.confidence.txt = Barva čáry Confidence
+proxies.colors.line.confidence2.txt = 2. barva čáry Confidence
+proxies.colors.line.connect.txt = Barva spojovací čáry
+proxies.colors.line.dataDecrease.txt = Barva čáry úbytku dat
+proxies.colors.line.dataIncrease.txt = Barva čáry přírůstku dat
+proxies.colors.line.error.txt = Barva čáry chyby
+proxies.colors.line.final.txt = Barva čáry koncové hodnoty
+proxies.colors.line.fit.txt = Barva regresní křivky
+proxies.colors.line.fit2.txt = 2. barva regresní křivky
+proxies.colors.line.graphData.txt = Barva čáry dat {0}
+proxies.colors.line.grid.txt = Barva čáry mřížky
+proxies.colors.line.initial.txt = Barva čáry počáteční hodnoty
+proxies.colors.line.missing.txt = Barva čáry chybějících dat
+proxies.colors.line.other.txt = Barva čáry ostatních dat
+proxies.colors.line.outlier.txt = Barva čáry hodnoty mimo
+proxies.colors.line.outline.txt = Barva čáry obrysu
+proxies.colors.line.overflow.txt = Barva čáry přetečení
+proxies.colors.line.prediction.txt = Barva čáry predikce
+proxies.colors.line.predictionLimits.txt = Barva čáry limitů predikce
+proxies.colors.line.reference.txt = Barva referenční čáry
+proxies.colors.line.underflow.txt = Barva čáry podtečení
+proxies.colors.marker.confidence.txt = Barva značky Confidence
+proxies.colors.marker.confidence2.txt = 2. barva značky Confidence
+proxies.colors.marker.dataDecrease.txt = Barva značky úbytku dat
+proxies.colors.marker.dataIncrease.txt = Barva značky přírůstku dat
+proxies.colors.marker.error.txt = Barva značky chyby
+proxies.colors.marker.final.txt = Barva značky koncové hodnoty
+proxies.colors.marker.fit.txt = Barva značky regrese
+proxies.colors.marker.fit2.txt = 2. barva značky regrese
+proxies.colors.marker.graphData.txt = Barva značky dat {0}
+proxies.colors.marker.initial.txt = Barva značky počáteční hodnoty
+proxies.colors.marker.missing.txt = Barva značky chybějících dat
+proxies.colors.marker.other.txt = Barva značky ostatních dat
+proxies.colors.marker.outlier.txt = Barva značky hodnoty mimo
+proxies.colors.marker.overflow.txt = Barva značky přetečení
+proxies.colors.marker.prediction.txt = Barva značky predikce
+proxies.colors.marker.predictionLimits.txt = Barva značky limitů predikce
+proxies.colors.marker.underflow.txt = Barva značky podtečení
+proxies.colors.text.confidence.txt = Barva fontu Confidence
+proxies.colors.text.confidence2.txt = 2. barva fontu Confidence
+proxies.colors.text.data.txt = Barva fontu dat
+proxies.colors.text.error.txt = Barva fontu chyby
+proxies.colors.text.final.txt = Barva fontu koncové hodnoty
+proxies.colors.text.footnote.txt = Barva fontu zápatí
+proxies.colors.text.graphData.txt = Barva fontu dat {0}
+proxies.colors.text.initial.txt = Barva fontu počáteční hodnoty
+proxies.colors.text.kpiData.txt = Barva fontu dat KPI
+proxies.colors.text.kpiRange.txt = Barva fontu hodnoty rozsahu KPI
+proxies.colors.text.label.txt = Barva fontu označení
+proxies.colors.text.missing.txt = Barva fontu chybějících dat
+proxies.colors.text.other.txt = Barva fontu ostatních dat
+proxies.colors.text.outlier.txt = Barva fontu hodnoty mimo
+proxies.colors.text.overflow.txt = Barva fontu přetečení
+proxies.colors.text.predictionLimits.txt = Barva fontu limitů predikce
+proxies.colors.text.title.txt = Barva fontu nadpisu
+proxies.colors.text.underflow.txt = Barva fontu podtečení
+proxies.colors.text.value.txt = Barva fontu hodnoty
+
+proxies.validation.maxValueBelowMin.txt = Musí být větší než minimální hodnota
+proxies.validation.minValueAboveMax.txt = Musí být menší než maximální hodnota
+proxies.validation.integer.txt = Musí být celé číslo
+proxies.validation.largestBubbleBelowMin.txt = Musí být větší než nejmenší bublina
+proxies.validation.smallestBubbleAboveMax.txt = Musí být menší než největší bublina
+proxies.validation.otherMinimumPercentageRange.txt = Musí být mezi 0% - 50%
+proxies.validation.positive.txt = Musí být kladné
+proxies.validation.between.txt = musí být mezi {0} a {1}
+
+proxies.default.finalBarLabel.txt = Koncové
+proxies.default.initialBarLabel.txt = Úvodní
+
+proxies.alignment.center.txt = Střed
+proxies.alignment.justify.txt = Zdůvodnit
+
+# NOTE: Left and Right should be flipped in RTL translations
+proxies.alignment.left.txt = Vlevo
+proxies.alignment.right.txt = Vpravo
+
+proxies.alignment.sideBySide.txt = Vedle sebe
+proxies.alignment.verticalStack.txt = Svisle nad sebou
+proxies.arrangement.flow.txt = Průběh
+proxies.arrangement.standard.txt = Standardní
+proxies.arrangement.toggle.txt = Změnit
+proxies.arrowHeadShape.barbed.txt = Ostny
+proxies.arrowHeadShape.closed.txt = Zavřené
+proxies.arrowHeadShape.filled.txt = Vyplněné
+proxies.arrowHeadShape.open.txt = Otevřené
+proxies.attrPriority.auto.txt = Automatické
+proxies.attrPriority.color.txt = Nejprve obrátit všechny barvy
+proxies.attrPriority.none.txt = Obrátit všechny atributy
+proxies.axisRange.differentPerCell.txt = Různé podle buněk
+proxies.axisRange.sameEachColumn.txt = Stejné v každém sloupci
+proxies.axisRange.sameEachRow.txt = Stejné v každém řádku
+proxies.axisRange.sameForAll.txt = Stejné ve všech buňkách
+proxies.border.auto.txt = Automatické
+proxies.border.off.txt = Vypnuto
+proxies.border.on.txt = Zapnuto
+proxies.connectOrder.axis.txt = Osa
+proxies.connectOrder.values.txt = Data
+proxies.dataLabelLocation.auto.txt = Automatické
+proxies.dataLabelLocation.callout.txt = Odvolání
+proxies.dataLabelLocation.inside.txt = Uvnitř
+proxies.dataLabelLocation.outside.txt = Zvenku
+proxies.dataPointAlignment.center.txt = Uprostřed
+proxies.contourType.label.txt = Typ obrysu
+proxies.contour.fill.txt=Výplň
+proxies.contour.fillType.txt=Typ
+proxies.contour.solidFillType.txt=Plně
+proxies.contour.gradientFillType.txt=Přechod
+proxies.contour.lineType.txt=Řádek
+proxies.contour.labelType.txt=Označení dat
+
+# NOTE: Left and Right should be flipped in RTL translations
+proxies.dataPointAlignment.left.txt = Vlevo
+proxies.dataPointAlignment.right.txt = Vpravo
+
+# NOTE: clockwise and counterclockwise should be flipped in RTL translations
+# i.e. proxies.direction.clockwise.txt = Counter clockwise
+proxies.direction.clockwise.txt = Po směru hodinových ručiček
+proxies.direction.counterclockwise.txt = Proti směru hodinových ručiček
+
+proxies.fillStyle.fade.txt = Blednutí barvy
+proxies.fillStyle.solid.txt = Pevné
+proxies.g100.none.txt = Skutečné hodnoty
+proxies.g100.positive.txt = Normalizovat skupiny na 100 %
+proxies.gridLines.auto.txt = Automatické
+proxies.gridLines.off.txt = Vypnuto
+proxies.gridLines.on.txt = Zapnuto
+proxies.groupingStyle.cluster.txt = Shluk
+proxies.groupingStyle.multiple.txt = Vícečetné
+proxies.groupingStyle.overlay.txt = Překryv
+proxies.groupingStyle.overlayFilled.txt = Překryv s výplní
+proxies.groupingStyle.overlayUnfilled.txt = Překryv bez výplně
+proxies.groupingStyle.stack.txt = Nad sebou
+proxies.groupingStyle.stackFilled.txt = Nad sebou s výplní
+proxies.labelPosition.automatic.txt = Automatické
+proxies.labelPosition.atInflectionPoints.txt = V inflexních bodech
+
+# {0} is an integer used to identify unique line patterns
+proxies.linePattern.default.txt = Automatické (default)
+proxies.linePattern.pattern.fmt = Vzor {0}
+
+proxies.markerSymbol.default.txt = Automatické (default)
+proxies.markerSymbol.CIRCLE.txt = Kruh
+proxies.markerSymbol.PLUS.txt = Plus
+proxies.markerSymbol.TRIANGLE.txt = Trojúhelník
+proxies.markerSymbol.SQUARE.txt = Čtverec
+proxies.markerSymbol.X.txt = X
+proxies.markerSymbol.TRIANGLE_DOWN.txt = Trojúhelník dolu
+proxies.markerSymbol.DIAMOND.txt = Diamant
+proxies.markerSymbol.ASTERISK.txt = Hvězdička
+proxies.markerSymbol.CIRCLE_BOLD.txt = Kruh tučně
+proxies.markerSymbol.PLUS_BOLD.txt = Plus tučně
+proxies.markerSymbol.TRIANGLE_BOLD.txt = Trojúhelník tučně
+proxies.markerSymbol.SQUARE_BOLD.txt = Čtverec tučně
+proxies.markerSymbol.X_BOLD.txt = X tučně
+proxies.markerSymbol.TRIANGLE_DOWN_BOLD.txt = Trojúhelník dolu tučně
+proxies.markerSymbol.DIAMOND_BOLD.txt = Diamant tučně
+proxies.markerSymbol.ASTERISK_BOLD.txt = Hvězdička tučně
+proxies.markerSymbol.CIRCLE_FILLED.txt = Kruh výplň
+proxies.markerSymbol.CROSS_FILLED.txt = Kříž výplň
+proxies.markerSymbol.TRIANGLE_FILLED.txt = Trojúhelník výplň
+proxies.markerSymbol.SQUARE_FILLED.txt = Čtverec výplň
+proxies.markerSymbol.SALTIRE_FILLED.txt = Ondřejský kříž výplň
+proxies.markerSymbol.TRIANGLE_DOWN_FILLED.txt = Trojúhelník dolu výplň
+proxies.markerSymbol.DIAMOND_FILLED.txt = Diamant výplň
+proxies.markerSymbol.STAR_FILLED.txt = Hvězda výplň
+proxies.markerSymbol.CROSS.txt = Kříž
+proxies.markerSymbol.SALTIRE.txt = Ondřejský kříž
+proxies.markerSymbol.STAR.txt = Hvězda
+proxies.markerSymbol.HASH.txt = Hash
+proxies.markerSymbol.HOME.txt = Domů
+proxies.markerSymbol.HOME_DOWN.txt = Domů dolu
+proxies.markerSymbol.DIAMOND_NARROW.txt = Diamant kurzíva
+proxies.markerSymbol.HOME_NARROW.txt = Domů kurzíva
+proxies.markerSymbol.HOME_NARROW_DOWN.txt = Domů kurzíva dolu
+proxies.markerSymbol.HOME_BOLD.txt = Domů tučně
+proxies.markerSymbol.HOME_DOWN_BOLD.txt = Domů dolu tučně
+proxies.markerSymbol.HOME_FILLED.txt = Domů výplň
+proxies.markerSymbol.HOME_DOWN_FILLED.txt = Domů dolu výplň
+proxies.markerSymbol.DIAMOND_NARROW_FILLED.txt = Diamant kurzíva výplň
+proxies.markerSymbol.HOME_NARROW_FILLED.txt = Domů kurzíva výplň
+proxies.markerSymbol.HOME_NARROW_DOWN_FILLED.txt = Domů kurzíva dolu výplň
+proxies.markerSymbol.HEXAGON.txt = Šestiúhelník
+proxies.markerSymbol.HEXAGON_VERTICAL.txt = Šestiúhelník vertikální
+proxies.markerSymbol.HEXAGON_FILLED.txt = Šestiúhelník výplň
+proxies.markerSymbol.HEXAGON_VERTICAL_FILLED.txt = Šestiúhelník vertikální výplň
+proxies.offset.center.txt = Uprostřed
+proxies.offset.negative.txt = Záporné
+proxies.offset.positive.txt = Kladné
+proxies.orientation.horizontal.txt = Vodorovně
+proxies.orientation.vertical.txt = Svisle
+proxies.overlaidGraphColors.cycle.txt = Začít každý graf jedinečnou barvou
+proxies.overlaidGraphColors.noCycle.txt = Začít každý graf jeho první výchozí barvou
+proxies.overlapHandling.alwaysRotate.txt = Vždy otočit
+proxies.overlapHandling.alwaysRotateDropAll.txt = Vždy otočit, vložit vše
+proxies.overlapHandling.auto.txt = Automatické
+proxies.overlapHandling.dropSome.txt = Vložit některé
+proxies.overlapHandling.none.txt = Žádné
+proxies.overlapHandling.rotate.txt = Otočit
+proxies.overlapHandling.showAll.txt = Zobrazit vše
+proxies.overlapHandling.stagger.txt = Střídat
+proxies.overlapHandling.staggerTruncate.txt = Střídat, vypustit
+proxies.overlapHandling.staggerTruncateDropAll.txt = Střídat, vypustit, vložit vše
+proxies.overlapHandling.truncate.txt = Vypustit
+proxies.overlapHandling.truncateRotate.txt = Vypustit, otočit
+proxies.placement.top.txt = Nahoře
+proxies.placement.bottom.txt = Dole
+
+# NOTE: Left and Right should be flipped in RTL translations
+proxies.placement.left.txt = Vlevo
+proxies.placement.right.txt = Vpravo
+
+proxies.position.side.txt = Na boku
+proxies.position.top.txt = Nahoře
+proxies.tickAlignment.betweenMidpoints.txt = Uprostřed mezi středovými body zaškrtnuté hodnoty
+proxies.tickAlignment.midpoint.txt = Ve středovém bodu zaškrtnuté hodnoty
+proxies.timeInterval.auto.txt = Automatické
+proxies.timeInterval.day.txt = Den
+proxies.timeInterval.hour.txt = Hodina
+proxies.timeInterval.minute.txt = Minuta
+proxies.timeInterval.month.txt = Měsíc
+proxies.timeInterval.quarter.txt = Čtvrtletí
+proxies.timeInterval.second.txt = Sekunda
+proxies.timeInterval.semiMonth.txt = Dva týdny
+proxies.timeInterval.semiYear.txt = Půlrok
+proxies.timeInterval.tenDay.txt = 10denní období
+proxies.timeInterval.week.txt = Týden
+proxies.timeInterval.year.txt = Rok
+proxies.visibility.automatic.txt = Automatické
+proxies.visibility.hideAll.txt = Skrýt vše
+
+# NOTE: Left and Right should be flipped in RTL translations
+proxies.yaxis.y.txt = Vlevo
+proxies.yaxis.y2.txt = Vpravo
+
+proxies.overviewAxis.contents.same.txt = Stejné jako hlavní graf
+proxies.overviewAxis.contents.custom.txt = Upřesnit prvky grafu
+
+# Dynamics
+dynamicRole.label.txt = Dynamická role
+# {0} is the name of the model to which the role is attached.  {1} is one of the role type labels below.
+dynamicRole.qualifiedLabel.fmt = {0}: {1}
+dynamicRole.category.txt = Kategorie
+dynamicRole.response.txt = Odezva
+dynamicRole.aggregatedGroup.txt = Skupina
+dynamicRole.group.txt = Skupina
+dynamicRole.color.txt = Barva
+dynamicRole.colorResponse.txt = Barva
+dynamicRole.target.txt = Cíl
+dynamicRole.x.txt = X
+dynamicRole.y.txt = Y
+# At this time, "z" is used exclusively by the ContourPlot for color.
+dynamicRole.z.txt = Barva
+dynamicRole.tip.txt = Informace k datům
+dynamicRole.task.txt = Úloha
+dynamicRole.start.txt = Začátek
+dynamicRole.end.txt = Konec
+dynamicRole.dataLabel.txt = Označení dat
+dynamicRole.dataValues.txt = Hodnoty dat
+dynamicRole.time.txt = Čas
+dynamicRole.size.txt = Velikost
+dynamicRole.limitUpper.txt = Horní limit
+dynamicRole.limitLower.txt = Spodní limit
+dynamicRole.xOrigin.txt = Počátek X
+dynamicRole.yOrigin.txt = Počátek Y
+dynamicRole.tileBy.txt = Dlaždice
+dynamicRole.mapCoordinates.txt = Geografické ID
+dynamicRole.mapContour.txt = Geografické ID
+dynamicRole.mapRegion.txt = Geografické ID
+dynamicRole.mapProvider.txt = Poskytovatel Mapy
+dynamicRole.mapTip.txt = Informace k datům
+
+dynamicRole.cellsGroup.txt = Grafy
+dynamicRole.sharedGroup.txt = Sdílené role
+dynamicRole.latticeGroup.txt = Role v mřížce zaměřené na data
+dynamicRole.rowVars.txt = Řádek mřížky
+dynamicRole.columnVars.txt = Sloupec mřížky
+
+dynamicRoles.types.any.txt=Jakákoli klasifikace
+dynamicRoles.types.character.txt=Kategorie
+dynamicRoles.types.numeric.txt=Ukazatel
+dynamicRoles.types.time.txt=Datetime
+
+# Names
+# {0} is the localized name of the model.
+# {1} is an integer used to identify that unique instance.
+names.rendererModel.label.fmt.txt = {0} {1}
+
+# {0} is the name of the plot and {1} is the localized name of the plot role
+# An example default role name is "BarChart 1 Category"
+names.defaultRoleDescription.label.fmt.txt={0} {1}
+# {0} is an integer used to uniquely identify the shared role
+names.sharedRoleDescription.label.fmt.txt=Sdílená role {0}
+
+#GraphBuilderElements
+elements.xaxis.txt = Osa X
+elements.layoutOverlayMap.txt = Mapa
+
+# NOTE: Left Y Axis and Right Y Axis should be flipped in RTL translations
+elements.yaxis.txt = Levá osa Y
+elements.y2axis.txt = Pravá osa Y
+
+elements.globalLegend.txt = Legendy
+elements.discreteLegend.txt = Diskrétní legenda
+
+# {0} is the localized name of the visualization
+elements.sizeLegend.fmt.txt = {0} Legenda velikosti
+elements.continuousLegend.fmt.txt = {0} Kontinuální legenda
+
+# error/warning messages
+# html tags are used for formatting in the application
+multiQueryDataMatrix.error.txt = Podrobná data a sumarizovaná data nelze použít ve stejném grafu, pokud se používají role datové mřížky. Všechny prvky grafů v rámci mřížky řízené daty musí navíc využívat stejnou sumarizaci dat.<br/><br/>Tento graf nelze uložit, dokud nebudou provedeny změny v jeho rolích.<br/><br/>Můžete provést:<ol><li>Odebrat všechny role mřížky řízené daty</li><li>Použít stejnou sumarizaci dat pro všechny prvky grafu</li></ol>
+# The replacement string is a reference to a graph element (individual plot)
+multiQueryDataMatrixDetails.error.fmt.txt = Pro sumarizaci se využívají následující role:{0}v grafech, které pro sumarizaci nevyužívají všechny výše uvedené role přidejte roli Skupina nebo jinou kategorickou roli, která sumarizuje data, a poté je sdílejte s výše uvedenou rolí, která se zatím nevyužívá.
+multiQuerySmallMessage.error.txt = Mřížka řízená daty vyžaduje změny
+multiQueryPanelMessage.error.txt = Mřížka zaměřená na data vyžaduje změny
+multiQuerySmallMessage.tip.txt = Pro více informací klikněte sem.
+
+emptyOverviewAxisSmallMessage.error.txt=Přehledová osa je prázdná
+emptyOverviewAxis.error.txt=Přehledová osa musí obsahovat alespoň jeden prvek grafu.<br/><br/>Graf nelze uložit, dokud nebude přidán prvek grafu nebo nebude vypnuta přehledová osa.
+
+unassignedRolesDetails.error.fmt.txt=Následující sdílené role se nevyužívají žádnými rolemi:{0}tento graf nelze uložit s nevyužitými sdílenými rolemi.
+
+dropMessage.dataMatrixOK.txt = Přidat do grafu
+dropMessage.cellOK.txt = Přidat do buňky
+dropMessage.mapOK.txt = Přidat do mapy
+dropMessage.overviewAxisOK.txt = Přidat do přehledové osy
+dropMessage.overviewAxisNotOK.txt = Není kompatibilní s ostatními prvky v přehledové ose
+dropMessage.overviewAxisNeverOK.txt = Není kompatibilní s přehledovou osou
+dropMessage.newRowOK.txt = Přidat do nového řádku
+dropMessage.newColumnOK.txt = Přidat do nového sloupce
+dropMessage.notCompatibleWithRow.txt = Není kompatibilní s ostatními prvky v tomto řádku
+dropMessage.notCompatibleWithColumn.txt = Není kompatibilní s ostatními prvky v tomto sloupci
+dropMessage.notCompatibleWithMap.txt = Geografické prvky nejsou kompatibilní s rozvrženími s více buňkami
+dropMessage.latticeOtherCellColumnNotOK.txt = Není kompatibilní s typem dat vybraným pro osu v ostatních prvcích v tomto sloupci
+dropMessage.latticeOtherCellRowNotOK.txt = Není kompatibilní s typem dat vybraným pro osu v ostatních prvcích v této řádce
+dropMessage.cellNotOK.txt = Není kompatibilní s ostatními prvky v této buňce
+dropMessage.treemapDataMatrix.txt = Dlaždicový graf je nekompatibilní s rolemi mřížky zaměřené na data
+dropMessage.mapDataMatrix.txt = Prvky vyžadující mapy nejsou kompatibilní s rolemi mřížky řízené daty
+dropMessage.layoutOverlayMapNotOk.txt = Není kompatibilní s geografickými prvky
+dropMessage.layoutOverlayMapSingleMapLayerOnly.txt = Nelze přidat ani přesunout vrstvu geografické mapy
+dropMessage.layoutOverlayMapIncompatibleRoles.txt = Vlastní sdílené role nejsou kompatibilní s Geo prvky
+dropMessage.layoutOverlayMapRequired.txt = Geo prvky nejsou kompatibilní s ostatními prvky v této buňce
+dropMessage.notCompatibleWithDataMatrixRoles.txt = Řádky ani sloupce nelze přidat, pokud jsou používány role mřížky zaměřené na data.
+dropMessage.layoutOverlayMapMixing.txt = Vrstvy mapy a nemapy nejsou kompatibilní
+
+dataMatrix.dataRolesDisabledMultiCell.txt = Role mřížky zaměřené na data nelze použít, pokud má šablona více než jednu buňku.
+dataMatrix.dataRolesDisabledMap.txt = Role mřížky řízené daty nelze použít s geografickými prvky.
+# {0} is the name of the role causing the conflict
+dataMatrix.dataRolesDisabledConflict.txt = Role mřížky zaměřené na data jsou nekompatibilní s {0}
+
+#VAD coppied Role Names
+roleName.CATEGORY_VAR.txt = Kategorie
+roleName.MEASURE_VAR.txt = Ukazatel
+roleName.SUBGROUP_VAR.txt = Skupina
+roleName.GROUPING_VAR.txt = Seskupení
+roleName.HORIZONTAL_SERIES_VAR.txt = Sloupce mřížky
+roleName.VERTICAL_SERIES_VAR.txt = Řady mřížky
+roleName.BAR_MEASURE1_VAR.txt = Ukazatel (sloupec)
+roleName.BAR_MEASURE2_VAR.txt = Ukazatel (2. sloupec)
+roleName.BAR_MEASURE_VAR.txt = Ukazatel (sloupec)
+roleName.LINE_MEASURE_VAR.txt = Ukazatel (čára)
+roleName.LINE_MEASURE1_VAR.txt = Ukazatel (čára)
+roleName.LINE_MEASURE2_VAR.txt = Ukazatel (2. čára)
+roleName.TILE_VAR.txt = Dlaždice
+roleName.X_VAR.txt = Osa X
+roleName.Y_VAR.txt = Osa Y
+roleName.SIZE_VAR.txt = Velikost
+roleName.COLOR_VAR.txt = Barva
+roleName.TARGET_VAR.txt = Cíl
+roleName.TIME_VAR.txt = Časová osa
+roleName.RESPONSE_VAR.txt = Ukazatel (čára)
+roleName.RESPONSE2_VAR.txt = Ukazatel (2. čára)
+roleName.ANIMATION.txt = Animace
+roleName.TIP_VAR.txt = Hodnoty informace k datům
+roleName.WORD_VAR.txt = Slovo
+roleName.GEO_VAR.txt = Geografie
+roleName.KPI_GROUP_VAR.txt = Skupina
+roleName.MEASURES_VAR.txt = Ukazatele
+
+#Custom role names
+roleName.TASK_VAR.txt = Úloha
+roleName.START_VAR.txt = Začátek
+roleName.FINISH_VAR.txt = Konec
+roleName.LABEL_VAR.txt = Označení
+roleName.X_ORIGIN_VAR.txt = Počátek X
+roleName.Y_ORIGIN_VAR.txt = Počátek Y
+roleName.X_START_VAR.txt = Počátek X
+roleName.X_END_VAR.txt = Konec X
+roleName.Y_START_VAR.txt = Počátek Y
+roleName.Y_END_VAR.txt = Konec Y
+roleName.SIZE_START_VAR.txt = Začátek velikosti
+roleName.SIZE_END_VAR.txt = Konec velikosti
+roleName.TIME_MEASURE1_VAR.txt = Ukazatel (časové řady)
+roleName.TIME_MEASURE2_VAR.txt = Ukazatel (časové řady 2)
+roleName.HIGH_VAR.txt = Vysoké
+roleName.LOW_VAR.txt = Nízká
+roleName.CLOSE_VAR.txt = Zavřít
+roleName.MOVING_AVG_VAR.txt = Klouzavý průměr
+roleName.BOLINGER_UPPER_VAR.txt = Bollinger horní
+roleName.BOLINGER_LOWER_VAR.txt = Bollinger spodní
+roleName.BOLLINGER_UPPER_VAR.txt = Bollinger horní
+roleName.BOLLINGER_LOWER_VAR.txt = Bollinger spodní
+roleName.VOLUME_VAR.txt = Objem
+
+confirmDialog.continue.txt = Pokračovat
+confirmDialog.cancel.txt = Zrušit
+
+confirmWarning.barRotate.title.txt = Změnit směr
+confirmWarning.barRotate.message.txt = Změna směru pro tento sloupcový graf změní také ostatní grafy. Chcete pokračovat?
+confirmWarning.changeType.title.txt = Změnit klasifikaci
+confirmWarning.changeType.message.txt = Klasifikace rolí na stejné ose musí být stejná.<br/><br/>Změna klasifikace pro {0} způsobí změnu klasifikace pro následující role:{1}<br/><br/>Chcete pokračovat?
+confirmWarning.reseatVisualizationsInMaps.title.txt = Resetovat role
+confirmWarning.reseatVisualizationsInMaps.message.txt = Změna rozložení s mapami může resetovat role. Chcete pokračovat?
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+#
+# sas_datetimeerrors.properties
+#
+# en_US
+#
+
+locale.not.null.txt=Místní nastavení nesmí být null
+date.time.not.null.txt=Styly data a času nesmějí být null
+date.argument.not.valid.txt=Argument stylu data není platný
+time.argument.not.valid.txt=Argument stylu času není platný
+date.time.style.not.none.txt=Styly data a času nesmějí být ŽÁDNÝ
+date.time.pattern.not.null.txt=Vzorec nesmí být null
+month.names.not.null.txt=Styl a kontext názvu nesmějí být null pro názvy měsíců
+weekday.names.not.null.txt=Styl a kontext názvu nesmějí být null pro názvy dní v týdnu
+# Based on CLDR(Ver 40)
+# I18NOK:FileNotLocalizable
+#
+# cs/sas_portable_formatters.properties
+#
+ 
+###################################################
+#      Date and Time Patterns
+###################################################
+# Date - Long/Medium/Short
+datePatternLong=EEEE d. MMMM yyyy
+datePatternMedium=d. MMMM yyyy
+datePatternShort=d. M. yyyy
+ 
+# Time - Long/Medium/Short
+timePatternLong=HH:mm:ss zzz
+timePatternMedium=HH:mm:ss
+timePatternShort=HH:mm
+ 
+# Date Format
+# Used for DATE and DTDATE
+date.0=dd.MM.yy
+date.1=d. M. yyyy
+date.2=d. MMMM yyyy
+date.3=EEEE d. MMMM yyyy
+ 
+# Day Format
+# Used for DAY
+day.0=d
+ 
+# DOWNAME Format
+# Used for DOWNAME
+downame.0=ccc
+downame.1=cccc
+ 
+# MMDDYY Format
+# Used for MMDDYY, DDMMYY and YYMMDD
+mmddyy.0=dd.MM.yy
+mmddyy.1=d. M. yyyy
+ 
+# MMYY Format
+# Used for MMYY and YYMM
+mmyy.0=M/yyyy
+mmyy.1=LLLL yyyy
+ 
+# MONTH Format
+# Used for MONTH
+monname.0=M
+monname.1=LLL
+monname.2=LLLL
+ 
+# MONYY Format
+# Used for MONYY, YYMON and DTMONYY
+monyy.0=LLLL yy
+monyy.1=LLLL yyyy
+monyy.2=LLLL yyyy
+ 
+# WEEKDATE Format
+# Used for WEEKDATE, WEEKDATX and DTWKDATX
+weekdate.0=ccc
+weekdate.1=cccc
+weekdate.2=EEE d. MMM yyyy
+weekdate.3=EEEE d. MMMM yyyy
+ 
+# WORDDATE Format
+# Used for WORDDATE and WORDDATX
+worddate.0=LLL
+worddate.1=LLLL
+worddate.2=d. M. yyyy
+worddate.3=d. MMMM yyyy
+ 
+# YEAR Format
+# Used for YEAR
+year.0=yy
+year.1=yyyy
+ 
+# DATETIME Format
+# Used for DATETIME, DATEAMPM
+datetime.0=dd.MM.yy HH:mm
+datetime.1=d. M. yyyy HH:mm:ss
+datetime.2=d. MMMM yyyy HH:mm:ss zzz
+datetime.3=EEEE d. MMMM yyyy HH:mm:ss zzz
+ 
+# TIME Format
+# Used for TOD, TIME and TIMEAMPM
+time.0=HH
+time.1=HH:mm
+time.2=HH:mm:ss
+time.3=HH:mm:ss zzz
+ 
+# HOUR Format
+# Used for HOUR
+hour.0=HH
+hour.1=hh a
+ 
+# HHMM Format
+# Used for HHMM
+hhmm.0=HH:mm
+hhmm.1=hh:mm a
+ 
+# MMSS Format
+# Used for MMSS
+mmss.0=mm
+mmss.1=mm:ss
+ 
+# Quarter Format
+# Used by YYQC and DTYYQC
+quarteryear.0=QQQ yyyy
+quarteryear.1=QQQQ yyyy
+ 
+###################################################
+#     Date and Time Names  
+###################################################
+# DayNames
+dayNames=neděle,pondělí,úterý,středa,čtvrtek,pátek,sobota
+dayNamesShort=ne,po,út,st,čt,pá,so
+dayNamesShortest=N,P,Ú,S,Č,P,S
+firstDayOfWeek=1
+ 
+# Stand-Alone DayNames
+SAdayNames=neděle,pondělí,úterý,středa,čtvrtek,pátek,sobota
+SAdayNamesShort=ne,po,út,st,čt,pá,so
+SAdayNamesShortest=N,P,Ú,S,Č,P,S
+ 
+# MonthNames
+monthNames=ledna,února,března,dubna,května,června,července,srpna,září,října,listopadu,prosince
+monthNamesShort=led,úno,bře,dub,kvě,čvn,čvc,srp,zář,říj,lis,pro
+monthNamesShortest=1,2,3,4,5,6,7,8,9,10,11,12
+ 
+# Stand-Alone MonthNames
+SAmonthNames=leden,únor,březen,duben,květen,červen,červenec,srpen,září,říjen,listopad,prosinec
+SAmonthNamesShort=led,úno,bře,dub,kvě,čvn,čvc,srp,zář,říj,lis,pro
+SAmonthNamesShortest=1,2,3,4,5,6,7,8,9,10,11,12
+ 
+# QuarterNames
+quarterNames=1. čtvrtletí,2. čtvrtletí,3. čtvrtletí,4. čtvrtletí
+quarterNamesShort=Q1,Q2,Q3,Q4
+quarterNamesShortest=1,2,3,4
+ 
+# Stand-Alone QuarterNames
+SAquarterNames=1. čtvrtletí,2. čtvrtletí,3. čtvrtletí,4. čtvrtletí
+SAquarterNamesShort=Q1,Q2,Q3,Q4
+SAquarterNamesShortest=1,2,3,4
+ 
+# DateBase
+am=dop.
+pm=odp.
+ 
+# A.D. Names
+eraADNameShortest=n.l.
+eraADNameShort=n. l.
+eraADNameLong=našeho letopočtu
+ 
+# B.C. Names
+eraBCNameShortest=př.n.l.
+eraBCNameShort=př. n. l.
+eraBCNameLong=před naším letopočtem
+ 
+###################################################
+#         Symbols  (might contain LRM/RLM) 
+###################################################
+# currency symbol
+currencySymbol=Kč
+ 
+# decimal point
+decimalPoint=,
+ 
+# thousands separator
+thousandsSeparator= 
+ 
+# list separator
+listSeparator=;
+ 
+# percent sign
+percentSymbol=%
+ 
+# plus sign
+plusSign=+
+ 
+# negative sign
+negativeSign=-
+ 
+# exponential
+exponentialSymbol=E
+ 
+# perMille
+permileSymbol=‰
+ 
+# infinity
+infinitySymbol=∞
+ 
+# nan
+nanSymbol=NaN
+ 
+###################################################
+#         Numeric Patterns (might contain LRM/RLM) 
+###################################################
+# decimal format pattern
+decimalFormat=#,##0.###
+ 
+# percent format pattern
+percentFormat=#,##0 %
+ 
+# currency format pattern
+currencyFormat=#,##0.00 ¤
+currencyAccountingFormat=#,##0.00 ¤
+ 
+# compressed number format
+compactDecimalShort.1000=0 tis.
+compactDecimalShort.10000=00 tis.
+compactDecimalShort.100000=000 tis.
+compactDecimalShort.1000000=0 mil.
+compactDecimalShort.10000000=00 mil.
+compactDecimalShort.100000000=000 mil.
+compactDecimalShort.1000000000=0 mld.
+compactDecimalShort.10000000000=00 mld.
+compactDecimalShort.100000000000=000 mld.
+compactDecimalShort.1000000000000=0 bil.
+compactDecimalShort.10000000000000=00 bil.
+compactDecimalShort.100000000000000=000 bil.
+ 
+###################################################
+#         Misc 
+###################################################
+# Text Direction: supported values are LTR and RTL
+textDirection=LTR
+ 
+# CurrencyFormatter
+currencyFormatterPrecision=2
+ 
+# NumberFormatter
+numberFormatterPrecision=2
+ 
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+# Tuple label
+missingValue.txt=(chybí)
+subTotal.txt=Mezisoučet:
+total.txt=Celkem
+suppressed.txt=(potlačeno)
+
+# VERBOSE expression descriptions
+# template placeholders:
+# {n} where n in [0 ... 9]: placeholder for the n-th function argument (zero-based)
+# {,}: placeholder for the list separator
+expression.description.error.unrecognized.txt = Nerozpoznaný výraz
+expression.description.in.fmt.txt = {0} v {1}
+expression.description.notIn.fmt.txt = {0} není v {1}
+expression.description.equalTo.fmt.txt = {0} je {1}
+expression.description.notEqualTo.fmt.txt = {0} není {1}
+expression.description.greaterThan.fmt.txt = {0} větší než {1}
+expression.description.greaterThanEqualTo.fmt.txt = {0} větší nebo rovno {1}
+expression.description.lessThan.fmt.txt = {0} menší než {1}
+expression.description.lessThanEqualTo.fmt.txt = {0} menší nebo rovno {1}
+expression.description.between.fmt.txt = {0} mezi {1} a {2}
+expression.description.contains.fmt.txt = {0} obsahuje {1}
+expression.description.notContains.fmt.txt = {0} neobsahuje {1}
+expression.description.beginsWith.fmt.txt = {0} začíná na {1}
+expression.description.endsWith.fmt.txt = {0} končí na {1}
+expression.description.missing.fmt.txt = {0} chybí
+expression.description.notMissing.fmt.txt = {0} nechybí
+
+expression.description.after.fmt.txt = {0} začíná po {1}
+expression.description.onOrAfter.fmt.txt = {0} začíná v nebo po {1}
+expression.description.before.fmt.txt = {0} končí před {1}
+expression.description.onOrBefore.fmt.txt = {0} končí v nebo před {1}
+
+expression.description.compoundAnd.fmt.txt = {0} A {1}
+expression.description.compoundAnd.parenthetical.fmt.txt = ({0}) A ({1})
+expression.description.compoundOr.fmt.txt = {0} NEBO {1}
+expression.description.compoundOr.parenthetical.fmt.txt = ({0}) NEBO ({1})
+
+expression.description.betweenExcluding.fmt.txt = {0} mezi {1} a {2} bez mezních hodnot
+expression.description.outsideIncluding.fmt.txt = {0} vně {1} a {2} včetně mezních hodnot
+expression.description.outsideExcluding.fmt.txt = {0} vně {1} a {2} bez mezních hodnot
+
+# Moved from iOS: InfoPanelAnyColumn, InfoPanelCurrentColumn
+expression.description.anyValue.txt = Libovolná hodnota buňky v řádku
+expression.description.currentValue.txt = Hodnota buňky
+
+expression.description.anyMeasureValue.txt = Libovolná hodnota ukazatele
+
+# INTERFACE expression descriptions
+expression.description.interface.in.fmt.txt = {0} IN { {1} }
+expression.description.interface.notIn.fmt.txt = {0} NOT IN { {1} }
+expression.description.interface.missing.fmt.txt = {0} MISSING
+expression.description.interface.notMissing.fmt.txt = {0} NOT MISSING
+expression.description.interface.contains.fmt.txt = {1} IN {0}
+expression.description.interface.notContains.fmt.txt = {1} NOT IN {0}
+expression.description.interface.between.fmt.txt = {1} ≤ {0} ≤ {2}
+expression.description.interface.betweenExcluding.fmt.txt = {1} < {0} < {2}
+expression.description.interface.outsideExcluding.fmt.txt = NOT {1} ≤ {0} ≤ {2}
+expression.description.interface.outsideIncluding.fmt.txt = NOT {1} < {0} < {2}
+expression.description.interface.upper.fmt.txt = Upper( {0} )
+expression.description.interface.lower.fmt.txt = Lower( {0} )
+expression.description.interface.pow.fmt.txt = {0} ^ {1}
+expression.description.interface.root.fmt.txt = Root[{1}]( {0} )
+expression.description.interface.abs.fmt.txt = | {0} |
+expression.description.interface.mod.fmt.txt = {0} % {1}
+expression.description.interface.round.fmt.txt = Round[{1}]( {0} )
+expression.description.interface.log.fmt.txt = Log[{1}]( {0} )
+expression.description.interface.cond.fmt.txt = IF {0} THEN {1} ELSE {2}
+expression.description.interface.concatenate.fmt.txt = Concat( {0}{,}{1} )
+expression.description.interface.find.fmt.txt = Find( {0}{,}{1} )
+expression.description.interface.findCharacter.fmt.txt = Find( {0}{,}{1} )
+expression.description.interface.length.fmt.txt = Length( {0} )
+expression.description.interface.pathBeginsWith.fmt.txt = {0} StartsWith {1}
+expression.description.interface.pathEndsWith.fmt.txt = {0} EndsWith {1}
+expression.description.interface.pathContains.fmt.txt = {1} IN {0}
+expression.description.interface.pathContainsNode.fmt.txt = { {1}{,}{2} } IN {0}
+expression.description.interface.cellIndex.fmt.txt = Cell[{0}+{1}]
+expression.description.interface.aggregateCells.fmt.txt = {0}( {1} FOR {2}[{3}:{4}] )
+expression.description.interface.rows.fmt.txt = Řádky
+expression.description.interface.columns.fmt.txt = Sloupce
+expression.description.interface.pathContainsSubPath.fmt.txt = ContainsSubPath( {0}{,}{1}{,}{2}{,}{3} )
+expression.description.interface.anyMeasure.txt = Libovolný ukazatel
+
+# Copied from ConditionOperator.* in Flex MobileDesigner (VAD)
+expression.operator.in.txt = V
+expression.operator.notIn.txt = Není v
+expression.operator.equals.txt = Rovno
+expression.operator.notEquals.txt = Nerovná se
+expression.operator.greaterThan.txt = Větší než
+expression.operator.greaterThanEqualTo.txt = Větší nebo rovno
+expression.operator.lessThan.txt = Menší než
+expression.operator.lessThanEqualTo.txt = Menší nebo rovno
+expression.operator.betweenInclusive.txt = Leží mezi (včetně)
+expression.operator.betweenExclusive.txt = Leží mezi (bez)
+expression.operator.outsideRangeInclusive.txt = Neleží mezi (včetně)
+expression.operator.outsideRangeExclusive.txt = Neleží mezi (bez)
+expression.operator.contains.txt = Obsahuje
+expression.operator.notContains.txt = Neobsahuje
+expression.operator.beginsWith.txt = Začíná na
+expression.operator.endsWith.txt = Končí na
+expression.operator.missing.txt = Chybí
+expression.operator.notMissing.txt = Nechybí
+
+expression.operator.after.txt = Začíná po
+expression.operator.onOrAfter.txt = Začíná v nebo po
+expression.operator.before.txt = Končí před
+expression.operator.onOrBefore.txt = Končí v nebo před
+
+
+ALL_OTHER.txt=Vše ostatní
+
+#Aggregation labels
+aggregation.minimum.txt = Minimum:
+aggregation.maximum.txt = Maximum:
+aggregation.total.txt = Celkový součet:
+aggregation.count.txt = Počet:
+aggregation.sum.txt = Součet:
+aggregation.average.txt = Průměr:
+aggregation.distinct.txt = Počet odlišných:
+aggregation.skew.txt = Šikmost:
+aggregation.kurtosis.txt = Špičatost:
+aggregation.coefficientOfVariation.txt = Variační koeficient:
+aggregation.uncorrectedSumOfSquares.txt = Nekorigovaný součet druhých mocnin:
+aggregation.correctedSumOfSquares.txt = Korigovaný součet druhých mocnin:
+aggregation.tStatistic.txt = Statistika T:
+aggregation.pValue.txt = P-hodnota:
+aggregation.firstQuartile.txt = První kvartil:
+aggregation.median.txt = Medián:
+aggregation.thirdQuartile.txt = Třetí kvartil:
+aggregation.standardDeviation.txt = Standardní odchylka:
+aggregation.standardError.txt = Standardní chyba:
+aggregation.variance.txt = Odchylka:
+aggregation.numberMissing.txt = Chybějící číslo:
+
+#table grand total
+table.grandTotal.txt = Celkový součet
+
+#table sort
+table.sort.sort.txt = Seřadit
+table.sort.ascending.txt = Vzestupně
+table.sort.descending.txt = Sestupně
+table.sort.none.txt = Nic
+table.sort.resetsort.txt = Resetovat řazení
+
+#table sparkline
+table.sparkline.to.txt = až
+table.sparkline.final.txt = Koncový
+
+#datagrid
+datagrid.rowNumbers.header.txt = Řádek
+
+#crosstab actions
+crosstab.expand.txt = Rozbalit
+crosstab.collapse.txt = Sbalit
+crosstab.drill.txt = Přejít
+crosstab.pageDown.txt = Přejít na další řádek
+crosstab.pageDownEnd.txt = Přejít na spodní řádek
+crosstab.pageUp.txt = Přejít na předchozí řádek
+crosstab.pageUpEnd.txt = Přejít na horní řádek
+
+#slider
+rangeSlider.currentValues.txt = {0} až {1}
+
+#scroll tooltip
+scroll.column.txt = Sloupec {0} z {1}
+scroll.row.txt = Řádka {0} z {1}
+
+#default hierarchy labels
+hierarchy.column.txt = Hierarchie sloupců
+hierarchy.row.txt = Hierarchie řádků
+hierarchy.hierarchy.txt = Hierarchie
+
+#accessibility
+accessibility.dataElement.hint.txt = Poklepem otevřete popisek a vyberete datový prvek.
+accessibility.objectType.crosstab.txt = Kontingenční tabulka
+accessibility.objectType.dataGrid.txt = Datová mřížka
+
+#accessibility used by KPIs
+accessibility.kpi.header.txt = Group = {0}
+accessibility.kpi.selection.txt = {0} z {1}
+
+
+#indicates the row and column for a table cell for accessibility
+accessibility.table.rowColumn.txt = Řádka {0}; sloupec {1}
+accessibility.table.row.txt = Řádka {0}
+accessibility.table.column.txt = Sloupec {0}
+
+#indicates the cell is a column header in the table for accessibility
+accessibility.table.header.txt = Hlavička
+
+#indicates the sort, if applicable, in a column heading for accessibility
+accessibility.table.sortPrimaryDescending.txt = Primární řazení, sestupně
+accessibility.table.sortSecondaryDescending.txt = Sekundární řazení, sestupně
+accessibility.table.sortDescending.txt = Řadit sestupně
+accessibility.table.sortPrimaryAscending.txt = Primární řazení, vzestupně
+accessibility.table.sortSecondaryAscending.txt = Sekundární řazení, vzestupně
+accessibility.table.sortAscending.txt = Řadit vzestupně
+accessibility.table.sortEnabled.hint.txt = Poklepem otevřete popisek řazení.
+
+# indicates datagrid/crosstab selected state
+accessibility.datagrid.rowSelected.txt = Řádek byl vybraný
+accessibility.crosstab.cellSelected.txt = Vybráno
+
+# accessibility hints used with table cells, based on whether they have a tooltip
+accessibility.table.selectRow.hint.txt = Poklepem přepnete výběr řádku.
+accessibility.table.openTooltip.hint.txt = Poklepem otevřete popisek a přepnete výběr řádku.
+
+# accessibility hints used with crosstab cells
+accessibility.crosstab.selectCell.hint.txt = Poklepem přepnete výběr buňky.
+
+# accesibility hints for crosstab total label on the header
+accessibility.crosstab.rowTotal.txt = Celkem v řádku
+accessibility.crosstab.columnTotal.txt = Celkem ve sloupci
+
+# indicates crosstab row/column header
+accessibility.crosstab.rowHeader.txt = Hlavička řádku
+accessibility.crosstab.columnHeader.txt = Hlavička sloupce
+
+# indicates crosstab row/column category 
+accessibility.crosstab.rowCategory.txt = Kategorie řádku
+accessibility.crosstab.columnCategory.txt = Kategorie sloupce
+
+# indicates the level number for crosstab row/column header
+accessibility.crosstab.level.txt = Úroveň {0}
+
+# indicates the collapsed/expanded state for crosstab row/column header
+accessibility.crosstab.collapsed.txt = Sbaleno
+accessibility.crosstab.expanded.txt = Rozbaleno
+accessibility.crosstab.drillable.txt = Odkaz
+
+# indicates the number row/column spans for crosstab row/column header
+accessibility.crosstab.rowColumnSpans.txt = Rozpětí {0} sloupce a {1} řádky
+accessibility.crosstab.rowSpans.txt = Rozpětí {0} řádky
+accessibility.crosstab.columnSpans.txt = Rozpětí {0} sloupce
+
+# accessibility, indicates if the cell contains a visual
+accessibility.table.containsKPI.txt = Obsahuje KPI
+accessibility.table.containsSparkline.txt = Obsahuje minigraf
+
+# indicates that the cell is a column total cell for accessibility
+accessibility.table.columnTotal.txt = Celkem
+
+# indicates an empty cell when a column has no total in the totals row for accessibility
+accessibility.table.noTotal.txt = Žádný součet sloupce
+
+# indicates a cell with a missing value in the data grid for
+# accessibility
+accessibility.table.missingValue.txt = Chybějící
+
+# indicates the order preference for search results
+# that might include address, city, and region
+# ex.  address={0},city={1},region={2}
+searchItem.AddressCityRegion.txt = {0}, {1}, {2}
+searchItem.AddressCity.txt = {0}, {1}
+searchItem.AddressRegion.txt = {0}, {1}
+searchItem.CityRegion.txt = {0}, {1}
+
+route.LessThanAMinute.txt = <1 min
+route.DistanceKilometers.fmt.txt = {0} km
+route.DistanceMiles.fmt.txt = {0} mil
+route.DistanceMile.fmt.txt = {0} míle
+route.Minute.fmt.txt = {0} min
+route.HoursMinutes.fmt.txt = {0} hod {1} min
+route.Hours.fmt.txt = {0} hod
+
+# used by tooltips when not all of the data values can be displayed.
+tooltip.numberDisplayed.txt = {0} z {1}
+tooltip.colon.txt = {0}:
+
+# Display List Separator, used to delimit lists of values in user facing text
+displayListSeparator=;
+
+promptbuttonbar.minlabel.txt=W...
+
+# scroll wheel zoom activation
+zoom.cmd.txt = Pro přiblížení stiskněte Cmd a použijte rolovací kolečko
+zoom.ctrl.txt = Pro přiblížení stiskněte Ctrl a použijte rolovací kolečko
+#
+# sas_exemplarcity_alias.properties
+#
+# TimezoneID=ExamplarCityAlias
+#
+Asia/Shanghai=Peking# Based on CLDR(Ver 34) & IANA 2018g
+# I18NOK:FileNotLocalizable
+#
+# cs/sas_timezone_selector.properties
+#
+# time zone information
+# Continent;Subcontinent;OffsetValue;ExampleCity;TzID;TerrCode;longitude;latitude
+tz0=Amerika;Severní Amerika (oblast);-36000;Adak;America/Adak;US;-1763929;+515248
+tz1=Amerika;Severní Amerika (oblast);-36000;Honolulu;Pacific/Honolulu;US;-1575130;+211825
+tz2=Amerika;Severní Amerika (oblast);-32400;Anchorage;America/Anchorage;US;-1495401;+611305
+tz3=Amerika;Severní Amerika (oblast);-32400;Juneau;America/Juneau;US;-1342511;+581807
+tz4=Amerika;Severní Amerika (oblast);-32400;Metlakatla;America/Metlakatla;US;-1313435;+550737
+tz5=Amerika;Severní Amerika (oblast);-32400;Nome;America/Nome;US;-1652423;+643004
+tz6=Amerika;Severní Amerika (oblast);-32400;Sitka;America/Sitka;US;-1351807;+571035
+tz7=Amerika;Severní Amerika (oblast);-32400;Yakutat;America/Yakutat;US;-1394338;+593249
+tz8=Amerika;Severní Amerika (oblast);-28800;Dawson;America/Dawson;CA;-13925;+6404
+tz9=Amerika;Severní Amerika (oblast);-28800;Vancouver;America/Vancouver;CA;-12307;+4916
+tz10=Amerika;Severní Amerika (oblast);-28800;Whitehorse;America/Whitehorse;CA;-13503;+6043
+tz11=Amerika;Severní Amerika (oblast);-28800;Los Angeles;America/Los_Angeles;US;-1181434;+340308
+tz12=Amerika;Severní Amerika (oblast);-25200;Cambridge Bay;America/Cambridge_Bay;CA;-1050310;+690650
+tz13=Amerika;Severní Amerika (oblast);-25200;Creston;America/Creston;CA;-11631;+4906
+tz14=Amerika;Severní Amerika (oblast);-25200;Dawson Creek;America/Dawson_Creek;CA;-12014;+5946
+tz15=Amerika;Severní Amerika (oblast);-25200;Edmonton;America/Edmonton;CA;-11328;+5333
+tz16=Amerika;Severní Amerika (oblast);-25200;Fort Nelson;America/Fort_Nelson;CA;-12242;+5848
+tz17=Amerika;Severní Amerika (oblast);-25200;Inuvik;America/Inuvik;CA;-1334300;+682059
+tz18=Amerika;Severní Amerika (oblast);-25200;Yellowknife;America/Yellowknife;CA;-11421;+6227
+tz19=Amerika;Severní Amerika (oblast);-25200;Boise;America/Boise;US;-1161209;+433649
+tz20=Amerika;Severní Amerika (oblast);-25200;Denver;America/Denver;US;-1045903;+394421
+tz21=Amerika;Severní Amerika (oblast);-25200;Phoenix;America/Phoenix;US;-1120424;+332654
+tz22=Amerika;Severní Amerika (oblast);-21600;Rainy River;America/Rainy_River;CA;-09434;+4843
+tz23=Amerika;Severní Amerika (oblast);-21600;Rankin Inlet;America/Rankin_Inlet;CA;-0920459;+624900
+tz24=Amerika;Severní Amerika (oblast);-21600;Regina;America/Regina;CA;-10439;+5024
+tz25=Amerika;Severní Amerika (oblast);-21600;Resolute;America/Resolute;CA;-0944945;+744144
+tz26=Amerika;Severní Amerika (oblast);-21600;Swift Current;America/Swift_Current;CA;-10750;+5017
+tz27=Amerika;Severní Amerika (oblast);-21600;Winnipeg;America/Winnipeg;CA;-09709;+4953
+tz28=Amerika;Severní Amerika (oblast);-21600;Chicago;America/Chicago;US;-0873900;+415100
+tz29=Amerika;Severní Amerika (oblast);-21600;Knox, Indiana;America/Indiana/Knox;US;-0863730;+411745
+tz30=Amerika;Severní Amerika (oblast);-21600;Tell City, Indiana;America/Indiana/Tell_City;US;-0864541;+375711
+tz31=Amerika;Severní Amerika (oblast);-21600;Menominee;America/Menominee;US;-0873651;+450628
+tz32=Amerika;Severní Amerika (oblast);-21600;Beulah, Severní Dakota;America/North_Dakota/Beulah;US;-1014640;+471551
+tz33=Amerika;Severní Amerika (oblast);-21600;Center, Severní Dakota;America/North_Dakota/Center;US;-1011757;+470659
+tz34=Amerika;Severní Amerika (oblast);-21600;New Salem, Severní Dakota;America/North_Dakota/New_Salem;US;-1012439;+465042
+tz35=Amerika;Severní Amerika (oblast);-18000;Atikokan;America/Coral_Harbour;CA;-0913718;+484531
+tz36=Amerika;Severní Amerika (oblast);-18000;Iqaluit;America/Iqaluit;CA;-06828;+6344
+tz37=Amerika;Severní Amerika (oblast);-18000;Nipigon;America/Nipigon;CA;-08816;+4901
+tz38=Amerika;Severní Amerika (oblast);-18000;Pangnirtung;America/Pangnirtung;CA;-06544;+6608
+tz39=Amerika;Severní Amerika (oblast);-18000;Thunder Bay;America/Thunder_Bay;CA;-08915;+4823
+tz40=Amerika;Severní Amerika (oblast);-18000;Toronto;America/Toronto;CA;-07923;+4339
+tz41=Amerika;Severní Amerika (oblast);-18000;Detroit;America/Detroit;US;-0830245;+421953
+tz42=Amerika;Severní Amerika (oblast);-18000;Marengo, Indiana;America/Indiana/Marengo;US;-0862041;+382232
+tz43=Amerika;Severní Amerika (oblast);-18000;Petersburg, Indiana;America/Indiana/Petersburg;US;-0871643;+382931
+tz44=Amerika;Severní Amerika (oblast);-18000;Vevay, Indiana;America/Indiana/Vevay;US;-0850402;+384452
+tz45=Amerika;Severní Amerika (oblast);-18000;Vincennes, Indiana;America/Indiana/Vincennes;US;-0873143;+384038
+tz46=Amerika;Severní Amerika (oblast);-18000;Winamac, Indiana;America/Indiana/Winamac;US;-0863611;+410305
+tz47=Amerika;Severní Amerika (oblast);-18000;Indianapolis;America/Indianapolis;US;-0860929;+394606
+tz48=Amerika;Severní Amerika (oblast);-18000;Monticello, Kentucky;America/Kentucky/Monticello;US;-0845057;+364947
+tz49=Amerika;Severní Amerika (oblast);-18000;Louisville;America/Louisville;US;-0854534;+381515
+tz50=Amerika;Severní Amerika (oblast);-18000;New York;America/New_York;US;-0740023;+404251
+tz51=Amerika;Severní Amerika (oblast);-14400;Bermudy;Atlantic/Bermuda;BM;-06446;+3217
+tz52=Amerika;Severní Amerika (oblast);-14400;Blanc-Sablon;America/Blanc-Sablon;CA;-05707;+5125
+tz53=Amerika;Severní Amerika (oblast);-14400;Glace Bay;America/Glace_Bay;CA;-05957;+4612
+tz54=Amerika;Severní Amerika (oblast);-14400;Goose Bay;America/Goose_Bay;CA;-06025;+5320
+tz55=Amerika;Severní Amerika (oblast);-14400;Halifax;America/Halifax;CA;-06336;+4439
+tz56=Amerika;Severní Amerika (oblast);-14400;Moncton;America/Moncton;CA;-06447;+4606
+tz57=Amerika;Severní Amerika (oblast);-14400;Thule;America/Thule;GL;-06847;+7634
+tz58=Amerika;Severní Amerika (oblast);-12600;St. John’s;America/St_Johns;CA;-05243;+4734
+tz59=Amerika;Severní Amerika (oblast);-10800;Nuuk;America/Godthab;GL;-05144;+6411
+tz60=Amerika;Severní Amerika (oblast);-10800;Miquelon;America/Miquelon;PM;-05620;+4703
+tz61=Amerika;Severní Amerika (oblast);-3600;Ittoqqortoormiit;America/Scoresbysund;GL;-02158;+7029
+tz62=Amerika;Severní Amerika (oblast);0;Danmarkshavn;America/Danmarkshavn;GL;-01840;+7646
+tz63=Amerika;Střední Amerika;-28800;Tijuana;America/Tijuana;MX;-11701;+3232
+tz64=Amerika;Střední Amerika;-25200;Chihuahua;America/Chihuahua;MX;-10605;+2838
+tz65=Amerika;Střední Amerika;-25200;Hermosillo;America/Hermosillo;MX;-11058;+2904
+tz66=Amerika;Střední Amerika;-25200;Mazatlán;America/Mazatlan;MX;-10625;+2313
+tz67=Amerika;Střední Amerika;-25200;Ojinaga;America/Ojinaga;MX;-10425;+2934
+tz68=Amerika;Střední Amerika;-21600;Belize;America/Belize;BZ;-08812;+1730
+tz69=Amerika;Střední Amerika;-21600;Kostarika;America/Costa_Rica;CR;-08405;+0956
+tz70=Amerika;Střední Amerika;-21600;Guatemala;America/Guatemala;GT;-09031;+1438
+tz71=Amerika;Střední Amerika;-21600;Tegucigalpa;America/Tegucigalpa;HN;-08713;+1406
+tz72=Amerika;Střední Amerika;-21600;Bahia Banderas;America/Bahia_Banderas;MX;-10515;+2048
+tz73=Amerika;Střední Amerika;-21600;Matamoros;America/Matamoros;MX;-09730;+2550
+tz74=Amerika;Střední Amerika;-21600;Merida;America/Merida;MX;-08937;+2058
+tz75=Amerika;Střední Amerika;-21600;Ciudad de México;America/Mexico_City;MX;-09909;+1924
+tz76=Amerika;Střední Amerika;-21600;Monterrey;America/Monterrey;MX;-10019;+2540
+tz77=Amerika;Střední Amerika;-21600;Managua;America/Managua;NI;-08617;+1209
+tz78=Amerika;Střední Amerika;-21600;Salvador;America/El_Salvador;SV;-08912;+1342
+tz79=Amerika;Střední Amerika;-18000;Cancún;America/Cancun;MX;-08646;+2105
+tz80=Amerika;Střední Amerika;-18000;Kajmanské ostrovy;America/Cayman;PA;-07932;+0858
+tz81=Amerika;Střední Amerika;-18000;Panama;America/Panama;PA;-07932;+0858
+tz82=Amerika;Karibik;-18000;Nassau;America/Nassau;BS;-07721;+2505
+tz83=Amerika;Karibik;-18000;Havana;America/Havana;CU;-08222;+2308
+tz84=Amerika;Karibik;-18000;Port-au-Prince;America/Port-au-Prince;HT;-07220;+1832
+tz85=Amerika;Karibik;-18000;Jamajka;America/Jamaica;JM;-0764736;+175805
+tz86=Amerika;Karibik;-18000;Grand Turk;America/Grand_Turk;TC;-07108;+2128
+tz87=Amerika;Karibik;-14400;Barbados;America/Barbados;BB;-05937;+1306
+tz88=Amerika;Karibik;-14400;Aruba;America/Aruba;CW;-06900;+1211
+tz89=Amerika;Karibik;-14400;Curaçao;America/Curacao;CW;-06900;+1211
+tz90=Amerika;Karibik;-14400;Kralendijk;America/Kralendijk;CW;-06900;+1211
+tz91=Amerika;Karibik;-14400;Lower Prince’s Quarter;America/Lower_Princes;CW;-06900;+1211
+tz92=Amerika;Karibik;-14400;Santo Domingo;America/Santo_Domingo;DO;-06954;+1828
+tz93=Amerika;Karibik;-14400;Martinik;America/Martinique;MQ;-06105;+1436
+tz94=Amerika;Karibik;-14400;Portoriko;America/Puerto_Rico;PR;-0660622;+182806
+tz95=Amerika;Karibik;-14400;Anguilla;America/Anguilla;TT;-06131;+1039
+tz96=Amerika;Karibik;-14400;Antigua;America/Antigua;TT;-06131;+1039
+tz97=Amerika;Karibik;-14400;Dominika;America/Dominica;TT;-06131;+1039
+tz98=Amerika;Karibik;-14400;Grenada;America/Grenada;TT;-06131;+1039
+tz99=Amerika;Karibik;-14400;Guadeloupe;America/Guadeloupe;TT;-06131;+1039
+tz100=Amerika;Karibik;-14400;Marigot;America/Marigot;TT;-06131;+1039
+tz101=Amerika;Karibik;-14400;Montserrat;America/Montserrat;TT;-06131;+1039
+tz102=Amerika;Karibik;-14400;Port of Spain;America/Port_of_Spain;TT;-06131;+1039
+tz103=Amerika;Karibik;-14400;Svatý Bartoloměj;America/St_Barthelemy;TT;-06131;+1039
+tz104=Amerika;Karibik;-14400;Svatý Kryštof;America/St_Kitts;TT;-06131;+1039
+tz105=Amerika;Karibik;-14400;Svatá Lucie;America/St_Lucia;TT;-06131;+1039
+tz106=Amerika;Karibik;-14400;Svatý Tomáš (Karibik);America/St_Thomas;TT;-06131;+1039
+tz107=Amerika;Karibik;-14400;Svatý Vincenc;America/St_Vincent;TT;-06131;+1039
+tz108=Amerika;Karibik;-14400;Tortola;America/Tortola;TT;-06131;+1039
+tz109=Amerika;Jižní Amerika;-21600;Velikonoční ostrov;Pacific/Easter;CL;-10926;-2709
+tz110=Amerika;Jižní Amerika;-21600;Galapágy;Pacific/Galapagos;EC;-08936;-0054
+tz111=Amerika;Jižní Amerika;-18000;Eirunepe;America/Eirunepe;BR;-06952;-0640
+tz112=Amerika;Jižní Amerika;-18000;Rio Branco;America/Rio_Branco;BR;-06748;-0958
+tz113=Amerika;Jižní Amerika;-18000;Bogotá;America/Bogota;CO;-07405;+0436
+tz114=Amerika;Jižní Amerika;-18000;Guayaquil;America/Guayaquil;EC;-07950;-0210
+tz115=Amerika;Jižní Amerika;-18000;Lima;America/Lima;PE;-07703;-1203
+tz116=Amerika;Jižní Amerika;-14400;La Paz;America/La_Paz;BO;-06809;-1630
+tz117=Amerika;Jižní Amerika;-14400;Boa Vista;America/Boa_Vista;BR;-06040;+0249
+tz118=Amerika;Jižní Amerika;-14400;Campo Grande;America/Campo_Grande;BR;-05437;-2027
+tz119=Amerika;Jižní Amerika;-14400;Cuiaba;America/Cuiaba;BR;-05605;-1535
+tz120=Amerika;Jižní Amerika;-14400;Manaus;America/Manaus;BR;-06001;-0308
+tz121=Amerika;Jižní Amerika;-14400;Porto Velho;America/Porto_Velho;BR;-06354;-0846
+tz122=Amerika;Jižní Amerika;-14400;Santiago;America/Santiago;CL;-07040;-3327
+tz123=Amerika;Jižní Amerika;-14400;Guyana;America/Guyana;GY;-05810;+0648
+tz124=Amerika;Jižní Amerika;-14400;Asunción;America/Asuncion;PY;-05740;-2516
+tz125=Amerika;Jižní Amerika;-14400;Caracas;America/Caracas;VE;-06656;+1030
+tz126=Amerika;Jižní Amerika;-10800;La Rioja;America/Argentina/La_Rioja;AR;-06651;-2926
+tz127=Amerika;Jižní Amerika;-10800;Rio Gallegos;America/Argentina/Rio_Gallegos;AR;-06913;-5138
+tz128=Amerika;Jižní Amerika;-10800;Salta;America/Argentina/Salta;AR;-06525;-2447
+tz129=Amerika;Jižní Amerika;-10800;San Juan;America/Argentina/San_Juan;AR;-06831;-3132
+tz130=Amerika;Jižní Amerika;-10800;San Luis;America/Argentina/San_Luis;AR;-06621;-3319
+tz131=Amerika;Jižní Amerika;-10800;Tucuman;America/Argentina/Tucuman;AR;-06513;-2649
+tz132=Amerika;Jižní Amerika;-10800;Ushuaia;America/Argentina/Ushuaia;AR;-06818;-5448
+tz133=Amerika;Jižní Amerika;-10800;Buenos Aires;America/Buenos_Aires;AR;-05827;-3436
+tz134=Amerika;Jižní Amerika;-10800;Catamarca;America/Catamarca;AR;-06547;-2828
+tz135=Amerika;Jižní Amerika;-10800;Córdoba;America/Cordoba;AR;-06411;-3124
+tz136=Amerika;Jižní Amerika;-10800;Jujuy;America/Jujuy;AR;-06518;-2411
+tz137=Amerika;Jižní Amerika;-10800;Mendoza;America/Mendoza;AR;-06849;-3253
+tz138=Amerika;Jižní Amerika;-10800;Araguaina;America/Araguaina;BR;-04812;-0712
+tz139=Amerika;Jižní Amerika;-10800;Bahía;America/Bahia;BR;-03831;-1259
+tz140=Amerika;Jižní Amerika;-10800;Belém;America/Belem;BR;-04829;-0127
+tz141=Amerika;Jižní Amerika;-10800;Fortaleza;America/Fortaleza;BR;-03830;-0343
+tz142=Amerika;Jižní Amerika;-10800;Maceio;America/Maceio;BR;-03543;-0940
+tz143=Amerika;Jižní Amerika;-10800;Recife;America/Recife;BR;-03454;-0803
+tz144=Amerika;Jižní Amerika;-10800;Santarém;America/Santarem;BR;-05452;-0226
+tz145=Amerika;Jižní Amerika;-10800;São Paulo;America/Sao_Paulo;BR;-04637;-2332
+tz146=Amerika;Jižní Amerika;-10800;Punta Arenas;America/Punta_Arenas;CL;-07055;-5309
+tz147=Amerika;Jižní Amerika;-10800;Stanley;Atlantic/Stanley;FK;-05751;-5142
+tz148=Amerika;Jižní Amerika;-10800;Cayenne;America/Cayenne;GF;-05220;+0456
+tz149=Amerika;Jižní Amerika;-10800;Paramaribo;America/Paramaribo;SR;-05510;+0550
+tz150=Amerika;Jižní Amerika;-10800;Montevideo;America/Montevideo;UY;-0561245;-345433
+tz151=Amerika;Jižní Amerika;-7200;Noronha;America/Noronha;BR;-03225;-0351
+tz152=Amerika;Jižní Amerika;-7200;Jižní Georgie;Atlantic/South_Georgia;GS;-03632;-5416
+tz153=Oceánie;Australasie;23400;Kokosové ostrovy;Indian/Cocos;CC;+09655;-1210
+tz154=Oceánie;Australasie;25200;Vánoční ostrov;Indian/Christmas;CX;+10543;-1025
+tz155=Oceánie;Australasie;28800;Perth;Australia/Perth;AU;+11551;-3157
+tz156=Oceánie;Australasie;31500;Eucla;Australia/Eucla;AU;+12852;-3143
+tz157=Oceánie;Australasie;34200;Adelaide;Australia/Adelaide;AU;+13835;-3455
+tz158=Oceánie;Australasie;34200;Broken Hill;Australia/Broken_Hill;AU;+14127;-3157
+tz159=Oceánie;Australasie;34200;Darwin;Australia/Darwin;AU;+13050;-1228
+tz160=Oceánie;Australasie;36000;Brisbane;Australia/Brisbane;AU;+15302;-2728
+tz161=Oceánie;Australasie;36000;Currie;Australia/Currie;AU;+14352;-3956
+tz162=Oceánie;Australasie;36000;Hobart;Australia/Hobart;AU;+14719;-4253
+tz163=Oceánie;Australasie;36000;Lindeman;Australia/Lindeman;AU;+14900;-2016
+tz164=Oceánie;Australasie;36000;Melbourne;Australia/Melbourne;AU;+14458;-3749
+tz165=Oceánie;Australasie;36000;Sydney;Australia/Sydney;AU;+15113;-3352
+tz166=Oceánie;Australasie;37800;Lord Howe;Australia/Lord_Howe;AU;+15905;-3133
+tz167=Oceánie;Australasie;39600;Macquarie;Antarctica/Macquarie;AU;+15857;-5430
+tz168=Oceánie;Australasie;39600;Norfolk;Pacific/Norfolk;NF;+16758;-2903
+tz169=Oceánie;Australasie;43200;McMurdo;Antarctica/McMurdo;NZ;+17446;-3652
+tz170=Oceánie;Australasie;43200;Auckland;Pacific/Auckland;NZ;+17446;-3652
+tz171=Oceánie;Australasie;45900;Chathamské ostrovy;Pacific/Chatham;NZ;-17633;-4357
+tz172=Oceánie;Melanésie;36000;Port Moresby;Pacific/Port_Moresby;PG;+14710;-0930
+tz173=Oceánie;Melanésie;39600;Nouméa;Pacific/Noumea;NC;+16627;-2216
+tz174=Oceánie;Melanésie;39600;Bougainville;Pacific/Bougainville;PG;+15534;-0613
+tz175=Oceánie;Melanésie;39600;Guadalcanal;Pacific/Guadalcanal;SB;+16012;-0932
+tz176=Oceánie;Melanésie;39600;Éfaté;Pacific/Efate;VU;+16825;-1740
+tz177=Oceánie;Melanésie;43200;Fidži;Pacific/Fiji;FJ;+17825;-1808
+tz178=Oceánie;Mikronésie (region);32400;Palau;Pacific/Palau;PW;+13429;+0720
+tz179=Oceánie;Mikronésie (region);36000;Chuukské ostrovy;Pacific/Truk;FM;+15147;+0725
+tz180=Oceánie;Mikronésie (region);36000;Guam;Pacific/Guam;GU;+14445;+1328
+tz181=Oceánie;Mikronésie (region);36000;Saipan;Pacific/Saipan;GU;+14445;+1328
+tz182=Oceánie;Mikronésie (region);39600;Kosrae;Pacific/Kosrae;FM;+16259;+0519
+tz183=Oceánie;Mikronésie (region);39600;Pohnpei;Pacific/Ponape;FM;+15813;+0658
+tz184=Oceánie;Mikronésie (region);43200;Tarawa;Pacific/Tarawa;KI;+17300;+0125
+tz185=Oceánie;Mikronésie (region);43200;Kwajalein;Pacific/Kwajalein;MH;+16720;+0905
+tz186=Oceánie;Mikronésie (region);43200;Majuro;Pacific/Majuro;MH;+17112;+0709
+tz187=Oceánie;Mikronésie (region);43200;Nauru;Pacific/Nauru;NR;+16655;-0031
+tz188=Oceánie;Mikronésie (region);43200;Wake;Pacific/Wake;UM;+16637;+1917
+tz189=Oceánie;Mikronésie (region);46800;Enderbury;Pacific/Enderbury;KI;-17105;-0308
+tz190=Oceánie;Mikronésie (region);50400;Kiritimati;Pacific/Kiritimati;KI;-15720;+0152
+tz191=Oceánie;Polynésie;-39600;Midway;Pacific/Midway;AS;-17042;-1416
+tz192=Oceánie;Polynésie;-39600;Pago Pago;Pacific/Pago_Pago;AS;-17042;-1416
+tz193=Oceánie;Polynésie;-39600;Niue;Pacific/Niue;NU;-16955;-1901
+tz194=Oceánie;Polynésie;-36000;Rarotonga;Pacific/Rarotonga;CK;-15946;-2114
+tz195=Oceánie;Polynésie;-36000;Tahiti;Pacific/Tahiti;PF;-14934;-1732
+tz196=Oceánie;Polynésie;-34200;Markézy;Pacific/Marquesas;PF;-13930;-0900
+tz197=Oceánie;Polynésie;-32400;Gambierovy ostrovy;Pacific/Gambier;PF;-13457;-2308
+tz198=Oceánie;Polynésie;-28800;Pitcairnovy ostrovy;Pacific/Pitcairn;PN;-13005;-2504
+tz199=Oceánie;Polynésie;43200;Funafuti;Pacific/Funafuti;TV;+17913;-0831
+tz200=Oceánie;Polynésie;43200;Wallis;Pacific/Wallis;WF;-17610;-1318
+tz201=Oceánie;Polynésie;46800;Fakaofo;Pacific/Fakaofo;TK;-17114;-0922
+tz202=Oceánie;Polynésie;46800;Tongatapu;Pacific/Tongatapu;TO;-17510;-2110
+tz203=Oceánie;Polynésie;46800;Apia;Pacific/Apia;WS;-17144;-1350
+tz204=Oceánie;vnější Oceánie;-10800;Palmer;Antarctica/Palmer;AQ;-06406;-6448
+tz205=Oceánie;vnější Oceánie;-10800;Rothera;Antarctica/Rothera;AQ;-06808;-6734
+tz206=Oceánie;vnější Oceánie;0;Troll;Antarctica/Troll;AQ;+0023206;-720041
+tz207=Oceánie;vnější Oceánie;10800;Syowa;Antarctica/Syowa;AQ;+0393524;-690022
+tz208=Oceánie;vnější Oceánie;18000;Mawson;Antarctica/Mawson;AQ;+06253;-6736
+tz209=Oceánie;vnější Oceánie;21600;Vostok;Antarctica/Vostok;AQ;+10654;-7824
+tz210=Oceánie;vnější Oceánie;25200;Davis;Antarctica/Davis;AQ;+07758;-6835
+tz211=Oceánie;vnější Oceánie;28800;Casey;Antarctica/Casey;AQ;+11031;-6617
+tz212=Oceánie;vnější Oceánie;36000;Dumont d’Urville;Antarctica/DumontDUrville;AQ;+14001;-6640
+tz213=Afrika;severní Afrika;3600;Alžír;Africa/Algiers;DZ;+00303;+3647
+tz214=Afrika;severní Afrika;3600;El Aaiun;Africa/El_Aaiun;EH;-01312;+2709
+tz215=Afrika;severní Afrika;3600;Casablanca;Africa/Casablanca;MA;-00735;+3339
+tz216=Afrika;severní Afrika;3600;Tunis;Africa/Tunis;TN;+01011;+3648
+tz217=Afrika;severní Afrika;7200;Káhira;Africa/Cairo;EG;+03115;+3003
+tz218=Afrika;severní Afrika;7200;Tripolis;Africa/Tripoli;LY;+01311;+3254
+tz219=Afrika;severní Afrika;7200;Chartúm;Africa/Khartoum;SD;+03232;+1536
+tz220=Afrika;západní Afrika;-3600;Kapverdy;Atlantic/Cape_Verde;CV;-02331;+1455
+tz221=Afrika;západní Afrika;0;Abidžan;Africa/Abidjan;CI;-00402;+0519
+tz222=Afrika;západní Afrika;0;Bamako;Africa/Bamako;CI;-00402;+0519
+tz223=Afrika;západní Afrika;0;Banjul;Africa/Banjul;CI;-00402;+0519
+tz224=Afrika;západní Afrika;0;Conakry;Africa/Conakry;CI;-00402;+0519
+tz225=Afrika;západní Afrika;0;Dakar;Africa/Dakar;CI;-00402;+0519
+tz226=Afrika;západní Afrika;0;Freetown;Africa/Freetown;CI;-00402;+0519
+tz227=Afrika;západní Afrika;0;Lomé;Africa/Lome;CI;-00402;+0519
+tz228=Afrika;západní Afrika;0;Nuakšott;Africa/Nouakchott;CI;-00402;+0519
+tz229=Afrika;západní Afrika;0;Ouagadougou;Africa/Ouagadougou;CI;-00402;+0519
+tz230=Afrika;západní Afrika;0;Svatá Helena;Atlantic/St_Helena;CI;-00402;+0519
+tz231=Afrika;západní Afrika;0;Accra;Africa/Accra;GH;-00013;+0533
+tz232=Afrika;západní Afrika;0;Bissau;Africa/Bissau;GW;-01535;+1151
+tz233=Afrika;západní Afrika;0;Monrovia;Africa/Monrovia;LR;-01047;+0618
+tz234=Afrika;západní Afrika;3600;Bangui;Africa/Bangui;NG;+00324;+0627
+tz235=Afrika;západní Afrika;3600;Brazzaville;Africa/Brazzaville;NG;+00324;+0627
+tz236=Afrika;západní Afrika;3600;Douala;Africa/Douala;NG;+00324;+0627
+tz237=Afrika;západní Afrika;3600;Kinshasa;Africa/Kinshasa;NG;+00324;+0627
+tz238=Afrika;západní Afrika;3600;Lagos;Africa/Lagos;NG;+00324;+0627
+tz239=Afrika;západní Afrika;3600;Libreville;Africa/Libreville;NG;+00324;+0627
+tz240=Afrika;západní Afrika;3600;Luanda;Africa/Luanda;NG;+00324;+0627
+tz241=Afrika;západní Afrika;3600;Malabo;Africa/Malabo;NG;+00324;+0627
+tz242=Afrika;západní Afrika;3600;Niamey;Africa/Niamey;NG;+00324;+0627
+tz243=Afrika;západní Afrika;3600;Porto-Novo;Africa/Porto-Novo;NG;+00324;+0627
+tz244=Afrika;střední Afrika;3600;Svatý Tomáš;Africa/Sao_Tome;ST;+00644;+0020
+tz245=Afrika;střední Afrika;3600;Ndžamena;Africa/Ndjamena;TD;+01503;+1207
+tz246=Afrika;východní Afrika;7200;Blantyre;Africa/Blantyre;MZ;+03235;-2558
+tz247=Afrika;východní Afrika;7200;Bujumbura;Africa/Bujumbura;MZ;+03235;-2558
+tz248=Afrika;východní Afrika;7200;Gaborone;Africa/Gaborone;MZ;+03235;-2558
+tz249=Afrika;východní Afrika;7200;Harare;Africa/Harare;MZ;+03235;-2558
+tz250=Afrika;východní Afrika;7200;Kigali;Africa/Kigali;MZ;+03235;-2558
+tz251=Afrika;východní Afrika;7200;Lubumbashi;Africa/Lubumbashi;MZ;+03235;-2558
+tz252=Afrika;východní Afrika;7200;Lusaka;Africa/Lusaka;MZ;+03235;-2558
+tz253=Afrika;východní Afrika;7200;Maputo;Africa/Maputo;MZ;+03235;-2558
+tz254=Afrika;východní Afrika;10800;Addis Abeba;Africa/Addis_Ababa;KE;+03649;-0117
+tz255=Afrika;východní Afrika;10800;Asmara;Africa/Asmera;KE;+03649;-0117
+tz256=Afrika;východní Afrika;10800;Dar es Salaam;Africa/Dar_es_Salaam;KE;+03649;-0117
+tz257=Afrika;východní Afrika;10800;Džibuti;Africa/Djibouti;KE;+03649;-0117
+tz258=Afrika;východní Afrika;10800;Kampala;Africa/Kampala;KE;+03649;-0117
+tz259=Afrika;východní Afrika;10800;Mogadišu;Africa/Mogadishu;KE;+03649;-0117
+tz260=Afrika;východní Afrika;10800;Nairobi;Africa/Nairobi;KE;+03649;-0117
+tz261=Afrika;východní Afrika;10800;Antananarivo;Indian/Antananarivo;KE;+03649;-0117
+tz262=Afrika;východní Afrika;10800;Komory;Indian/Comoro;KE;+03649;-0117
+tz263=Afrika;východní Afrika;10800;Mayotte;Indian/Mayotte;KE;+03649;-0117
+tz264=Afrika;východní Afrika;10800;Juba;Africa/Juba;SS;+03137;+0451
+tz265=Afrika;východní Afrika;14400;Mauricius;Indian/Mauritius;MU;+05730;-2010
+tz266=Afrika;východní Afrika;14400;Réunion;Indian/Reunion;RE;+05528;-2052
+tz267=Afrika;východní Afrika;14400;Mahé;Indian/Mahe;SC;+05528;-0440
+tz268=Afrika;východní Afrika;18000;Kerguelenovy ostrovy;Indian/Kerguelen;TF;+0701303;-492110
+tz269=Afrika;východní Afrika;21600;Chagos;Indian/Chagos;IO;+07225;-0720
+tz270=Afrika;jižní Afrika;7200;Windhoek;Africa/Windhoek;NA;+01706;-2234
+tz271=Afrika;jižní Afrika;7200;Johannesburg;Africa/Johannesburg;ZA;+02800;-2615
+tz272=Afrika;jižní Afrika;7200;Maseru;Africa/Maseru;ZA;+02800;-2615
+tz273=Afrika;jižní Afrika;7200;Mbabane;Africa/Mbabane;ZA;+02800;-2615
+tz274=Evropa;severní Evropa;0;Faerské ostrovy;Atlantic/Faeroe;FO;-00646;+6201
+tz275=Evropa;severní Evropa;0;Guernsey;Europe/Guernsey;GB;-0000731;+513030
+tz276=Evropa;severní Evropa;0;Ostrov Man;Europe/Isle_of_Man;GB;-0000731;+513030
+tz277=Evropa;severní Evropa;0;Jersey;Europe/Jersey;GB;-0000731;+513030
+tz278=Evropa;severní Evropa;0;Londýn;Europe/London;GB;-0000731;+513030
+tz279=Evropa;severní Evropa;0;Reykjavík;Atlantic/Reykjavik;IS;-02151;+6409
+tz280=Evropa;severní Evropa;3600;Kodaň;Europe/Copenhagen;DK;+01235;+5540
+tz281=Evropa;severní Evropa;3600;Dublin;Europe/Dublin;IE;-00615;+5320
+tz282=Evropa;severní Evropa;3600;Longyearbyen;Arctic/Longyearbyen;NO;+01045;+5955
+tz283=Evropa;severní Evropa;3600;Oslo;Europe/Oslo;NO;+01045;+5955
+tz284=Evropa;severní Evropa;3600;Stockholm;Europe/Stockholm;SE;+01803;+5920
+tz285=Evropa;severní Evropa;7200;Tallinn;Europe/Tallinn;EE;+02445;+5925
+tz286=Evropa;severní Evropa;7200;Helsinky;Europe/Helsinki;FI;+02458;+6010
+tz287=Evropa;severní Evropa;7200;Mariehamn;Europe/Mariehamn;FI;+02458;+6010
+tz288=Evropa;severní Evropa;7200;Vilnius;Europe/Vilnius;LT;+02519;+5441
+tz289=Evropa;severní Evropa;7200;Riga;Europe/Riga;LV;+02406;+5657
+tz290=Evropa;západní Evropa;3600;Brusel;Europe/Brussels;BE;+00420;+5050
+tz291=Evropa;západní Evropa;3600;Paříž;Europe/Paris;FR;+00220;+4852
+tz292=Evropa;západní Evropa;3600;Lucemburk;Europe/Luxembourg;LU;+00609;+4936
+tz293=Evropa;západní Evropa;3600;Monako;Europe/Monaco;MC;+00723;+4342
+tz294=Evropa;západní Evropa;3600;Amsterdam;Europe/Amsterdam;NL;+00454;+5222
+tz295=Evropa;východní Evropa;7200;Sofie;Europe/Sofia;BG;+02319;+4241
+tz296=Evropa;východní Evropa;7200;Kišiněv;Europe/Chisinau;MD;+02850;+4700
+tz297=Evropa;východní Evropa;7200;Bukurešť;Europe/Bucharest;RO;+02606;+4426
+tz298=Evropa;východní Evropa;7200;Kaliningrad;Europe/Kaliningrad;RU;+02030;+5443
+tz299=Evropa;východní Evropa;7200;Kyjev;Europe/Kiev;UA;+03031;+5026
+tz300=Evropa;východní Evropa;7200;Užhorod;Europe/Uzhgorod;UA;+02218;+4837
+tz301=Evropa;východní Evropa;7200;Záporoží;Europe/Zaporozhye;UA;+03510;+4750
+tz302=Evropa;východní Evropa;10800;Minsk;Europe/Minsk;BY;+02734;+5354
+tz303=Evropa;východní Evropa;10800;Kirov;Europe/Kirov;RU;+04939;+5836
+tz304=Evropa;východní Evropa;10800;Moskva;Europe/Moscow;RU;+0373704;+554521
+tz305=Evropa;východní Evropa;10800;Simferopol;Europe/Simferopol;UA;+03406;+4457
+tz306=Evropa;východní Evropa;14400;Astrachaň;Europe/Astrakhan;RU;+04803;+4621
+tz307=Evropa;východní Evropa;14400;Samara;Europe/Samara;RU;+05009;+5312
+tz308=Evropa;východní Evropa;14400;Saratov;Europe/Saratov;RU;+04602;+5134
+tz309=Evropa;východní Evropa;14400;Uljanovsk;Europe/Ulyanovsk;RU;+04824;+5420
+tz310=Evropa;východní Evropa;14400;Volgograd;Europe/Volgograd;RU;+04425;+4844
+tz311=Asie;Severní Asie;18000;Jekatěrinburg;Asia/Yekaterinburg;RU;+06036;+5651
+tz312=Asie;Severní Asie;21600;Omsk;Asia/Omsk;RU;+07324;+5500
+tz313=Evropa;východní Evropa;25200;Barnaul;Asia/Barnaul;RU;+08345;+5322
+tz314=Asie;Severní Asie;25200;Krasnojarsk;Asia/Krasnoyarsk;RU;+09250;+5601
+tz315=Asie;Severní Asie;25200;Novokuzněck;Asia/Novokuznetsk;RU;+08707;+5345
+tz316=Evropa;východní Evropa;25200;Novosibirsk;Asia/Novosibirsk;RU;+08255;+5502
+tz317=Evropa;východní Evropa;25200;Tomsk;Asia/Tomsk;RU;+08458;+5630
+tz318=Evropa;východní Evropa;28800;Irkutsk;Asia/Irkutsk;RU;+10420;+5216
+tz319=Asie;Severní Asie;32400;Čita;Asia/Chita;RU;+11328;+5203
+tz320=Evropa;východní Evropa;32400;Chandyga;Asia/Khandyga;RU;+1353314;+623923
+tz321=Evropa;východní Evropa;32400;Jakutsk;Asia/Yakutsk;RU;+12940;+6200
+tz322=Evropa;východní Evropa;36000;Ust-Nera;Asia/Ust-Nera;RU;+1431336;+643337
+tz323=Evropa;východní Evropa;36000;Vladivostok;Asia/Vladivostok;RU;+13156;+4310
+tz324=Evropa;východní Evropa;39600;Magadan;Asia/Magadan;RU;+15048;+5934
+tz325=Evropa;východní Evropa;39600;Sachalin;Asia/Sakhalin;RU;+14242;+4658
+tz326=Evropa;východní Evropa;39600;Sredněkolymsk;Asia/Srednekolymsk;RU;+15343;+6728
+tz327=Evropa;východní Evropa;43200;Anadyr;Asia/Anadyr;RU;+17729;+6445
+tz328=Asie;Severní Asie;43200;Kamčatka;Asia/Kamchatka;RU;+15839;+5301
+tz329=Evropa;jižní Evropa;-3600;Azorské ostrovy;Atlantic/Azores;PT;-02540;+3744
+tz330=Evropa;jižní Evropa;0;Kanárské ostrovy;Atlantic/Canary;ES;-01524;+2806
+tz331=Evropa;jižní Evropa;0;Madeira;Atlantic/Madeira;PT;-01654;+3238
+tz332=Evropa;jižní Evropa;0;Lisabon;Europe/Lisbon;PT;-00908;+3843
+tz333=Evropa;jižní Evropa;3600;Andorra;Europe/Andorra;AD;+00131;+4230
+tz334=Evropa;jižní Evropa;3600;Tirana;Europe/Tirane;AL;+01950;+4120
+tz335=Evropa;jižní Evropa;3600;Ceuta;Africa/Ceuta;ES;-00519;+3553
+tz336=Evropa;jižní Evropa;3600;Madrid;Europe/Madrid;ES;-00341;+4024
+tz337=Evropa;jižní Evropa;3600;Gibraltar;Europe/Gibraltar;GI;-00521;+3608
+tz338=Evropa;jižní Evropa;3600;Řím;Europe/Rome;IT;+01229;+4154
+tz339=Evropa;jižní Evropa;3600;San Marino;Europe/San_Marino;IT;+01229;+4154
+tz340=Evropa;jižní Evropa;3600;Vatikán;Europe/Vatican;IT;+01229;+4154
+tz341=Evropa;jižní Evropa;3600;Malta;Europe/Malta;MT;+01431;+3554
+tz342=Evropa;jižní Evropa;3600;Bělehrad;Europe/Belgrade;RS;+02030;+4450
+tz343=Evropa;jižní Evropa;3600;Lublaň;Europe/Ljubljana;RS;+02030;+4450
+tz344=Evropa;jižní Evropa;3600;Podgorica;Europe/Podgorica;RS;+02030;+4450
+tz345=Evropa;jižní Evropa;3600;Sarajevo;Europe/Sarajevo;RS;+02030;+4450
+tz346=Evropa;jižní Evropa;3600;Skopje;Europe/Skopje;RS;+02030;+4450
+tz347=Evropa;jižní Evropa;3600;Záhřeb;Europe/Zagreb;RS;+02030;+4450
+tz348=Evropa;jižní Evropa;7200;Athény;Europe/Athens;GR;+02343;+3758
+tz349=Evropa;Střední Evropa;3600;Bratislava;Europe/Bratislava;CZ;+01426;+5005
+tz350=Evropa;Střední Evropa;3600;Praha;Europe/Prague;CZ;+01426;+5005
+tz351=Evropa;Střední Evropa;3600;Budapešť;Europe/Budapest;HU;+01905;+4730
+tz352=Evropa;Střední Evropa;3600;Varšava;Europe/Warsaw;PL;+02100;+5215
+tz353=Evropa;Střední Evropa;3600;Vídeň;Europe/Vienna;AT;+01620;+4813
+tz354=Evropa;Střední Evropa;3600;Busingen;Europe/Busingen;CH;+00832;+4723
+tz355=Evropa;Střední Evropa;3600;Vaduz;Europe/Vaduz;CH;+00832;+4723
+tz356=Evropa;Střední Evropa;3600;Curych;Europe/Zurich;CH;+00832;+4723
+tz357=Evropa;Střední Evropa;3600;Berlín;Europe/Berlin;DE;+01322;+5230
+tz358=Asie;západní Asie;7200;Famagusta;Asia/Famagusta;CY;+03357;+3507
+tz359=Asie;západní Asie;7200;Nikósie;Asia/Nicosia;CY;+03322;+3510
+tz360=Asie;západní Asie;7200;Jeruzalém;Asia/Jerusalem;IL;+0351326;+314650
+tz361=Asie;západní Asie;7200;Ammán;Asia/Amman;JO;+03556;+3157
+tz362=Asie;západní Asie;7200;Bejrút;Asia/Beirut;LB;+03530;+3353
+tz363=Asie;západní Asie;7200;Gaza;Asia/Gaza;PS;+03428;+3130
+tz364=Asie;západní Asie;7200;Hebron;Asia/Hebron;PS;+0350542;+313200
+tz365=Asie;západní Asie;7200;Damašek;Asia/Damascus;SY;+03618;+3330
+tz366=Asie;západní Asie;10800;Bagdád;Asia/Baghdad;IQ;+04425;+3321
+tz367=Asie;západní Asie;10800;Bahrajn;Asia/Bahrain;QA;+05132;+2517
+tz368=Asie;západní Asie;10800;Katar;Asia/Qatar;QA;+05132;+2517
+tz369=Asie;západní Asie;10800;Aden;Asia/Aden;SA;+04643;+2438
+tz370=Asie;západní Asie;10800;Kuvajt;Asia/Kuwait;SA;+04643;+2438
+tz371=Asie;západní Asie;10800;Rijád;Asia/Riyadh;SA;+04643;+2438
+tz372=Asie;západní Asie;10800;Istanbul;Europe/Istanbul;TR;+02858;+4101
+tz373=Asie;západní Asie;14400;Dubaj;Asia/Dubai;AE;+05518;+2518
+tz374=Asie;západní Asie;14400;Maskat;Asia/Muscat;AE;+05518;+2518
+tz375=Asie;západní Asie;14400;Jerevan;Asia/Yerevan;AM;+04430;+4011
+tz376=Asie;západní Asie;14400;Baku;Asia/Baku;AZ;+04951;+4023
+tz377=Asie;západní Asie;14400;Tbilisi;Asia/Tbilisi;GE;+04449;+4143
+tz378=Asie;Střední Asie;18000;Ašchabad;Asia/Ashgabat;TM;+05823;+3757
+tz379=Asie;Střední Asie;18000;Dušanbe;Asia/Dushanbe;TJ;+06848;+3835
+tz380=Asie;Střední Asie;18000;Aktau;Asia/Aqtau;KZ;+05016;+4431
+tz381=Asie;Střední Asie;18000;Aktobe;Asia/Aqtobe;KZ;+05710;+5017
+tz382=Asie;Střední Asie;18000;Atyrau;Asia/Atyrau;KZ;+05156;+4707
+tz383=Asie;Střední Asie;18000;Uralsk;Asia/Oral;KZ;+05121;+5113
+tz384=Asie;Střední Asie;18000;Samarkand;Asia/Samarkand;UZ;+06648;+3940
+tz385=Asie;Střední Asie;18000;Taškent;Asia/Tashkent;UZ;+06918;+4120
+tz386=Asie;Střední Asie;21600;Biškek;Asia/Bishkek;KG;+07436;+4254
+tz387=Asie;Střední Asie;21600;Almaty;Asia/Almaty;KZ;+07657;+4315
+tz388=Asie;Střední Asie;21600;Kyzylorda;Asia/Qyzylorda;KZ;+06528;+4448
+tz389=Asie;východní Asie;25200;Hovd;Asia/Hovd;MN;+09139;+4801
+tz390=Asie;východní Asie;28800;Šanghaj;Asia/Shanghai;CN;+12128;+3114
+tz391=Asie;východní Asie;28800;Hongkong;Asia/Hong_Kong;HK;+11409;+2217
+tz392=Asie;východní Asie;28800;Čojbalsan;Asia/Choibalsan;MN;+11430;+4804
+tz393=Asie;východní Asie;28800;Ulánbátar;Asia/Ulaanbaatar;MN;+10653;+4755
+tz394=Asie;východní Asie;28800;Macao;Asia/Macau;MO;+1133230;+221150
+tz395=Asie;východní Asie;28800;Tchaj-pej;Asia/Taipei;TW;+12130;+2503
+tz396=Asie;východní Asie;32400;Tokio;Asia/Tokyo;JP;+1394441;+353916
+tz397=Asie;východní Asie;32400;Pchjongjang;Asia/Pyongyang;KP;+12545;+3901
+tz398=Asie;východní Asie;32400;Soul;Asia/Seoul;KR;+12658;+3733
+tz399=Asie;jižní Asie;12600;Teherán;Asia/Tehran;IR;+05126;+3540
+tz400=Asie;jižní Asie;16200;Kábul;Asia/Kabul;AF;+06912;+3431
+tz401=Asie;jižní Asie;18000;Maledivy;Indian/Maldives;MV;+07330;+0410
+tz402=Asie;jižní Asie;18000;Karáčí;Asia/Karachi;PK;+06703;+2452
+tz403=Asie;jižní Asie;19800;Kalkata;Asia/Calcutta;IN;+08822;+2232
+tz404=Asie;jižní Asie;19800;Kolombo;Asia/Colombo;LK;+07951;+0656
+tz405=Asie;jižní Asie;20700;Káthmándú;Asia/Katmandu;NP;+08519;+2743
+tz406=Asie;jižní Asie;21600;Dháka;Asia/Dhaka;BD;+09025;+2343
+tz407=Asie;jižní Asie;21600;Thimbú;Asia/Thimphu;BT;+08939;+2728
+tz408=Asie;jihovýchodní Asie;23400;Rangún;Asia/Yangon;MM;+09610;+1647
+tz409=Asie;jihovýchodní Asie;25200;Jakarta;Asia/Jakarta;ID;+10648;-0610
+tz410=Asie;jihovýchodní Asie;25200;Pontianak;Asia/Pontianak;ID;+10920;-0002
+tz411=Asie;jihovýchodní Asie;25200;Bangkok;Asia/Bangkok;TH;+10031;+1345
+tz412=Asie;jihovýchodní Asie;25200;Phnompenh;Asia/Phnom_Penh;TH;+10031;+1345
+tz413=Asie;jihovýchodní Asie;25200;Vientiane;Asia/Vientiane;TH;+10031;+1345
+tz414=Asie;jihovýchodní Asie;25200;Ho Či Minovo město;Asia/Saigon;VN;+10640;+1045
+tz415=Asie;jihovýchodní Asie;28800;Brunej;Asia/Brunei;BN;+11455;+0456
+tz416=Asie;jihovýchodní Asie;28800;Makassar;Asia/Makassar;ID;+11924;-0507
+tz417=Asie;jihovýchodní Asie;28800;Kuala Lumpur;Asia/Kuala_Lumpur;MY;+10142;+0310
+tz418=Asie;jihovýchodní Asie;28800;Kučing;Asia/Kuching;MY;+11020;+0133
+tz419=Asie;jihovýchodní Asie;28800;Manila;Asia/Manila;PH;+12100;+1435
+tz420=Asie;jihovýchodní Asie;28800;Singapur;Asia/Singapore;SG;+10351;+0117
+tz421=Asie;jihovýchodní Asie;32400;Jayapura;Asia/Jayapura;ID;+14042;-0232
+tz422=Asie;jihovýchodní Asie;32400;Dili;Asia/Dili;TL;+12535;-0833
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+#-------National language support-------------------
+# Used for all type of user defined error messages.
+
+MapOperation.EsriCapabilities.txt=Nelze se připojit ke službě Esri ({0}): {1}
+MapOperation.RemoteGeometry.txt=Nelze načíst geometrie: {0}
+MapOperation.RemoteGeometryReason.txt=Neplatná odezva
+MapOperation.RemoteGeometryEmpty.txt=Daným identifikátorům neodpovídají žádné geometrie.
+MapOperation.WindowsCode.txt=Číslo chyby Windows
+MapOperation.EsriDrivetime.txt=Nelze získat informace o ujeté vzdálenosti: {0}
+MapOperation.EsriRoute.txt=Nelze načíst informace o trase: {0}
+MapOperation.EsriSearch.txt=Nelze načíst informace vyhledávání.
+MapOperation.EsriSearchEmpty.txt=Hledání „{0}“ nevrátilo žádné výsledky.
+MapOperation.EsriReverseGeocode.txt=V tomto umístění nejsou k dispozici žádné informace.
+MapOperation.EsriGeoEnrichment.txt=Nelze načíst informace GeoEnrichment.
+MapOperation.Projection.txt=Nelze vytvořit projekci dat: {0}
+MapOperation.MissingMapCoordinates.txt=Některé funkce se na mapě nemusejí zobrazovat kvůli chybějícím informacím o poloze v datech.
+MapOperation.MissingGeometries.txt=Geografická mapa regionu nezobrazuje některé regiony, protože data neodpovídají známým geografickým regionům.
+MapOperation.NoMatchesFound.txt=Žádné funkce mapy nemají platné informace o místě.  Zkontrolujte typ geografie.
+MapOperation.ProjectedPointsMissing.txt=Některé funkce se nemusejí zobrazit na mapě, protože jejich informace o místě nelze projektovat.
+MapDataCache.MissingEmbeddedGeometry.txt=Geometrie nejsou k dispozici.
+EsriDirectoryServices.EsriQuery.txt=Chyba načítání informací služby Esri.
+
+EsriPortalAuth.NoToken.txt=Mapu nelze zobrazit.  Uživatelská služba Esri vyžaduje platný identifikátor a heslo uživatele, aby mohla vygenerovat mapu.  Je také možné, že vypršela platnost hesla.
+EsriPortalAuth.InvalidToken.txt=Platnost aktuální relace s Esri Server vypršela.  Pokud se relace automaticky znovu nepřipojí, ukončete aplikaci a restartujte ji.
+EsriPortalAuth.Permissions.txt=Nelze zobrazit požadovanou mapu Esri ({0}).  Spojte se správcem Esri a vyžádejte si informace o svých oprávněních.
+
+EsriGeocodeServices.InvalidInputs.txt=Neplatné vstupy pro geokódovací služby Esri.
+EsriGeocodeServices.EsriError.txt=Chyba při připojování ke službě Esri ({0}): {1}
+EsriGeoEnrichmentServices.InvalidInputs.txt=Neplatné vstupy pro službu Esri GeoEnrichment.
+EsriGeoEnrichmentServices.EsriError.txt=Chyba připojení ke službě Esri GeoEnrichment ({0}): {1}
+
+EsriServices.EmptyResults.txt=Prázdné výsledky
+WKBGeometry.InvalidProjection.txt={0} regionů nelze správně projektovat.  Zkontrolujte nastavení projekce na straně poskytovatele uživatelské mapy.
+WKBGeometry.MissingRegions.txt={0} z {1} regionů nenalezeno.
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+#
+# These will be surfaced to users and should be reviewed and translated.
+#
+
+# The report state could not be saved to the server.
+vaviewer.error.stateNotSaved.txt = Stav reportu nebylo možné uložit na server.
+
+# The report state could not be reset on the server.
+vaviewer.error.stateNotReset.txt = Stav reportu nelze na serveru resetovat.
+
+# Saving state is not supported.
+vaviewer.error.stateNotSupported.txt = Ukládání stavu reportu není podporováno.
+
+# The report could not be saved to the server.
+vaviewer.error.reportNotSaved.txt = Report nebylo možné uložit na server.
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+#
+# These will be surfaced to users and should be reviewed and translated.
+#
+
+vaviewer.natural.language.vocalization.question.whichPathShouldIUse.txt = „Jakou složku mám použít?“
+vaviewer.natural.language.vocalization.question.whichReportShouldIUse.txt = „Jaký report mám použít?“
+vaviewer.natural.language.vocalization.question.whichConnectionShouldIUse.txt = „Jaký server mám použít?“
+vaviewer.natural.language.vocalization.question.whichPromptShouldIUse.txt = „Jaký ovladač filtru mám použít?“
+vaviewer.natural.language.vocalization.question.whichValueShouldIUse.txt = „Jakou hodnotu mám použít?“
+vaviewer.natural.language.vocalization.question.whichVisualizationShouldIUse.txt = „Jakou vizualizaci mám použít?“
+vaviewer.natural.language.vocalization.question.whichPageShouldIUse.txt = „Jakou stránku mám použít?“
+vaviewer.natural.language.vocalization.question.whichPromptShouldIClear.txt = „Jaký ovladač filtru mám vymazat?“
+
+vaviewer.natural.language.vocalization.warning.requiresActiveReport.txt = Rád bych pomohl, ale potřebuji otevřít report.
+vaviewer.natural.language.vocalization.warning.onFirstPage.txt = Dobrá zpráva, jste na stránce 1.
+vaviewer.natural.language.vocalization.warning.onLastPage.txt = Dobrá zpráva, jste na místě.
+vaviewer.natural.language.vocalization.warning.reportContainsSinglePage.txt = Tento report má jen jednu stránku.
+vaviewer.natural.language.vocalization.warning.reportContainsOnlyNPages.fmt.txt = Tento report má jen {0} stránek.
+vaviewer.natural.language.vocalization.warning.noSuchPageNumber.txt = To je vtip? Taková stránka neexistuje.
+vaviewer.natural.language.vocalization.warning.invalidReport.txt = V tomto reportu došlo k chybě … nedává žádný smysl.
+vaviewer.natural.language.vocalization.warning.statementNotUnderstood.txt = Nejsem si jistý, jestli rozumím.
+vaviewer.natural.language.vocalization.warning.unsupportedFeature.txt = Je mi líto, ale nikdo mi zatím neřekl, jak to mám udělat. Pořád se učím.
+vaviewer.natural.language.vocalization.warning.noVisualsToInspect.txt = Na této stránce není nic ke kontrole.
+vaviewer.natural.language.vocalization.warning.unexpectedStateChange.txt = Co se stalo? Ten objekt je teď pryč!
+vaviewer.natural.language.vocalization.warning.unableToLocate.txt = Ale ne! Ten objekt byl odstraněn!
+vaviewer.natural.language.vocalization.warning.unableToHelp.txt = Rád bych pomohl, ale bohužel nevím jak.
+vaviewer.natural.language.vocalization.warning.requestWasCancelled.txt = Požadavek byl zrušen.
+vaviewer.natural.language.vocalization.warning.domainLoadStarted.txt = Narazil/a jsem na problém. Právě provádím opravu. Bude mi to trval ještě chvilku. Poté Vám rád/a opět pomohu.
+vaviewer.natural.language.vocalization.warning.domainLoadInProgress.txt = Opravuji problém a jsem téměř hotov/a. Poté Vám budu moci opět pomoci.
+vaviewer.natural.language.vocalization.warning.domainLoadFailed.txt = Mám problém, který nedokážu opravit.  Požádejte prosím svého správce systému SAS, aby mi pomohl.
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+#
+# These will be surfaced to users and should be reviewed and translated.
+#
+
+# e.g. Nov 18, 2017 at 12:15 AM
+vaviewer.sidepanel.dateFormat.txt = {0} v {1}
+
+vaviewer.sidepanel.serverLocation.txt = Server
+vaviewer.sidepanel.folderLocation.txt = Místo
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+#
+
+# These definitions are used to override corresponding definitions from GTL.
+# Doc:  http://sww.sas.com/saspedia/Business_Intelligence_Report_Definition_Graph_Localization_Overrides
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.MEAN.txt = Průměr
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.STD.txt = Stand. odch.
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.MIN.txt = Dolní vous
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.MAX.txt = Horní vous
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.TRUE_MIN.txt = Minimum
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.TRUE_MAX.txt = Maximum
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.N.txt = Součet
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+# bird_localized_strings.properties
+#
+# en_US
+#
+
+#VAD copied Role Description
+bird.data.role.ANIMATION_VAR.txt = Animace
+bird.data.role.BAR_MEASURE1_VAR.txt = Ukazatel (sloupec 1)
+bird.data.role.BAR_MEASURE2_VAR.txt = Ukazatel (2. sloupec)
+bird.data.role.BAR_MEASURE_VAR.txt = Ukazatel (sloupec)
+bird.data.role.BOLINGER_LOWER_VAR.txt = Bollinger spodní
+bird.data.role.BOLINGER_UPPER_VAR.txt = Bollinger horní
+bird.data.role.CATEGORY_VAR.txt = Kategorie
+bird.data.role.CLOSE_VAR.txt = Zavřít
+bird.data.role.COLOR_VAR.txt = Barva
+bird.data.role.COLUMN_VAR.txt = Sloupec
+bird.data.role.COLUMNS_VAR.txt = Sloupce
+bird.data.role.DATA_LABEL_VAR.txt = Označení dat
+bird.data.role.DATA_VALUE_VAR.txt = Hodnoty dat
+bird.data.role.DOCUMENT_COUNT_VAR.txt = Počet dokumentů
+bird.data.role.DOTPLOT_CATEGORY_VAR.txt = Kategorie
+bird.data.role.DOTPLOT_MEASURE_VAR.txt = Ukazatel
+bird.data.role.DYNVAR_1_VAR.txt = Dynamická proměnná 1
+bird.data.role.DYNVAR_2_VAR.txt = Dynamická proměnná 2
+bird.data.role.DYNVAR_3_VAR.txt = Dynamická proměnná 3
+bird.data.role.EVENT_VAR.txt = Událost
+bird.data.role.FINISH_VAR.txt = Konec
+bird.data.role.GEO_VAR.txt = Geografie
+bird.data.role.GROUP_VAR.txt = Skupina
+bird.data.role.GROUPING_VAR.txt = Seskupení
+bird.data.role.HIDDEN_VAR.txt = Skryté
+bird.data.role.HIERARCHY_LEVELS_VAR.txt = Úrovní
+bird.data.role.HIGH_VAR.txt = Vysoké
+bird.data.role.HISTOGRAM_FREQUENCY_VAR.txt = Frekvence
+bird.data.role.HISTOGRAM_MEASURE_VAR.txt = Ukazatel
+bird.data.role.HORIZONTAL_SERIES_VAR.txt = Sloupce mřížky
+bird.data.role.ID_VAR.txt = ID
+bird.data.role.KEY_FRAME_VAR.txt = Klíčový rámec
+bird.data.role.KPI_GROUP_VAR.txt = Skupina
+bird.data.role.LABEL_VAR.txt = Označení
+bird.data.role.LINE_MEASURE1_VAR.txt = Ukazatel (čára 1)
+bird.data.role.LINE_MEASURE2_VAR.txt = Ukazatel (2. čára)
+bird.data.role.LINE_MEASURE_VAR.txt = Ukazatel (čára)
+bird.data.role.LINKMAGNITUDE_VAR.txt = Propojení absolutní
+bird.data.role.LINKWEIGHT_VAR.txt = Odkaz
+bird.data.role.LINK_COLOR_VAR.txt = Barva odkazu
+bird.data.role.LINK_WIDTH_VAR.txt = Šířka odkazu
+bird.data.role.LOW_VAR.txt = Nízká
+bird.data.role.MAGNITUDE_VAR.txt = Neuronový absolutní průměr
+bird.data.role.MEASURE_VAR.txt = Ukazatel
+bird.data.role.MEASURES_VAR.txt = Ukazatele
+bird.data.role.MOVING_AVG_VAR.txt = Klouzavý průměr
+bird.data.role.NEURON_VAR.txt = Neuron
+bird.data.role.NODE_VAR.txt = Uzel
+bird.data.role.OTHER_VAR.txt = Jiné
+bird.data.role.RESPONSE1_VAR.txt = Ukazatel (čára 1)
+bird.data.role.RESPONSE2_VAR.txt = Ukazatel (2. čára)
+bird.data.role.RESPONSE_VAR.txt = Ukazatel
+bird.data.role.ROW_VAR.txt = Řádek
+bird.data.role.ROWS_VAR.txt = Řádky
+bird.data.role.SEQUENCE_VAR.txt = Sekvenční pořadí
+bird.data.role.SHARED_DYNVAR_0_VAR.txt = Sdílená dynamická proměnná 0
+bird.data.role.SIZE_VAR.txt = Velikost
+bird.data.role.SIZE_END_VAR.txt = Konec velikosti
+bird.data.role.SIZE_START_VAR.txt = Začátek velikosti
+bird.data.role.SOURCE_VAR.txt = Zdroj
+bird.data.role.START_VAR.txt = Začátek
+bird.data.role.SUBGROUP_VAR.txt = Skupina
+bird.data.role.TARGET_VAR.txt = Cíl
+bird.data.role.TASK_VAR.txt = Úloha
+bird.data.role.TERM_VAR.txt = Termín
+bird.data.role.TERM_TOPIC_WEIGHT_VAR.txt = Váha tématu
+bird.data.role.TILE_VAR.txt = Dlaždice
+bird.data.role.TIME_VAR.txt = Časová osa
+bird.data.role.TIME_MEASURE1_VAR.txt = Ukazatel (časová řada 1)
+bird.data.role.TIME_MEASURE2_VAR.txt = Ukazatel (časová řada 2)
+bird.data.role.TIP_VAR.txt = Hodnoty informace k datům
+bird.data.role.TOPIC_VAR.txt = Téma
+bird.data.role.TRANSACTION_ID_VAR.txt = Identifikátor transakce
+bird.data.role.VERTICAL_SERIES_VAR.txt = Řady mřížky
+bird.data.role.VOLUME_VAR.txt = Objem
+bird.data.role.WEIGHT_VAR.txt = Váha
+bird.data.role.WEIGHT_TITLE_VAR.txt = Váha
+bird.data.role.WORD_VAR.txt = Slovo
+bird.data.role.X_VAR.txt = Osa X
+bird.data.role.X_END_VAR.txt = Konec X
+bird.data.role.X_ORIGIN_VAR.txt = Počátek X
+bird.data.role.X_START_VAR.txt = Počátek X
+bird.data.role.Y_VAR.txt = Osa Y
+bird.data.role.Y_END_VAR.txt = Konec Y
+bird.data.role.Y_ORIGIN_VAR.txt = Počátek Y
+bird.data.role.Y_START_VAR.txt = Počátek Y
+
+bird.data.aggregations.sum.txt = Součet
+bird.data.aggregations.average.txt = Průměr
+bird.data.aggregations.min.txt = Minimum
+bird.data.aggregations.max.txt = Maximum
+bird.data.aggregations.countDistinct.txt = Počet odlišných
+bird.data.aggregations.totalCount.txt = Frekvence
+bird.data.aggregations.totalCountPercent.txt = Procenta celku
+bird.data.aggregations.standardDeviation.txt = Směrodatná odchylka
+bird.data.aggregations.standardErrorStatistic.txt = Standardní chyba
+bird.data.aggregations.variance.txt= Odchylka
+bird.data.aggregations.mode.txt = Režim
+bird.data.aggregations.countMissing.txt = Chybějící číslo
+bird.data.aggregations.firstQuartile.txt = První kvartil
+bird.data.aggregations.median.txt = Medián
+bird.data.aggregations.thirdQuartile.txt = Třetí kvartil
+bird.data.aggregations.skew.txt = Šikmost
+bird.data.aggregations.kurtosis.txt = Špičatost
+bird.data.aggregations.coefficientOfVariation.txt = Variační koeficient
+bird.data.aggregations.uncorrectedSumOfSquares.txt = Nekorigovaný součet druhých mocnin
+bird.data.aggregations.correctedSumOfSquares.txt = Korigovaný součet druhých mocnin
+bird.data.aggregations.tStatistic.txt = Statistika T (pro průměr = 0)
+bird.data.aggregations.pValue.txt = P-hodnota (pro statistiku T)
+
+bird.visuals.accessibility.visual.hint.txt = Poklepem otevřete datové prvky.
+bird.visuals.accessibility.textObject.hint.txt = Poklepem otevřete textové prvky.
+bird.visuals.accessibility.selectObject.hint.txt  = Poklepem vyberete objekt reportu.
+bird.visuals.accessibility.table.hint.txt = Poklepem otevřete prvky tabulky.
+bird.visuals.accessibility.webcontent.hint.txt  = Poklepem otevřete webový obsah.
+bird.visuals.accessibility.customAction.maximize.hint.txt = Maximalizace objektu reportu.
+bird.visuals.accessibility.customAction.restore.hint.txt = Obnovení objektu reportu.
+bird.visuals.accessibility.customAction.drillUp.hint.txt = Přechod nahoru v hierarchii dat.
+bird.visuals.accessibility.customAction.supplementalView.hint.txt = Přístup k doplňujícím podrobnostem.
+bird.visuals.accessibility.customAction.search.hint.txt = Otevřít kontrolu vyhledávání.
+bird.visuals.accessibility.customAction.dragMode.hint.txt = Vybrat režim přetažení.
+bird.visuals.accessibility.customAction.back.hint.txt = Navigovat zpět.
+bird.visuals.accessibility.customAction.warning.hint.txt = Čtení upozornění objektu reportu.
+bird.visuals.accessibility.customAction.accessTableElements.hint.txt = Prvky tabulky přístupu.
+bird.visuals.accessibility.customAction.exitData.hint.txt = Opuštění datových prvků; návrat k objektu reportu.
+bird.visuals.accessibility.customAction.exitTextElements.hint.txt = Opuštění textových prvků; návrat k objektu reportu.
+bird.visuals.accessibility.customAction.exitTableElements.hint.txt = Ukončuje prvky tabulky; vrací se k objektu reportu.
+bird.visuals.accessibility.customAction.exitRowHeaders.hint.txt = Ukončuje prvky záhlaví řádků tabulky; vrací se k objektu reportu.
+bird.visuals.accessibility.customAction.exitColumnHeaders.hint.txt = Ukončuje prvky záhlaví sloupců tabulky; vrací se k objektu reportu.
+bird.visuals.accessibility.customAction.terseLabels.hint.txt = Aktivace stručných detailů pro datové prvky.
+bird.visuals.accessibility.customAction.detailedLabels.hint.txt = Aktivace rozšířených detailů pro datové prvky.
+bird.visuals.accessibility.customAction.table.terseLabels.hint.txt = Aktivace stručných detailů pro prvky tabulky.
+bird.visuals.accessibility.customAction.table.detailedLabels.hint.txt = Aktivace rozšířených detailů pro prvky tabulky.
+bird.visuals.accessibility.customAction.noElements.txt = Nejsou k dispozici žádné datové prvky; návrat na objekt reportu.
+bird.visuals.accessibility.customAction.table.noElements.txt = Nejsou k dispozici žádné prvky tabulky; návrat k objektu reportu.
+bird.visuals.accessibility.customAction.clearThisSelection.hint.txt = Vymazání výběru.
+bird.visuals.accessibility.dataElement.selected.txt = Vybráno
+bird.visuals.accessibility.customAction.clearAllSelections.hint.txt = Vymazání výběrů datových prvků.
+bird.visuals.accessibility.customAction.table.clearAllSelections.hint.txt = Vymazání výběrů řádek.
+bird.visuals.accessibility.visual.hasSelections.txt = Obsahuje výběry.
+bird.visuals.accessibility.customAction.activateRow.txt = Přístup k prvkům záhlaví řádků tabulky.
+bird.visuals.accessibility.customAction.activateColumn.txt = Přístup k prvkům záhlaví sloupců tabulky.
+
+
+# these are all used to identify to the VoiceOver user the type of filter prompt (UI control) that the
+# user is encountering within the report viewer
+bird.visuals.accessibility.checkbox.promptname.txt = Zaškrtávací pole - ovládání filtru
+bird.visuals.accessibility.combobox.promptname.txt = Seznam - ovládání filtru
+bird.visuals.accessibility.horizontalDualslider.promptname.txt = Posuvník horizontálního rozsahu - ovládání filtru
+bird.visuals.accessibility.verticalDualslider.promptname.txt = Posuvník vertikálního rozsahu - ovládání filtru
+bird.visuals.accessibility.horizontalSlider.promptname.txt = Horizontální jeden posuvník - ovládání filtru
+bird.visuals.accessibility.verticalSlider.promptname.txt = Vertikální jeden posuvník - ovládání filtru
+bird.visuals.accessibility.horizontalButtonbar.promptname.txt = Horizontální tlačítko - ovládání filtru
+bird.visuals.accessibility.verticalButtonbar.promptname.txt = Vertikální tlačítko - ovládání filtru
+bird.visuals.accessibility.radiobutton.promptname.txt = Přepínač - ovládání filtru
+bird.visuals.accessibility.textfield.promptname.txt = Textové pole - ovládání filtru
+
+# for scrolling the combobox (and other prompts with options) in accessibility mode,
+# indicates the options shown on the screen. For example, "1 to 12 of 24"
+bird.visuals.accessibility.combobox.optionPaging.txt = {0} až {1} z {2}
+
+bird.visuals.accessibility.customAction.exitListElements.hint.txt = Poklepem ukončíte možnosti; vrátíte se k ovládání filtru.
+bird.visuals.accessibility.radiobutton.selections.txt = Počet vybraných položek: {0}
+bird.visuals.accessibility.radiobutton.oneSelection.txt = 1 výběr
+bird.visuals.accessibility.customAction.exitTextField.hint.txt = Poklepem ukončíte textové pole; vrátíte se k ovládání filtru.
+bird.visuals.accessibility.customAction.exitRangeSliderElements.hint.txt = Poklepem ukončíte prvky posuvníku; vrátíte se k ovládání filtru.
+
+# this is to indicate the values of the dual range slider
+bird.visuals.accessibility.rangeSlider.currentValues.txt = {0} až {1}
+
+# these are used to indicate which part of hte dual range slider has accessibility focus
+bird.visuals.accessibility.rangeSlider.lowerThumb.txt = Posuvník ve spodní části rozsahu
+bird.visuals.accessibility.rangeSlider.upperThumb.txt = Posuvník v horní části rozsahu
+bird.visuals.accessibility.rangeSlider.track.txt = Sledovat
+
+# this is to indicate which option and how many options for prompts listing options
+bird.visuals.accessibility.combobox.currentIndex.txt = {0} z {1}
+
+# these are used for prompts that are empty
+bird.visuals.accessibility.combobox.noSelection.txt = Žádný výběr.
+bird.visuals.accessibility.checkbox.noSelections.txt = Žádné výběry.
+bird.visuals.accessibility.textfield.noText.txt = Není zadán žádný text.
+
+# This is used by prompts as a missing value display string
+bird.prompts.missingValues.label.txt=(chybějící hodnoty)
+
+# these are the hints used for the various filter prompts
+# prompts that drill into the options (button bar, checkbox, radio button) access
+# the prompt options; prompts that open a popup for the options need to state they
+# open the popup
+bird.visuals.accessibility.checkbox.hint.txt = Poklepem otevřete možnosti.
+bird.visuals.accessibility.combobox.hint.txt = Poklepem otevřete vyskakovací okno.
+bird.visuals.accessibility.textfield.hint.txt = Poklepem otevřete textové pole.
+bird.visuals.accessibility.rangeslider.hint.txt = Poklepem otevřete prvky posuvníku.
+
+#these are the hints that are used for the various prompt options
+bird.visuals.accessibility.checkboxOption.selected.hint.txt = Poklepem zrušíte výběr položky.
+bird.visuals.accessibility.checkboxOption.unselected.hint.txt = Poklepem vyberete položku.
+
+#table/datagrid accessibility
+bird.visuals.accessibility.datagrid.verticalScrollPosition.txt = Řádky {0} až {1} ze {2}
+bird.visuals.accessibility.datagrid.horizontalScrollPosition.txt = Sloupce {0} až {1} ze {2}
+
+# this announcement occurs when the row wraps to the next or previous row
+bird.visuals.accessibility.table.nextRow.announcement.txt = Řádka {0}
+
+# this announcement occurs when the row wraps to the header row
+bird.visuals.accessibility.table.headerRow.announcement.txt = Hlavičky
+
+# this announcement occurs when the row wraps to the totals row
+bird.visuals.accessibility.table.totalsRow.announcement.txt = Celkem
+
+# Display rule legends.
+bird.displayRules.heading.DisplayRules.txt = Pravidla zobrazení
+bird.displayRules.heading.ReportLevel.txt = REPORT
+bird.displayRules.target.AnyCategory.txt = Libovolná kategorie
+bird.displayRules.target.AnyMeasure.txt = Libovolný ukazatel
+bird.displayRules.Other.txt = Jiné
+bird.displayRules.cellPlacement.left.txt = Vlevo od textu
+bird.displayRules.cellPlacement.right.txt = Vpravo od textu
+bird.displayRules.cellPlacement.replace.txt = nahrazuje text
+# Originally the sample text was numeric and formatted, but UX 
+# now recommends just using regular alphabetic text like "abc"
+bird.displayRules.fontIndicatorSampleText.numeric.txt = 1 234,56
+bird.displayRules.fontIndicatorSampleText.txt = abc
+bird.displayRules.kpiPosition.leftOfText.fmt.txt = Vlevo od textu, s {0} jako x
+bird.displayRules.kpiPosition.rightOfText.fmt.txt = Vpravo od textu, s {0} jako x
+bird.displayRules.kpiPosition.replacesText.fmt.txt = nahrazuje text, s {0} jako x
+bird.displayRules.kpiPosition.default.fmt.txt = s {0} jako x
+bird.displayRules.untitled.txt = bez názvu
+
+# Range description for KPIs and range rules like:
+#    $25,000  <  x  <  $50,000
+# Note that the "x" symbol should match the KPI positional properties above
+bird.displayRules.range.fmt.txt = {LOW} {LOWRELATION} x {HIGHRELATION} {HIGH}
+
+# Information panel labels
+bird.informationPanel.incomingFilters.txt = Příchozí filtry
+bird.informationPanel.legend.txt = Legenda
+bird.informationPanel.missingDescription.txt = (Neposkytnuto)
+bird.informationPanel.descriptionTitle.txt = Popis
+bird.informationPanel.ranks.txt = Pořadí
+bird.informationPanel.warnings.txt = Varování
+bird.informationPanel.comments.txt = Komentáře
+bird.informationPanel.alerts.txt = Výstrahy
+bird.informationPanel.name.txt = Název
+bird.informationPanel.createdBy.txt = Vytvořil/a
+bird.informationPanel.modifiedBy.txt = Upravil/a
+
+bird.informationPanel.interactiveFilters.txt = Interaktivní filtry
+bird.informationPanel.dataSourceFilters.txt = Filtry zdroje dat
+bird.informationPanel.title.txt = Nadpis
+
+
+
+# Rank descriptions
+
+# Notes for translators:
+# Rank description templates - do not translate, but place in the correct order for your locale's translation.
+# The ${} enclosed values will be replaced by the translated inserts below them or numbers/labels from the data
+#
+# template.relational example: Bottom 10% of Cars (including missing values) by MPG
+# | ${Subset} | ${Rows} | ${Percent} | ${Of} | ${AllVisibleCategories} |       ${TiesAndMissing}    | ${By} | ${Frequency} |
+# |  Bottom   |    10   |      %     |   of  |          Cars           | (including missing values) |   by  |     MPG      |
+#
+# template.detail example: Top 5% (including ties) by Frequency
+# | ${Subset} | ${Rows} | ${Percent} | ${TiesAndMissing} | ${By} | ${Frequency} |
+# |   Top     |    5    |      %     |  (including ties) |   by  |   Frequency  |
+#
+bird.data.ranks.template.relational = ${Subset} ${Rows}${Percent} ${Of} ${AllVisibleCategories} ${TiesAndMissing} ${By} ${Frequency}
+bird.data.ranks.template.detail = ${Subset} ${Rows}${Percent} ${Of} ${DetailRank} ${TiesAndMissing} ${By} ${Frequency}
+
+# inserts for ${Subset}
+bird.data.ranks.subset.top.txt = Nahoře
+bird.data.ranks.subset.bottom.txt = Dole
+bird.data.ranks.subset.all.txt = Vše
+
+# insert for ${Percent} (Optional)
+bird.data.ranks.percent.txt = %
+
+# insert for ${of}
+bird.data.ranks.of.txt = z
+
+# insert for ${allVisibleCategories}. 
+# ${allVisibleCategories} may also be replaced by a single category name from the data, like "Countries"
+bird.data.ranks.allVisibleCategories.txt = všechny viditelné kategorie
+
+# inserts for ${TiesAndMissing} (optional)
+bird.data.ranks.includeTies.txt = (včetně shodných)
+bird.data.ranks.includeMissing.txt = (včetně chybějících hodnot)
+bird.data.ranks.includeTiesAndMissing.txt = (včetně shodných a chybějících hodnot)
+
+# insert for ${By}
+bird.data.ranks.by.txt = podle
+
+# insert for ${Frequency}
+# ${Frequency} may also be replaced by a different measure from the dataset, like "Score"
+bird.data.ranks.frequency.txt = Frekvence
+
+# labels for the rank type dropdown in the ranks editor panel
+bird.data.ranks.bottomCount.txt = Nejnižší počet
+bird.data.ranks.bottomPercent.txt = Nejnižší procento
+bird.data.ranks.topCount.txt = Nejvyšší počet
+bird.data.ranks.topPercent.txt = Nejvyšší procento
+
+# All visible categories as a standalone label in the Ranks edit panel.
+bird.data.ranks.groupBy.allVisibleCategories.txt = Všechny viditelné kategorie
+bird.data.ranks.groupBy.detailRank.txt = Pořadí detailů
+
+
+#Table SparkKPI tooltip
+bird.sparkKPI.value.txt = Hodnota
+
+# row number column header label
+bird.rowNumber.label.txt = Řádek
+
+#DynamicSpan
+bird.data.dynamicSpan.metadataSource.interactiveFilters.noFilter.txt = <Není nastaven žádný interaktivní filtr>
+bird.data.dynamicSpan.metadataSource.tableModified.noValue.txt = <Žádná hodnota>
+bird.data.dynamicSpan.promptAndVariable.noValue.txt = <Nebyl vybrán žádný prvek>
+
+#Element Types
+bird.types.imageElement.txt = Obrázek
+bird.types.promptElement.txt = Výzva
+bird.types.storedProcessElement.txt = Uložený proces
+bird.types.tableElement.txt = Tabulka seznamu
+bird.types.textElement.txt = Text
+bird.types.jobContentElement.txt = Obsah úlohy
+bird.types.webContentElement.txt = Obsah webu
+bird.types.crosstabElement.txt = Kontingenční tabulka
+bird.types.visualContainerElement.txt = Vizuální kontejner
+bird.types.kpiElement.txt = Graf KPI
+bird.types.graphElement.txt = Graf
+
+bird.types.buttonBar.txt = Panel tlačítek
+bird.types.dropDownList.txt = Rozbalovací seznam
+bird.types.list.txt = Seznam
+bird.types.textInput.txt = Textový vstup
+bird.types.barChart.txt = Sloupcový graf
+bird.types.boxPlot.txt = Krabicový graf
+bird.types.bubbleChangePlot.txt = Bublinový změnový graf
+bird.types.bubblePlot.txt = Bublinový graf
+bird.types.butterflyChart.txt = Motýlkový graf
+bird.types.compTimeSeries.txt = Porovnávací graf časových řad
+bird.types.correlationMatrix.txt = Korelační matice
+bird.types.decisionTree.txt = Rozhodovací strom
+bird.types.dotPlot.txt = Bodový graf
+bird.types.barBarChart.txt = Sloupcový graf s duální osou
+bird.types.barLineChart.txt = Sloupcový/čárový graf s duální osou
+bird.types.lineLineChart.txt = Čárový graf s duální osou
+bird.types.dualAxisTimeSeries.txt = Graf časových řad s duální osou
+bird.types.gauge.txt = Měřítko
+bird.types.heatMap.txt = Teplotní mapa
+bird.types.histogram.txt = Histogram
+bird.types.keyValue.txt = Hodnota klíče
+bird.types.lineChart.txt = Čárový graf
+bird.types.needlePlot.txt = Jehlový graf
+bird.types.numericSeries.txt = Graf číselné řady
+bird.types.parallelCoordinates.txt = Graf s paralelními souřadnicemi
+bird.types.pieChart.txt = Koláčový graf
+bird.types.scatterPlot.txt = Bodový graf
+bird.types.scheduleChart.txt = Graf plánování
+bird.types.stepPlot.txt = Stupňový graf
+bird.types.targetedBarChart.txt = Pruhový graf s cílem
+bird.types.timeSeries.txt = Graf časových řad
+bird.types.treemap.txt = Dlaždicový graf
+bird.types.vectorPlot.txt = Vektorový graf
+bird.types.waterfallChart.txt = Vodopádový graf
+bird.types.wordCloud.txt = Cloud slov
+
+# DataItem format types (see also VAN's sas-van/src/main/openuilibs/sas.van/src/sas/van/messagebundle.properties)
+bird.data.format.COMMA.txt=Čárka
+bird.data.format.DOLLAR.txt=Dolar
+bird.data.format.EURO.txt=Euro
+bird.data.format.F.txt=Plovoucí
+bird.data.format.BEST.txt=Číslo
+bird.data.format.PERCENT.txt=Procento
+bird.data.format.POUND.txt=Libra
+bird.data.format.WON.txt=Won
+bird.data.format.YEN.txt=Jen
+bird.data.format.AED.txt=Spojené arabské emiráty
+bird.data.format.AUD.txt=Austrálie
+bird.data.format.BGN.txt=Bulharsko
+bird.data.format.BRL.txt=Brazílie
+bird.data.format.CAD.txt=Kanada
+bird.data.format.CHF.txt=Lichtenštejnsko a Švýcarsko
+bird.data.format.CNY.txt=Čína
+bird.data.format.CZK.txt=Česká republika
+bird.data.format.DKK.txt=Dánsko, Faerské ostrovy a Grónsko
+bird.data.format.EEK.txt=Estonsko
+bird.data.format.EGP.txt=Egypt
+bird.data.format.EUR.txt=Evropská unie
+bird.data.format.GBP.txt=Spojené království
+bird.data.format.HKD.txt=Hongkong
+bird.data.format.HRK.txt=Chorvatsko
+bird.data.format.HUF.txt=Maďarsko
+bird.data.format.IDR.txt=Indonésie
+bird.data.format.ILS.txt=Izrael
+bird.data.format.INR.txt=Indie
+bird.data.format.JPY.txt=Japonsko
+bird.data.format.KRW.txt=Jižní Korea
+bird.data.format.LTL.txt=Litva
+bird.data.format.LVL.txt=Lotyšsko
+bird.data.format.MOP.txt=Macao
+bird.data.format.MXN.txt=Mexiko
+bird.data.format.MYR.txt=Malajsie
+bird.data.format.NOK.txt=Norsko
+bird.data.format.NZD.txt=Nový Zéland
+bird.data.format.PLN.txt=Polsko
+bird.data.format.RUB.txt=Rusko
+bird.data.format.SEK.txt=Švédsko
+bird.data.format.SGD.txt=Singapur
+bird.data.format.THB.txt=Thajsko
+bird.data.format.TRY.txt=Turecko
+bird.data.format.TWD.txt=Tchaj-wan
+bird.data.format.USD.txt=Spojené státy a Portoriko
+bird.data.format.ZAR.txt=Jižní Afrika
+bird.data.format.DATEN.txt=Datum
+bird.data.format.DATE.txt=Datum s názvem měsíce
+bird.data.format.DAY.txt=Den měsíce
+bird.data.format.DOWNAME.txt=Den týdne
+bird.data.format.JULDAY.txt=Den roku
+bird.data.format.WEEKDATE.txt=Den, datum
+bird.data.format.DDMMYY.txt=DDMMRRRR
+bird.data.format.JULIAN.txt=Juliánský
+bird.data.format.MMDDYY.txt=MMDDRRRR
+bird.data.format.MONYY.txt=MĚSRRRR
+bird.data.format.MMYY.txt=MMRRRR
+bird.data.format.MONTH.txt=Měsíc
+bird.data.format.MONNAME.txt=Měsíc
+bird.data.format.WORDDATE.txt=Měsíc, den, rok
+bird.data.format.YEAR.txt=Rok
+bird.data.format.YYQC.txt=Čtvrtletí, rok
+bird.data.format.YYMM.txt=RRRRMM
+bird.data.format.YYMMDD.txt=RRRRMMDD
+bird.data.format.TIME.txt=Uplynulý čas
+bird.data.format.HOUR.txt=Hodin
+bird.data.format.HHMM.txt=Hodiny, minuty
+bird.data.format.MMSS.txt=Minuty, sekundy
+bird.data.format.DTDATE.txt=Datum
+bird.data.format.DATETIME.txt=Datum, čas
+bird.data.format.DTWKDATX.txt=Den, datum
+bird.data.format.DTMONYY.txt=MĚSRRRR
+bird.data.format.TIMEAMPM.txt=Čas
+bird.data.format.QTR.txt=Čtvrtletí
+bird.data.format.WEEKV.txt=Týden
+bird.data.format.WEEKVYW.txt=Rok, týden
+bird.data.format.WEEKVYWD.txt=Rok, týden, den
+bird.data.format.DTYEAR.txt=Rok
+bird.data.format.DTYYQC.txt=Čtvrtletí, rok
+bird.data.format.CHARACTER.txt=$
+bird.data.format.DURATION.txt=Trvání
+bird.data.format.CURRENCY.txt=Měna
+
+
+
+
+
+
+
+
+
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+# bird_warnings.properties
+#
+# en_US
+#
+
+#//////////////////////
+# 1.4.2013: reviewed for style, grammar and translatability by Karen Mobley
+#//////////////////////
+
+# FAILURE: An object has a failure status when the object cannot be rendered
+# successfully and there is no action the viewer can take to make the object
+# render successfully. In the viewer/SDK the failure messages are dispalyed in
+# an error pill overlay.
+
+#///////////////////////
+# WARNING: An object has a warning status when either 1) the object can be
+# rendered successfully but there are some limitations/caveats or 2) the object
+# cannot be rendered successfully but there is an action the viewer can take to
+# make the object render successfully. In the viewer/SDK the warning messages
+# are displayed as either 1) an info status badge or 2) an info pill overlay.
+
+#///////////////////////
+# (error pill): When shown in an error pill a message should be overlaid on
+# the object so that the pill covers the object and indicates that the object
+# should not be used. It should use the error status icons and colors
+# appropriate for the client.
+
+#///////////////////////
+# (info pill): When shown in an info pill a message should be overlaid on
+# the object so that the pill covers the object and indicates that the object
+# should not be used. It should use the informational status icons and colors
+# appropriate for the client.
+
+#///////////////////////
+# (info badge): When shown in an info badge a message should be shown in a
+# tooltip or popover accessible from a icon placed in a non-obtrusive place on
+# the object. It should use the informational status icons and colors
+# appropriate for the client.
+
+#///////////////////////
+# (validation): Control objects display messages differently and instead of
+# a pill or badge should use the validation most appropriate to the control
+# type.
+
+# FAILURE (error pill): Error message to display when an image from the server is missing.
+bird.error.image.imageNotFound.txt = Obrázek pro tento objekt reportu chybí nebo není platný.
+
+# FAILURE (error pill): Generic failure message when we lack further details or do not recognized the server's statusReason.
+bird.error.data.serverDataFailure.txt = Chyba dat serveru
+
+# WARNING (info pill): The result data was much too large, and so we recieved none instead.
+bird.error.data.transport.dataLimitsExceeded.txt = Dotaz generoval soubor dat, který je příliš velký na to, aby ho mohla zpracovat serverová aplikace.
+
+# FAILURE (error pill): A data source used by this report object was not found.
+bird.error.data.transport.dataSourceNotFound.txt = Požadovaný zdroj dat nebyl nalezen na serveru.
+
+# FAILURE (error pill): A backend server used for some of the data in this object was not found (but we did get a response from transport services).
+bird.error.data.transport.serverNotFound.txt = Server nebyl nalezen.
+
+# FAILURE (error pill): The report object uses data for which the user is (no longer?) authorized to view
+bird.error.data.transport.unauthorized.txt = Nemáte oprávnění zobrazit data použitá v tomto objektu reportu.
+
+# FAILURE (error pill): The query sent to the server was malformed or not understood by the server (statusReason=queryError OR unsupportedRequest) status=failure only .
+bird.error.data.transport.queryError.txt = Server neporozuměl požadavku aplikace na data.
+
+# FAILURE (error pill): The report object was malformed (i.e. failed to parse embedded StatGraph template)
+bird.error.report.malformedReportElement.txt = Aplikace nemůže zobrazit objekt reportu, protože je vadný.
+
+# FAILURE (error pill): The the graph object was malformed (i.e. the graph refers a result that dose not exist in bird report)
+bird.error.graph.malformedResult.txt = Objekt grafu odkazuje na neplatný výsledek.
+
+# FAILURE (error pill): The required roles are not assigned.
+bird.error.data.allRolesNotAssigned.txt = Požadovaným rolím nebyla přiřazena položka dat.
+
+# FAILURE (error pill): StoredProcessElements are unsupported in R10+
+bird.warning.models.storedProcessUnsupported.txt = Uložené procesy již nejsou podporovány.
+
+# WARNING (info badge): User readable reason code for incompleteData.
+bird.error.data.transport.incompleteData.txt = Data použitá v tomto objektu reportu jsou příliš velká. Je zobrazena pouze podmnožina dat.
+
+# WARNING (info badge): User readable reason code for limitedInteraction.
+bird.error.data.transport.limitedInteraction.txt = Data použitá v tomto objektu reportu jsou příliš velká. Vlastnost interakce je omezena nebo zakázána.
+
+# FAILURE (error pill): Message displayed when a report object requires a live connection, and we do not have a connection or a live-request response was not received from the server.
+# Note: This message appears in help, so the help files need to be updated if this string changes.
+bird.error.data.noResponseFromServer.txt = Požadavek na data serveru nebyl splněn. Data objektu reportu možná chybí, nebo nejsou úplná. Zkontrolujte, že je k dispozici síťové spojení, například mobilní, Wi-Fi nebo jiná síť.
+
+# FAILURE (error pill): Message displayed when a report object requests new data from the server, but the response is malformed or unrecognized.
+bird.error.data.unrecognizedResponse.txt = Požadavek serveru vrátil data, která jsou nerozpoznaná nebo vadná. Data objektu reportu možná chybí nebo nejsou úplná. Obraťte se na správce SAS Visual Analytics pro svou organizaci.
+
+# FAILURE (error pill): Message displayed in offline mode when data is not available because we cannot run queries to get it.
+bird.error.data.notAvailable.txt = Data nejsou k dispozici.
+
+# WARNING (info pill): Message that gets displayed when filtered data results in empty set.
+bird.error.data.filterProducedEmptyData.txt =Žádné shody dat pro aktuální filtry.
+
+# WARNING (info badge): Message that gets displayed when the kpi grid is asked to show more than 100 kpis
+bird.error.data.transport.kpiLimitsExceeded.txt = Zobrazují se pouze některá data, protože existuje příliš mnoho dat k zobrazení. Filtrujte data, aby se zobrazily jiné hodnoty.
+
+# WARNING (info badge): Some interactive features (like brushing) are not supported on this object. (status=limited only)
+bird.warning.data.transport.unsupportedRequest.txt = Některé neaktivní funkce tohoto objektu reportu mohou být omezené nebo zakázané.
+
+# FAILURE (error pill): Comment Detail when the result status is failure 
+bird.error.data.contactAdministrator.txt = Obraťte se na správce SAS Visual Analytics pro svou organizaci.
+
+
+#//////////////////////////
+# Additional R5 result warnings (THESE NEED REVIEW)
+# See the "reason" attribute descriptions on saspedia: http://sww.sas.com/saspedia/Result_(Business_Intelligence_Report_Definition)
+
+
+# FAILURE (error pill): The report object is incomplete because data has not been assigned. Prior to R5, this condition was always reported as dataSourceNotFound.
+bird.error.data.transport.dataNotAssigned.txt = Data nebyla přiřazena.
+
+# WARNING (info badge): Should not be a problem with VA producers, but essentially the problem here is that the BIDATA layer bins data based upon its format and the displayed value may have a different granularity than the bin size.
+# For example, users may see minutes displayed, but the data has actually been binned per hour.
+bird.error.data.transport.formatWarning.txt = Asociovaný formát nebyl rozpoznán a úroveň agregace dat nemusí odpovídat zobrazeným hodnotám.
+
+# WARNING (info badge): Truncation of rank ties.
+bird.error.data.transport.rankTiesTruncated.txt = Počet vazeb ve filtru pořadí překračuje limit.  Některé byly vynechány.
+
+# ???: Message for exceeding allowed period calculations.
+bird.error.data.transport.maxPeriodCalculationsExceeded.txt = Příliš mnoho výpočtů období vrací chybějící hodnoty. Chcete-li snížit počet výpočtů období, přidejte časový filtr.
+
+# ???: Message for unresolved calculations on an object.
+bird.error.data.transport.unresolvedPeriodCalculations.txt = Pro tento objekt reportu byly zaznamenány nevyřešené výpočty období.
+bird.error.data.transport.unresolvedCalculations.txt = Pro tento objekt reportu byly zaznamenány nevyřešené výpočty.
+
+# ???: Message displayed when we receive status=limited result but do not recognize the reason code or reason=unknown
+bird.error.data.transport.unknown.txt = Při zpracování dat pro tento objekt reportu byl zaznamenán neznámý problém.
+
+# WARNING (info badge): Message for new measure rules on graphs. While there are some appropriate use-cases for the new rules, in many cases they will lead to misleading visualizations.
+bird.rules.graphMeasureRuleConflict.txt = Tento report objektů používá pravidla, která mohou být v konfliktu se základní barevnou mapou.
+
+# WARNING (info badge): Message for disabled interactions.
+bird.warning.interactionDisabled.txt = Některé interakce zahrnující tento objekt reportu byly zakázány.
+
+# WARNING (info badge): Messages shown when map data is not fully represented.
+bird.warning.missingMapCoordinates.txt = Některé funkce se na mapě nemusejí zobrazovat kvůli chybějícím informacím o poloze v datech.
+bird.warning.missingGeometries.txt = Geografická mapa regionu nezobrazuje některé regiony, protože data neodpovídají známým geografickým regionům.
+bird.warning.noMatchesFound.txt = Pro poskytnuté externí geografické datové položky nebyly nalezeny žádné shody.
+
+
+#//////////////////////////
+# Transport/Result reason codes that are new in R7
+
+
+# WARNING (info badge): Percentage rank results were truncated.
+bird.error.data.transport.maxRankValuesExceeded.txt = Z procentuálního výpočtu pořadí bylo vráceno příliš mnoho hodnot a data nemusejí být kompletní.
+
+# WARNING (info badge): Parameter value was clamped.
+bird.error.data.transport.parameterOutOfRange.txt = Parametr ležel mimo rozsah a byl omezen limity povolenými daným omezením.
+
+
+#/////////////////////////
+# Warnings for report parameter validation.
+
+
+# FAILURE (validation): Value too small
+bird.error.parameter.valueTooSmall.fmt.txt = Neplatná hodnota parametru pro parametr „{0}“: Hodnota ({1}) je menší než minimální povolená hodnota ({2}).
+
+# FAILURE (validation): Value too small or equal
+bird.error.parameter.valueTooSmallOrEqual.fmt.txt = Neplatná hodnota parametru pro parametr „{0}“: Hodnota ({1}) je menší nebo rovna minimální povolené hodnotě ({2}).
+
+# FAILURE (validation): Value too large
+bird.error.parameter.valueTooLarge.fmt.txt = Neplatná hodnota parametru pro parametr „{0}“: Hodnota ({1}) je větší než maximální povolená hodnota ({2}).
+
+# FAILURE (validation): Value too large or equal
+bird.error.parameter.valueTooLargeOrEqual.fmt.txt = Neplatná hodnota parametru pro parametr „{0}“: Hodnota ({1}) je větší nebo rovna maximální povolené hodnotě ({2}).
+
+# FAILURE (validation): Invalid parameter value
+bird.error.parameter.invalidValue.fmt.txt = Neplatná hodnota parametru pro parametr „{0}“: {1}.
+
+# FAILURE (validation): The Condition range model for a KPI definition is malformed or incomplete
+bird.error.kpi.invalidDisplayRules.txt = Požadovaná pravidla zobrazení nebyla přiřazena ani vytvořena.
+
+# WARNING (info badge): Maximum rows exceeded with truncation.
+bird.error.data.maxRowsExceededDataTruncated.txt = Sada dat překročila maximální počet povolených řádků ({0}). Zobrazeno bude pouze prvních {0} řádků.
+
+# WARNING (info pill): Maximum rows exceeded without truncation.
+bird.error.data.maxRowsExceededNoData.txt = Sada dat překročila maximální počet povolených řádků ({0}). Data nebudou zobrazena.
+
+# FAILURE (error pill): Report Object incomplete
+bird.error.data.reportObjectIncomplete.txt = Objekt reportu je neúplný.
+
+# WARNING (info badge): No measure variable in R10 promptDefinition
+bird.warning.prompt.noMeasureVariable.txt = Pole používá měřítko, ale žádná proměnná MeasureVariable nebyla definována v definici pole.
+
+# WARNING (info badge): Mising dynamic default values.
+bird.warning.prompt.missingDynamicValue.txt = Chybí dynamické výchozí hodnoty.
+
+# FAILURE (validation): Warning message that gets displayed when the value entered into a prompt does not match the correct formatting
+bird.warning.data.incorrectFormat.fmt.txt = Zadaná hodnota neodpovídá formátu {0}.
+
+# FAILURE (error pill): Web Content objects can be disabled by system administrators for security
+bird.warning.elementNotSupported.fmt.txt = {0} nelze zobrazit.
+
+# WARNING (info badge): Saved state is missing the report.xml file. Most likely the state was saved by an earlier version of the software.
+bird.warning.report.stateIsMissingModelFile.txt = Uložený stav nemá soubor modelu sestavy. Report byl načten ve svém výchozím stavu.
+
+# WARNING (toast?): Warning for dropped items when performing a visual conversion
+bird.warning.autoChartChanges.fmt.txt=Některé z těch objektů byly přesunuty, protože nejsou podporovány v novém grafu:  {0}.
+bird.warning.removedIxn.txt=Akce
+bird.warning.removedActions.txt=Odkazy
+bird.warning.removedConditions.txt=Pravidla zobrazení
+bird.warning.removedDataItems.txt=Datové položky
+bird.warning.removedRanks.txt=Pořadí
+bird.warning.removedFilters.txt=Filtry
+bird.warning.removedParameters.txt=Parametry
+bird.warning.allOtherRemovedOnRanks.txt=Vše ostatní v pořadí
+
+# FAILURE (validation): Warning for invalid user input
+bird.warning.invalid.user.input.txt=Neplatná položka
+
+# FAILURE (error pill): Job Contents warnings
+bird.warning.job.executionFailed.txt=Provádění úlohy se nezdařilo.
+bird.warning.job.error.txt=Provádění úlohy vrátilo chybu.
+
+# View Set warnings (SDK)
+bird.warning.viewset.multipleReferences.txt=Objekty reportu nelze použít ve více kontextech.
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+# bird_auto_title.properties
+#
+# http://sww.sas.com/saspedia/Title_(Business_Intelligence_Report_Definition)
+#
+# en_US
+#
+
+bird.autotitle.exampleData.txt=Ukázková data
+bird.autotitle.measure.txt=Ukazatel
+bird.autotitle.category.txt=Kategorie
+bird.autotitle.frequency.txt=Četnost
+bird.autotitle.source.txt=Zdroj
+bird.autotitle.response.txt=Odezva
+bird.autotitle.documentCollection.txt=Kolekce dokumentů
+bird.autotitle.hierarchy.txt=Hierarchie
+bird.autotitle.yAxis.txt=Osa Y
+bird.autotitle.xAxis.txt=Osa X
+bird.autotitle.bar.txt= (sloupec)
+bird.autotitle.bar2.txt= (sloupec2)
+bird.autotitle.target.txt=Target
+bird.autotitle.color.txt=Barva
+bird.autotitle.size.txt=Velikost
+bird.autotitle.measureBar.txt=Ukazatel (sloupec)
+bird.autotitle.measureBar2.txt=Ukazatel (sloupec 2)
+bird.autotitle.measureLine.txt=Ukazatel (čára)
+bird.autotitle.measureLine2.txt=Ukazatel (čára 2)
+bird.autotitle.measureTimeSeries.txt=Ukazatel
+bird.autotitle.measureTimeSeries2.txt=Ukazatel
+bird.autotitle.timeAxis.txt=Časová osa
+bird.autotitle.buttonBar.txt=Panel tlačítek
+bird.autotitle.dropDownList.txt=Rozbalovací seznam
+bird.autotitle.list.txt=Seznam
+bird.autotitle.decisionTree.txt=Rozhodovací strom
+bird.autotitle.bayesNet.txt=Bayesova síť
+bird.autotitle.network.txt=Síť
+bird.autotitle.textTopics.txt=Textová témata
+bird.autotitle.glm.txt=Zobecněný lineární model
+bird.autotitle.linear.txt=Lineární regrese
+bird.autotitle.logistic.txt=Logistická regrese
+bird.autotitle.factMac.txt=Factorization Machine
+bird.autotitle.explAuto.txt=Automatizované vysvětlení
+bird.autotitle.predAuto.txt=Automatizovaná predikce
+bird.autotitle.scenarioAnalysis.txt=Automatizovaná predikce
+bird.autotitle.forest.txt=Les
+bird.autotitle.gradientBoosting.txt=Gradient Boosting
+bird.autotitle.neuralNetwork.txt=Neuronová síť
+bird.autotitle.svm.txt=Support Vector Machine
+bird.autotitle.gam.txt=Generalizovaný aditivní model
+bird.autotitle.nplr.txt=Bezparametrová logistická regrese
+bird.autotitle.slider.txt=Posuvník
+bird.autotitle.textInput.txt=Textový vstup
+bird.autotitle.measureDate.txt=Ukazatel/datum
+bird.autotitle.axisItems.txt=Položky osy
+bird.autotitle.task.txt=Úloha
+bird.autotitle.start.txt=Začátek
+bird.autotitle.finish.txt=Dokončit
+bird.autotitle.template.one.fmt.txt={0}
+bird.autotitle.sankey.linkColor.dropOff.txt=Odklon
+bird.autotitle.sankey.linkColor.event.txt=Událost
+bird.autotitle.sankey.linkColor.path.txt=Cesta
+bird.autotitle.template.oneByTwo.fmt.txt={0} podle {1}
+bird.autotitle.template.oneByTwoGroupedByThree.fmt.txt={0} podle {1} seskupeno podle {2}
+bird.autotitle.template.oneOfTwo.fmt.txt={0} z {1}
+bird.autotitle.template.oneOfTwoGroupedByThree.fmt.txt={0} z {1} seskupeno podle {2}
+bird.autotitle.template.oneByTwoSizedByThree.fmt.txt={0} podle {1} velikost nastavena podle {2}
+bird.autotitle.template.oneToTwo.fmt.txt={0} až {1}
+bird.autotitle.template.oneCommaTwoByThree.fmt.txt={0}, {1} podle {2}
+bird.autotitle.template.oneByTwoToThree.fmt.txt={0} podle {1} do {2}
+bird.autotitle.template.oneOfTwoParenThree.fmt.txt={0} z {1} ({2})
+bird.autotitle.template.oneFromTwoToThree.fmt.txt={0} od {1} do {2}
+bird.autotitle.template.correlationOfSelected.txt=Korelace vybraných ukazatelů
+bird.autotitle.template.scatterPlotOfSelected.txt=Bodový graf vybraných ukazatelů
+bird.autotitle.template.bubbleChangeOfSelected.txt=Bublinová změna vybraných položek
+bird.autotitle.template.vectorOfSelected.txt=Vektorový graf vybraných položek
+bird.autotitle.template.parallelCoordinatesOfSelected.txt=Paralelní souřadnice vybraných položek
+bird.autotitle.template.cluster.txt=Shluk vybraných položek
+bird.autotitle.template.sankey.1.fmt.txt=Cesta dle {0}
+bird.autotitle.template.sankey.fmt.txt=Cesta {0} dle {1}
+bird.autotitle.template.two.fmt.txt={1} 
+bird.autotitle.template.twoParenThree.fmt.txt={1} ({2})
+bird.autotitle.template.relationships.fmt.txt=Jaký je vztah mezi {0} a {1}?
+bird.autotitle.template.geo.coordinates.txt=Geografická mapa Geografie
+bird.autotitle.template.geo.coordinates.fmt.txt=Geografická mapa {0}
+bird.autotitle.template.geo.coordinates.size.txt=Geografická mapa Geografie, velikost nastavena podle Velikost
+bird.autotitle.template.geo.coordinates.size.fmt.txt=Geografická mapa {1}, velikost nastavena podle {0}
+bird.autotitle.template.geo.coordinates.color.size.fmt.txt={0} podle {2} velikost nastavena podle {1}
+bird.autotitle.template.geo.txt=Barva podle geografie
+bird.autotitle.template.geo.multioverlay.txt=Geografická mapa vybraných položek
+bird.autotitle.template.network.txt=Síť geografie
+bird.autotitle.template.network.fmt.txt=Síť {0}

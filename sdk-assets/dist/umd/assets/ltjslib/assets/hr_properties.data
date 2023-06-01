@@ -1,0 +1,3068 @@
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+#
+# These will most likely be surfaced to users and should be reviewed and translated.
+# Karen and Julie received the same file from Greg Stelmack and Kerry Trout. 
+#
+#  4.17.19   JGS & KLM: Updated terminology (variants of subscribe->add; unsubscribe->remove); corrected other errors. 
+#  7.10.14   KLM reviewed for grammar, spelling, & SAS Style   
+#
+warning.network.unavailable.txt = Mreža trenutačno nije dostupna. Provjerite veze.
+warning.server.unavailable.txt = Povezivanje s poslužiteljem nije moguće. Provjerite jesu li poslužitelj i ulaz ispravno uneseni. U protivnom, poslužitelj ili mreža možda neće biti dostupni.
+warning.server.version.not.supported.txt = Odabrani poslužitelj ne podržava verziju aplikacije SAS Visual Analytics App instaliranu na ovom uređaju. Instalirajte najnoviju verziju aplikacije SAS Visual Analytics App, a zatim se povežite s ovim poslužiteljem.
+warning.certificate.error.txt = Uspostavljanje sigurne veze s ovim poslužiteljem nije uspjelo. Provjerite jesu li instalirani svi potrebni certifikati.
+warning.unsupported.request.txt = Pokušani zahtjev nije podržan na poslužitelju.
+warning.unauthorized.txt = Prijava nije uspjela. ID korisnika ili lozinka nisu točni.
+
+# these two use obsolete terminology and are no longer used by the code
+warning.blacklisted.txt = Poslužitelj je blokirao pristup ovom uređaju.
+warning.not.in.whitelist.txt = Pristup s ovog uređaja nije omogućen na poslužitelju.
+# these two are now used instead
+warning.denylisted.txt = Poslužitelj je blokirao pristup ovom uređaju.
+warning.not.in.allowlist.txt = Pristup s ovog uređaja nije omogućen na poslužitelju.
+
+warning.resource.not.found.txt = Traženi resurs nije pronađen na poslužitelju.
+warning.resource.not.accessible.txt = Nije moguće pristupiti zahtijevanom izvoru na poslužitelju. Obratite se svom SAS administratoru.
+warning.invalid.media.txt = Podaci koje je vratio poslužitelj u neispravnom su obliku.
+warning.duplicate.connection.txt = Već je dodan poslužitelj s odim ID-jem korisnika.
+warning.duplicate.connection.description.txt = Poslužitelj s tim opisom već postoji.
+warning.duplicate.report.txt = Izvješće s tim nazivom već postoji.
+warning.duplicate.folder.txt = Mapa s tim nazivom već postoji.
+warning.duplicate.collection.txt = Zbirka s tim nazivom već postoji.
+warning.duplicate.insight.txt = Uvid s tim nazivom već postoji.
+warning.service.failure.txt = Došlo je do neočekivane pogreške usluge pri pokušaju ispunjavanja zahtjeva.
+warning.password.storage.failed.txt = Spremanje vjerodajnica nije moguće.
+warning.password.lookup.failed.txt = Pretraživanje lozinke nije uspjelo.
+warning.report.cannot.downgrade.txt = Ne može pristupiti izvješću. Stvorila ga je novija verzija programa SAS Visual Analytics. Obratite se svom SAS administratoru.
+warning.request.cancelled.txt = Zahtjev je otkazan.
+warning.system.quiesced.txt = Zahtjev je otkazan jer se aplikacija zatvara.
+warning.timeout.txt = Zahtjev je istekao.
+warning.report.already.updating.txt = Aplikacija trenutno ne može obraditi vaš zahtjev za dodavanje ili ažuriranje izvješća. Automatsko dodavanje ili ažuriranje već je u tijeku. Pokušajte ponovno kasnije. Ako se problem nastavi pojavljivati, obratite se SAS administratoru svoje organizacije.
+warning.report.save.failed.msg = Izvješće nije bilo moguće spremiti na poslužitelj.
+warning.connection.user.mismatch.msg = Unijeli ste drugačiji ID korisnika. Ova instanca poslužitelja očekuje da se prijavite kao {0}.
+
+# These messages will probably only be used internally
+warning.invalid.arguments.txt = Nema dovoljno informacija za ispunjavanje zahtjeva.
+warning.local.resource.expired.txt = Lokalni resurs upotrijebljen za pokretanje zahtjeva više nije dostupan.
+warning.unable.to.cancel.request.complete.txt = Pokušaj otkazivanja zahtjeva nije uspio jer je zahtjev dovršen.
+warning.configuration.error.txt = Dogodila se konfiguracijska pogreška.
+warning.complete.with.warnings.txt = Zahtjev je dovršen uz upozorenja.
+warning.status.unavailable.txt = Status nije dostupan za ovaj zahtjev.
+
+# Custom warnings for specific report save failures
+warning.report.save.cannot.write.to.folder.msg = Mapa ne postoji ili joj nije moguće pristupiti. Navedite drugu mapu.
+warning.report.save.report.exists.msg = Navedeni naziv izvješća već postoji. Odaberite drugi naziv.
+
+# This is displayed in places that describe that reports are on the local device
+# For example, it is used in a header when showing search results
+search.headers.localhost.txt = U stavci Moja izvješća
+
+# These are errors used in the search view when a search does not get results
+search.cells.infocell.error.txt = Došlo je do pogreške tijekom pretraživanja ove veze.
+search.cells.infocell.noresults.txt = Pretraživanje nije vratilo nijedan rezultat za ovu vezu.
+search.cells.infocell.nofilterresults.txt = Na ovoj vezi s poslužiteljem nema izvješća koja se podudaraju s trenutačnim pretraživanjem i kriterijima filtriranja.
+search.cells.infocell.servernotsupported.txt = Značajka pretraživanja nije podržana na ovoj vezi s poslužiteljem.
+search.cells.infocell.portfolio.noresults.txt = Pretraživanje nije vratilo nijedan rezultat za ovaj portfelj.
+search.cells.infocell.portfolio.nofilterresults.txt = Nema izvješća koja se podudaraju s trenutačnim pretraživanjem i kriterijima filtriranja.
+
+# this is used to filter search results and appears in each category (author, date, location)
+# to indicate to use all available authers/dates/locations for this search
+search.filters.all.txt = Sve
+
+# these are specific date ranges for filtering in search results
+search.filters.lastday.txt = Zadnja 24 sata
+search.filters.lastweek.txt = Zadnji tjedan
+search.filters.lastmonth.txt = Zadnji mjesec
+
+# this is used when filtering the search results to subscribed reports
+search.filters.portfolio.txt = Moja izvješća
+
+# these are used for accessibility (voiceover)
+search.filters.unselectedHint.txt = Izmjenjuje odabir.
+search.filters.selectedHint.txt = Izmjenjuje odabir.
+search.filters.selected.txt = Odabrano
+
+# these are used for "narrow by"
+search.filters.narrowby.locations = Mjesto
+search.filters.narrowby.authors = Autor
+search.filters.narrowby.date = Datum
+search.filters.narrowby.delimiter = ,
+
+# these are the titles used in the different sections of the search filter
+# some platforms uppercase all the letters in the titles, and these should
+# be translated in the appropriate way for each language
+search.filters.title.location.txt = Mjesto
+search.filters.title.location.uppercase.txt = MJESTO
+search.filters.title.author.txt = Autor
+search.filters.title.author.uppercase.txt = AUTOR
+search.filters.title.modifieddate.txt = Datum ažuriran
+search.filters.title.modifieddate.uppercase.txt = DATUM AŽURIRAN
+
+# add connection controller
+addconnectioncontroller.button.next.txt = Sljedeće
+addconnectioncontroller.error.fallback.txt = Došlo je do neočekivane pogreške usluge pri pokušaju postavljanja veze.
+addconnectioncontroller.successfulconnectionadded.txt = Veza je uspješno dodana.
+
+# These 3 are obsolete
+addconnectioncontroller.whitelist.messagedialog.title.txt = Ako znate adresu e-pošte administratora sustava, možete poslati e-poštu sa zahtjevom za pristup tom poslužitelju.
+addconnectioncontroller.whitelist.messagedialog.button.positive.txt = Pošalji e-poštu
+addconnectioncontroller.whitelist.messagedialog.button.negative.txt = Odustani
+# They have been replaced by:
+addconnectioncontroller.allowlist.messagedialog.title.txt = Ako znate adresu e-pošte administratora sustava, možete poslati e-poštu sa zahtjevom za pristup tom poslužitelju.
+addconnectioncontroller.allowlist.messagedialog.button.positive.txt = Pošalji e-poštu
+addconnectioncontroller.allowlist.messagedialog.button.negative.txt = Odustani
+
+# connection details controller
+connectiondetailscontroller.editconnectiondescriptionmessage.success.txt = Veza je uspješno ažurirana.
+
+# portfolio controller
+portfoliocontroller.title.txt = Portfelj
+portfoliocontroller.subscribed.title.txt = Moja izvješća
+portfoliocontroller.history.title.txt = Nedavno
+portfoliocontroller.favorites.title.txt = Favoriti
+
+# expanded controller
+expandedcontroller.title.subscribed.txt = Moja izvješća
+expandedcontroller.title.history.txt = Nedavna izvješća
+expandedcontroller.title.favorites.txt = Izvješća Favoriti
+
+expandedcontroller.sortby.txt = Sortiraj prema:
+
+expandedcontroller.sortorder.name.title.txt = Naziv
+expandedcontroller.sortorder.server.title.txt = Veza
+expandedcontroller.sortorder.subscriptiondate.title.txt = Datum dodavanja
+expandedcontroller.sortorder.lastupdateddate.title.txt = Zadnje ažuriranje
+expandedcontroller.sortorder.mostrecentlyviewed.title.txt = Nedavno pregledano
+expandedcontroller.sortorder.default.title.txt = Važnost
+expandedcontroller.sortorder.historyrelevance.title.txt = Nedavno pregledano
+expandedcontroller.sortorder.frequentlyviewed.title.txt = Često prikazivano
+
+expandedcontroller.sortorder.name.description.txt = Sortiraj izvješća po nazivu, a zatim po datumu ažuriranja.
+expandedcontroller.sortorder.server.description.txt = Sortiraj izvješća po pridruženoj vezi, zatim po nazivu, a potom po datumu ažuriranja.
+expandedcontroller.sortorder.subscriptiondate.description.txt = Sortiraj izvješća po datumu dodavanja, a zatim po nazivu.
+expandedcontroller.sortorder.lastupdateddate.description.txt = Sortiraj izvješća po zadnjem uspješnom ažuriranju, a zatim po nazivu.
+expandedcontroller.sortorder.mostrecentlyviewed.description.txt = Sortiraj izvješća po datumu zadnjeg pristupa na ovom uređaju, a zatim po nazivu.
+expandedcontroller.sortorder.default.description.txt = Sortiraj izvješća po važnosti pretraživanja, kako je određeno vezom.
+expandedcontroller.sortorder.historyrelevance.description.txt = Sortiraj izvješća po datumu nedavnog prikaza na svim uređajima.
+expandedcontroller.sortorder.frequentlyviewed.description.txt = Sortiraj izvješća po broju prikazivanja, a zatim po nazivu.
+
+# subscription controller
+reportsubscription.author.title.txt = Autor
+reportsubscription.createdon.title.txt = Datum izrade
+reportsubscription.updatedon.title.txt = Izmijenjeno
+reportsubscription.location.title.txt = Mjesto na
+reportsubscription.description.title.txt = Opis
+reportsubscription.description.contents.notavailable.txt = (Nije ponuđeno)
+reportsubscription.reportunavailable.title.txt = Izvješće nedostupno
+reportsubscription.reportunavailable.contents.txt = Ovo je izvješće trenutno nedostupno na poslužitelju.
+reportsubscription.reportunavailable.button.title.txt = Ukloni
+reportsubscription.subscribereport.button.subscribe.txt = Dodaj
+reportsubscription.subscribereport.button.subscribing.txt = Dodavanje
+reportsubscription.subscribereport.button.open.txt = Otvori
+
+# settings controller
+settingscontroller.title.txt = Postavke
+settingscontroller.connectionsection.title.txt = veze
+settingscontroller.addconnectionbutton.title.txt = Dodaj vezu
+
+# connection details controller
+connectiondetailscontroller.connectiondetailssection.title.txt = Veza
+connectiondetailscontroller.connectiondetailssection.server.title.txt = Poslužitelj
+connectiondetailscontroller.connectiondetailssection.port.title.txt = Ulaz
+connectiondetailscontroller.connectiondetailssection.secureconnection.title.txt = Sigurna veza
+
+connectiondetailscontroller.authenticationdetailssection.title.txt = Provjera autentičnosti
+connectiondetailscontroller.authenticationdetailssection.guest.logonasguest.title.txt = Prijavite se kao gost
+connectiondetailscontroller.authenticationdetailssection.guest.loggedon.userid.title.txt = ID korisnika
+connectiondetailscontroller.authenticationdetailssection.guest.loggedon.password.title.txt = Lozinka
+
+connectiondetailscontroller.miscellaneousdetailssection.title.txt = Ostalo
+connectiondetailscontroller.miscellaneousdetailssection.description.title.txt = Opis
+connectiondetailscontroller.miscellaneousdetailssection.descriptioncontents.placeholder.txt = tekst uzorka
+connectiondetailscontroller.miscellaneousdetailssection.descriptioncontents.guest.user.txt = gost
+
+connectiondetailscontroller.clearhistory.button.title.txt = Očisti Nedavna izvješća za vezu
+connectiondetailscontroller.clearhistory.shortmessage.txt = Očisti nedavni sadržaj ove veze prikazan u prikazu Nedavno.
+connectiondetailscontroller.clearhistory.longmessage.txt = Očistite izvješća koja su prikazana u prikazu Nedavno. Povijest nedavnih izvješća očišćena je na poslužitelju i na mobilnom uređaju.
+
+connectiondetailscontroller.removeconnection.button.title.txt = Ukloni vezu
+
+connectiondetailscontroller.removeconnectiondialog.title.txt = Ukloni vezu
+connectiondetailscontroller.removeconnectiondialog.message.txt = Uklanjanjem ove veze uklonit će se svi dokumenti preuzeti s ovog poslužitelja.
+connectiondetailscontroller.removeconnectiondialog.cancelbutton.txt = Odustani
+connectiondetailscontroller.removeconnectiondialog.removebutton.txt = Ukloni
+
+# library controller
+
+librarycontroller.node.folder.contents.nocontents.txt = Ta je mapa prazna.
+librarycontroller.node.root.title.txt = Sve veze
+librarycontroller.node.favorites.title.txt = Favoriti
+librarycontroller.node.history.title.txt = Nedavno
+
+# allowlist, denylist - the first two are obsolete and no longer used
+whitelist.messagedialog.message.txt = „__HOST__” zahtijeva registriranje uređaja od strane administratora prije omogućavanja pristupa sadržaju.\nPristup je onemogućen.\nIzvješća su uklonjena s ovog uređaja.\nObratite se svom SAS administratoru.
+blacklist.messagedialog.message.txt = „__HOST__” je opozvao vaš pristup svom sadržaju.\nSva izvješća povezana s ovim poslužiteljem uklonjena su s ovog mobilnog uređaja.\nObratite se svom SAS administratoru.
+# these are now used by the code.
+allowlist.messagedialog.message.txt = „__HOST__” zahtijeva registriranje uređaja od strane administratora prije omogućavanja pristupa sadržaju.\nPristup je onemogućen.\nIzvješća su uklonjena s ovog uređaja.\nObratite se svom SAS administratoru.
+denylist.messagedialog.message.txt = „__HOST__” je opozvao vaš pristup svom sadržaju.\nSva izvješća povezana s ovim poslužiteljem uklonjena su s ovog mobilnog uređaja.\nObratite se svom SAS administratoru.
+
+# base report view model
+
+basereportviewmodel.reportstatus.unsubscribed.txt = Uklonjeno
+basereportviewmodel.reportstatus.subscribing.txt = Dodavanje
+basereportviewmodel.reportstatus.downloading.txt = Preuzimanje
+basereportviewmodel.reportstatus.unavailable.txt = Nedostupno
+basereportviewmodel.reportstatus.normal.txt = Normalno
+basereportviewmodel.reportstatus.new.txt = Novo
+basereportviewmodel.reportstatus.updated.txt = Ažurirano
+
+# commons
+ok.txt = U redu
+close.txt = Zatvori
+
+# report sort order list
+reportsortorderlist.title.txt = SORTIRAJ PREMA:
+
+# collection date groupings
+collection.dategroup.today = Danas
+collection.dategroup.yesterday = Jučer
+collection.dategroup.thisweek = Ovaj tjedan
+collection.dategroup.unavailable = Bez datuma
+
+# User names
+user.name.not.found = nedostupno
+user.name.sas = SAS
+user.name.same.user = Ja
+
+# Comments
+comment.no.subject = (nema predmeta)
+
+# Folders
+folder.my.folder.label.txt = My Folder
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+com.sas.graphics.gtl.core.itemRenderer.NodeLinkDiagramItem.LABELVALUE.txt= {0}:
+
+com.sas.graphics.gtl.nodeLinkDiagram.lineageDiagram.txt=Dijagram podrijetla
+
+com.sas.graphics.gtl.nodeLinkDiagram.networkDiagram.txt=Mrežni dijagram
+
+com.sas.graphics.gtl.nodeLinkDiagram.nodeLinkDiagram.txt=Dijagram veze čvora
+
+com.sas.graphics.gtl.nodeLinkDiagram.pfd.txt=Dijagram tijeka procesa
+
+com.sas.graphics.gtl.nodeLinkDiagram.sankeyDiagram.txt=Dijagram sankey
+
+com.sas.graphics.gtl.nodeLinkDiagram.treeDiagram.txt=Dijagram stabla
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+
+com.sas.graphics.gtl.impl.util.TickValueUtil.TRILLIONS.txt=trilijuni
+com.sas.graphics.gtl.impl.util.TickValueUtil.BILLIONS.txt=milijarde
+com.sas.graphics.gtl.impl.util.TickValueUtil.MILLIONS.txt=milijuni
+com.sas.graphics.gtl.impl.util.TickValueUtil.THOUSANDS.txt=tisuće
+com.sas.graphics.gtl.impl.util.TickValueUtil.TRILLIONTHS.txt=trilijunke
+com.sas.graphics.gtl.impl.util.TickValueUtil.BILLIONTHS.txt=milijardinke
+com.sas.graphics.gtl.impl.util.TickValueUtil.MILLIONTHS.txt=milijuntinke
+com.sas.graphics.gtl.impl.util.TickValueUtil.THOUSANDTHS.txt=tisućinke
+
+com.sas.graphics.gtl.impl.data.Variable.PERCENT_LABEL.txt=Postotak
+com.sas.graphics.gtl.impl.data.Variable.FREQUENCY_LABEL.txt=Učestalost
+
+com.sas.graphics.gtl.impl.legend.SizeLegendRenderer.POSITIVE.txt = Pozitivna vrijednost
+com.sas.graphics.gtl.impl.legend.SizeLegendRenderer.NEGATIVE.txt = Negativna vrijednost
+
+com.sas.graphics.gtl.impl.legend.LayoutGlobalLegendRenderer.LEGEND_DROPPED.txt = Legenda nije prikazana zbog ograničenog dostupnog prostora.
+com.sas.graphics.gtl.impl.legend.LayoutGlobalLegendController.LEGEND_TRUNCATED.txt = Nije prikazana cijela legenda.
+
+com.sas.graphics.gtl.missingValueWarning.txt= Ovaj grafikon sadržava vrijednosti koje nedostaju ili nisu valjane i ne mogu se ispravno prikazati.
+com.sas.graphics.gtl.duplicateKeyFrameWarning.txt=Podaci za ovaj grafikon nisu valjani za animaciju. Podaci ne smiju uključivati duplicirane kombinacije kategorija i datuma.
+
+com.sas.graphics.gtl.scatterPlotMatrix.scatterPlotMatrix.txt=Matrica dijagrama rasipanja
+
+com.sas.graphics.gtl.impl.DataAnimationRenderer.SLOW.txt = Sporo
+com.sas.graphics.gtl.impl.DataAnimationRenderer.FAST.txt = Brzo
+com.sas.graphics.gtl.impl.DataAnimationRenderer.NORMAL.txt = Normalno
+com.sas.graphics.gtl.impl.DataAnimationRenderer.LOOP.txt = Petlja
+com.sas.graphics.gtl.impl.DataAnimationRenderer.SPEED.txt = Brzina
+com.sas.graphics.gtl.impl.DataAnimationRenderer.FORWARD.txt = Naprijed
+com.sas.graphics.gtl.impl.DataAnimationRenderer.BACK.txt = Natrag
+com.sas.graphics.gtl.impl.DataAnimationRenderer.PLAY.txt = Reproduciraj
+com.sas.graphics.gtl.impl.DataAnimationRenderer.PAUSE.txt = Pauziraj
+com.sas.graphics.gtl.impl.DataAnimationRenderer.MENU.txt = Izbornik
+
+com.sas.graphics.gtl.CELLS_ARE_TOO_SMALL.txt=Previše redaka ili stupaca rešetke.
+com.sas.graphics.gtl.impl.renderer.CELL_HEADER_LABEL_EQUALS_VALUE.fmt.txt = {0} = {1}
+
+com.sas.graphics.gtl.impl.OverviewAxisRenderer.LOWER_LIMIT.fmt.txt = Os pregleda: Raspon pojedinosti donjeg ograničenja za lijevu i desnu minijaturu: {0}, za povećavanje i smanjivanje vrijednosti koristite tipke sa strelicama.
+com.sas.graphics.gtl.impl.OverviewAxisRenderer.UPPER_LIMIT.fmt.txt = Os pregleda: Raspon pojedinosti gornjeg ograničenja za lijevu i desnu minijaturu: {0}, za povećavanje i smanjivanje vrijednosti koristite tipke sa strelicama.
+com.sas.graphics.gtl.impl.OverviewAxisRenderer.DETAIL_RANGE.fmt.txt = Os pregleda: Raspon pojedinosti, vrijednost: {0} do {1}, za pomicanje raspona pojedinosti koristite tipke sa strelicama.
+# UX recommends two (non-breaking) spaces before and after 'to' for English
+com.sas.graphics.gtl.RANGE_TO.txt= {0}  do  {1}
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+com.sas.graphics.gtl.layoutOverlay.waterfallChart.txt=Pozitivno-negativni grafikon
+com.sas.graphics.gtl.layoutOverlay.waterfallChart.finalBar.txt=Završno
+com.sas.graphics.gtl.layoutOverlay.waterfallChart.initialBar.txt=Početno
+com.sas.graphics.gtl.layoutOverlay.waterfallChart.legendEntry.increasing.txt=Rastuće
+com.sas.graphics.gtl.layoutOverlay.waterfallChart.legendEntry.decreasing.txt=Opadajuće
+com.sas.graphics.gtl.layoutOverlay.waterfallChart.legendEntry.noChange.txt=Nema promjene
+
+com.sas.graphics.gtl.layoutOverlay.horizontal.txt=Vodoravno
+com.sas.graphics.gtl.layoutOverlay.vertical.txt=Okomito
+
+com.sas.graphics.gtl.layoutOverlay.barchart.txt=Stupčasti grafikon
+com.sas.graphics.gtl.layoutOverlay.barchart.warning.duplicate.bar.classification.values.txt=Stupičasti grafikon naišao je na duplicirane vrijednosti podataka klasifikacije stupaca i ne može se prikazati.
+
+com.sas.graphics.gtl.layoutOverlay.bandPlot.txt=Trakasti dijagram
+
+com.sas.graphics.gtl.layoutOverlay.boxPlot.txt=Dijagram s okvirima
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.MAX.txt=MakTrakasti dijagramsimalna „Whisker” crta
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.MEAN.txt=Srednja vrijednost
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.MEDIAN.txt=Medijan
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.MIN.txt=Minimalna „Whisker” crta
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.N.txt=N
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.Q1.txt=Prvi kvartil
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.Q3.txt=Treći kvartil
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.STD.txt=Standardna devijacija podataka
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.RANGE.txt=Raspon
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.IQR.txt=Interkvartil
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.OUTLIER.txt=Opažanje van donje i gornje granice
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.FAROUTLIER.txt=Opažanje van donje i gornje udaljene granice
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.BOXWIDTH.txt=Širina okvira
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.TRUE_MAX.txt=Maksimum uključujući stršeće vrijednosti
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.TRUE_MIN.txt=Minimum uključujući stršeće vrijednosti
+
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.MAX.txt=Maksimum
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.MEAN.txt=Srednja vrijednost
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.MEDIAN.txt=Medijan
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.MIN.txt=Minimum
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.N.txt=Nema opažanja
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.Q1.txt=1. kvartil
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.Q3.txt=3. kvartil
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.STD.txt=Standardna
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.RANGE.txt=Raspon
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.IQR.txt=INTERKVARTIL
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.DATA_MIN.txt=Min. podaci
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.DATA_MAX.txt=Maks. podaci
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.TRUE_MIN.txt=Istinita min.
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.TRUE_MAX.txt=Istinita maks.
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxDisplayStats.SUMWGT.txt=Zbroj težina
+
+com.sas.graphics.gtl.layoutOverlay.bubblePlot.txt=Mjehuričasti dijagram
+
+com.sas.graphics.gtl.layoutOverlay.contourPlot.txt=Konturni dijagram
+com.sas.graphics.gtl.layoutOverlay.contourPlot.ContourPlotRenderState.Warn.FlatContour.txt=Podaci se ne mogu prikazati jer su minimalne i maksimalne vrijednosti odgovora iste.
+com.sas.graphics.gtl.layoutOverlay.contourPlot.ContourPlotRenderState.Warn.InvalidDataContour.txt=Podaci se ne mogu prikazati jer nisu valjani ili nema dovoljno vrijednosti.
+
+com.sas.graphics.gtl.layoutOverlay.ellipseParm.txt=Elipsa
+
+com.sas.graphics.gtl.layoutOverlay.gauge.txt=Mjerilo
+
+com.sas.graphics.gtl.layoutOverlay.heatBox.txt=Toplinski okvir
+
+com.sas.graphics.gtl.layoutOverlay.heatMap.txt=Toplinska mapa
+
+com.sas.graphics.gtl.layoutOverlay.highLowPlot.txt=Dijagram visoko-nisko
+
+com.sas.graphics.gtl.layoutOverlay.histogram.txt=Histogram
+
+com.sas.graphics.gtl.layoutOverlay.lineChart.txt=Linijski grafikon
+com.sas.graphics.gtl.layoutOverlay.lineChart.LineChartRenderState.Warn.UNABLE_TO_STACK_NEGATIVE_VALUES.txt=Nije moguće složiti crte zbog negativnih vrijednosti.
+com.sas.graphics.gtl.layoutOverlay.lineChart.LineChartRenderState.Warn.UNABLE_TO_STACK_NEGATIVE_VALUES1.txt=Upozorenje: Nemogućnost slaganja crta
+com.sas.graphics.gtl.layoutOverlay.lineChart.LineChartRenderState.Warn.UNABLE_TO_STACK_NEGATIVE_VALUES2.txt=zbog negativnih vrijednosti.
+com.sas.graphics.gtl.layoutOverlay.lineChart.LineChartRenderState.Warn.UNABLE_TO_STACK_MISSING_VALUES2.txt=zbog vrijednosti koje nedostaju ili nisu prisutne.
+com.sas.graphics.gtl.layoutOverlay.lineChart.LineChartRenderState.Warn.DUPLICATE_LINE_CLASSIFICATION_VALUES.txt=Linijski grafikon naišao je na duplicirane vrijednosti podataka klasifikacije linija i ne može se prikazati.
+
+com.sas.graphics.gtl.layoutOverlay.mapLayer.txt=Karta
+
+com.sas.graphics.gtl.layoutOverlay.mapRegionLayer.txt=Područje karte
+com.sas.graphics.gtl.layoutOverlay.mapLineLayer.txt=Sloj retka karte
+com.sas.graphics.gtl.layoutOverlay.overlayDataInset.txt=Umetak podataka preklapanja
+
+com.sas.graphics.gtl.layoutOverlay.mixed.txt=Vrsta miješanog grafikona
+
+com.sas.graphics.gtl.layoutOverlay.needlePlot.txt=Igleni dijagram
+
+com.sas.graphics.gtl.layoutOverlay.networkPlot.txt=Mrežni dijagram
+
+com.sas.graphics.gtl.layoutOverlay.onMap.txt={0} na karti
+
+com.sas.graphics.gtl.layoutOverlay.mapWithRegion.txt=Karta s područjem karte
+
+com.sas.graphics.gtl.layoutOverlay.onMapRegion.txt={0} na području karte
+
+com.sas.graphics.gtl.layoutOverlay.onMapWtihRegion.txt={0} na karti s područjem karte
+
+com.sas.graphics.gtl.layoutOverlay.referenceLine.txt=Referentna crta
+
+com.sas.graphics.gtl.overlayDataInset.cell.max.fmt.txt=Neki su podaci odrezani jer objekt može samo prikazivati {0} umetnute grafikone.
+
+com.sas.graphics.gtl.layoutOverlay.seriesPlot.AbstractSeriesPlotRenderer.Warn.UNABLE_TO_STACK_NEGATIVE_VALUES.txt=Nije moguće složiti crte zbog negativnih vrijednosti.
+com.sas.graphics.gtl.layoutOverlay.seriesPlot.AbstractSeriesPlotRenderer.Warn.UNABLE_TO_STACK_NEGATIVE_VALUES1.txt=Upozorenje: Nemogućnost slaganja crta
+com.sas.graphics.gtl.layoutOverlay.seriesPlot.AbstractSeriesPlotRenderer.Warn.UNABLE_TO_STACK_NEGATIVE_VALUES2.txt=zbog negativnih vrijednosti.
+
+com.sas.graphics.gtl.layoutOverlay.scatterPlot.txt=Dijagram rasipanja
+com.sas.graphics.gtl.layoutOverlay.scatterPlotMatrix.txt=Matrica dijagrama rasipanja
+
+com.sas.graphics.gtl.layoutOverlay.scheduleChart.txt=Grafikon rasporeda
+
+com.sas.graphics.gtl.layoutOverlay.stepPlot.txt=Dijagram s koracima
+
+com.sas.graphics.gtl.layoutOverlay.timeSeriesPlot.AbstractSeriesPlotRenderer.Warn.DUPLICATE_CLASSIFICATION_VALUES.txt=Dijagram vremenskog niza naišao je na duplicirane vrijednosti podataka klasifikacije i ne može se prikazati.
+
+com.sas.graphics.gtl.layoutOverlay.vectorPlot.txt=Vektorski dijagram
+
+com.sas.graphics.gtl.layoutOverlay.Overlay.Warn.NUMBER_OF_LABELS_EXCEED_MAXIMUM_THRESHOLD.txt=Oznake se neće prikazati jer je prag premašen.
+com.sas.graphics.gtl.layoutOverlay.Overlay.Warn.INVALID_HISTOGRAM_X_VALUES_WARNING.txt = Vrijednosti X za histogram nisu valjane. Sve vrijednosti X su identične ili nedostaju.
+com.sas.graphics.gtl.layoutOverlay.waterfallChart.WaterfallChartRenderState.Warn.DUPLICATE_CLASSIFICATION_VALUES.txt=Pozitivno-negativni grafikon naišao je na duplicirane vrijednosti podataka klasifikacije i ne može se prikazati.
+com.sas.graphics.gtl.layoutOverlay.waterfallChart.DUPLICATE_FINAL_BAR_VALUE=Oznaka završnog stupca jednaka je vrijednosti podataka.
+com.sas.graphics.gtl.layoutOverlay.waterfallChart.DUPLICATE_INITIAL_BAR_VALUE=Oznaka početnog stupca jednaka je vrijednosti podataka.
+
+com.sas.graphics.gtl.layoutOverlay.heatBoxParm.BinTipEnum.FREQUENCY.txt=Učestalost
+com.sas.graphics.gtl.layoutOverlay.heatBoxParm.BinTipEnum.LOWER.txt=(donja)
+com.sas.graphics.gtl.layoutOverlay.heatBoxParm.BinTipEnum.UPPER.txt=(gornja)
+
+com.sas.graphics.gtl.layoutOverlay.seriesPlot.txt=Dijagram niza
+
+com.sas.graphics.gtl.layoutOverlay.scatterPlot.numItemsInCluster.txt=Broj stavki
+
+com.sas.graphics.gtl.layoutOverlay.textPlot.txt=Tekstni dijagram
+
+com.sas.graphics.gtl.layoutOverlayMap.OpenStreetMapProvider.Copyright.txt=Podaci na kartama © OpenStreetMap
+com.sas.graphics.gtl.layoutOverlayMap.Pin.Name.txt=Naziv
+com.sas.graphics.gtl.layoutOverlayMap.Pin.Name.default.fmt.txt=Oznaka mjesta {0}
+com.sas.graphics.gtl.layoutOverlayMap.Pin.Address.txt=Adresa
+com.sas.graphics.gtl.layoutOverlayMap.route.From.txt = Od
+com.sas.graphics.gtl.layoutOverlayMap.route.To.txt = Do
+com.sas.graphics.gtl.layoutOverlayMap.route.Distance.txt = Udaljenost
+com.sas.graphics.gtl.layoutOverlayMap.route.Time.txt = Vrijeme
+com.sas.graphics.gtl.layoutOverlayMap.route.Waypoint.txt = Putna točka rute
+com.sas.graphics.gtl.layoutOverlayMap.route.Begin.txt = Početak rute
+com.sas.graphics.gtl.layoutOverlayMap.route.End.txt = Kraj rute
+com.sas.graphics.gtl.layoutOverlayMap.route.type.direct.txt = Ravna crta
+com.sas.graphics.gtl.layoutOverlayMap.route.type.driveDistance.txt = Najkraća udaljenost vožnje
+com.sas.graphics.gtl.layoutOverlayMap.route.type.driveTime.txt = Najbrže vrijeme vožnje
+com.sas.graphics.gtl.layoutOverlayMap.route.type.walkDistance.txt = Najkraća udaljenost hodanja
+com.sas.graphics.gtl.layoutOverlayMap.route.type.walkTime.txt = Najbrže vrijeme hodanja
+com.sas.graphics.gtl.layoutOverlayMap.route.type.truckDistance.txt = Najkraća udaljenost prijevoza
+com.sas.graphics.gtl.layoutOverlayMap.route.type.truckTime.txt = Najbrže vrijeme prijevoza
+com.sas.graphics.gtl.layoutOverlayMap.route.type.txt = Način usmjeravanja
+com.sas.graphics.gtl.layoutOverlayMap.selection.type.txt = Metoda odabira
+com.sas.graphics.gtl.layoutOverlayMap.buffer.Breaks.txt = Stanke
+com.sas.graphics.gtl.layoutOverlayMap.buffer.time.fmt.txt = {0} min
+com.sas.graphics.gtl.layoutOverlayMap.buffer.miles.fmt.txt = {0} milja
+com.sas.graphics.gtl.layoutOverlayMap.buffer.km.fmt.txt = {0} km
+com.sas.graphics.gtl.layoutOverlayMap.buffer.meters.fmt.txt = {0} m
+com.sas.graphics.gtl.layoutOverlayMap.clusteredDataBounds.txt = Ponovno grupiranje obustavljeno je.  Trenutačne granice karte prelaze koordinatni prostor podataka.
+com.sas.graphics.gtl.layoutOverlayMap.region.warning.multiple.classification.values.txt=Neke regije na karti imaju višestruke vrijednosti klasifikacije.  Prikazuje se samo prva vrijednost.
+com.sas.graphics.gtl.layoutOverlayMap.lines.warning.multiple.classification.values.txt=Neke linije na karti imaju višestruke vrijednosti klasifikacije.  Prikazuje se samo prva vrijednost.
+
+com.sas.graphics.gtl.layoutOverlayPolar.PolarRadarChart.PolarRadarChartRenderState.Warn.UNABLE_TO_STACK_NEGATIVE_VALUES.txt=Nije moguće složiti radare zbog negativnih vrijednosti.
+com.sas.graphics.gtl.layoutOverlayPolar.PolarRadarChart.PolarRadarChartRenderState.Warn.UNABLE_TO_FILL_MISSING_VALUES.txt=Stil ispune zahtjeva da ni za jednu os ne nedostaju podatkovne točke.
+com.sas.graphics.gtl.layoutOverlayPolar.PolarRadarChart.PolarRadarChartRenderState.Warn.LESS_THAN_THREE_CATEGOTY_VALUES.txt=Podatkovna stavka dodijeljena ulozi kategorije mora imati najmanje tri razlikovne vrijednosti.
+com.sas.graphics.gtl.layoutOverlayPolar.PolarRadarChart.PolarRadarChartRenderState.Warn.LESS_THAN_THREE_RESPONSE_ROLES.txt=Ako uloga kategorije nije dodijeljena, onda najmanje tri mjerne vrijednosti moraju biti dodijeljene ulozi osi.
+com.sas.graphics.gtl.layoutOverlayPolar.PolarRadarChart.PolarRadarChartRenderState.Warn.RESPONSE_ALL_MISSING_VALUES.txt=Jedna ili više mjera su uklonjene iz uloge osi jer svim recima u trenutačnom upitu nedostaju vrijednosti.
+com.sas.graphics.gtl.layoutOverlayPolar.PolarRadarChart.PolarRadarChartRenderState.Warn.DUPLICATE_CLASSIFICATION_VALUES.txt=Grafikon sadržava dvostruke klasifikacijske vrijednosti i ne može se prikazati.
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+#Log messages for framework
+com.sas.graphics.gtl.impl.axis.AbstractAxisRenderer.INVALIDTIMEAXIS.txt=Vremenska os ne može podržati format podataka u dijagramu. Vrsta osi promijenit će se u LINEAR.
+com.sas.graphics.gtl.impl.axis.AbstractAxisRenderer.INVALIDLOGAXIS.txt=Os zapisnika ne može podržavati nulte ili negativne vrijednosti za os s iscrtanih podataka ili zbog zadane ili pripisane vrijednosti BASELINEINTERCEPT. Vrsta osi promijenit će se u LINEAR.
+com.sas.graphics.gtl.impl.axis.AbstractAxisRenderer.INVALIDLOGVIEWPORT.fmt.txt=Os zapisnika ne može podržavati nulte ili negativne vrijednosti za {0} ({1}). Koristit će se zadano za opciju {0}.
+com.sas.graphics.gtl.impl.axis.AbstractAxisRenderer.INVALIDVIEWPORT.fmt.txt=Vrijednost VIEWMAX ({0}) mora biti veća od vrijednosti VIEWMIN ({1}). Za obje će se mogućnosti koristiti zadane vrijednosti.
+com.sas.graphics.gtl.impl.axis.AbstractAxisRenderer.INVALIDVIEWPORTMAX.fmt.txt=Vrijednost VIEWMAX ({0}) niža je od minimalnih podataka. Koristit će se zadano za opciju VIEWMAX.
+com.sas.graphics.gtl.impl.axis.AbstractAxisRenderer.INVALIDVIEWPORTMIN.fmt.txt=Vrijednost VIEWMAX ({0}) viša je od maksimalnih podataka. Koristit će se zadano za opciju VIEWMIN.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayLayoutPane.INCOMPATIBLEOVERLAY.fmt.txt={0} izjava u sukobu je s vrstom osi. Dijagram se neće iscrtati.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayLayoutPane.INCOMPATIBLEINNERMARGINOVERLAY.fmt.txt={0} izjava ne može se postaviti u blok INNERMARGIN. Dijagram se neće iscrtati.
+com.sas.graphics.gtl.impl.renderer.ContentLayoutPane.LEGENDAREAMAX.fmt.txt=Legenda je izostavljena zbog ograničenja veličine. Postavite veću vrijednost stavke LEGENDAREAMAX kako bi se prikazala legenda.
+com.sas.graphics.gtl.impl.renderer.layoutOverlay.highlowPlot.HighLowPlotRenderer.HIGHLOWDATA.txt=Dijagram oscilacija možda se neće ispravno iscrtati. Stupci s vrijednošću LOW većom od vrijednosti HIGH nisu iscrtane.
+com.sas.graphics.gtl.impl.renderer.layoutOverlay.highlowPlot.HighLowPlotRenderer.ENDCAPDISPLAY.txt=ENDCAPDISPLAY={0} – nije podržano kada se upotrebljava TYPE=BAR. Opcija će se ignorirati.
+com.sas.graphics.gtl.impl.renderer.layoutOverlay.heatBoxParm.HeatBoxParmRenderer.INVALIDBOX.txt=Podaci za okvire nepotpuni su ili nisu valjani. Neki se okviri neće iscrtati.
+com.sas.graphics.gtl.impl.renderer.layoutOverlay.bubblePlot.BubblePlotRenderer.BUBBLERADIUSMINMAX.txt=Vrijednost BUBBLERADIUSMAX mora biti veća od vrijednosti BUBBLERADIUSMIN. Za obje će se mogućnosti koristiti zadane vrijednosti.
+com.sas.graphics.gtl.impl.renderer.layoutOverlay.barchart.note.error.bar.invalid.values.txt=Trake pogrešaka potisnut će se kada se koristi opcija GROUPDISPLAY=STACK ili GROUP100=POSITIVE|MAGNITUDE
+com.sas.graphics.gtl.impl.renderer.layoutOverlay.barChart.BarChartRenderer.BASELINEINTERCEPT.txt=BASELINEINTERCEPT=Opcija zanemarit će se kada se koristi opcija GROUPDISPLAY=STACK ili GROUP100=POSITIVE|MAGNITUDE. Osnovica retka iscrtat će se pri zadanoj vrijednosti.
+com.sas.graphics.gtl.impl.renderer.layoutOverlay.waterfallChart.note.duplicateInitialBar.txt=Vrijednost početnog stupca „INITIALBARTICKVALUE={0}” duplicira vrijednost kategorije.
+com.sas.graphics.gtl.impl.renderer.layoutOverlay.waterfallChart.note.duplicateFinalBar.txt=Vrijednost završnog stupca „INITIALBARTICKVALUE={0}” duplicira vrijednost kategorije.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.REQUIREDROLEMISSING.fmt.txt=Obavezni {1} u izjavi {0} nedostaje. Dijagram se neće iscrtati.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.REQUIREDROLEINVALID.fmt.txt=Obavezni {1} ({2}) u izjavi {0} nije valjan. Dijagram se neće iscrtati.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.REQUIREDDATETIMEROLEINVALID.fmt.txt=Obavezni {1} ({2}) u izjavi {0} nije valjan. Opcija očekuje stupac s vremenom i datumom. Dijagram se neće iscrtati.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.REQUIREDPOSROLEINVALID.fmt.txt=Obavezni {1} ({2}) u izjavi {0} nije valjan. Opcija očekuje pozitivne vrijednosti koje nisu nula u stupcu. Dijagram se neće iscrtati.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.REQUIREDNONEGROLEINVALID.fmt.txt=Obavezni {1} ({2}) u izjavi {0} nije valjan. Opcija ne očekuje negativnu vrijednost u stupcu. Dijagram se neće iscrtati.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.REQUIREDNUMROLEINVALID.fmt.txt=Obavezni {1} ({2}) u izjavi {0} nije valjan. Opcija očekuje numeričke vrijednosti u stupcu. Dijagram se neće iscrtati.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.REQUIREDSTRINGROLEINVALID.fmt.txt=Obavezni {1} ({2}) u izjavi {0} nije valjan. Opcija očekuje vrijednosti niza u stupcu. Dijagram se neće iscrtati.
+com.sas.graphics.gtl.impl.renderer.AbstractAnnotationRenderer.INVALIDDRAWSPACE.fmt.txt=Stavka {0} nije valjana. Iscrtavanje izjave je odbačeno.
+
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.NONREQUIREDROLEINVALID.fmt.txt={1} ({2}) u izjavi {0} nije valjan. Zadatak se ignorira.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.NONREQUIREDPOSROLEINVALID.fmt.txt={1} ({2}) u izjavi {0} nije valjan. Opcija očekuje pozitivne vrijednosti koje nisu nula u stupcu. Zadatak se ignorira.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.NONREQUIREDNONEGROLEINVALID.fmt.txt={1} ({2}) u izjavi {0} nije valjan. Opcija ne očekuje negativnu vrijednost u stupcu. Zadatak se ignorira.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.NONREQUIREDNUMROLEINVALID.fmt.txt={1} ({2}) u izjavi {0} nije valjan. Opcija očekuje numeričke vrijednosti u stupcu. Zadatak se ignorira.
+com.sas.graphics.gtl.impl.renderer.AbstractOverlayRenderer.NONREQUIREDSTRINGROLEINVALID.fmt.txt={1} ({2}) u izjavi {0} nije valjan. Opcija očekuje vrijednosti niza u stupcu. Zadatak se ignorira.
+com.sas.graphics.gtl.impl.renderer.DataRenderer.UNKNOWN.txt=Nepoznato
+com.sas.graphics.gtl.impl.renderer.layoutOverlay.dropLine.DropLineRenderer.INCOMPATIBLE_XY_LABEL.txt=Broj vrijednosti za (X, Y) i uloge OZNAKA razlikuju se. Oznake se neće prikazati.
+
+com.sas.graphics.gtl.impl.util.ImageMapUtilities.tooltip.fmt.txt=Onemogućeni su opisi HTML podataka jer je dosegnuta granična vrijednost. Vrijednost TIPMAX={0} u naredbi ODS GRAPHICS možete postaviti tako da stvara opise podataka.
+
+com.sas.graphics.gtl.layoutRegion.piechart.Warning.txt= Tortni grafikon sadržava neke negativne vrijednosti ili vrijednosti koje nedostaju i nije ih moguće prikazati.
+com.sas.graphics.gtl.layoutRegion.piechart.allZeroOrNegativeWarning.txt= Tortni grafikon sadržava sve nulte ili negativne vrijednosti i ne može se prikazati.
+com.sas.graphics.gtl.layoutRegion.piechart.smallMultipleSomeNegativeOrMissingWarning.txt= Neki tortni grafikoni sadržavaju neke negativne vrijednosti ili vrijednosti koje nedostaju i nije ih moguće prikazati.
+com.sas.graphics.gtl.layoutRegion.piechart.smallMultipleAllZeroOrNegativeWarning.txt= Neki tortni grafikoni sadržavaju sve nulte ili negativne vrijednosti i nije ih moguće prikazati.
+
+com.sas.graphics.gtl.xml.ModelParser.invalidXmlAttributeValue.fmt.txt={0}={1} nije valjano. Upotrijebit će se zadana vrijednost.
+com.sas.graphics.gtl.impl.util.GTLSASLogger.minCannotBeGreaterThanMax.fmt.txt=Vrijednost {0} ne smije biti veća od {1}. Mogućnosti {0} i {1} se ignoriraju.
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+com.sas.graphics.gtl.layoutRegion.iciclePlot.txt=Sigasti dijagram
+
+com.sas.graphics.gtl.layoutRegion.pieChart.PieOtherSliceOptions.LABEL.txt=Drugo
+
+com.sas.graphics.gtl.layoutRegion.piechart.Warning.txt= Tortni grafikon sadržava neke negativne vrijednosti ili vrijednosti koje nedostaju i nije ih moguće prikazati.
+com.sas.graphics.gtl.layoutRegion.piechart.allZeroOrNegativeWarning.txt= Tortni grafikon sadržava sve nulte ili negativne vrijednosti i ne može se prikazati.
+com.sas.graphics.gtl.layoutRegion.piechart.smallMultipleSomeNegativeOrMissingWarning.txt= Neki tortni grafikoni sadržavaju neke negativne vrijednosti ili vrijednosti koje nedostaju i nije ih moguće prikazati.
+com.sas.graphics.gtl.layoutRegion.piechart.smallMultipleAllZeroOrNegativeWarning.txt= Neki tortni grafikoni sadržavaju sve nulte ili negativne vrijednosti i nije ih moguće prikazati.
+com.sas.graphics.gtl.layoutRegion.piechart.Warn.DUPLICATE_CLASSIFICATION_VALUES.txt= Tortni grafikon naišao je na duplicirane vrijednosti podataka klasifikacije i ne može se prikazati.
+com.sas.graphics.gtl.layoutRegion.insetPiechart.Warn.DUPLICATE_CLASSIFICATION_VALUES.txt= Neki su tortni grafikoni naišli na duplicirane vrijednosti podataka klasifikacije i ne mogu se prikazati.
+
+
+com.sas.graphics.gtl.layoutRegion.treeMap.Warning.txt=Karta u obliku stabla sadrži vrijednost nula ili negativne vrijednosti koje se ne mogu prikazati. Pretvorene su u vrijednosti frekvencije.
+com.sas.graphics.gtl.layoutRegion.treeMap.AllMissingWarning.txt=Hijerarhijski ugniježđeni grafikon sadržava vrijednosti koje se ne mogu prikazati. Pretvorene su u vrijednosti frekvencije.
+com.sas.graphics.gtl.layoutRegion.treeMap.Warn.DUPLICATE_CLASSIFICATION_VALUES.txt=Hijerarhijski ugniježđeni grafikon naišao je na duplicirane vrijednosti podataka klasifikacije i ne može se prikazati.
+com.sas.graphics.gtl.layoutRegion.treeMap.Warn.MISSING_SIZE_VALUES.txt=Hijerarhijski ugniježđeni grafikon sadržava vrijednosti koje nedostaju i ne mogu se ispravno prikazati.
+
+com.sas.graphics.gtl.layoutRegion.wordCloud.termWarning.txt= Nisu prikazani svi izrazi.
+com.sas.graphics.gtl.layoutRegion.wordCloud.missingValueWarning.txt= Oblak riječi sadržava vrijednosti koje nedostaju ili nisu valjane i ne mogu se ispravno prikazati.
+
+com.sas.graphics.gtl.layoutRegion.gauge.valueoutofbound.txt= Mjerilo sadržava nedostupnu vrijednost.
+com.sas.graphics.gtl.layoutRegion.gauge.targetoutofbound.txt= Mjerilo sadržava nedostupni cilj koji nije prikazan.
+
+com.sas.graphics.gtl.layoutRegion.nld.missingValueWarning.txt= Ovaj dijagram sadržava vrijednosti koje nedostaju ili nisu valjane i ne mogu se ispravno prikazati.
+
+com.sas.graphics.gtl.layoutRegion.keyValue.txt=Vrijednost ključa
+com.sas.graphics.gtl.layoutRegion.keyValue.duplicateValue.txt=Vrijednost ključa naišla je na duplicirane vrijednosti kategorije i ne može se prikazati.
+com.sas.graphics.gtl.layoutRegion.gauge.duplicateValue.txt=Mjerilo je naišlo na dvostruke vrijednosti kategorije i ne može se prikazati.
+
+// KeyValue labels shown on the component
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.SUM.txt=Zbroj
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.MEAN.txt=Srednja vrijednost
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.FREQ.txt=Frekv.
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.PCT.txt=Sl.
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.FIRST.txt=Prvo
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.MIN.txt=Minimum
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.MAX.txt=Maksimum
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.MEDIAN.txt=Mdn.
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.FREQUENCY_WITH_MISSING.txt=Frekv. s nedost.
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.COUNT_DISTINCT.txt=Točan
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.STANDARD_DEVIATION.txt=SD
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.STANDARD_ERROR.txt=SE
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.VARIANCE.txt=Odstupanje
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.MODE.txt=Način
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.COUNT_MISSING.txt=Nedostaje
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.FIRST_QUARTILE.txt=Q1
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.THIRD_QUARTILE.txt=Q3
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.SKEW.txt=Asimetrija
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.KURTOSIS.txt=Spljoštenost
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.COEFFICIENT_OF_VARIATION.txt=Koeficijent varijacije
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.UNCORRECTED_SUM_OF_SQUARES.txt=Neispravljeni zbroj kvadrata
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.CORRECTED_SUM_OF_SQUARES.txt=CSS
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.T_STATISTIC.txt=t
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.P_VALUE.txt=p
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.UNKNOWN.txt=Nepoznato
+
+// KeyValue tooltip will contain longer value for statistic
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.SUM.txt=Zbroj
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.MEAN.txt=Srednja vrijednost
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.FREQ.txt=Učestalost
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.PCT.txt=Postotak
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.FIRST.txt=Prvo
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.MIN.txt=Minimum
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.MAX.txt=Maksimum
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.MEDIAN.txt=Medijan
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.FREQUENCY_WITH_MISSING.txt=Frekv. s nedost.
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.COUNT_DISTINCT.txt=Točan broj
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.STANDARD_DEVIATION.txt=Standardna devijacija
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.STANDARD_ERROR.txt=Standardna pogreška
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.VARIANCE.txt=Odstupanje
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.MODE.txt=Način
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.COUNT_MISSING.txt=Nedostaje broj
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.FIRST_QUARTILE.txt=Prvi kvartil
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.THIRD_QUARTILE.txt=Treći kvartil
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.SKEW.txt=Asimetrija
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.KURTOSIS.txt=Spljoštenost
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.COEFFICIENT_OF_VARIATION.txt=Koeficijent varijacije
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.UNCORRECTED_SUM_OF_SQUARES.txt=Neispravljeni zbroj kvadrata
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.CORRECTED_SUM_OF_SQUARES.txt=Ispravljeni zbroj kvadrata
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.T_STATISTIC.txt=T-statistika
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.P_VALUE.txt=P-vrijednost
+com.sas.graphics.gtl.layoutRegion.keyValue.tooltip.KeyValueStatisticLabel.UNKNOWN.txt=Nepoznata statistika
+
+com.sas.graphics.gtl.layoutRegion.keyValue.KeyValueStatisticLabel.STATTIPLABEL.txt=Statistika
+com.sas.graphics.gtl.layoutRegion.keyValue.NoTextFits.txt=Tekst nije moguće prikazati. Valjane uloge nisu postavljene ili je spremnik premalen.
+
+com.sas.graphics.gtl.layoutRegion.kpiChart.txt=KPI grafikon
+
+com.sas.graphics.gtl.layoutRegion.parallelCoordinatesPlot.txt=Dijagram paralelnih koordinata
+com.sas.graphics.gtl.layoutRegion.pcp.INVALID_BIN_METADATA.txt = Specifikacija metapodataka podgrupe nije valjana.
+com.sas.graphics.gtl.layoutRegion.pcp.INVALID_BIN_OPTIONS.txt = Navedene su nevaljane mogućnosti podgrupe.
+
+com.sas.graphics.gtl.layoutRegion.pieChart.txt=Tortni grafikon
+
+com.sas.graphics.gtl.layoutRegion.treeMap.txt=Hijerarhijski ugniježđeni grafikon
+
+com.sas.graphics.gtl.layoutRegion.wordCloud.txt=Oblak riječi
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+#
+# sas_graphbuilder_resources.properties
+#
+# en_US
+#
+
+graph.txt = Grafikon
+
+axisOptions.txt = Os
+
+# Data Visualizations
+dataVisualizations.BarChart.txt = Stupčasti grafikon
+dataVisualizations.WaterfallChart.txt = Pozitivno-negativni grafikon
+dataVisualizations.LineChart.txt = Linijski grafikon
+dataVisualizations.PieChart.txt = Tortni grafikon
+dataVisualizations.ScheduleChart.txt = Grafikon rasporeda
+dataVisualizations.ScatterPlot.txt = Dijagram rasipanja
+dataVisualizations.TimeSeriesPlot.txt = Dijagram vremenskog niza
+dataVisualizations.BubblePlot.txt = Mjehuričasti dijagram
+dataVisualizations.BandPlot.txt = Trakasti dijagram
+dataVisualizations.NeedlePlot.txt = Igleni dijagram
+dataVisualizations.StepPlot.txt = Dijagram s koracima
+dataVisualizations.SeriesPlot.txt = Dijagram niza
+dataVisualizations.VectorPlot.txt = Vektorski dijagram
+dataVisualizations.Treemap.txt = Hijerarhijski ugniježđeni grafikon
+dataVisualizations.TreeMap.txt = Hijerarhijski ugniježđeni grafikon
+dataVisualizations.LayoutDataMatrix.txt = Na temelju podataka
+dataVisualizations.MapLayer.txt = Zemljopisna karta
+dataVisualizations.MapRegionLayer.txt = Dijagram regije (samo geografski)
+dataVisualizations.ContourPlot.txt = Konturni dijagram (samo geografski)
+dataVisualizations.MapRegionLayer.titleInReport.txt = Dijagram regije
+dataVisualizations.ContourPlot.titleInReport.txt = Konturni dijagram
+
+# Proxies
+proxies.label.alignment.txt = Poravnanje
+proxies.label.arrangement.txt = Raspored
+proxies.label.arrowHeads.txt = Vršci strelice
+proxies.label.arrowHeadShape.txt = Oblik
+proxies.label.attrPriority.txt = Rotacija stila podatkovnog elementa
+proxies.label.axisLabel.txt = Oznaka osi
+proxies.label.axisLine.txt = Crta osi
+proxies.label.background.txt = Pozadina
+proxies.label.backgroundColor.txt = Boja pozadine
+proxies.label.barLabelColor.txt = Boja oznake stupca
+proxies.label.baselineStyle.txt = Stil osnovice retka
+proxies.label.border.txt = Obrub
+proxies.label.breakOnMissingValues.txt = Prijelom na vrijednostima koje nedostaju
+proxies.label.categoricalValuesOverlapHandling.txt = Upravljanje preklapanjem kategoričkih vrijednosti
+proxies.label.colorByValueChangeDirection.txt = Boja po smjeru promjene vrijednosti
+proxies.label.combineIntoOther.txt = Kombiniraj isključene ćelije u „Zajednički raspored”
+proxies.label.connectLines.txt = Spoji crte
+proxies.label.connectOrder.txt = Spoji redoslijed
+proxies.label.dataLabelCategory.txt = Kategorija
+proxies.label.dataLabelLocation.txt = Mjesto
+proxies.label.dataLabelPercent.txt = Postotak ukupnog zbroja
+proxies.label.dataLabels.txt = Oznake podataka
+proxies.label.dataLabelTextStyle.txt = Stil teksta oznake podataka
+proxies.label.dataLabelValue.txt = Stvarna vrijednost
+proxies.label.dataPointAlignment.txt = Poravnanje točke podataka
+proxies.label.decreasingColor.txt = Opadajuća boja
+proxies.label.direction.txt = Smjer
+proxies.label.donutHole.txt = Prstenasti otvor
+proxies.label.donutHoleDiameter.txt = Promjer
+proxies.label.emptyFill.txt = Ispuna za područja bez odgovora
+proxies.label.emptyOutline.txt = Kontura za područja bez odgovora
+proxies.label.extractScale.txt = Skaliranje izvoza
+proxies.label.fillBaseline.txt = Ispuna osnovica retka
+proxies.label.fillColor.txt = Boja ispune
+proxies.label.fillStyle.txt = Stil ispune
+proxies.label.finalBar.txt = Završna (kumulativna) traka
+proxies.label.fixedBaseline.txt = Fiksna osnovica retka
+proxies.label.fixedLabel.txt = Fiksna oznaka
+proxies.label.fixedMaximum.txt = Fiksni maksimum
+proxies.label.fixedMinimum.txt = Fiksni minimum
+proxies.label.fixedTitle.txt = Fiksni naslov
+proxies.label.g100.txt = Mjerilo grupiranja
+proxies.label.gridLines.txt = Crte rešetke
+proxies.label.groupingStyle.txt = Stil grupiranja
+proxies.label.groupLabelBackgroundColor.txt = Boja pozadine oznake grupe
+proxies.label.displayInLegend.txt = Prikaz u legendi
+proxies.label.increasingColor.txt = Rastuća boja
+proxies.label.initialBar.txt = Početna traka
+proxies.label.integersOnly.txt = Samo cijeli brojevi
+proxies.label.label.txt = Oznaka
+proxies.label.labelPosition.txt = Položaj oznake
+proxies.label.labelTextColor.txt = Boja teksta oznake
+proxies.label.largestBubble.txt = Najveći mjehurić
+proxies.label.levelIndicator.txt = Pokazatelj razine
+proxies.label.levelIndicatorColor.txt = Boja teksta
+proxies.label.line.txt = Crta
+proxies.label.lineColor.txt = Boja crte
+proxies.label.lineLabelBaseline.horizontal.txt = Vodoravno
+proxies.label.lineLabelBaseline.tangent.txt = Slijedi konturnu liniju
+proxies.label.lineLabelBaseline.txt = Usmjerenje
+proxies.label.lineLabelPosition.middle.txt = Sredina
+proxies.label.lineLabelPosition.begin.txt = Početak
+proxies.label.lineLabelPosition.end.txt = Kraj
+proxies.label.lineLabelPosition.txt = Položaj
+proxies.label.linePattern.txt = Uzorak crte
+proxies.label.lineThickness.txt = Debljina crte
+proxies.label.lineStyle.txt = Stil crte
+proxies.label.markerColor.txt = Boja markera
+proxies.label.markers.txt = Markeri
+proxies.label.markerStyle.txt = Stil markera
+proxies.label.measureValuesOverlapHandling.txt = Upravljanje preklapanjem izmjerenih vrijednosti
+proxies.label.offset.txt = Pomak
+proxies.label.otherColor.txt = Boja ostalih
+proxies.label.otherMinimum.txt = Minimalni postotak for „Drugo”
+proxies.label.otherSlice.txt = Izradi isječak „Drugo” za minimalne vrijednosti
+proxies.label.outline.txt = Kontura
+proxies.label.outlineStyle.txt = Stil konture
+proxies.label.outlineColor.txt = Boja konture
+proxies.label.overlaidGraphColors.txt = Boje prekrivajućeg grafa
+proxies.label.overlapHandling.txt = Upravljanje preklapanjem
+proxies.label.overviewAxis.txt = Os pregleda
+proxies.label.overviewAxis.contents.txt = Sadržaj
+proxies.label.overviewAxis.graphElements.txt = Elementi grafikona
+proxies.label.pieLabel.txt = Tortna oznaka
+proxies.label.placement.txt = Smještaj
+proxies.label.position.txt = Položaj
+proxies.label.reverseOrder.txt = Preokreni redoslijed
+proxies.label.shortFixedLabel.txt = Kratka fiksna oznaka
+proxies.label.showLegend.txt = Prikaži legendu
+proxies.label.smallestBubble.txt = Najmanji mjehurić
+proxies.label.spacing.txt = Razmak
+proxies.label.splitTimeValues.txt = Podijeljene vrijednosti vremena
+proxies.label.startingPoint.txt = Početna točka (stupnjevi)
+proxies.label.textColor.txt = Boja teksta
+proxies.label.textStyle.txt = Stil teksta
+proxies.label.textStyle.dataLabel.txt = Stil teksta oznake podataka
+proxies.label.textStyle.dataValue.txt = Stil teksta vrijednosti podataka
+proxies.label.tickAlignment.txt = Poravnanje
+proxies.label.tickMarks.txt = Crtične oznake
+proxies.label.tickValues.txt = Crtične vrijednosti
+proxies.label.timeDataInterval.txt = Interval vremenskih podataka
+proxies.label.title.txt = Naslov
+proxies.label.titleTextStyle.txt = Stil teksta naslova
+proxies.label.transparency.txt = Prozirnost
+proxies.label.value.txt = Vrijednost
+proxies.label.visibility.txt = Vidljivost
+proxies.label.visibility.map.txt = Pozadina karte
+proxies.label.wallColor.txt = Boja zida
+proxies.label.wallOutline.txt = Struktura zida
+proxies.label.xAxisRange.txt = Raspon osi X
+proxies.label.yaxis.txt = Os Y
+proxies.label.yAxisRange.txt = Raspon osi Y
+proxies.label.levels.txt = Razine
+
+# {0} is an integer used to identify unique colors
+proxies.colors.default.txt = Automatski (zadano)
+proxies.colors.fill.background.txt = Boja pozadine
+proxies.colors.fill.confidence.txt = Boja pouzdanosti
+proxies.colors.fill.confidence2.txt = Boja pouzdanosti 2
+proxies.colors.fill.dataDecrease.txt = Boja pada podataka
+proxies.colors.fill.dataIncrease.txt = Boja porasta podataka
+proxies.colors.fill.error.txt = Boja pogreške
+proxies.colors.fill.final.txt = Boja završne vrijednosti
+proxies.colors.fill.graphData.txt = Boja podataka {0}
+proxies.colors.fill.headerBackground.txt = Boja pozadine zaglavlja
+proxies.colors.fill.initial.txt = Boja početne vrijednosti
+proxies.colors.fill.kpiOverflow.txt = Boja prelijevanja KPI-ja
+proxies.colors.fill.kpiRange.txt = Boja raspona KPI-ja {0}
+proxies.colors.fill.kpiUnderflow.txt = Boja podlijevanja KPI-ja
+proxies.colors.fill.legendBackground.txt = Boja pozadine legende
+proxies.colors.fill.missing.txt = Boja podataka koji nedostaju
+proxies.colors.fill.other.txt = Boja ostalih podataka
+proxies.colors.fill.outlier.txt = Boja stršeće vrijednosti
+proxies.colors.fill.overflow.txt = Boja prelijevanja
+proxies.colors.fill.predictionLimits.txt = Boja ograničenja predviđanja
+proxies.colors.fill.underflow.txt = Boja podlijevanja
+proxies.colors.fill.wallBackground.txt = Boja pozadine zida
+proxies.colors.line.axis.txt = Boja crte osi
+proxies.colors.line.border.txt = Boja crte obruba
+proxies.colors.line.box.txt = Boja crte okvira
+proxies.colors.line.confidence.txt = Boja crte pouzdanosti
+proxies.colors.line.confidence2.txt = Boja crte pouzdanosti 2
+proxies.colors.line.connect.txt = Boja crte povezivanja
+proxies.colors.line.dataDecrease.txt = Boja crte pada podataka
+proxies.colors.line.dataIncrease.txt = Boja crte porasta podataka
+proxies.colors.line.error.txt = Boja crte pogreške
+proxies.colors.line.final.txt = Boja crte završne vrijednosti
+proxies.colors.line.fit.txt = Boja crte prilagodbe
+proxies.colors.line.fit2.txt = Boja crte prilagodbe 2
+proxies.colors.line.graphData.txt = Boja crte podataka {0}
+proxies.colors.line.grid.txt = Boja crte rešetke
+proxies.colors.line.initial.txt = Boja crte početne vrijednosti
+proxies.colors.line.missing.txt = Boja crte podataka koji nedostaju
+proxies.colors.line.other.txt = Boja crte ostalih podataka
+proxies.colors.line.outlier.txt = Boja crte stršeće vrijednosti
+proxies.colors.line.outline.txt = Boja crte strukture
+proxies.colors.line.overflow.txt = Boja crte prelijevanja
+proxies.colors.line.prediction.txt = Boja crte predviđanja
+proxies.colors.line.predictionLimits.txt = Boja crte ograničenja predviđanja
+proxies.colors.line.reference.txt = Boja referentne crte
+proxies.colors.line.underflow.txt = Boja crte podlijevanja
+proxies.colors.marker.confidence.txt = Boja markera pouzdanosti
+proxies.colors.marker.confidence2.txt = Boja markera pouzdanosti 2
+proxies.colors.marker.dataDecrease.txt = Boja markera pada podataka
+proxies.colors.marker.dataIncrease.txt = Boja markera porasta podataka
+proxies.colors.marker.error.txt = Boja markera pogreške
+proxies.colors.marker.final.txt = Boja markera završne vrijednosti
+proxies.colors.marker.fit.txt = Boja markera prilagodbe
+proxies.colors.marker.fit2.txt = Boja markera prilagodbe 2
+proxies.colors.marker.graphData.txt = Boja markera podataka {0}
+proxies.colors.marker.initial.txt = Boja markera početne vrijednosti
+proxies.colors.marker.missing.txt = Boja markera podataka koji nedostaju
+proxies.colors.marker.other.txt = Boja markera ostalih podataka
+proxies.colors.marker.outlier.txt = Boja markera stršeće vrijednosti
+proxies.colors.marker.overflow.txt = Boja markera prelijevanja
+proxies.colors.marker.prediction.txt = Boja markera predviđanja
+proxies.colors.marker.predictionLimits.txt = Boja markera ograničenja predviđanja
+proxies.colors.marker.underflow.txt = Boja markera podlijevanja
+proxies.colors.text.confidence.txt = Boja fonta pouzdanosti
+proxies.colors.text.confidence2.txt = Boja fonta pouzdanosti 2
+proxies.colors.text.data.txt = Boja fonta podataka
+proxies.colors.text.error.txt = Boja fonta pogreške
+proxies.colors.text.final.txt = Boja fonta završne vrijednosti
+proxies.colors.text.footnote.txt = Boja fonta fusnote
+proxies.colors.text.graphData.txt = Boja fonta podataka {0}
+proxies.colors.text.initial.txt = Boja fonta početne vrijednosti
+proxies.colors.text.kpiData.txt = Boja fonta podataka KPI-ja
+proxies.colors.text.kpiRange.txt = Boja fonta vrijednosti raspona KPI-ja
+proxies.colors.text.label.txt = Boja fonta oznake
+proxies.colors.text.missing.txt = Boja fonta podataka koji nedostaju
+proxies.colors.text.other.txt = Boja fonta ostalih podataka
+proxies.colors.text.outlier.txt = Boja fonta stršeće vrijednosti
+proxies.colors.text.overflow.txt = Boja fonta prelijevanja
+proxies.colors.text.predictionLimits.txt = Boja fonta ograničenja predviđanja
+proxies.colors.text.title.txt = Boja fonta naslova
+proxies.colors.text.underflow.txt = Boja fonta podlijevanja
+proxies.colors.text.value.txt = Boja fonta vrijednosti
+
+proxies.validation.maxValueBelowMin.txt = Mora biti veći od minimalne vrijednosti
+proxies.validation.minValueAboveMax.txt = Mora biti manji od maksimalne vrijednosti
+proxies.validation.integer.txt = Mora biti cijeli broj
+proxies.validation.largestBubbleBelowMin.txt = Mora biti veće od najmanjeg mjehurića
+proxies.validation.smallestBubbleAboveMax.txt = Mora biti manje od najvećeg mjehurića
+proxies.validation.otherMinimumPercentageRange.txt = Mora biti između 0 % i 50 %
+proxies.validation.positive.txt = Mora biti pozitivna vrijednost
+proxies.validation.between.txt = Mora biti između {0} i {1}
+
+proxies.default.finalBarLabel.txt = Završno
+proxies.default.initialBarLabel.txt = Početno
+
+proxies.alignment.center.txt = Centriraj
+proxies.alignment.justify.txt = Poravnaj
+
+# NOTE: Left and Right should be flipped in RTL translations
+proxies.alignment.left.txt = Lijevo
+proxies.alignment.right.txt = Desno
+
+proxies.alignment.sideBySide.txt = Od ruba do ruba
+proxies.alignment.verticalStack.txt = Okomito slaganje
+proxies.arrangement.flow.txt = Tijek
+proxies.arrangement.standard.txt = Standardno
+proxies.arrangement.toggle.txt = Preklop
+proxies.arrowHeadShape.barbed.txt = Ograđeno
+proxies.arrowHeadShape.closed.txt = Zatvoreno
+proxies.arrowHeadShape.filled.txt = Popunjeno
+proxies.arrowHeadShape.open.txt = Otvoreno
+proxies.attrPriority.auto.txt = Automatski
+proxies.attrPriority.color.txt = Prvo zakreni sve boje
+proxies.attrPriority.none.txt = Zakreni sve atribute
+proxies.axisRange.differentPerCell.txt = Različito po ćelijama
+proxies.axisRange.sameEachColumn.txt = Isto unutar svakog stupca
+proxies.axisRange.sameEachRow.txt = Isto unutar svakog reda
+proxies.axisRange.sameForAll.txt = Isto za sve ćelije
+proxies.border.auto.txt = Automatski
+proxies.border.off.txt = Isključeno
+proxies.border.on.txt = Uključeno
+proxies.connectOrder.axis.txt = Os
+proxies.connectOrder.values.txt = Podaci
+proxies.dataLabelLocation.auto.txt = Automatski
+proxies.dataLabelLocation.callout.txt = Oblačić
+proxies.dataLabelLocation.inside.txt = Unutar
+proxies.dataLabelLocation.outside.txt = Izvan
+proxies.dataPointAlignment.center.txt = Centriraj
+proxies.contourType.label.txt = Vrsta konture
+proxies.contour.fill.txt=Ispuna
+proxies.contour.fillType.txt=Vrsta
+proxies.contour.solidFillType.txt=Jednobojno
+proxies.contour.gradientFillType.txt=Prijelaz
+proxies.contour.lineType.txt=Crta
+proxies.contour.labelType.txt=Oznake podataka
+
+# NOTE: Left and Right should be flipped in RTL translations
+proxies.dataPointAlignment.left.txt = Lijevo
+proxies.dataPointAlignment.right.txt = Desno
+
+# NOTE: clockwise and counterclockwise should be flipped in RTL translations
+# i.e. proxies.direction.clockwise.txt = Counter clockwise
+proxies.direction.clockwise.txt = U smjeru kazaljki na satu
+proxies.direction.counterclockwise.txt = U suprotnom smjeru od smjera kazaljki na satu
+
+proxies.fillStyle.fade.txt = Izblijedi
+proxies.fillStyle.solid.txt = Čvrsto
+proxies.g100.none.txt = Stvarne vrijednosti
+proxies.g100.positive.txt = Normaliziraj grupe do 100 %
+proxies.gridLines.auto.txt = Automatski
+proxies.gridLines.off.txt = Isključeno
+proxies.gridLines.on.txt = Uključeno
+proxies.groupingStyle.cluster.txt = Klaster
+proxies.groupingStyle.multiple.txt = Višestruko
+proxies.groupingStyle.overlay.txt = Preklapanje
+proxies.groupingStyle.overlayFilled.txt = Popunjeno preklapanje
+proxies.groupingStyle.overlayUnfilled.txt = Nepopunjeno preklapanje
+proxies.groupingStyle.stack.txt = Stog
+proxies.groupingStyle.stackFilled.txt = Ispunjeno slaganje
+proxies.labelPosition.automatic.txt = Automatski
+proxies.labelPosition.atInflectionPoints.txt = Na točkama infleksije
+
+# {0} is an integer used to identify unique line patterns
+proxies.linePattern.default.txt = Automatski (zadano)
+proxies.linePattern.pattern.fmt = Uzorak {0}
+
+proxies.markerSymbol.default.txt = Automatski (zadano)
+proxies.markerSymbol.CIRCLE.txt = Krug
+proxies.markerSymbol.PLUS.txt = Plus
+proxies.markerSymbol.TRIANGLE.txt = Trokut
+proxies.markerSymbol.SQUARE.txt = Kvadrat
+proxies.markerSymbol.X.txt = X
+proxies.markerSymbol.TRIANGLE_DOWN.txt = Trokut usmjeren prema dolje
+proxies.markerSymbol.DIAMOND.txt = Dijamant
+proxies.markerSymbol.ASTERISK.txt = Zvjezdica
+proxies.markerSymbol.CIRCLE_BOLD.txt = Krug – podebljan
+proxies.markerSymbol.PLUS_BOLD.txt = Plus – podebljan
+proxies.markerSymbol.TRIANGLE_BOLD.txt = Trokut – podebljan
+proxies.markerSymbol.SQUARE_BOLD.txt = Kvadrat – podebljan
+proxies.markerSymbol.X_BOLD.txt = X – podebljan
+proxies.markerSymbol.TRIANGLE_DOWN_BOLD.txt = Trokut usmjeren prema dolje – podebljan
+proxies.markerSymbol.DIAMOND_BOLD.txt = Dijamant – podebljan
+proxies.markerSymbol.ASTERISK_BOLD.txt = Zvjezdica – podebljana
+proxies.markerSymbol.CIRCLE_FILLED.txt = Krug s ispunom
+proxies.markerSymbol.CROSS_FILLED.txt = Križ s ispunom
+proxies.markerSymbol.TRIANGLE_FILLED.txt = Trokut s ispunom
+proxies.markerSymbol.SQUARE_FILLED.txt = Kvadrat s ispunom
+proxies.markerSymbol.SALTIRE_FILLED.txt = Andrijin križ s ispunom
+proxies.markerSymbol.TRIANGLE_DOWN_FILLED.txt = Trokut usmjeren prema dolje s ispunom
+proxies.markerSymbol.DIAMOND_FILLED.txt = Dijamant s ispunom
+proxies.markerSymbol.STAR_FILLED.txt = Zvjezdica s ispunom
+proxies.markerSymbol.CROSS.txt = Križ
+proxies.markerSymbol.SALTIRE.txt = Andrijin križ
+proxies.markerSymbol.STAR.txt = Zvijezda
+proxies.markerSymbol.HASH.txt = Raspršivanje
+proxies.markerSymbol.HOME.txt = Početna stranica
+proxies.markerSymbol.HOME_DOWN.txt = Ikona početne stranice okrenuta prema dolje
+proxies.markerSymbol.DIAMOND_NARROW.txt = Dijamant – uski
+proxies.markerSymbol.HOME_NARROW.txt = Ikona početne stranice – uska
+proxies.markerSymbol.HOME_NARROW_DOWN.txt = Ikona početne stranice okrenuta prema dolje – uska
+proxies.markerSymbol.HOME_BOLD.txt = Ikona početne stranice – podebljana
+proxies.markerSymbol.HOME_DOWN_BOLD.txt = Ikona početne stranice okrenuta prema dolje – podebljana
+proxies.markerSymbol.HOME_FILLED.txt = Ikona početne stranice s ispunom
+proxies.markerSymbol.HOME_DOWN_FILLED.txt = Ikona početne stranice okrenuta prema dolje s ispunom
+proxies.markerSymbol.DIAMOND_NARROW_FILLED.txt = Dijamant – uski, s ispunom
+proxies.markerSymbol.HOME_NARROW_FILLED.txt = Ikona početne stranice – uska, s ispunom
+proxies.markerSymbol.HOME_NARROW_DOWN_FILLED.txt = Ikona početne stranice okrenuta prema dolje – uska, s ispunom
+proxies.markerSymbol.HEXAGON.txt = Šesterokut
+proxies.markerSymbol.HEXAGON_VERTICAL.txt = Okomiti šesterokut
+proxies.markerSymbol.HEXAGON_FILLED.txt = Šesterokut s ispunom
+proxies.markerSymbol.HEXAGON_VERTICAL_FILLED.txt = Okomiti šesterokut s ispunom
+proxies.offset.center.txt = Centriraj
+proxies.offset.negative.txt = Negativna vrijednost
+proxies.offset.positive.txt = Pozitivna vrijednost
+proxies.orientation.horizontal.txt = Vodoravno
+proxies.orientation.vertical.txt = Okomito
+proxies.overlaidGraphColors.cycle.txt = Započni svaki grafikon jedinstvenom bojom
+proxies.overlaidGraphColors.noCycle.txt = Započni prvi grafikon zadanom bojom
+proxies.overlapHandling.alwaysRotate.txt = Uvijek okreni
+proxies.overlapHandling.alwaysRotateDropAll.txt = Uvijek okreni, ispusti sve
+proxies.overlapHandling.auto.txt = Automatski
+proxies.overlapHandling.dropSome.txt = Ispusti dio
+proxies.overlapHandling.none.txt = Ništa
+proxies.overlapHandling.rotate.txt = Okreni
+proxies.overlapHandling.showAll.txt = Prikaži sve
+proxies.overlapHandling.stagger.txt = Postupno pomiči
+proxies.overlapHandling.staggerTruncate.txt = Postupno pomiči, skrati
+proxies.overlapHandling.staggerTruncateDropAll.txt = Postupno pomiči, skrati, ukloni sve
+proxies.overlapHandling.truncate.txt = Skrati
+proxies.overlapHandling.truncateRotate.txt = Skrati, rotiraj
+proxies.placement.top.txt = Gore
+proxies.placement.bottom.txt = Dolje
+
+# NOTE: Left and Right should be flipped in RTL translations
+proxies.placement.left.txt = Lijevo
+proxies.placement.right.txt = Desno
+
+proxies.position.side.txt = Bočno
+proxies.position.top.txt = Gore
+proxies.tickAlignment.betweenMidpoints.txt = Na pola puta između središnjih crtičnih vrijednosti
+proxies.tickAlignment.midpoint.txt = Na sredini crtičnih vrijednosti
+proxies.timeInterval.auto.txt = Automatski
+proxies.timeInterval.day.txt = Dan
+proxies.timeInterval.hour.txt = Sat
+proxies.timeInterval.minute.txt = Minuta
+proxies.timeInterval.month.txt = Mjesec
+proxies.timeInterval.quarter.txt = Tromjesečje
+proxies.timeInterval.second.txt = Sekunda
+proxies.timeInterval.semiMonth.txt = Polumjesečno
+proxies.timeInterval.semiYear.txt = Polugodišnje
+proxies.timeInterval.tenDay.txt = Svakih 10 dana
+proxies.timeInterval.week.txt = Tjedan
+proxies.timeInterval.year.txt = Godina
+proxies.visibility.automatic.txt = Automatski
+proxies.visibility.hideAll.txt = Sakrij sve
+
+# NOTE: Left and Right should be flipped in RTL translations
+proxies.yaxis.y.txt = Lijevo
+proxies.yaxis.y2.txt = Desno
+
+proxies.overviewAxis.contents.same.txt = Isto kao glavni grafikon
+proxies.overviewAxis.contents.custom.txt = Navedite elemente grafikona
+
+# Dynamics
+dynamicRole.label.txt = Dinamična uloga
+# {0} is the name of the model to which the role is attached.  {1} is one of the role type labels below.
+dynamicRole.qualifiedLabel.fmt = {0}: {1}
+dynamicRole.category.txt = Kategorija
+dynamicRole.response.txt = Odgovor
+dynamicRole.aggregatedGroup.txt = Grupa
+dynamicRole.group.txt = Grupa
+dynamicRole.color.txt = Boja
+dynamicRole.colorResponse.txt = Boja
+dynamicRole.target.txt = Cilj
+dynamicRole.x.txt = X
+dynamicRole.y.txt = Y
+# At this time, "z" is used exclusively by the ContourPlot for color.
+dynamicRole.z.txt = Boja
+dynamicRole.tip.txt = Vrh podataka
+dynamicRole.task.txt = Zadatak
+dynamicRole.start.txt = Početak
+dynamicRole.end.txt = Dovrši
+dynamicRole.dataLabel.txt = Oznaka podataka
+dynamicRole.dataValues.txt = Vrijednosti podataka
+dynamicRole.time.txt = Vrijeme
+dynamicRole.size.txt = Veličina
+dynamicRole.limitUpper.txt = Gornja granica
+dynamicRole.limitLower.txt = Donja granica
+dynamicRole.xOrigin.txt = Početna točka X
+dynamicRole.yOrigin.txt = Početna točka Y
+dynamicRole.tileBy.txt = Pločice
+dynamicRole.mapCoordinates.txt = Geografski ID
+dynamicRole.mapContour.txt = Geografski ID
+dynamicRole.mapRegion.txt = Geografski ID
+dynamicRole.mapProvider.txt = Davatelj karte
+dynamicRole.mapTip.txt = Vrh podataka
+
+dynamicRole.cellsGroup.txt = Grafikoni
+dynamicRole.sharedGroup.txt = Zajedničke uloge
+dynamicRole.latticeGroup.txt = Uloge rešetke na temelju podataka
+dynamicRole.rowVars.txt = Red rešetke
+dynamicRole.columnVars.txt = Stupac rešetke
+
+dynamicRoles.types.any.txt=Bilo koja klasifikacija
+dynamicRoles.types.character.txt=Kategorija
+dynamicRoles.types.numeric.txt=Mjera
+dynamicRoles.types.time.txt=Datum i vrijeme
+
+# Names
+# {0} is the localized name of the model.
+# {1} is an integer used to identify that unique instance.
+names.rendererModel.label.fmt.txt = {0} {1}
+
+# {0} is the name of the plot and {1} is the localized name of the plot role
+# An example default role name is "BarChart 1 Category"
+names.defaultRoleDescription.label.fmt.txt={0} {1}
+# {0} is an integer used to uniquely identify the shared role
+names.sharedRoleDescription.label.fmt.txt=Zajednička uloga {0}
+
+#GraphBuilderElements
+elements.xaxis.txt = Os X
+elements.layoutOverlayMap.txt = Karta
+
+# NOTE: Left Y Axis and Right Y Axis should be flipped in RTL translations
+elements.yaxis.txt = Lijeva os Y
+elements.y2axis.txt = Desna os Y
+
+elements.globalLegend.txt = Legende
+elements.discreteLegend.txt = Diskretna legenda
+
+# {0} is the localized name of the visualization
+elements.sizeLegend.fmt.txt = Legenda veličine {0}
+elements.continuousLegend.fmt.txt = {0} Kontinuirana legenda
+
+# error/warning messages
+# html tags are used for formatting in the application
+multiQueryDataMatrix.error.txt = Detaljni podaci i sažeti podaci nisu dopušteni u istom grafikonu kada se koriste uloge rešetke. Isto tako, svi elementi grafikona unutar rešetke temeljene na podacima moraju koristiti isto sažimanje podataka.<br/><br/>Ovaj grafikon ne može se spremiti dok se ne unesu izmjene u njegove uloge.<br/><br/>Možete učiniti nešto od sljedećeg:<ol><li>ukloniti uloge rešetke temeljene na podacima ili</li><li>koristiti isto sažimanje podataka za sve elemente grafikona</li></ol>
+# The replacement string is a reference to a graph element (individual plot)
+multiQueryDataMatrixDetails.error.fmt.txt = Sljedeće uloge koriste se za sažimanje: {0}Za grafikone i dijagrame koji ne koriste sve uloge za sažimanje koje su gore navedene, dodajte grupnu ulogu ili drugu kategoričku ulogu koja će sažimati podatke, zatim je podijelite s gore navedenom ulogom koja još nije korištena.
+multiQuerySmallMessage.error.txt = Rešetka temeljena na podacima zahtijeva promjene
+multiQueryPanelMessage.error.txt = Rešetka temeljena na podacima zahtijeva promjene
+multiQuerySmallMessage.tip.txt = Kliknite za više informacija.
+
+emptyOverviewAxisSmallMessage.error.txt=Os pregleda prazna je
+emptyOverviewAxis.error.txt=Os pregleda mora sadržavati najmanje jedan element grafikona.<br/><br/>Grafikon se ne može spremiti dok se ne doda element grafikona ili se os pregleda ne isključi.
+
+unassignedRolesDetails.error.fmt.txt=Nijedna uloga ne koristi sljedeće zajedničke uloge: {0}Grafikon se ne može spremiti sa zajedničkim ulogama koje se ne koriste.
+
+dropMessage.dataMatrixOK.txt = Dodaj u grafikon
+dropMessage.cellOK.txt = Dodaj u ćeliju
+dropMessage.mapOK.txt = Dodaj na mapu
+dropMessage.overviewAxisOK.txt = Dodaj na os pregleda
+dropMessage.overviewAxisNotOK.txt = Nije kompatibilno s drugim elementima na osi pregleda
+dropMessage.overviewAxisNeverOK.txt = Nije kompatibilno s osi pregleda
+dropMessage.newRowOK.txt = Dodaj u novi red
+dropMessage.newColumnOK.txt = Dodaj u novi stupac
+dropMessage.notCompatibleWithRow.txt = Nije kompatibilno s ostalim elementima u ovom retku
+dropMessage.notCompatibleWithColumn.txt = Nije kompatibilno s ostalim elementima u ovom stupcu
+dropMessage.notCompatibleWithMap.txt = Geografski elementi nisu kompatibilni s rasporedima s više ćelija
+dropMessage.latticeOtherCellColumnNotOK.txt = Nije kompatibilno s vrstom podataka odabranom za os u ostalim elementima u ovom stupcu
+dropMessage.latticeOtherCellRowNotOK.txt = Nije kompatibilno s vrstom podataka odabranom za os u ostalim elementima u ovom retku
+dropMessage.cellNotOK.txt = Nije kompatibilno s ostalim elementima u ovoj ćeliji
+dropMessage.treemapDataMatrix.txt = Hijerarhijski ugniježđeni grafikon nije kompatibilan s ulogama rešetke temeljenim na podacima.
+dropMessage.mapDataMatrix.txt = Elementi koji zahtijevaju karte nisu kompatibilni s ulogama rešetke temeljenim na podacima
+dropMessage.layoutOverlayMapNotOk.txt = Nije kompatibilno s geografskim elementima
+dropMessage.layoutOverlayMapSingleMapLayerOnly.txt = Sloj zemljopisne karte nije moguće dodati ni pomaknuti
+dropMessage.layoutOverlayMapIncompatibleRoles.txt = Prilagođene dijeljene uloge nisu kompatibilne s geografskim elementima
+dropMessage.layoutOverlayMapRequired.txt = Geografski elementi nisu kompatibilni s ostalim elementima u ovoj ćeliji
+dropMessage.notCompatibleWithDataMatrixRoles.txt = Redci i stupci ne mogu se dodati kada su u upotrebi uloge rešetke temeljene na podacima.
+dropMessage.layoutOverlayMapMixing.txt = Slojevi karte i slojevi stavke koja nije karta nisu kompatibilni.
+
+dataMatrix.dataRolesDisabledMultiCell.txt = Uloge rešetke na temelju podataka ne mogu se koristiti kad predložak ima više od jedne ćelije.
+dataMatrix.dataRolesDisabledMap.txt = Uloge rešetke na temelju podataka ne mogu se upotrebljavati s geografskim elementima
+# {0} is the name of the role causing the conflict
+dataMatrix.dataRolesDisabledConflict.txt = Uloge rešetke na temelju podataka nisu kompatibilne s {0}
+
+#VAD coppied Role Names
+roleName.CATEGORY_VAR.txt = Kategorija
+roleName.MEASURE_VAR.txt = Mjera
+roleName.SUBGROUP_VAR.txt = Grupa
+roleName.GROUPING_VAR.txt = Grupiranje
+roleName.HORIZONTAL_SERIES_VAR.txt = Stupci rešetke
+roleName.VERTICAL_SERIES_VAR.txt = Redci rešetke
+roleName.BAR_MEASURE1_VAR.txt = Mjera (stupac)
+roleName.BAR_MEASURE2_VAR.txt = Mjera (stupac 2)
+roleName.BAR_MEASURE_VAR.txt = Mjera (stupac)
+roleName.LINE_MEASURE_VAR.txt = Mjera (crta)
+roleName.LINE_MEASURE1_VAR.txt = Mjera (crta)
+roleName.LINE_MEASURE2_VAR.txt = Mjera (crta 2)
+roleName.TILE_VAR.txt = Pločica
+roleName.X_VAR.txt = Os X
+roleName.Y_VAR.txt = Os Y
+roleName.SIZE_VAR.txt = Veličina
+roleName.COLOR_VAR.txt = Boja
+roleName.TARGET_VAR.txt = Cilj
+roleName.TIME_VAR.txt = Vremenska os
+roleName.RESPONSE_VAR.txt = Mjera (crta)
+roleName.RESPONSE2_VAR.txt = Mjera (crta 2)
+roleName.ANIMATION.txt = Animacija
+roleName.TIP_VAR.txt = Vrijednosti vrha podataka
+roleName.WORD_VAR.txt = Riječ
+roleName.GEO_VAR.txt = Geografija
+roleName.KPI_GROUP_VAR.txt = Grupa
+roleName.MEASURES_VAR.txt = Mjere
+
+#Custom role names
+roleName.TASK_VAR.txt = Zadatak
+roleName.START_VAR.txt = Početak
+roleName.FINISH_VAR.txt = Dovrši
+roleName.LABEL_VAR.txt = Oznaka
+roleName.X_ORIGIN_VAR.txt = Početna točka X
+roleName.Y_ORIGIN_VAR.txt = Početna točka Y
+roleName.X_START_VAR.txt = Početak X
+roleName.X_END_VAR.txt = Kraj X
+roleName.Y_START_VAR.txt = Početak Y
+roleName.Y_END_VAR.txt = Kraj Y
+roleName.SIZE_START_VAR.txt = Početak veličine
+roleName.SIZE_END_VAR.txt = Kraj veličine
+roleName.TIME_MEASURE1_VAR.txt = Mjera (vremenski niz)
+roleName.TIME_MEASURE2_VAR.txt = Mjera (vremenski niz 2)
+roleName.HIGH_VAR.txt = Visoko
+roleName.LOW_VAR.txt = Nisko
+roleName.CLOSE_VAR.txt = Zatvori
+roleName.MOVING_AVG_VAR.txt = Prosjek premještanja
+roleName.BOLINGER_UPPER_VAR.txt = Bollinger gornji
+roleName.BOLINGER_LOWER_VAR.txt = Bollinger donji
+roleName.BOLLINGER_UPPER_VAR.txt = Bollinger gornji
+roleName.BOLLINGER_LOWER_VAR.txt = Bollinger donji
+roleName.VOLUME_VAR.txt = Količina
+
+confirmDialog.continue.txt = Nastavi
+confirmDialog.cancel.txt = Odustani
+
+confirmWarning.barRotate.title.txt = Promijeni smjer
+confirmWarning.barRotate.message.txt = Promjenom smjera na ovom stupčastom grafikonu promijenit ćete i ostale grafikone. Želite li nastaviti?
+confirmWarning.changeType.title.txt = Promijeni klasifikaciju
+confirmWarning.changeType.message.txt = Klasifikacija za uloge na istoj osi mora biti ista.<br/><br/>Promjenom klasifikacije stavke {0} prouzročit ćete promjenu klasifikacije sljedećih uloga: {1}<br/><br/>Želite li nastaviti?
+confirmWarning.reseatVisualizationsInMaps.title.txt = Vrati izvorne uloge
+confirmWarning.reseatVisualizationsInMaps.message.txt = Izmjenom rasporeda s kartama možete vratiti izvorne uloge. Želite li nastaviti?
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+#
+# sas_datetimeerrors.properties
+#
+# en_US
+#
+
+locale.not.null.txt=Regionalna shema ne smije biti prazna vrijednost
+date.time.not.null.txt=Stilovi datuma i vremena ne smiju biti prazne vrijednosti
+date.argument.not.valid.txt=Argument stila datuma nije valjan
+time.argument.not.valid.txt=Argument stila vremena nije valjan
+date.time.style.not.none.txt=Stilovi i datuma i vremena ne mogu biti NIŠTA
+date.time.pattern.not.null.txt=Uzorak ne smije biti prazna vrijednost
+month.names.not.null.txt=Stil naziva i kontekst ne smiju biti prazne vrijednosti za nazive mjeseci
+weekday.names.not.null.txt=Stil naziva i kontekst ne smiju biti prazne vrijednosti za nazive dana u tjednu
+# Based on CLDR(Ver 40)
+# I18NOK:FileNotLocalizable
+#
+# hr/sas_portable_formatters.properties
+#
+ 
+###################################################
+#      Date and Time Patterns
+###################################################
+# Date - Long/Medium/Short
+datePatternLong=EEEE, d. MMMM yyyy.
+datePatternMedium=d. MMMM yyyy.
+datePatternShort=d. MMM yyyy.
+ 
+# Time - Long/Medium/Short
+timePatternLong=HH:mm:ss (zzz)
+timePatternMedium=HH:mm:ss
+timePatternShort=HH:mm
+ 
+# Date Format
+# Used for DATE and DTDATE
+date.0=dd. MM. yyyy.
+date.1=d. MMM yyyy.
+date.2=d. MMMM yyyy.
+date.3=EEEE, d. MMMM yyyy.
+ 
+# Day Format
+# Used for DAY
+day.0=d
+ 
+# DOWNAME Format
+# Used for DOWNAME
+downame.0=ccc
+downame.1=cccc
+ 
+# MMDDYY Format
+# Used for MMDDYY, DDMMYY and YYMMDD
+mmddyy.0=dd. MM. yyyy.
+mmddyy.1=d. MMM yyyy.
+ 
+# MMYY Format
+# Used for MMYY and YYMM
+mmyy.0=MM. yyyy.
+mmyy.1=LLL yyyy.
+ 
+# MONTH Format
+# Used for MONTH
+monname.0=M
+monname.1=LLL
+monname.2=LLLL
+ 
+# MONYY Format
+# Used for MONYY, YYMON and DTMONYY
+monyy.0=LLL yy.
+monyy.1=LLL yyyy.
+monyy.2=LLLL yyyy.
+ 
+# WEEKDATE Format
+# Used for WEEKDATE, WEEKDATX and DTWKDATX
+weekdate.0=ccc
+weekdate.1=cccc
+weekdate.2=EEE, d. MMM yyyy.
+weekdate.3=EEEE, d. MMMM yyyy.
+ 
+# WORDDATE Format
+# Used for WORDDATE and WORDDATX
+worddate.0=LLL
+worddate.1=LLLL
+worddate.2=d. MMM yyyy.
+worddate.3=d. MMMM yyyy.
+ 
+# YEAR Format
+# Used for YEAR
+year.0=yy.
+year.1=yyyy.
+ 
+# DATETIME Format
+# Used for DATETIME, DATEAMPM
+datetime.0=dd. MM. yyyy. HH:mm
+datetime.1=d. MMM yyyy. HH:mm:ss
+datetime.2=d. MMMM yyyy. 'u' HH:mm:ss zzz
+datetime.3=EEEE, d. MMMM yyyy. 'u' HH:mm:ss (zzz)
+ 
+# TIME Format
+# Used for TOD, TIME and TIMEAMPM
+time.0=HH
+time.1=HH:mm
+time.2=HH:mm:ss
+time.3=HH:mm:ss (zzz)
+ 
+# HOUR Format
+# Used for HOUR
+hour.0=HH
+hour.1=hh a
+ 
+# HHMM Format
+# Used for HHMM
+hhmm.0=HH:mm
+hhmm.1=hh:mm a
+ 
+# MMSS Format
+# Used for MMSS
+mmss.0=mm
+mmss.1=mm:ss
+ 
+# Quarter Format
+# Used by YYQC and DTYYQC
+quarteryear.0=QQQ yyyy.
+quarteryear.1=QQQQ yyyy.
+ 
+###################################################
+#     Date and Time Names  
+###################################################
+# DayNames
+dayNames=nedjelja,ponedjeljak,utorak,srijeda,četvrtak,petak,subota
+dayNamesShort=ned,pon,uto,sri,čet,pet,sub
+dayNamesShortest=N,P,U,S,Č,P,S
+firstDayOfWeek=1
+ 
+# Stand-Alone DayNames
+SAdayNames=nedjelja,ponedjeljak,utorak,srijeda,četvrtak,petak,subota
+SAdayNamesShort=ned,pon,uto,sri,čet,pet,sub
+SAdayNamesShortest=n,p,u,s,č,p,s
+ 
+# MonthNames
+monthNames=siječnja,veljače,ožujka,travnja,svibnja,lipnja,srpnja,kolovoza,rujna,listopada,studenoga,prosinca
+monthNamesShort=sij,velj,ožu,tra,svi,lip,srp,kol,ruj,lis,stu,pro
+monthNamesShortest=1.,2.,3.,4.,5.,6.,7.,8.,9.,10.,11.,12.
+ 
+# Stand-Alone MonthNames
+SAmonthNames=siječanj,veljača,ožujak,travanj,svibanj,lipanj,srpanj,kolovoz,rujan,listopad,studeni,prosinac
+SAmonthNamesShort=sij,velj,ožu,tra,svi,lip,srp,kol,ruj,lis,stu,pro
+SAmonthNamesShortest=1.,2.,3.,4.,5.,6.,7.,8.,9.,10.,11.,12.
+ 
+# QuarterNames
+quarterNames=1. kvartal,2. kvartal,3. kvartal,4. kvartal
+quarterNamesShort=1kv,2kv,3kv,4kv
+quarterNamesShortest=1.,2.,3.,4.
+ 
+# Stand-Alone QuarterNames
+SAquarterNames=1. kvartal,2. kvartal,3. kvartal,4. kvartal
+SAquarterNamesShort=1. kv.,2. kv.,3. kv.,4. kv.
+SAquarterNamesShortest=1.,2.,3.,4.
+ 
+# DateBase
+am=AM
+pm=PM
+ 
+# A.D. Names
+eraADNameShortest=po. Kr.
+eraADNameShort=po. Kr.
+eraADNameLong=poslije Krista
+ 
+# B.C. Names
+eraBCNameShortest=pr. Kr.
+eraBCNameShort=pr. Kr.
+eraBCNameLong=prije Krista
+ 
+###################################################
+#         Symbols  (might contain LRM/RLM) 
+###################################################
+# currency symbol
+currencySymbol=kn
+ 
+# decimal point
+decimalPoint=,
+ 
+# thousands separator
+thousandsSeparator=.
+ 
+# list separator
+listSeparator=;
+ 
+# percent sign
+percentSymbol=%
+ 
+# plus sign
+plusSign=+
+ 
+# negative sign
+negativeSign=−
+ 
+# exponential
+exponentialSymbol=E
+ 
+# perMille
+permileSymbol=‰
+ 
+# infinity
+infinitySymbol=∞
+ 
+# nan
+nanSymbol=NaN
+ 
+###################################################
+#         Numeric Patterns (might contain LRM/RLM) 
+###################################################
+# decimal format pattern
+decimalFormat=#,##0.###
+ 
+# percent format pattern
+percentFormat=#,##0 %
+ 
+# currency format pattern
+currencyFormat=#,##0.00 ¤
+currencyAccountingFormat=#,##0.00 ¤
+ 
+# compressed number format
+compactDecimalShort.1000=0 tis.
+compactDecimalShort.10000=00 tis.
+compactDecimalShort.100000=000 tis.
+compactDecimalShort.1000000=0 mil.
+compactDecimalShort.10000000=00 mil.
+compactDecimalShort.100000000=000 mil.
+compactDecimalShort.1000000000=0 mlr.
+compactDecimalShort.10000000000=00 mlr.
+compactDecimalShort.100000000000=000 mlr.
+compactDecimalShort.1000000000000=0 bil.
+compactDecimalShort.10000000000000=00 bil.
+compactDecimalShort.100000000000000=000 bil.
+ 
+###################################################
+#         Misc 
+###################################################
+# Text Direction: supported values are LTR and RTL
+textDirection=LTR
+ 
+# CurrencyFormatter
+currencyFormatterPrecision=2
+ 
+# NumberFormatter
+numberFormatterPrecision=2
+ 
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+# Tuple label
+missingValue.txt=(nedostaje)
+subTotal.txt=Podzbroj:
+total.txt=Ukupni zbroj
+suppressed.txt=(potisnuto)
+
+# VERBOSE expression descriptions
+# template placeholders:
+# {n} where n in [0 ... 9]: placeholder for the n-th function argument (zero-based)
+# {,}: placeholder for the list separator
+expression.description.error.unrecognized.txt = Neprepoznati izraz
+expression.description.in.fmt.txt = {0} u {1}
+expression.description.notIn.fmt.txt = {0} nije u {1}
+expression.description.equalTo.fmt.txt = {0} je {1}
+expression.description.notEqualTo.fmt.txt = {0} nije {1}
+expression.description.greaterThan.fmt.txt = {0} veće od {1}
+expression.description.greaterThanEqualTo.fmt.txt = {0} veće od ili jednako {1}
+expression.description.lessThan.fmt.txt = {0} manje od {1}
+expression.description.lessThanEqualTo.fmt.txt = {0} manje od ili jednako {1}
+expression.description.between.fmt.txt = {0} između {1} i {2}
+expression.description.contains.fmt.txt = {0} sadržava {1}
+expression.description.notContains.fmt.txt = {0} ne sadržava {1}
+expression.description.beginsWith.fmt.txt = {0} počinje s {1}
+expression.description.endsWith.fmt.txt = {0} završava s {1}
+expression.description.missing.fmt.txt = {0} nedostaje
+expression.description.notMissing.fmt.txt = {0} ne nedostaje
+
+expression.description.after.fmt.txt = {0} počinje nakon {1}
+expression.description.onOrAfter.fmt.txt = {0} počinje u ili nakon {1}
+expression.description.before.fmt.txt = {0} završava prije {1}
+expression.description.onOrBefore.fmt.txt = {0} završava u ili prije {1}
+
+expression.description.compoundAnd.fmt.txt = {0} I {1}
+expression.description.compoundAnd.parenthetical.fmt.txt = ({0}) I ({1})
+expression.description.compoundOr.fmt.txt = {0} ILI {1}
+expression.description.compoundOr.parenthetical.fmt.txt = ({0}) ILI ({1})
+
+expression.description.betweenExcluding.fmt.txt = {0} između {1} i {2} isključujućih granica
+expression.description.outsideIncluding.fmt.txt = {0} izvan {1} i {2} uključujućih granica
+expression.description.outsideExcluding.fmt.txt = {0} izvan {1} i {2} isključujućih granica
+
+# Moved from iOS: InfoPanelAnyColumn, InfoPanelCurrentColumn
+expression.description.anyValue.txt = Bilo koja vrijednost ćelije u retku
+expression.description.currentValue.txt = Vrijednost ćelije
+
+expression.description.anyMeasureValue.txt = Bilo koja vrijednost mjere
+
+# INTERFACE expression descriptions
+expression.description.interface.in.fmt.txt = {0} IN { {1} }
+expression.description.interface.notIn.fmt.txt = {0} NOT IN { {1} }
+expression.description.interface.missing.fmt.txt = {0} MISSING
+expression.description.interface.notMissing.fmt.txt = {0} NOT MISSING
+expression.description.interface.contains.fmt.txt = {1} IN {0}
+expression.description.interface.notContains.fmt.txt = {1} NOT IN {0}
+expression.description.interface.between.fmt.txt = {1} ≤ {0} ≤ {2}
+expression.description.interface.betweenExcluding.fmt.txt = {1} < {0} < {2}
+expression.description.interface.outsideExcluding.fmt.txt = NOT {1} ≤ {0} ≤ {2}
+expression.description.interface.outsideIncluding.fmt.txt = NOT {1} < {0} < {2}
+expression.description.interface.upper.fmt.txt = Upper( {0} )
+expression.description.interface.lower.fmt.txt = Lower( {0} )
+expression.description.interface.pow.fmt.txt = {0} ^ {1}
+expression.description.interface.root.fmt.txt = Root[{1}]( {0} )
+expression.description.interface.abs.fmt.txt = | {0} |
+expression.description.interface.mod.fmt.txt = {0} % {1}
+expression.description.interface.round.fmt.txt = Round[{1}]( {0} )
+expression.description.interface.log.fmt.txt = Log[{1}]( {0} )
+expression.description.interface.cond.fmt.txt = IF {0} THEN {1} ELSE {2}
+expression.description.interface.concatenate.fmt.txt = Concat( {0}{,}{1} )
+expression.description.interface.find.fmt.txt = Find( {0}{,}{1} )
+expression.description.interface.findCharacter.fmt.txt = Find( {0}{,}{1} )
+expression.description.interface.length.fmt.txt = Length( {0} )
+expression.description.interface.pathBeginsWith.fmt.txt = {0} StartsWith {1}
+expression.description.interface.pathEndsWith.fmt.txt = {0} EndsWith {1}
+expression.description.interface.pathContains.fmt.txt = {1} IN {0}
+expression.description.interface.pathContainsNode.fmt.txt = { {1}{,}{2} } IN {0}
+expression.description.interface.cellIndex.fmt.txt = Cell[{0}+{1}]
+expression.description.interface.aggregateCells.fmt.txt = {0}( {1} FOR {2}[{3}:{4}] )
+expression.description.interface.rows.fmt.txt = Redci
+expression.description.interface.columns.fmt.txt = Stupci
+expression.description.interface.pathContainsSubPath.fmt.txt = ContainsSubPath( {0}{,}{1}{,}{2}{,}{3} )
+expression.description.interface.anyMeasure.txt = Bilo koja mjera
+
+# Copied from ConditionOperator.* in Flex MobileDesigner (VAD)
+expression.operator.in.txt = U
+expression.operator.notIn.txt = Nije u
+expression.operator.equals.txt = Jednako
+expression.operator.notEquals.txt = Nije jednako
+expression.operator.greaterThan.txt = Veće od
+expression.operator.greaterThanEqualTo.txt = Veće od ili jednako
+expression.operator.lessThan.txt = Manje od
+expression.operator.lessThanEqualTo.txt = Manje od ili jednako
+expression.operator.betweenInclusive.txt = Između (uključivo)
+expression.operator.betweenExclusive.txt = Između (isključivo)
+expression.operator.outsideRangeInclusive.txt = Nije između (uključujući)
+expression.operator.outsideRangeExclusive.txt = Nije između (isključivo)
+expression.operator.contains.txt = Sadržava
+expression.operator.notContains.txt = Ne sadržava
+expression.operator.beginsWith.txt = Počinje s
+expression.operator.endsWith.txt = Završava s
+expression.operator.missing.txt = Nedostaje
+expression.operator.notMissing.txt = Ne nedostaje
+
+expression.operator.after.txt = Počinje nakon
+expression.operator.onOrAfter.txt = Počinje u ili nakon
+expression.operator.before.txt = Završava prije
+expression.operator.onOrBefore.txt = Završava u ili prije
+
+
+ALL_OTHER.txt=Sve drugo
+
+#Aggregation labels
+aggregation.minimum.txt = Minimum:
+aggregation.maximum.txt = Maksimum:
+aggregation.total.txt = Ukupni zbroj:
+aggregation.count.txt = Broj:
+aggregation.sum.txt = Zbroj:
+aggregation.average.txt = Prosjek:
+aggregation.distinct.txt = Broj različitih vrijednosti:
+aggregation.skew.txt = Asimetrija:
+aggregation.kurtosis.txt = Spljoštenost:
+aggregation.coefficientOfVariation.txt = Koeficijent varijacije:
+aggregation.uncorrectedSumOfSquares.txt = Neispravljeni zbroj kvadrata:
+aggregation.correctedSumOfSquares.txt = Ispravljeni zbroj kvadrata:
+aggregation.tStatistic.txt = T-statistika:
+aggregation.pValue.txt = P-vrijednost:
+aggregation.firstQuartile.txt = Prvi kvartil:
+aggregation.median.txt = Medijan:
+aggregation.thirdQuartile.txt = Treći kvartil:
+aggregation.standardDeviation.txt = Standardna devijacija:
+aggregation.standardError.txt = Standardna pogreška:
+aggregation.variance.txt = Odstupanje:
+aggregation.numberMissing.txt = Broj koji nedostaje:
+
+#table grand total
+table.grandTotal.txt = Sveukupni zbroj
+
+#table sort
+table.sort.sort.txt = Sortiraj
+table.sort.ascending.txt = Uzlazno
+table.sort.descending.txt = Silazno
+table.sort.none.txt = Ništa
+table.sort.resetsort.txt = Vrati izvorno sortiranje
+
+#table sparkline
+table.sparkline.to.txt = do
+table.sparkline.final.txt = Završno
+
+#datagrid
+datagrid.rowNumbers.header.txt = Redak
+
+#crosstab actions
+crosstab.expand.txt = Proširi
+crosstab.collapse.txt = Sažmi
+crosstab.drill.txt = Pretraži kroz razine
+crosstab.pageDown.txt = Skok do sljedećeg retka
+crosstab.pageDownEnd.txt = Skok do donjeg retka
+crosstab.pageUp.txt = Skok do prethodnog retka
+crosstab.pageUpEnd.txt = Skok na najviši redak
+
+#slider
+rangeSlider.currentValues.txt = {0} do {1}
+
+#scroll tooltip
+scroll.column.txt = Stupac {0} od {1}
+scroll.row.txt = Redak {0} od {1}
+
+#default hierarchy labels
+hierarchy.column.txt = Hijerarhija stupaca
+hierarchy.row.txt = Hijerarhija redaka
+hierarchy.hierarchy.txt = Hijerarhija
+
+#accessibility
+accessibility.dataElement.hint.txt = Dvaput dodirnite za otvaranje opisa elemenata i odaberite element podataka.
+accessibility.objectType.crosstab.txt = Križni tabulator
+accessibility.objectType.dataGrid.txt = Podatkovna rešetka
+
+#accessibility used by KPIs
+accessibility.kpi.header.txt = Group = {0}
+accessibility.kpi.selection.txt = {0} od {1}
+
+
+#indicates the row and column for a table cell for accessibility
+accessibility.table.rowColumn.txt = Redak {0}; Stupac {1}
+accessibility.table.row.txt = Redak {0}
+accessibility.table.column.txt = Stupac {0}
+
+#indicates the cell is a column header in the table for accessibility
+accessibility.table.header.txt = Zaglavlje
+
+#indicates the sort, if applicable, in a column heading for accessibility
+accessibility.table.sortPrimaryDescending.txt = Primarno sortiranje, silazno
+accessibility.table.sortSecondaryDescending.txt = Sekundarno sortiranje, silazno
+accessibility.table.sortDescending.txt = Sortiraj silazno
+accessibility.table.sortPrimaryAscending.txt = Primarno sortiranje, uzlazno
+accessibility.table.sortSecondaryAscending.txt = Sekundarno sortiranje, uzlazno
+accessibility.table.sortAscending.txt = Sortiraj uzlazno
+accessibility.table.sortEnabled.hint.txt = Dvaput dodirnite za otvaranje opisa elemenata za sortiranje.
+
+# indicates datagrid/crosstab selected state
+accessibility.datagrid.rowSelected.txt = Odabrani redak
+accessibility.crosstab.cellSelected.txt = Odabrano
+
+# accessibility hints used with table cells, based on whether they have a tooltip
+accessibility.table.selectRow.hint.txt = Dvaput dodirnite za preklapanje odabira retka.
+accessibility.table.openTooltip.hint.txt = Dvaput dodirnite za otvaranje opisa elemenata i preklapanje odabira retka.
+
+# accessibility hints used with crosstab cells
+accessibility.crosstab.selectCell.hint.txt = Dvaput dodirnite za preklapanje odabira ćelija.
+
+# accesibility hints for crosstab total label on the header
+accessibility.crosstab.rowTotal.txt = Ukupni zbroj redaka
+accessibility.crosstab.columnTotal.txt = Ukupni zbroj stupaca
+
+# indicates crosstab row/column header
+accessibility.crosstab.rowHeader.txt = Zaglavlje retka
+accessibility.crosstab.columnHeader.txt = Zaglavlja stupca
+
+# indicates crosstab row/column category 
+accessibility.crosstab.rowCategory.txt = Kategorija retka
+accessibility.crosstab.columnCategory.txt = Kategorija stupca
+
+# indicates the level number for crosstab row/column header
+accessibility.crosstab.level.txt = Razina {0}
+
+# indicates the collapsed/expanded state for crosstab row/column header
+accessibility.crosstab.collapsed.txt = Sažeto
+accessibility.crosstab.expanded.txt = Prošireno
+accessibility.crosstab.drillable.txt = Veza
+
+# indicates the number row/column spans for crosstab row/column header
+accessibility.crosstab.rowColumnSpans.txt = Obuhvaća {0} stupaca i {1} redaka
+accessibility.crosstab.rowSpans.txt = Obuhvaća {0} redaka
+accessibility.crosstab.columnSpans.txt = Obuhvaća {0} stupaca
+
+# accessibility, indicates if the cell contains a visual
+accessibility.table.containsKPI.txt = Sadržava KPI
+accessibility.table.containsSparkline.txt = Sadržava mini grafikon
+
+# indicates that the cell is a column total cell for accessibility
+accessibility.table.columnTotal.txt = Ukupni zbroj
+
+# indicates an empty cell when a column has no total in the totals row for accessibility
+accessibility.table.noTotal.txt = Nema ukupnog zbroja stupaca
+
+# indicates a cell with a missing value in the data grid for
+# accessibility
+accessibility.table.missingValue.txt = Nedostaje
+
+# indicates the order preference for search results
+# that might include address, city, and region
+# ex.  address={0},city={1},region={2}
+searchItem.AddressCityRegion.txt = {0}, {1}, {2}
+searchItem.AddressCity.txt = {0}, {1}
+searchItem.AddressRegion.txt = {0}, {1}
+searchItem.CityRegion.txt = {0}, {1}
+
+route.LessThanAMinute.txt = <1 min
+route.DistanceKilometers.fmt.txt = {0} km
+route.DistanceMiles.fmt.txt = {0} milje
+route.DistanceMile.fmt.txt = {0} milja
+route.Minute.fmt.txt = {0} min
+route.HoursMinutes.fmt.txt = {0} h {1} min
+route.Hours.fmt.txt = {0} h
+
+# used by tooltips when not all of the data values can be displayed.
+tooltip.numberDisplayed.txt = {0} od {1}
+tooltip.colon.txt = {0}:
+
+# Display List Separator, used to delimit lists of values in user facing text
+displayListSeparator=;
+
+promptbuttonbar.minlabel.txt=W...
+
+# scroll wheel zoom activation
+zoom.cmd.txt = Pritisnite Cmd i okrenite kotačić za zumiranje
+zoom.ctrl.txt = PRESS Ctrl i okrenite kotačić za zumiranje
+# Based on CLDR(Ver 34) & IANA 2018g
+# I18NOK:FileNotLocalizable
+#
+# hr/sas_timezone_selector.properties
+#
+# time zone information
+# Continent;Subcontinent;OffsetValue;ExampleCity;TzID;TerrCode;longitude;latitude
+tz0=Amerike;Sjeverna Amerika;-36000;Adak;America/Adak;US;-1763929;+515248
+tz1=Amerike;Sjeverna Amerika;-36000;Honolulu;Pacific/Honolulu;US;-1575130;+211825
+tz2=Amerike;Sjeverna Amerika;-32400;Anchorage;America/Anchorage;US;-1495401;+611305
+tz3=Amerike;Sjeverna Amerika;-32400;Juneau;America/Juneau;US;-1342511;+581807
+tz4=Amerike;Sjeverna Amerika;-32400;Metlakatla;America/Metlakatla;US;-1313435;+550737
+tz5=Amerike;Sjeverna Amerika;-32400;Nome;America/Nome;US;-1652423;+643004
+tz6=Amerike;Sjeverna Amerika;-32400;Sitka;America/Sitka;US;-1351807;+571035
+tz7=Amerike;Sjeverna Amerika;-32400;Yakutat;America/Yakutat;US;-1394338;+593249
+tz8=Amerike;Sjeverna Amerika;-28800;Dawson;America/Dawson;CA;-13925;+6404
+tz9=Amerike;Sjeverna Amerika;-28800;Vancouver;America/Vancouver;CA;-12307;+4916
+tz10=Amerike;Sjeverna Amerika;-28800;Whitehorse;America/Whitehorse;CA;-13503;+6043
+tz11=Amerike;Sjeverna Amerika;-28800;Los Angeles;America/Los_Angeles;US;-1181434;+340308
+tz12=Amerike;Sjeverna Amerika;-25200;Cambridge Bay;America/Cambridge_Bay;CA;-1050310;+690650
+tz13=Amerike;Sjeverna Amerika;-25200;Creston;America/Creston;CA;-11631;+4906
+tz14=Amerike;Sjeverna Amerika;-25200;Dawson Creek;America/Dawson_Creek;CA;-12014;+5946
+tz15=Amerike;Sjeverna Amerika;-25200;Edmonton;America/Edmonton;CA;-11328;+5333
+tz16=Amerike;Sjeverna Amerika;-25200;Fort Nelson;America/Fort_Nelson;CA;-12242;+5848
+tz17=Amerike;Sjeverna Amerika;-25200;Inuvik;America/Inuvik;CA;-1334300;+682059
+tz18=Amerike;Sjeverna Amerika;-25200;Yellowknife;America/Yellowknife;CA;-11421;+6227
+tz19=Amerike;Sjeverna Amerika;-25200;Boise;America/Boise;US;-1161209;+433649
+tz20=Amerike;Sjeverna Amerika;-25200;Denver;America/Denver;US;-1045903;+394421
+tz21=Amerike;Sjeverna Amerika;-25200;Phoenix;America/Phoenix;US;-1120424;+332654
+tz22=Amerike;Sjeverna Amerika;-21600;Rainy River;America/Rainy_River;CA;-09434;+4843
+tz23=Amerike;Sjeverna Amerika;-21600;Rankin Inlet;America/Rankin_Inlet;CA;-0920459;+624900
+tz24=Amerike;Sjeverna Amerika;-21600;Regina;America/Regina;CA;-10439;+5024
+tz25=Amerike;Sjeverna Amerika;-21600;Resolute;America/Resolute;CA;-0944945;+744144
+tz26=Amerike;Sjeverna Amerika;-21600;Swift Current;America/Swift_Current;CA;-10750;+5017
+tz27=Amerike;Sjeverna Amerika;-21600;Winnipeg;America/Winnipeg;CA;-09709;+4953
+tz28=Amerike;Sjeverna Amerika;-21600;Chicago;America/Chicago;US;-0873900;+415100
+tz29=Amerike;Sjeverna Amerika;-21600;Knox, Indiana;America/Indiana/Knox;US;-0863730;+411745
+tz30=Amerike;Sjeverna Amerika;-21600;Tell City, Indiana;America/Indiana/Tell_City;US;-0864541;+375711
+tz31=Amerike;Sjeverna Amerika;-21600;Menominee;America/Menominee;US;-0873651;+450628
+tz32=Amerike;Sjeverna Amerika;-21600;Beulah, Sjeverna Dakota;America/North_Dakota/Beulah;US;-1014640;+471551
+tz33=Amerike;Sjeverna Amerika;-21600;Center, Sjeverna Dakota;America/North_Dakota/Center;US;-1011757;+470659
+tz34=Amerike;Sjeverna Amerika;-21600;New Salem, Sjeverna Dakota;America/North_Dakota/New_Salem;US;-1012439;+465042
+tz35=Amerike;Sjeverna Amerika;-18000;Atikokan;America/Coral_Harbour;CA;-0913718;+484531
+tz36=Amerike;Sjeverna Amerika;-18000;Iqaluit;America/Iqaluit;CA;-06828;+6344
+tz37=Amerike;Sjeverna Amerika;-18000;Nipigon;America/Nipigon;CA;-08816;+4901
+tz38=Amerike;Sjeverna Amerika;-18000;Pangnirtung;America/Pangnirtung;CA;-06544;+6608
+tz39=Amerike;Sjeverna Amerika;-18000;Thunder Bay;America/Thunder_Bay;CA;-08915;+4823
+tz40=Amerike;Sjeverna Amerika;-18000;Toronto;America/Toronto;CA;-07923;+4339
+tz41=Amerike;Sjeverna Amerika;-18000;Detroit;America/Detroit;US;-0830245;+421953
+tz42=Amerike;Sjeverna Amerika;-18000;Marengo, Indiana;America/Indiana/Marengo;US;-0862041;+382232
+tz43=Amerike;Sjeverna Amerika;-18000;Petersburg, Indiana;America/Indiana/Petersburg;US;-0871643;+382931
+tz44=Amerike;Sjeverna Amerika;-18000;Vevay, Indiana;America/Indiana/Vevay;US;-0850402;+384452
+tz45=Amerike;Sjeverna Amerika;-18000;Vincennes, Indiana;America/Indiana/Vincennes;US;-0873143;+384038
+tz46=Amerike;Sjeverna Amerika;-18000;Winamac, Indiana;America/Indiana/Winamac;US;-0863611;+410305
+tz47=Amerike;Sjeverna Amerika;-18000;Indianapolis;America/Indianapolis;US;-0860929;+394606
+tz48=Amerike;Sjeverna Amerika;-18000;Monticello, Kentucky;America/Kentucky/Monticello;US;-0845057;+364947
+tz49=Amerike;Sjeverna Amerika;-18000;Louisville;America/Louisville;US;-0854534;+381515
+tz50=Amerike;Sjeverna Amerika;-18000;New York;America/New_York;US;-0740023;+404251
+tz51=Amerike;Sjeverna Amerika;-14400;Bermuda;Atlantic/Bermuda;BM;-06446;+3217
+tz52=Amerike;Sjeverna Amerika;-14400;Blanc-Sablon;America/Blanc-Sablon;CA;-05707;+5125
+tz53=Amerike;Sjeverna Amerika;-14400;Glace Bay;America/Glace_Bay;CA;-05957;+4612
+tz54=Amerike;Sjeverna Amerika;-14400;Goose Bay;America/Goose_Bay;CA;-06025;+5320
+tz55=Amerike;Sjeverna Amerika;-14400;Halifax;America/Halifax;CA;-06336;+4439
+tz56=Amerike;Sjeverna Amerika;-14400;Moncton;America/Moncton;CA;-06447;+4606
+tz57=Amerike;Sjeverna Amerika;-14400;Thule;America/Thule;GL;-06847;+7634
+tz58=Amerike;Sjeverna Amerika;-12600;St. John’s;America/St_Johns;CA;-05243;+4734
+tz59=Amerike;Sjeverna Amerika;-10800;Nuuk;America/Godthab;GL;-05144;+6411
+tz60=Amerike;Sjeverna Amerika;-10800;Miquelon;America/Miquelon;PM;-05620;+4703
+tz61=Amerike;Sjeverna Amerika;-3600;Ittoqqortoormiit;America/Scoresbysund;GL;-02158;+7029
+tz62=Amerike;Sjeverna Amerika;0;Danmarkshavn;America/Danmarkshavn;GL;-01840;+7646
+tz63=Amerike;Centralna Amerika;-28800;Tijuana;America/Tijuana;MX;-11701;+3232
+tz64=Amerike;Centralna Amerika;-25200;Chihuahua;America/Chihuahua;MX;-10605;+2838
+tz65=Amerike;Centralna Amerika;-25200;Hermosillo;America/Hermosillo;MX;-11058;+2904
+tz66=Amerike;Centralna Amerika;-25200;Mazatlan;America/Mazatlan;MX;-10625;+2313
+tz67=Amerike;Centralna Amerika;-25200;Ojinaga;America/Ojinaga;MX;-10425;+2934
+tz68=Amerike;Centralna Amerika;-21600;Belize;America/Belize;BZ;-08812;+1730
+tz69=Amerike;Centralna Amerika;-21600;Kostarika;America/Costa_Rica;CR;-08405;+0956
+tz70=Amerike;Centralna Amerika;-21600;Gvatemala;America/Guatemala;GT;-09031;+1438
+tz71=Amerike;Centralna Amerika;-21600;Tegucigalpa;America/Tegucigalpa;HN;-08713;+1406
+tz72=Amerike;Centralna Amerika;-21600;Bahia Banderas;America/Bahia_Banderas;MX;-10515;+2048
+tz73=Amerike;Centralna Amerika;-21600;Matamoros;America/Matamoros;MX;-09730;+2550
+tz74=Amerike;Centralna Amerika;-21600;Merida;America/Merida;MX;-08937;+2058
+tz75=Amerike;Centralna Amerika;-21600;Ciudad de México;America/Mexico_City;MX;-09909;+1924
+tz76=Amerike;Centralna Amerika;-21600;Monterrey;America/Monterrey;MX;-10019;+2540
+tz77=Amerike;Centralna Amerika;-21600;Managua;America/Managua;NI;-08617;+1209
+tz78=Amerike;Centralna Amerika;-21600;Salvador;America/El_Salvador;SV;-08912;+1342
+tz79=Amerike;Centralna Amerika;-18000;Cancun;America/Cancun;MX;-08646;+2105
+tz80=Amerike;Centralna Amerika;-18000;Kajman;America/Cayman;PA;-07932;+0858
+tz81=Amerike;Centralna Amerika;-18000;Panama;America/Panama;PA;-07932;+0858
+tz82=Amerike;Karibi;-18000;Nassau;America/Nassau;BS;-07721;+2505
+tz83=Amerike;Karibi;-18000;Havana;America/Havana;CU;-08222;+2308
+tz84=Amerike;Karibi;-18000;Port-au-Prince;America/Port-au-Prince;HT;-07220;+1832
+tz85=Amerike;Karibi;-18000;Jamajka;America/Jamaica;JM;-0764736;+175805
+tz86=Amerike;Karibi;-18000;Grand Turk;America/Grand_Turk;TC;-07108;+2128
+tz87=Amerike;Karibi;-14400;Barbados;America/Barbados;BB;-05937;+1306
+tz88=Amerike;Karibi;-14400;Aruba;America/Aruba;CW;-06900;+1211
+tz89=Amerike;Karibi;-14400;Curaçao;America/Curacao;CW;-06900;+1211
+tz90=Amerike;Karibi;-14400;Kralendijk;America/Kralendijk;CW;-06900;+1211
+tz91=Amerike;Karibi;-14400;Lower Prince’s Quarter;America/Lower_Princes;CW;-06900;+1211
+tz92=Amerike;Karibi;-14400;Santo Domingo;America/Santo_Domingo;DO;-06954;+1828
+tz93=Amerike;Karibi;-14400;Martinique;America/Martinique;MQ;-06105;+1436
+tz94=Amerike;Karibi;-14400;Portoriko;America/Puerto_Rico;PR;-0660622;+182806
+tz95=Amerike;Karibi;-14400;Angvila;America/Anguilla;TT;-06131;+1039
+tz96=Amerike;Karibi;-14400;Antigua;America/Antigua;TT;-06131;+1039
+tz97=Amerike;Karibi;-14400;Dominika;America/Dominica;TT;-06131;+1039
+tz98=Amerike;Karibi;-14400;Grenada;America/Grenada;TT;-06131;+1039
+tz99=Amerike;Karibi;-14400;Guadalupe;America/Guadeloupe;TT;-06131;+1039
+tz100=Amerike;Karibi;-14400;Marigot;America/Marigot;TT;-06131;+1039
+tz101=Amerike;Karibi;-14400;Montserrat;America/Montserrat;TT;-06131;+1039
+tz102=Amerike;Karibi;-14400;Port of Spain;America/Port_of_Spain;TT;-06131;+1039
+tz103=Amerike;Karibi;-14400;Saint Barthélemy;America/St_Barthelemy;TT;-06131;+1039
+tz104=Amerike;Karibi;-14400;St. Kitts;America/St_Kitts;TT;-06131;+1039
+tz105=Amerike;Karibi;-14400;St. Lucia;America/St_Lucia;TT;-06131;+1039
+tz106=Amerike;Karibi;-14400;St. Thomas;America/St_Thomas;TT;-06131;+1039
+tz107=Amerike;Karibi;-14400;St. Vincent;America/St_Vincent;TT;-06131;+1039
+tz108=Amerike;Karibi;-14400;Tortola;America/Tortola;TT;-06131;+1039
+tz109=Amerike;Južna Amerika;-21600;Uskršnji otok;Pacific/Easter;CL;-10926;-2709
+tz110=Amerike;Južna Amerika;-21600;Galapagos;Pacific/Galapagos;EC;-08936;-0054
+tz111=Amerike;Južna Amerika;-18000;Eirunepe;America/Eirunepe;BR;-06952;-0640
+tz112=Amerike;Južna Amerika;-18000;Rio Branco;America/Rio_Branco;BR;-06748;-0958
+tz113=Amerike;Južna Amerika;-18000;Bogota;America/Bogota;CO;-07405;+0436
+tz114=Amerike;Južna Amerika;-18000;Guayaquil;America/Guayaquil;EC;-07950;-0210
+tz115=Amerike;Južna Amerika;-18000;Lima;America/Lima;PE;-07703;-1203
+tz116=Amerike;Južna Amerika;-14400;La Paz;America/La_Paz;BO;-06809;-1630
+tz117=Amerike;Južna Amerika;-14400;Boa Vista;America/Boa_Vista;BR;-06040;+0249
+tz118=Amerike;Južna Amerika;-14400;Campo Grande;America/Campo_Grande;BR;-05437;-2027
+tz119=Amerike;Južna Amerika;-14400;Cuiaba;America/Cuiaba;BR;-05605;-1535
+tz120=Amerike;Južna Amerika;-14400;Manaus;America/Manaus;BR;-06001;-0308
+tz121=Amerike;Južna Amerika;-14400;Porto Velho;America/Porto_Velho;BR;-06354;-0846
+tz122=Amerike;Južna Amerika;-14400;Santiago;America/Santiago;CL;-07040;-3327
+tz123=Amerike;Južna Amerika;-14400;Gvajana;America/Guyana;GY;-05810;+0648
+tz124=Amerike;Južna Amerika;-14400;Asunción;America/Asuncion;PY;-05740;-2516
+tz125=Amerike;Južna Amerika;-14400;Caracas;America/Caracas;VE;-06656;+1030
+tz126=Amerike;Južna Amerika;-10800;La Rioja;America/Argentina/La_Rioja;AR;-06651;-2926
+tz127=Amerike;Južna Amerika;-10800;Rio Gallegos;America/Argentina/Rio_Gallegos;AR;-06913;-5138
+tz128=Amerike;Južna Amerika;-10800;Salta;America/Argentina/Salta;AR;-06525;-2447
+tz129=Amerike;Južna Amerika;-10800;San Juan;America/Argentina/San_Juan;AR;-06831;-3132
+tz130=Amerike;Južna Amerika;-10800;San Luis;America/Argentina/San_Luis;AR;-06621;-3319
+tz131=Amerike;Južna Amerika;-10800;Tucuman;America/Argentina/Tucuman;AR;-06513;-2649
+tz132=Amerike;Južna Amerika;-10800;Ushuaia;America/Argentina/Ushuaia;AR;-06818;-5448
+tz133=Amerike;Južna Amerika;-10800;Buenos Aires;America/Buenos_Aires;AR;-05827;-3436
+tz134=Amerike;Južna Amerika;-10800;Catamarca;America/Catamarca;AR;-06547;-2828
+tz135=Amerike;Južna Amerika;-10800;Cordoba;America/Cordoba;AR;-06411;-3124
+tz136=Amerike;Južna Amerika;-10800;Jujuy;America/Jujuy;AR;-06518;-2411
+tz137=Amerike;Južna Amerika;-10800;Mendoza;America/Mendoza;AR;-06849;-3253
+tz138=Amerike;Južna Amerika;-10800;Araguaina;America/Araguaina;BR;-04812;-0712
+tz139=Amerike;Južna Amerika;-10800;Bahia;America/Bahia;BR;-03831;-1259
+tz140=Amerike;Južna Amerika;-10800;Belem;America/Belem;BR;-04829;-0127
+tz141=Amerike;Južna Amerika;-10800;Fortaleza;America/Fortaleza;BR;-03830;-0343
+tz142=Amerike;Južna Amerika;-10800;Maceio;America/Maceio;BR;-03543;-0940
+tz143=Amerike;Južna Amerika;-10800;Recife;America/Recife;BR;-03454;-0803
+tz144=Amerike;Južna Amerika;-10800;Santarem;America/Santarem;BR;-05452;-0226
+tz145=Amerike;Južna Amerika;-10800;Sao Paulo;America/Sao_Paulo;BR;-04637;-2332
+tz146=Amerike;Južna Amerika;-10800;Punta Arenas;America/Punta_Arenas;CL;-07055;-5309
+tz147=Amerike;Južna Amerika;-10800;Stanley;Atlantic/Stanley;FK;-05751;-5142
+tz148=Amerike;Južna Amerika;-10800;Cayenne;America/Cayenne;GF;-05220;+0456
+tz149=Amerike;Južna Amerika;-10800;Paramaribo;America/Paramaribo;SR;-05510;+0550
+tz150=Amerike;Južna Amerika;-10800;Montevideo;America/Montevideo;UY;-0561245;-345433
+tz151=Amerike;Južna Amerika;-7200;Noronha;America/Noronha;BR;-03225;-0351
+tz152=Amerike;Južna Amerika;-7200;Južna Georgija;Atlantic/South_Georgia;GS;-03632;-5416
+tz153=Oceanija;Australazija;23400;Kokosovi otoci;Indian/Cocos;CC;+09655;-1210
+tz154=Oceanija;Australazija;25200;Božićni otok;Indian/Christmas;CX;+10543;-1025
+tz155=Oceanija;Australazija;28800;Perth;Australia/Perth;AU;+11551;-3157
+tz156=Oceanija;Australazija;31500;Eucla;Australia/Eucla;AU;+12852;-3143
+tz157=Oceanija;Australazija;34200;Adelaide;Australia/Adelaide;AU;+13835;-3455
+tz158=Oceanija;Australazija;34200;Broken Hill;Australia/Broken_Hill;AU;+14127;-3157
+tz159=Oceanija;Australazija;34200;Darwin;Australia/Darwin;AU;+13050;-1228
+tz160=Oceanija;Australazija;36000;Brisbane;Australia/Brisbane;AU;+15302;-2728
+tz161=Oceanija;Australazija;36000;Currie;Australia/Currie;AU;+14352;-3956
+tz162=Oceanija;Australazija;36000;Hobart;Australia/Hobart;AU;+14719;-4253
+tz163=Oceanija;Australazija;36000;Lindeman;Australia/Lindeman;AU;+14900;-2016
+tz164=Oceanija;Australazija;36000;Melbourne;Australia/Melbourne;AU;+14458;-3749
+tz165=Oceanija;Australazija;36000;Sydney;Australia/Sydney;AU;+15113;-3352
+tz166=Oceanija;Australazija;37800;Lord Howe;Australia/Lord_Howe;AU;+15905;-3133
+tz167=Oceanija;Australazija;39600;Macquarie;Antarctica/Macquarie;AU;+15857;-5430
+tz168=Oceanija;Australazija;39600;Norfolk;Pacific/Norfolk;NF;+16758;-2903
+tz169=Oceanija;Australazija;43200;McMurdo;Antarctica/McMurdo;NZ;+17446;-3652
+tz170=Oceanija;Australazija;43200;Auckland;Pacific/Auckland;NZ;+17446;-3652
+tz171=Oceanija;Australazija;45900;Chatham;Pacific/Chatham;NZ;-17633;-4357
+tz172=Oceanija;Melanezija;36000;Port Moresby;Pacific/Port_Moresby;PG;+14710;-0930
+tz173=Oceanija;Melanezija;39600;Noumea;Pacific/Noumea;NC;+16627;-2216
+tz174=Oceanija;Melanezija;39600;Bougainville;Pacific/Bougainville;PG;+15534;-0613
+tz175=Oceanija;Melanezija;39600;Guadalcanal;Pacific/Guadalcanal;SB;+16012;-0932
+tz176=Oceanija;Melanezija;39600;Efate;Pacific/Efate;VU;+16825;-1740
+tz177=Oceanija;Melanezija;43200;Fidži;Pacific/Fiji;FJ;+17825;-1808
+tz178=Oceanija;Mikronezijsko područje;32400;Palau;Pacific/Palau;PW;+13429;+0720
+tz179=Oceanija;Mikronezijsko područje;36000;Chuuk;Pacific/Truk;FM;+15147;+0725
+tz180=Oceanija;Mikronezijsko područje;36000;Guam;Pacific/Guam;GU;+14445;+1328
+tz181=Oceanija;Mikronezijsko područje;36000;Saipan;Pacific/Saipan;GU;+14445;+1328
+tz182=Oceanija;Mikronezijsko područje;39600;Kosrae;Pacific/Kosrae;FM;+16259;+0519
+tz183=Oceanija;Mikronezijsko područje;39600;Pohnpei;Pacific/Ponape;FM;+15813;+0658
+tz184=Oceanija;Mikronezijsko područje;43200;Tarawa;Pacific/Tarawa;KI;+17300;+0125
+tz185=Oceanija;Mikronezijsko područje;43200;Kwajalein;Pacific/Kwajalein;MH;+16720;+0905
+tz186=Oceanija;Mikronezijsko područje;43200;Majuro;Pacific/Majuro;MH;+17112;+0709
+tz187=Oceanija;Mikronezijsko područje;43200;Nauru;Pacific/Nauru;NR;+16655;-0031
+tz188=Oceanija;Mikronezijsko područje;43200;Wake;Pacific/Wake;UM;+16637;+1917
+tz189=Oceanija;Mikronezijsko područje;46800;Enderbury;Pacific/Enderbury;KI;-17105;-0308
+tz190=Oceanija;Mikronezijsko područje;50400;Kiritimati;Pacific/Kiritimati;KI;-15720;+0152
+tz191=Oceanija;Polinezija;-39600;Midway;Pacific/Midway;AS;-17042;-1416
+tz192=Oceanija;Polinezija;-39600;Pago Pago;Pacific/Pago_Pago;AS;-17042;-1416
+tz193=Oceanija;Polinezija;-39600;Niue;Pacific/Niue;NU;-16955;-1901
+tz194=Oceanija;Polinezija;-36000;Rarotonga;Pacific/Rarotonga;CK;-15946;-2114
+tz195=Oceanija;Polinezija;-36000;Tahiti;Pacific/Tahiti;PF;-14934;-1732
+tz196=Oceanija;Polinezija;-34200;Markižansko otočje;Pacific/Marquesas;PF;-13930;-0900
+tz197=Oceanija;Polinezija;-32400;Gambier;Pacific/Gambier;PF;-13457;-2308
+tz198=Oceanija;Polinezija;-28800;Pitcairn;Pacific/Pitcairn;PN;-13005;-2504
+tz199=Oceanija;Polinezija;43200;Funafuti;Pacific/Funafuti;TV;+17913;-0831
+tz200=Oceanija;Polinezija;43200;Wallis;Pacific/Wallis;WF;-17610;-1318
+tz201=Oceanija;Polinezija;46800;Fakaofo;Pacific/Fakaofo;TK;-17114;-0922
+tz202=Oceanija;Polinezija;46800;Tongatapu;Pacific/Tongatapu;TO;-17510;-2110
+tz203=Oceanija;Polinezija;46800;Apia;Pacific/Apia;WS;-17144;-1350
+tz204=Oceanija;Vanjska područja Oceanije;-10800;Palmer;Antarctica/Palmer;AQ;-06406;-6448
+tz205=Oceanija;Vanjska područja Oceanije;-10800;Rothera;Antarctica/Rothera;AQ;-06808;-6734
+tz206=Oceanija;Vanjska područja Oceanije;0;Troll;Antarctica/Troll;AQ;+0023206;-720041
+tz207=Oceanija;Vanjska područja Oceanije;10800;Syowa;Antarctica/Syowa;AQ;+0393524;-690022
+tz208=Oceanija;Vanjska područja Oceanije;18000;Mawson;Antarctica/Mawson;AQ;+06253;-6736
+tz209=Oceanija;Vanjska područja Oceanije;21600;Vostok;Antarctica/Vostok;AQ;+10654;-7824
+tz210=Oceanija;Vanjska područja Oceanije;25200;Davis;Antarctica/Davis;AQ;+07758;-6835
+tz211=Oceanija;Vanjska područja Oceanije;28800;Casey;Antarctica/Casey;AQ;+11031;-6617
+tz212=Oceanija;Vanjska područja Oceanije;36000;Dumont d’Urville;Antarctica/DumontDUrville;AQ;+14001;-6640
+tz213=Afrika;Sjeverna Afrika;3600;Alžir;Africa/Algiers;DZ;+00303;+3647
+tz214=Afrika;Sjeverna Afrika;3600;El Aaiun;Africa/El_Aaiun;EH;-01312;+2709
+tz215=Afrika;Sjeverna Afrika;3600;Casablanca;Africa/Casablanca;MA;-00735;+3339
+tz216=Afrika;Sjeverna Afrika;3600;Tunis;Africa/Tunis;TN;+01011;+3648
+tz217=Afrika;Sjeverna Afrika;7200;Kairo;Africa/Cairo;EG;+03115;+3003
+tz218=Afrika;Sjeverna Afrika;7200;Tripoli;Africa/Tripoli;LY;+01311;+3254
+tz219=Afrika;Sjeverna Afrika;7200;Khartoum;Africa/Khartoum;SD;+03232;+1536
+tz220=Afrika;Zapadna Afrika;-3600;Zelenortski Otoci;Atlantic/Cape_Verde;CV;-02331;+1455
+tz221=Afrika;Zapadna Afrika;0;Abidjan;Africa/Abidjan;CI;-00402;+0519
+tz222=Afrika;Zapadna Afrika;0;Bamako;Africa/Bamako;CI;-00402;+0519
+tz223=Afrika;Zapadna Afrika;0;Banjul;Africa/Banjul;CI;-00402;+0519
+tz224=Afrika;Zapadna Afrika;0;Conakry;Africa/Conakry;CI;-00402;+0519
+tz225=Afrika;Zapadna Afrika;0;Dakar;Africa/Dakar;CI;-00402;+0519
+tz226=Afrika;Zapadna Afrika;0;Freetown;Africa/Freetown;CI;-00402;+0519
+tz227=Afrika;Zapadna Afrika;0;Lomé;Africa/Lome;CI;-00402;+0519
+tz228=Afrika;Zapadna Afrika;0;Nouakchott;Africa/Nouakchott;CI;-00402;+0519
+tz229=Afrika;Zapadna Afrika;0;Ouagadougou;Africa/Ouagadougou;CI;-00402;+0519
+tz230=Afrika;Zapadna Afrika;0;St. Helena;Atlantic/St_Helena;CI;-00402;+0519
+tz231=Afrika;Zapadna Afrika;0;Accra;Africa/Accra;GH;-00013;+0533
+tz232=Afrika;Zapadna Afrika;0;Bissau;Africa/Bissau;GW;-01535;+1151
+tz233=Afrika;Zapadna Afrika;0;Monrovia;Africa/Monrovia;LR;-01047;+0618
+tz234=Afrika;Zapadna Afrika;3600;Bangui;Africa/Bangui;NG;+00324;+0627
+tz235=Afrika;Zapadna Afrika;3600;Brazzaville;Africa/Brazzaville;NG;+00324;+0627
+tz236=Afrika;Zapadna Afrika;3600;Douala;Africa/Douala;NG;+00324;+0627
+tz237=Afrika;Zapadna Afrika;3600;Kinshasa;Africa/Kinshasa;NG;+00324;+0627
+tz238=Afrika;Zapadna Afrika;3600;Lagos;Africa/Lagos;NG;+00324;+0627
+tz239=Afrika;Zapadna Afrika;3600;Libreville;Africa/Libreville;NG;+00324;+0627
+tz240=Afrika;Zapadna Afrika;3600;Luanda;Africa/Luanda;NG;+00324;+0627
+tz241=Afrika;Zapadna Afrika;3600;Malabo;Africa/Malabo;NG;+00324;+0627
+tz242=Afrika;Zapadna Afrika;3600;Niamey;Africa/Niamey;NG;+00324;+0627
+tz243=Afrika;Zapadna Afrika;3600;Porto-Novo;Africa/Porto-Novo;NG;+00324;+0627
+tz244=Afrika;Središnja Afrika;3600;São Tomé;Africa/Sao_Tome;ST;+00644;+0020
+tz245=Afrika;Središnja Afrika;3600;Ndjamena;Africa/Ndjamena;TD;+01503;+1207
+tz246=Afrika;Istočna Afrika;7200;Blantyre;Africa/Blantyre;MZ;+03235;-2558
+tz247=Afrika;Istočna Afrika;7200;Bujumbura;Africa/Bujumbura;MZ;+03235;-2558
+tz248=Afrika;Istočna Afrika;7200;Gaborone;Africa/Gaborone;MZ;+03235;-2558
+tz249=Afrika;Istočna Afrika;7200;Harare;Africa/Harare;MZ;+03235;-2558
+tz250=Afrika;Istočna Afrika;7200;Kigali;Africa/Kigali;MZ;+03235;-2558
+tz251=Afrika;Istočna Afrika;7200;Lubumbashi;Africa/Lubumbashi;MZ;+03235;-2558
+tz252=Afrika;Istočna Afrika;7200;Lusaka;Africa/Lusaka;MZ;+03235;-2558
+tz253=Afrika;Istočna Afrika;7200;Maputo;Africa/Maputo;MZ;+03235;-2558
+tz254=Afrika;Istočna Afrika;10800;Addis Abeba;Africa/Addis_Ababa;KE;+03649;-0117
+tz255=Afrika;Istočna Afrika;10800;Asmara;Africa/Asmera;KE;+03649;-0117
+tz256=Afrika;Istočna Afrika;10800;Dar es Salaam;Africa/Dar_es_Salaam;KE;+03649;-0117
+tz257=Afrika;Istočna Afrika;10800;Džibuti;Africa/Djibouti;KE;+03649;-0117
+tz258=Afrika;Istočna Afrika;10800;Kampala;Africa/Kampala;KE;+03649;-0117
+tz259=Afrika;Istočna Afrika;10800;Mogadishu;Africa/Mogadishu;KE;+03649;-0117
+tz260=Afrika;Istočna Afrika;10800;Nairobi;Africa/Nairobi;KE;+03649;-0117
+tz261=Afrika;Istočna Afrika;10800;Antananarivo;Indian/Antananarivo;KE;+03649;-0117
+tz262=Afrika;Istočna Afrika;10800;Komori;Indian/Comoro;KE;+03649;-0117
+tz263=Afrika;Istočna Afrika;10800;Mayotte;Indian/Mayotte;KE;+03649;-0117
+tz264=Afrika;Istočna Afrika;10800;Juba;Africa/Juba;SS;+03137;+0451
+tz265=Afrika;Istočna Afrika;14400;Mauricijus;Indian/Mauritius;MU;+05730;-2010
+tz266=Afrika;Istočna Afrika;14400;Réunion;Indian/Reunion;RE;+05528;-2052
+tz267=Afrika;Istočna Afrika;14400;Mahe;Indian/Mahe;SC;+05528;-0440
+tz268=Afrika;Istočna Afrika;18000;Kerguelen;Indian/Kerguelen;TF;+0701303;-492110
+tz269=Afrika;Istočna Afrika;21600;Chagos;Indian/Chagos;IO;+07225;-0720
+tz270=Afrika;Južna Afrika;7200;Windhoek;Africa/Windhoek;NA;+01706;-2234
+tz271=Afrika;Južna Afrika;7200;Johannesburg;Africa/Johannesburg;ZA;+02800;-2615
+tz272=Afrika;Južna Afrika;7200;Maseru;Africa/Maseru;ZA;+02800;-2615
+tz273=Afrika;Južna Afrika;7200;Mbabane;Africa/Mbabane;ZA;+02800;-2615
+tz274=Europa;Sjeverna Europa;0;Ferojski otoci;Atlantic/Faeroe;FO;-00646;+6201
+tz275=Europa;Sjeverna Europa;0;Guernsey;Europe/Guernsey;GB;-0000731;+513030
+tz276=Europa;Sjeverna Europa;0;Otok Man;Europe/Isle_of_Man;GB;-0000731;+513030
+tz277=Europa;Sjeverna Europa;0;Jersey;Europe/Jersey;GB;-0000731;+513030
+tz278=Europa;Sjeverna Europa;0;London;Europe/London;GB;-0000731;+513030
+tz279=Europa;Sjeverna Europa;0;Reykjavik;Atlantic/Reykjavik;IS;-02151;+6409
+tz280=Europa;Sjeverna Europa;3600;Kopenhagen;Europe/Copenhagen;DK;+01235;+5540
+tz281=Europa;Sjeverna Europa;3600;Dublin;Europe/Dublin;IE;-00615;+5320
+tz282=Europa;Sjeverna Europa;3600;Longyearbyen;Arctic/Longyearbyen;NO;+01045;+5955
+tz283=Europa;Sjeverna Europa;3600;Oslo;Europe/Oslo;NO;+01045;+5955
+tz284=Europa;Sjeverna Europa;3600;Stockholm;Europe/Stockholm;SE;+01803;+5920
+tz285=Europa;Sjeverna Europa;7200;Tallinn;Europe/Tallinn;EE;+02445;+5925
+tz286=Europa;Sjeverna Europa;7200;Helsinki;Europe/Helsinki;FI;+02458;+6010
+tz287=Europa;Sjeverna Europa;7200;Mariehamn;Europe/Mariehamn;FI;+02458;+6010
+tz288=Europa;Sjeverna Europa;7200;Vilnius;Europe/Vilnius;LT;+02519;+5441
+tz289=Europa;Sjeverna Europa;7200;Riga;Europe/Riga;LV;+02406;+5657
+tz290=Europa;Zapadna Europa;3600;Bruxelles;Europe/Brussels;BE;+00420;+5050
+tz291=Europa;Zapadna Europa;3600;Pariz;Europe/Paris;FR;+00220;+4852
+tz292=Europa;Zapadna Europa;3600;Luksemburg;Europe/Luxembourg;LU;+00609;+4936
+tz293=Europa;Zapadna Europa;3600;Monako;Europe/Monaco;MC;+00723;+4342
+tz294=Europa;Zapadna Europa;3600;Amsterdam;Europe/Amsterdam;NL;+00454;+5222
+tz295=Europa;Istočna Europa;7200;Sofija;Europe/Sofia;BG;+02319;+4241
+tz296=Europa;Istočna Europa;7200;Kišinjev;Europe/Chisinau;MD;+02850;+4700
+tz297=Europa;Istočna Europa;7200;Bukurešt;Europe/Bucharest;RO;+02606;+4426
+tz298=Europa;Istočna Europa;7200;Kalinjingrad;Europe/Kaliningrad;RU;+02030;+5443
+tz299=Europa;Istočna Europa;7200;Kijev;Europe/Kiev;UA;+03031;+5026
+tz300=Europa;Istočna Europa;7200;Užgorod;Europe/Uzhgorod;UA;+02218;+4837
+tz301=Europa;Istočna Europa;7200;Zaporožje;Europe/Zaporozhye;UA;+03510;+4750
+tz302=Europa;Istočna Europa;10800;Minsk;Europe/Minsk;BY;+02734;+5354
+tz303=Europa;Istočna Europa;10800;Kirov;Europe/Kirov;RU;+04939;+5836
+tz304=Europa;Istočna Europa;10800;Moskva;Europe/Moscow;RU;+0373704;+554521
+tz305=Europa;Istočna Europa;10800;Simferopol;Europe/Simferopol;UA;+03406;+4457
+tz306=Europa;Istočna Europa;14400;Astrakhan;Europe/Astrakhan;RU;+04803;+4621
+tz307=Europa;Istočna Europa;14400;Samara;Europe/Samara;RU;+05009;+5312
+tz308=Europa;Istočna Europa;14400;Saratov;Europe/Saratov;RU;+04602;+5134
+tz309=Europa;Istočna Europa;14400;Uljanovsk;Europe/Ulyanovsk;RU;+04824;+5420
+tz310=Europa;Istočna Europa;14400;Volgograd;Europe/Volgograd;RU;+04425;+4844
+tz311=Azija;Sjeverna Azija;18000;Ekaterinburg;Asia/Yekaterinburg;RU;+06036;+5651
+tz312=Azija;Sjeverna Azija;21600;Omsk;Asia/Omsk;RU;+07324;+5500
+tz313=Europa;Istočna Europa;25200;Barnaul;Asia/Barnaul;RU;+08345;+5322
+tz314=Azija;Sjeverna Azija;25200;Krasnojarsk;Asia/Krasnoyarsk;RU;+09250;+5601
+tz315=Azija;Sjeverna Azija;25200;Novokuznjeck;Asia/Novokuznetsk;RU;+08707;+5345
+tz316=Europa;Istočna Europa;25200;Novosibirsk;Asia/Novosibirsk;RU;+08255;+5502
+tz317=Europa;Istočna Europa;25200;Tomsk;Asia/Tomsk;RU;+08458;+5630
+tz318=Europa;Istočna Europa;28800;Irkutsk;Asia/Irkutsk;RU;+10420;+5216
+tz319=Azija;Sjeverna Azija;32400;Chita;Asia/Chita;RU;+11328;+5203
+tz320=Europa;Istočna Europa;32400;Handiga;Asia/Khandyga;RU;+1353314;+623923
+tz321=Europa;Istočna Europa;32400;Jakutsk;Asia/Yakutsk;RU;+12940;+6200
+tz322=Europa;Istočna Europa;36000;Ust-Nera;Asia/Ust-Nera;RU;+1431336;+643337
+tz323=Europa;Istočna Europa;36000;Vladivostok;Asia/Vladivostok;RU;+13156;+4310
+tz324=Europa;Istočna Europa;39600;Magadan;Asia/Magadan;RU;+15048;+5934
+tz325=Europa;Istočna Europa;39600;Sahalin;Asia/Sakhalin;RU;+14242;+4658
+tz326=Europa;Istočna Europa;39600;Srednekolimsk;Asia/Srednekolymsk;RU;+15343;+6728
+tz327=Europa;Istočna Europa;43200;Anadir;Asia/Anadyr;RU;+17729;+6445
+tz328=Azija;Sjeverna Azija;43200;Kamčatka;Asia/Kamchatka;RU;+15839;+5301
+tz329=Europa;Južna Europa;-3600;Azorski otoci;Atlantic/Azores;PT;-02540;+3744
+tz330=Europa;Južna Europa;0;Kanari;Atlantic/Canary;ES;-01524;+2806
+tz331=Europa;Južna Europa;0;Madeira;Atlantic/Madeira;PT;-01654;+3238
+tz332=Europa;Južna Europa;0;Lisabon;Europe/Lisbon;PT;-00908;+3843
+tz333=Europa;Južna Europa;3600;Andora;Europe/Andorra;AD;+00131;+4230
+tz334=Europa;Južna Europa;3600;Tirana;Europe/Tirane;AL;+01950;+4120
+tz335=Europa;Južna Europa;3600;Ceuta;Africa/Ceuta;ES;-00519;+3553
+tz336=Europa;Južna Europa;3600;Madrid;Europe/Madrid;ES;-00341;+4024
+tz337=Europa;Južna Europa;3600;Gibraltar;Europe/Gibraltar;GI;-00521;+3608
+tz338=Europa;Južna Europa;3600;Rim;Europe/Rome;IT;+01229;+4154
+tz339=Europa;Južna Europa;3600;San Marino;Europe/San_Marino;IT;+01229;+4154
+tz340=Europa;Južna Europa;3600;Vatikan;Europe/Vatican;IT;+01229;+4154
+tz341=Europa;Južna Europa;3600;Malta;Europe/Malta;MT;+01431;+3554
+tz342=Europa;Južna Europa;3600;Beograd;Europe/Belgrade;RS;+02030;+4450
+tz343=Europa;Južna Europa;3600;Ljubljana;Europe/Ljubljana;RS;+02030;+4450
+tz344=Europa;Južna Europa;3600;Podgorica;Europe/Podgorica;RS;+02030;+4450
+tz345=Europa;Južna Europa;3600;Sarajevo;Europe/Sarajevo;RS;+02030;+4450
+tz346=Europa;Južna Europa;3600;Skoplje;Europe/Skopje;RS;+02030;+4450
+tz347=Europa;Južna Europa;3600;Zagreb;Europe/Zagreb;RS;+02030;+4450
+tz348=Europa;Južna Europa;7200;Atena;Europe/Athens;GR;+02343;+3758
+tz349=Europa;Srednja Europa;3600;Bratislava;Europe/Bratislava;CZ;+01426;+5005
+tz350=Europa;Srednja Europa;3600;Prag;Europe/Prague;CZ;+01426;+5005
+tz351=Europa;Srednja Europa;3600;Budimpešta;Europe/Budapest;HU;+01905;+4730
+tz352=Europa;Srednja Europa;3600;Varšava;Europe/Warsaw;PL;+02100;+5215
+tz353=Europa;Srednja Europa;3600;Beč;Europe/Vienna;AT;+01620;+4813
+tz354=Europa;Srednja Europa;3600;Busingen;Europe/Busingen;CH;+00832;+4723
+tz355=Europa;Srednja Europa;3600;Vaduz;Europe/Vaduz;CH;+00832;+4723
+tz356=Europa;Srednja Europa;3600;Zürich;Europe/Zurich;CH;+00832;+4723
+tz357=Europa;Srednja Europa;3600;Berlin;Europe/Berlin;DE;+01322;+5230
+tz358=Azija;Zapadna Azija;7200;Famagusta;Asia/Famagusta;CY;+03357;+3507
+tz359=Azija;Zapadna Azija;7200;Nikozija;Asia/Nicosia;CY;+03322;+3510
+tz360=Azija;Zapadna Azija;7200;Jeruzalem;Asia/Jerusalem;IL;+0351326;+314650
+tz361=Azija;Zapadna Azija;7200;Amman;Asia/Amman;JO;+03556;+3157
+tz362=Azija;Zapadna Azija;7200;Beirut;Asia/Beirut;LB;+03530;+3353
+tz363=Azija;Zapadna Azija;7200;Gaza;Asia/Gaza;PS;+03428;+3130
+tz364=Azija;Zapadna Azija;7200;Hebron;Asia/Hebron;PS;+0350542;+313200
+tz365=Azija;Zapadna Azija;7200;Damask;Asia/Damascus;SY;+03618;+3330
+tz366=Azija;Zapadna Azija;10800;Bagdad;Asia/Baghdad;IQ;+04425;+3321
+tz367=Azija;Zapadna Azija;10800;Bahrein;Asia/Bahrain;QA;+05132;+2517
+tz368=Azija;Zapadna Azija;10800;Katar;Asia/Qatar;QA;+05132;+2517
+tz369=Azija;Zapadna Azija;10800;Aden;Asia/Aden;SA;+04643;+2438
+tz370=Azija;Zapadna Azija;10800;Kuvajt;Asia/Kuwait;SA;+04643;+2438
+tz371=Azija;Zapadna Azija;10800;Rijad;Asia/Riyadh;SA;+04643;+2438
+tz372=Azija;Zapadna Azija;10800;Istanbul;Europe/Istanbul;TR;+02858;+4101
+tz373=Azija;Zapadna Azija;14400;Dubai;Asia/Dubai;AE;+05518;+2518
+tz374=Azija;Zapadna Azija;14400;Muscat;Asia/Muscat;AE;+05518;+2518
+tz375=Azija;Zapadna Azija;14400;Erevan;Asia/Yerevan;AM;+04430;+4011
+tz376=Azija;Zapadna Azija;14400;Baku;Asia/Baku;AZ;+04951;+4023
+tz377=Azija;Zapadna Azija;14400;Tbilisi;Asia/Tbilisi;GE;+04449;+4143
+tz378=Azija;Srednja Azija;18000;Ashgabat;Asia/Ashgabat;TM;+05823;+3757
+tz379=Azija;Srednja Azija;18000;Dušanbe;Asia/Dushanbe;TJ;+06848;+3835
+tz380=Azija;Srednja Azija;18000;Aktau;Asia/Aqtau;KZ;+05016;+4431
+tz381=Azija;Srednja Azija;18000;Aktobe;Asia/Aqtobe;KZ;+05710;+5017
+tz382=Azija;Srednja Azija;18000;Atyrau;Asia/Atyrau;KZ;+05156;+4707
+tz383=Azija;Srednja Azija;18000;Oral;Asia/Oral;KZ;+05121;+5113
+tz384=Azija;Srednja Azija;18000;Samarkand;Asia/Samarkand;UZ;+06648;+3940
+tz385=Azija;Srednja Azija;18000;Taškent;Asia/Tashkent;UZ;+06918;+4120
+tz386=Azija;Srednja Azija;21600;Biškek;Asia/Bishkek;KG;+07436;+4254
+tz387=Azija;Srednja Azija;21600;Alma Ata;Asia/Almaty;KZ;+07657;+4315
+tz388=Azija;Srednja Azija;21600;Kizilorda;Asia/Qyzylorda;KZ;+06528;+4448
+tz389=Azija;Istočna Azija;25200;Hovd;Asia/Hovd;MN;+09139;+4801
+tz390=Azija;Istočna Azija;28800;Šangaj;Asia/Shanghai;CN;+12128;+3114
+tz391=Azija;Istočna Azija;28800;Hong Kong;Asia/Hong_Kong;HK;+11409;+2217
+tz392=Azija;Istočna Azija;28800;Choibalsan;Asia/Choibalsan;MN;+11430;+4804
+tz393=Azija;Istočna Azija;28800;Ulan Bator;Asia/Ulaanbaatar;MN;+10653;+4755
+tz394=Azija;Istočna Azija;28800;Makao;Asia/Macau;MO;+1133230;+221150
+tz395=Azija;Istočna Azija;28800;Taipei;Asia/Taipei;TW;+12130;+2503
+tz396=Azija;Istočna Azija;32400;Tokyo;Asia/Tokyo;JP;+1394441;+353916
+tz397=Azija;Istočna Azija;32400;Pjongjang;Asia/Pyongyang;KP;+12545;+3901
+tz398=Azija;Istočna Azija;32400;Seoul;Asia/Seoul;KR;+12658;+3733
+tz399=Azija;Južna Azija;12600;Teheran;Asia/Tehran;IR;+05126;+3540
+tz400=Azija;Južna Azija;16200;Kabul;Asia/Kabul;AF;+06912;+3431
+tz401=Azija;Južna Azija;18000;Maldivi;Indian/Maldives;MV;+07330;+0410
+tz402=Azija;Južna Azija;18000;Karachi;Asia/Karachi;PK;+06703;+2452
+tz403=Azija;Južna Azija;19800;Kolkata;Asia/Calcutta;IN;+08822;+2232
+tz404=Azija;Južna Azija;19800;Colombo;Asia/Colombo;LK;+07951;+0656
+tz405=Azija;Južna Azija;20700;Kathmandu;Asia/Katmandu;NP;+08519;+2743
+tz406=Azija;Južna Azija;21600;Dhaka;Asia/Dhaka;BD;+09025;+2343
+tz407=Azija;Južna Azija;21600;Thimphu;Asia/Thimphu;BT;+08939;+2728
+tz408=Azija;Jugoistočna Azija;23400;Rangoon;Asia/Yangon;MM;+09610;+1647
+tz409=Azija;Jugoistočna Azija;25200;Džakarta;Asia/Jakarta;ID;+10648;-0610
+tz410=Azija;Jugoistočna Azija;25200;Pontianak;Asia/Pontianak;ID;+10920;-0002
+tz411=Azija;Jugoistočna Azija;25200;Bangkok;Asia/Bangkok;TH;+10031;+1345
+tz412=Azija;Jugoistočna Azija;25200;Phnom Penh;Asia/Phnom_Penh;TH;+10031;+1345
+tz413=Azija;Jugoistočna Azija;25200;Vientiane;Asia/Vientiane;TH;+10031;+1345
+tz414=Azija;Jugoistočna Azija;25200;Ho Ši Min;Asia/Saigon;VN;+10640;+1045
+tz415=Azija;Jugoistočna Azija;28800;Brunej;Asia/Brunei;BN;+11455;+0456
+tz416=Azija;Jugoistočna Azija;28800;Makassar;Asia/Makassar;ID;+11924;-0507
+tz417=Azija;Jugoistočna Azija;28800;Kuala Lumpur;Asia/Kuala_Lumpur;MY;+10142;+0310
+tz418=Azija;Jugoistočna Azija;28800;Kuching;Asia/Kuching;MY;+11020;+0133
+tz419=Azija;Jugoistočna Azija;28800;Manila;Asia/Manila;PH;+12100;+1435
+tz420=Azija;Jugoistočna Azija;28800;Singapur;Asia/Singapore;SG;+10351;+0117
+tz421=Azija;Jugoistočna Azija;32400;Jayapura;Asia/Jayapura;ID;+14042;-0232
+tz422=Azija;Jugoistočna Azija;32400;Dili;Asia/Dili;TL;+12535;-0833
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+#-------National language support-------------------
+# Used for all type of user defined error messages.
+
+MapOperation.EsriCapabilities.txt=Nije moguće povezati se s uslugom Esri ({0}): {1}
+MapOperation.RemoteGeometry.txt=Nije moguće dohvatiti geometrije: {0}
+MapOperation.RemoteGeometryReason.txt=Odgovor nije valjan
+MapOperation.RemoteGeometryEmpty.txt=Nijedna geometrija ne podudara se s navedenim identifikatorima.
+MapOperation.WindowsCode.txt=Broj pogreške u sustavu Windows
+MapOperation.EsriDrivetime.txt=Nije moguće dohvatiti informacije o udaljenosti za vožnju: {0}
+MapOperation.EsriRoute.txt=Nije moguće dohvatiti informacije o ruti: {0}
+MapOperation.EsriSearch.txt=Nije moguće dohvatiti informacije o pretraživanju.
+MapOperation.EsriSearchEmpty.txt=Pretraživanje za „{0}” nije vratilo ni jedan rezultat.
+MapOperation.EsriReverseGeocode.txt=Nema dostupnih podataka na ovoj lokaciji.
+MapOperation.EsriGeoEnrichment.txt=Nije moguće dohvatiti informacije koje se odnose na GeoEnrichment.
+MapOperation.Projection.txt=Nije moguće izraditi projekciju podataka: {0}
+MapOperation.MissingMapCoordinates.txt=Neke značajke ne mogu se prikazati karti zbog informacija o lokaciji koje nedostaju u podacima.
+MapOperation.MissingGeometries.txt=Karta geografskog područja ne prikazuje neka područja jer se podaci nisu podudarili s poznatim geografskim područjima.
+MapOperation.NoMatchesFound.txt=Nijedna značajka karte nema valjane informacije o lokaciji.  Provjerite vrstu geografije.
+MapOperation.ProjectedPointsMissing.txt=Neke značajke ne mogu se prikazati karti zbog informacija o lokaciji koje se nisu mogle projicirati.
+MapDataCache.MissingEmbeddedGeometry.txt=Geometrije nisu dostupne.
+EsriDirectoryServices.EsriQuery.txt=Pogreška pri dohvaćanju informacija o usluzi Esri.
+
+EsriPortalAuth.NoToken.txt=Nije moguće prikazati kartu.  Prilagođene usluge Esri zahtijevaju valjani korisnički ID prije generiranja karte.  Ili je moguće da je lozinka istekla.
+EsriPortalAuth.InvalidToken.txt=Trenutna sesija s Esri poslužiteljem je istekla.  Ako se sesija automatski ponovno ne poveže, izađite i ponovno pokrenite aplikaciju.
+EsriPortalAuth.Permissions.txt=Nije moguće prikazati zahtijevanu Esri kartu ({0}).  Obratite se Esri administratoru oko vaših dozvola.
+
+EsriGeocodeServices.InvalidInputs.txt=Unosi koji nisu valjani za Esri usluge geokodiranja.
+EsriGeocodeServices.EsriError.txt=Došlo je do pogreške pri povezivanju s uslugom Esri ({0}): {1}
+EsriGeoEnrichmentServices.InvalidInputs.txt=Unosi koji nisu valjani za uslugu Esri GeoEnrichment.
+EsriGeoEnrichmentServices.EsriError.txt=Došlo je do pogreške pri povezivanju s uslugom Esri GeoEnrichment ({0}): {1}
+
+EsriServices.EmptyResults.txt=Prazni rezultati
+WKBGeometry.InvalidProjection.txt={0} regije nisu se mogle ispravno projicirati.  Provjerite status projekcije na prilagođenom pružatelju karte.
+WKBGeometry.MissingRegions.txt={0} od {1} regija nije pronađeno.
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+#
+# These will be surfaced to users and should be reviewed and translated.
+#
+
+# The report state could not be saved to the server.
+vaviewer.error.stateNotSaved.txt = Stanje izvješća nije se moglo spremiti na poslužitelj.
+
+# The report state could not be reset on the server.
+vaviewer.error.stateNotReset.txt = Stanje izvješća nije se moglo vratiti na izvorno na poslužitelju.
+
+# Saving state is not supported.
+vaviewer.error.stateNotSupported.txt = Spremanje stanja izvješća nije podržano.
+
+# The report could not be saved to the server.
+vaviewer.error.reportNotSaved.txt = Izvješće nije bilo moguće spremiti na poslužitelj.
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+#
+# These will be surfaced to users and should be reviewed and translated.
+#
+
+vaviewer.natural.language.vocalization.question.whichPathShouldIUse.txt = "Koju mapu trebam koristiti?"
+vaviewer.natural.language.vocalization.question.whichReportShouldIUse.txt = "Koje izvješće trebam koristiti?"
+vaviewer.natural.language.vocalization.question.whichConnectionShouldIUse.txt = "Koji preglednik trebam koristiti?"
+vaviewer.natural.language.vocalization.question.whichPromptShouldIUse.txt = "Koju kontrolu filtra trebam koristiti?"
+vaviewer.natural.language.vocalization.question.whichValueShouldIUse.txt = "Koju vrijednost trebam koristiti?"
+vaviewer.natural.language.vocalization.question.whichVisualizationShouldIUse.txt = "Koju vizualizaciju trebam koristiti?"
+vaviewer.natural.language.vocalization.question.whichPageShouldIUse.txt = "Koju stranicu trebam koristiti?"
+vaviewer.natural.language.vocalization.question.whichPromptShouldIClear.txt = "Koju kontrolu filtra trebam očistiti?"
+
+vaviewer.natural.language.vocalization.warning.requiresActiveReport.txt = Želim pomoći, no potrebno mi je otvoreno izvješće.
+vaviewer.natural.language.vocalization.warning.onFirstPage.txt = Dobre vijesti, na 1. ste stranici.
+vaviewer.natural.language.vocalization.warning.onLastPage.txt = Dobre vijesti, ovdje ste.
+vaviewer.natural.language.vocalization.warning.reportContainsSinglePage.txt = Ovo izvješće ima samo jednu stranicu.
+vaviewer.natural.language.vocalization.warning.reportContainsOnlyNPages.fmt.txt = Ovo izvješće ima samo sljedeći broj stranica: {0}.
+vaviewer.natural.language.vocalization.warning.noSuchPageNumber.txt = Šalite li se? Ta stranica ne postoji.
+vaviewer.natural.language.vocalization.warning.invalidReport.txt = Nešto nije u redu s ovim izvješćem... Nema smisla.
+vaviewer.natural.language.vocalization.warning.statementNotUnderstood.txt = Nisam siguran/na da razumijem.
+vaviewer.natural.language.vocalization.warning.unsupportedFeature.txt = Žao mi je, nisu me još tome podučili. Još razvijam vještine.
+vaviewer.natural.language.vocalization.warning.noVisualsToInspect.txt = Na ovoj stranici nema ničega za provjeru.
+vaviewer.natural.language.vocalization.warning.unexpectedStateChange.txt = Što se dogodilo? Taj je objekt sad nestao!
+vaviewer.natural.language.vocalization.warning.unableToLocate.txt = O, ne! Taj je objekt uklonjen!
+vaviewer.natural.language.vocalization.warning.unableToHelp.txt = Želim pomoći, no ne znam kako.
+vaviewer.natural.language.vocalization.warning.requestWasCancelled.txt = Zahtjev je otkazan.
+vaviewer.natural.language.vocalization.warning.domainLoadStarted.txt = Naišao/naišla sam na problem. Upravo ga otklanjam. Trebat će mi otprilike još jedna minuta. Nakon toga rado ću opet pomoći.
+vaviewer.natural.language.vocalization.warning.domainLoadInProgress.txt = Otklanjam problem, uskoro ću završiti. Nakon toga opet mogu pomoći.
+vaviewer.natural.language.vocalization.warning.domainLoadFailed.txt = Imam problem koji ne mogu otkloniti.  Zamolite svojeg administratora sustava SAS da mi pomogne.
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+#
+# These will be surfaced to users and should be reviewed and translated.
+#
+
+# e.g. Nov 18, 2017 at 12:15 AM
+vaviewer.sidepanel.dateFormat.txt = {0} u {1}
+
+vaviewer.sidepanel.serverLocation.txt = Poslužitelj
+vaviewer.sidepanel.folderLocation.txt = Mjesto
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+#
+
+# These definitions are used to override corresponding definitions from GTL.
+# Doc:  http://sww.sas.com/saspedia/Business_Intelligence_Report_Definition_Graph_Localization_Overrides
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.MEAN.txt = Prosjek
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.STD.txt = Standardna devijacija
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.MIN.txt = Donja „Whisker” crta
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.MAX.txt = Gornja „Whisker” crta
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.TRUE_MIN.txt = Minimum
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.TRUE_MAX.txt = Maksimum
+com.sas.graphics.gtl.layoutOverlay.boxPlot.BoxStatsEnum.N.txt = Broj
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+# bird_localized_strings.properties
+#
+# en_US
+#
+
+#VAD copied Role Description
+bird.data.role.ANIMATION_VAR.txt = Animacija
+bird.data.role.BAR_MEASURE1_VAR.txt = Mjera (stupac 1)
+bird.data.role.BAR_MEASURE2_VAR.txt = Mjera (stupac 2)
+bird.data.role.BAR_MEASURE_VAR.txt = Mjera (stupac)
+bird.data.role.BOLINGER_LOWER_VAR.txt = Bollinger donji
+bird.data.role.BOLINGER_UPPER_VAR.txt = Bollinger gornji
+bird.data.role.CATEGORY_VAR.txt = Kategorija
+bird.data.role.CLOSE_VAR.txt = Zatvori
+bird.data.role.COLOR_VAR.txt = Boja
+bird.data.role.COLUMN_VAR.txt = Stupac
+bird.data.role.COLUMNS_VAR.txt = Stupci
+bird.data.role.DATA_LABEL_VAR.txt = Oznake podataka
+bird.data.role.DATA_VALUE_VAR.txt = Vrijednosti podataka
+bird.data.role.DOCUMENT_COUNT_VAR.txt = Broj dokumenata
+bird.data.role.DOTPLOT_CATEGORY_VAR.txt = Kategorija
+bird.data.role.DOTPLOT_MEASURE_VAR.txt = Mjera
+bird.data.role.DYNVAR_1_VAR.txt = Dinamička varijabla 1
+bird.data.role.DYNVAR_2_VAR.txt = Dinamička varijabla 2
+bird.data.role.DYNVAR_3_VAR.txt = Dinamička varijabla 3
+bird.data.role.EVENT_VAR.txt = Događaj
+bird.data.role.FINISH_VAR.txt = Dovrši
+bird.data.role.GEO_VAR.txt = Geografija
+bird.data.role.GROUP_VAR.txt = Grupa
+bird.data.role.GROUPING_VAR.txt = Grupiranje
+bird.data.role.HIDDEN_VAR.txt = Skriveno
+bird.data.role.HIERARCHY_LEVELS_VAR.txt = Razine
+bird.data.role.HIGH_VAR.txt = Visoko
+bird.data.role.HISTOGRAM_FREQUENCY_VAR.txt = Učestalost
+bird.data.role.HISTOGRAM_MEASURE_VAR.txt = Mjera
+bird.data.role.HORIZONTAL_SERIES_VAR.txt = Stupci rešetke
+bird.data.role.ID_VAR.txt = ID
+bird.data.role.KEY_FRAME_VAR.txt = Ključni okvir
+bird.data.role.KPI_GROUP_VAR.txt = Grupa
+bird.data.role.LABEL_VAR.txt = Oznaka
+bird.data.role.LINE_MEASURE1_VAR.txt = Mjera (crta 1)
+bird.data.role.LINE_MEASURE2_VAR.txt = Mjera (crta 2)
+bird.data.role.LINE_MEASURE_VAR.txt = Mjera (crta)
+bird.data.role.LINKMAGNITUDE_VAR.txt = Apsolutna veza
+bird.data.role.LINKWEIGHT_VAR.txt = Veza
+bird.data.role.LINK_COLOR_VAR.txt = Boja veze
+bird.data.role.LINK_WIDTH_VAR.txt = Širina veze
+bird.data.role.LOW_VAR.txt = Nisko
+bird.data.role.MAGNITUDE_VAR.txt = Apsolutni prosjek neurona
+bird.data.role.MEASURE_VAR.txt = Mjera
+bird.data.role.MEASURES_VAR.txt = Mjere
+bird.data.role.MOVING_AVG_VAR.txt = Prosjek premještanja
+bird.data.role.NEURON_VAR.txt = Neuron
+bird.data.role.NODE_VAR.txt = Čvor
+bird.data.role.OTHER_VAR.txt = Drugo
+bird.data.role.RESPONSE1_VAR.txt = Mjera (crta 1)
+bird.data.role.RESPONSE2_VAR.txt = Mjera (crta 2)
+bird.data.role.RESPONSE_VAR.txt = Mjera
+bird.data.role.ROW_VAR.txt = Redak
+bird.data.role.ROWS_VAR.txt = Redci
+bird.data.role.SEQUENCE_VAR.txt = Poredak niza
+bird.data.role.SHARED_DYNVAR_0_VAR.txt = Zajednički dynvar 0
+bird.data.role.SIZE_VAR.txt = Veličina
+bird.data.role.SIZE_END_VAR.txt = Kraj veličine
+bird.data.role.SIZE_START_VAR.txt = Početak veličine
+bird.data.role.SOURCE_VAR.txt = Izvor
+bird.data.role.START_VAR.txt = Početak
+bird.data.role.SUBGROUP_VAR.txt = Grupa
+bird.data.role.TARGET_VAR.txt = Cilj
+bird.data.role.TASK_VAR.txt = Zadatak
+bird.data.role.TERM_VAR.txt = Pojam
+bird.data.role.TERM_TOPIC_WEIGHT_VAR.txt = Važnost teme
+bird.data.role.TILE_VAR.txt = Pločica
+bird.data.role.TIME_VAR.txt = Vremenska os
+bird.data.role.TIME_MEASURE1_VAR.txt = Mjera (vremenski niz 1)
+bird.data.role.TIME_MEASURE2_VAR.txt = Mjera (vremenski niz 2)
+bird.data.role.TIP_VAR.txt = Vrijednosti vrha podataka
+bird.data.role.TOPIC_VAR.txt = Tema
+bird.data.role.TRANSACTION_ID_VAR.txt = Identifikator transakcije
+bird.data.role.VERTICAL_SERIES_VAR.txt = Redci rešetke
+bird.data.role.VOLUME_VAR.txt = Količina
+bird.data.role.WEIGHT_VAR.txt = Težina
+bird.data.role.WEIGHT_TITLE_VAR.txt = Težina
+bird.data.role.WORD_VAR.txt = Riječ
+bird.data.role.X_VAR.txt = Os X
+bird.data.role.X_END_VAR.txt = Kraj X
+bird.data.role.X_ORIGIN_VAR.txt = Početna točka X
+bird.data.role.X_START_VAR.txt = Početak X
+bird.data.role.Y_VAR.txt = Os Y
+bird.data.role.Y_END_VAR.txt = Kraj Y
+bird.data.role.Y_ORIGIN_VAR.txt = Početna točka Y
+bird.data.role.Y_START_VAR.txt = Početak Y
+
+bird.data.aggregations.sum.txt = Zbroj
+bird.data.aggregations.average.txt = Prosjek
+bird.data.aggregations.min.txt = Minimum
+bird.data.aggregations.max.txt = Maksimum
+bird.data.aggregations.countDistinct.txt = Broj različitih vrijednosti
+bird.data.aggregations.totalCount.txt = Učestalost
+bird.data.aggregations.totalCountPercent.txt = Postotak ukupnog zbroja
+bird.data.aggregations.standardDeviation.txt = Standardna devijacija
+bird.data.aggregations.standardErrorStatistic.txt = Standardna pogreška
+bird.data.aggregations.variance.txt= Odstupanje
+bird.data.aggregations.mode.txt = Način
+bird.data.aggregations.countMissing.txt = Broj koji nedostaje
+bird.data.aggregations.firstQuartile.txt = Prvi kvartil
+bird.data.aggregations.median.txt = Medijan
+bird.data.aggregations.thirdQuartile.txt = Treći kvartil
+bird.data.aggregations.skew.txt = Asimetričnost
+bird.data.aggregations.kurtosis.txt = Spljoštenost
+bird.data.aggregations.coefficientOfVariation.txt = Koeficijent varijacije
+bird.data.aggregations.uncorrectedSumOfSquares.txt = Neispravljeni zbroj kvadrata
+bird.data.aggregations.correctedSumOfSquares.txt = Ispravljeni zbroj kvadrata
+bird.data.aggregations.tStatistic.txt = T-statistika (za prosjek = 0)
+bird.data.aggregations.pValue.txt = P-vrijednost (za T-statistiku)
+
+bird.visuals.accessibility.visual.hint.txt = Dvaput dodirnite za pristup elementima podataka.
+bird.visuals.accessibility.textObject.hint.txt = Dvaput dodirnite za pristup elementima teksta.
+bird.visuals.accessibility.selectObject.hint.txt  = Dvaput dodirnite za odabir objekta izvješća.
+bird.visuals.accessibility.table.hint.txt = Dvaput dodirnite za pristup elementima tablica.
+bird.visuals.accessibility.webcontent.hint.txt  = Dvaput dodirnite za pristup sadržaju na webu.
+bird.visuals.accessibility.customAction.maximize.hint.txt = Povećajte objekt izvješća.
+bird.visuals.accessibility.customAction.restore.hint.txt = Vratite objekt izvješća.
+bird.visuals.accessibility.customAction.drillUp.hint.txt = Pretraži kroz razine gore u hijerarhiji podataka.
+bird.visuals.accessibility.customAction.supplementalView.hint.txt = Pristupite dodatnim pojedinostima.
+bird.visuals.accessibility.customAction.search.hint.txt = Otvorite kontrolu pretraživanja.
+bird.visuals.accessibility.customAction.dragMode.hint.txt = Odaberite način za povlačenje.
+bird.visuals.accessibility.customAction.back.hint.txt = Vratite se natrag.
+bird.visuals.accessibility.customAction.warning.hint.txt = Pročitajte upozorenje objekta izvješća.
+bird.visuals.accessibility.customAction.accessTableElements.hint.txt = Pristupite elementima tablice.
+bird.visuals.accessibility.customAction.exitData.hint.txt = Izađite iz elemenata podataka; vratite se na objekt izvješća.
+bird.visuals.accessibility.customAction.exitTextElements.hint.txt = Izađite iz elemenata teksta; vratite se na objekt izvješća.
+bird.visuals.accessibility.customAction.exitTableElements.hint.txt = Izađite iz elemenata tablice; vratite se na objekt izvješća.
+bird.visuals.accessibility.customAction.exitRowHeaders.hint.txt = Izađite iz elemenata zaglavlja retka; vratite se na objekt izvješća.
+bird.visuals.accessibility.customAction.exitColumnHeaders.hint.txt = Izađite iz elemenata zaglavlja stupca; vratite se na objekt izvješća.
+bird.visuals.accessibility.customAction.terseLabels.hint.txt = Akvitirajte sažete pojedinosti za elemente podataka.
+bird.visuals.accessibility.customAction.detailedLabels.hint.txt = Akvitirajte proširene pojedinosti za elemente podataka.
+bird.visuals.accessibility.customAction.table.terseLabels.hint.txt = Akvitirajte sažete pojedinosti za elemente tablice.
+bird.visuals.accessibility.customAction.table.detailedLabels.hint.txt = Akvitirajte proširene pojedinosti za elemente tablice.
+bird.visuals.accessibility.customAction.noElements.txt = Nema elemenata podataka; povratak na objekt izvješća.
+bird.visuals.accessibility.customAction.table.noElements.txt = Nema elemenata tablice; povratak na objekt izvješća.
+bird.visuals.accessibility.customAction.clearThisSelection.hint.txt = Očistite ovaj odabir.
+bird.visuals.accessibility.dataElement.selected.txt = Odabrano
+bird.visuals.accessibility.customAction.clearAllSelections.hint.txt = Očistite odabire elementa podataka.
+bird.visuals.accessibility.customAction.table.clearAllSelections.hint.txt = Očistite odabir redaka.
+bird.visuals.accessibility.visual.hasSelections.txt = Sadržava odabire.
+bird.visuals.accessibility.customAction.activateRow.txt = Pristupite elementima zaglavlja retka.
+bird.visuals.accessibility.customAction.activateColumn.txt = Pristupite elementima zaglavlja stupca.
+
+
+# these are all used to identify to the VoiceOver user the type of filter prompt (UI control) that the
+# user is encountering within the report viewer
+bird.visuals.accessibility.checkbox.promptname.txt = Kontrola filtra potvrdnog okvira
+bird.visuals.accessibility.combobox.promptname.txt = Kontrola popisa filtara
+bird.visuals.accessibility.horizontalDualslider.promptname.txt = Kontrola filtra vodoravnog klizača raspona
+bird.visuals.accessibility.verticalDualslider.promptname.txt = Kontrola filtra okomitog klizača raspona
+bird.visuals.accessibility.horizontalSlider.promptname.txt = Kontrola filtra jednog vodoravnog klizača
+bird.visuals.accessibility.verticalSlider.promptname.txt = Kontrola filtra jednog okomitog klizača
+bird.visuals.accessibility.horizontalButtonbar.promptname.txt = Kontrola filtra vodoravnog gumba
+bird.visuals.accessibility.verticalButtonbar.promptname.txt = Kontrola filtra okomitog gumba
+bird.visuals.accessibility.radiobutton.promptname.txt = Kontrola filtra izbornog gumba
+bird.visuals.accessibility.textfield.promptname.txt = Kontrola filtra tekstualnog polja
+
+# for scrolling the combobox (and other prompts with options) in accessibility mode,
+# indicates the options shown on the screen. For example, "1 to 12 of 24"
+bird.visuals.accessibility.combobox.optionPaging.txt = {0} do {1} od {2}
+
+bird.visuals.accessibility.customAction.exitListElements.hint.txt = Dvaput dodirnite za izlaz iz mogućnosti; vratite se na kontrolu filtra.
+bird.visuals.accessibility.radiobutton.selections.txt = Odabrane stavke: {0}
+bird.visuals.accessibility.radiobutton.oneSelection.txt = 1 odabir
+bird.visuals.accessibility.customAction.exitTextField.hint.txt = Dvaput dodirnite za izlaz iz tekstualnog polja; vratite se na kontrolu filtra.
+bird.visuals.accessibility.customAction.exitRangeSliderElements.hint.txt = Dvaput dodirnite za izlaz iz elemenata klizača; vratite se na kontrolu filtra.
+
+# this is to indicate the values of the dual range slider
+bird.visuals.accessibility.rangeSlider.currentValues.txt = {0} do {1}
+
+# these are used to indicate which part of hte dual range slider has accessibility focus
+bird.visuals.accessibility.rangeSlider.lowerThumb.txt = Klizač nadolje
+bird.visuals.accessibility.rangeSlider.upperThumb.txt = Klizač nagore
+bird.visuals.accessibility.rangeSlider.track.txt = Prati
+
+# this is to indicate which option and how many options for prompts listing options
+bird.visuals.accessibility.combobox.currentIndex.txt = {0} od {1}
+
+# these are used for prompts that are empty
+bird.visuals.accessibility.combobox.noSelection.txt = Nema odabira.
+bird.visuals.accessibility.checkbox.noSelections.txt = Nema odabira.
+bird.visuals.accessibility.textfield.noText.txt = Nema unesenog teksta.
+
+# This is used by prompts as a missing value display string
+bird.prompts.missingValues.label.txt=(nedostaju vrijednosti)
+
+# these are the hints used for the various filter prompts
+# prompts that drill into the options (button bar, checkbox, radio button) access
+# the prompt options; prompts that open a popup for the options need to state they
+# open the popup
+bird.visuals.accessibility.checkbox.hint.txt = Dvaput dodirnite za pristup opcijama.
+bird.visuals.accessibility.combobox.hint.txt = Dvaput dodirnite za otvaranje skočnog prozora.
+bird.visuals.accessibility.textfield.hint.txt = Dvaput dodirnite za pristup polju teksta.
+bird.visuals.accessibility.rangeslider.hint.txt = Dvaput dodirnite za pristup elementima klizača.
+
+#these are the hints that are used for the various prompt options
+bird.visuals.accessibility.checkboxOption.selected.hint.txt = Dvaput dodirnite za poništavanje odabira stavke.
+bird.visuals.accessibility.checkboxOption.unselected.hint.txt = Dvaput dodirnite za odabir stavke.
+
+#table/datagrid accessibility
+bird.visuals.accessibility.datagrid.verticalScrollPosition.txt = Retci {0} do {1} od {2}
+bird.visuals.accessibility.datagrid.horizontalScrollPosition.txt = Stupci {0} do {1} od {2}
+
+# this announcement occurs when the row wraps to the next or previous row
+bird.visuals.accessibility.table.nextRow.announcement.txt = Redak {0}
+
+# this announcement occurs when the row wraps to the header row
+bird.visuals.accessibility.table.headerRow.announcement.txt = Naslovi
+
+# this announcement occurs when the row wraps to the totals row
+bird.visuals.accessibility.table.totalsRow.announcement.txt = Ukupni zbrojevi
+
+# Display rule legends.
+bird.displayRules.heading.DisplayRules.txt = Pravila prikaza
+bird.displayRules.heading.ReportLevel.txt = IZVJEŠĆE
+bird.displayRules.target.AnyCategory.txt = Bilo koja kategorija
+bird.displayRules.target.AnyMeasure.txt = Bilo koja mjera
+bird.displayRules.Other.txt = Drugo
+bird.displayRules.cellPlacement.left.txt = Lijevo od teksta
+bird.displayRules.cellPlacement.right.txt = Desno od teksta
+bird.displayRules.cellPlacement.replace.txt = zamjenjuje tekst
+# Originally the sample text was numeric and formatted, but UX 
+# now recommends just using regular alphabetic text like "abc"
+bird.displayRules.fontIndicatorSampleText.numeric.txt = 1234,56
+bird.displayRules.fontIndicatorSampleText.txt = abc
+bird.displayRules.kpiPosition.leftOfText.fmt.txt = Lijevo od teksta, s {0} kao x
+bird.displayRules.kpiPosition.rightOfText.fmt.txt = Desno od teksta, s {0} kao x
+bird.displayRules.kpiPosition.replacesText.fmt.txt = zamjenjuje tekst, s {0} kao x
+bird.displayRules.kpiPosition.default.fmt.txt = s {0} kao x
+bird.displayRules.untitled.txt = bez naslova
+
+# Range description for KPIs and range rules like:
+#    $25,000  <  x  <  $50,000
+# Note that the "x" symbol should match the KPI positional properties above
+bird.displayRules.range.fmt.txt = {LOW} {LOWRELATION} x {HIGHRELATION} {HIGH}
+
+# Information panel labels
+bird.informationPanel.incomingFilters.txt = Ulazni filtri
+bird.informationPanel.legend.txt = Legenda
+bird.informationPanel.missingDescription.txt = (Nije ponuđeno)
+bird.informationPanel.descriptionTitle.txt = Opis
+bird.informationPanel.ranks.txt = Rang
+bird.informationPanel.warnings.txt = Upozorenja
+bird.informationPanel.comments.txt = Komentari
+bird.informationPanel.alerts.txt = Upozorenja
+bird.informationPanel.name.txt = Naziv
+bird.informationPanel.createdBy.txt = Autor izrade
+bird.informationPanel.modifiedBy.txt = Autor izmjene
+
+bird.informationPanel.interactiveFilters.txt = Interaktivni filtri
+bird.informationPanel.dataSourceFilters.txt = Filtri izvora podataka
+bird.informationPanel.title.txt = Naslov
+
+
+
+# Rank descriptions
+
+# Notes for translators:
+# Rank description templates - do not translate, but place in the correct order for your locale's translation.
+# The ${} enclosed values will be replaced by the translated inserts below them or numbers/labels from the data
+#
+# template.relational example: Bottom 10% of Cars (including missing values) by MPG
+# | ${Subset} | ${Rows} | ${Percent} | ${Of} | ${AllVisibleCategories} |       ${TiesAndMissing}    | ${By} | ${Frequency} |
+# |  Bottom   |    10   |      %     |   of  |          Cars           | (including missing values) |   by  |     MPG      |
+#
+# template.detail example: Top 5% (including ties) by Frequency
+# | ${Subset} | ${Rows} | ${Percent} | ${TiesAndMissing} | ${By} | ${Frequency} |
+# |   Top     |    5    |      %     |  (including ties) |   by  |   Frequency  |
+#
+bird.data.ranks.template.relational = ${Subset} ${Rows}${Percent} ${Of} ${AllVisibleCategories} ${TiesAndMissing} ${By} ${Frequency}
+bird.data.ranks.template.detail = ${Subset} ${Rows}${Percent} ${Of} ${DetailRank} ${TiesAndMissing} ${By} ${Frequency}
+
+# inserts for ${Subset}
+bird.data.ranks.subset.top.txt = Gore
+bird.data.ranks.subset.bottom.txt = Dolje
+bird.data.ranks.subset.all.txt = Sve
+
+# insert for ${Percent} (Optional)
+bird.data.ranks.percent.txt = %
+
+# insert for ${of}
+bird.data.ranks.of.txt = od
+
+# insert for ${allVisibleCategories}. 
+# ${allVisibleCategories} may also be replaced by a single category name from the data, like "Countries"
+bird.data.ranks.allVisibleCategories.txt = sve vidljive kategorije
+
+# inserts for ${TiesAndMissing} (optional)
+bird.data.ranks.includeTies.txt = (uključujući veze)
+bird.data.ranks.includeMissing.txt = (uključujući vrijednosti koje nedostaju)
+bird.data.ranks.includeTiesAndMissing.txt = (uključujući veze i vrijednosti koje nedostaju)
+
+# insert for ${By}
+bird.data.ranks.by.txt = po
+
+# insert for ${Frequency}
+# ${Frequency} may also be replaced by a different measure from the dataset, like "Score"
+bird.data.ranks.frequency.txt = Učestalost
+
+# labels for the rank type dropdown in the ranks editor panel
+bird.data.ranks.bottomCount.txt = Najniži broj
+bird.data.ranks.bottomPercent.txt = Najniži postotak
+bird.data.ranks.topCount.txt = Najveći broj
+bird.data.ranks.topPercent.txt = Najveći postotak
+
+# All visible categories as a standalone label in the Ranks edit panel.
+bird.data.ranks.groupBy.allVisibleCategories.txt = Sve vidljive kategorije
+bird.data.ranks.groupBy.detailRank.txt = Rang pojedinosti
+
+
+#Table SparkKPI tooltip
+bird.sparkKPI.value.txt = Vrijednost
+
+# row number column header label
+bird.rowNumber.label.txt = Redak
+
+#DynamicSpan
+bird.data.dynamicSpan.metadataSource.interactiveFilters.noFilter.txt = <Nisu prisutni interaktivni filtri>
+bird.data.dynamicSpan.metadataSource.tableModified.noValue.txt = <Nema vrijednosti>
+bird.data.dynamicSpan.promptAndVariable.noValue.txt = <Nema odabrane stavke>
+
+#Element Types
+bird.types.imageElement.txt = Slika
+bird.types.promptElement.txt = Odzivnik
+bird.types.storedProcessElement.txt = Spremljeni proces
+bird.types.tableElement.txt = Tablica popisa
+bird.types.textElement.txt = Tekst
+bird.types.jobContentElement.txt = Sadržaj posla
+bird.types.webContentElement.txt = Web-sadržaj
+bird.types.crosstabElement.txt = Unakrižna tablica
+bird.types.visualContainerElement.txt = Vizualni spremnik
+bird.types.kpiElement.txt = KPI grafikon
+bird.types.graphElement.txt = Grafikon
+
+bird.types.buttonBar.txt = Traka s gumbima
+bird.types.dropDownList.txt = Padajući popis
+bird.types.list.txt = Popis
+bird.types.textInput.txt = Unos teksta
+bird.types.barChart.txt = Stupčasti grafikon
+bird.types.boxPlot.txt = Dijagram s okvirima
+bird.types.bubbleChangePlot.txt = Mjehuričasti dijagram promjene
+bird.types.bubblePlot.txt = Mjehuričasti dijagram
+bird.types.butterflyChart.txt = Leptirasti grafikon
+bird.types.compTimeSeries.txt = Usporedni dijagram vremenskog niza
+bird.types.correlationMatrix.txt = Matrica korelacije
+bird.types.decisionTree.txt = Stablo odlučivanja
+bird.types.dotPlot.txt = Točkasti dijagram
+bird.types.barBarChart.txt = Stupčasti grafikon s dvije osi
+bird.types.barLineChart.txt = Stupčasto-linijski grafikon s dvije osi
+bird.types.lineLineChart.txt = Linijski grafikon s dvije osi
+bird.types.dualAxisTimeSeries.txt = Dijagram vremenskog niza s dvije osi
+bird.types.gauge.txt = Mjerilo
+bird.types.heatMap.txt = Toplinska mapa
+bird.types.histogram.txt = Histogram
+bird.types.keyValue.txt = Ključna vrijednost
+bird.types.lineChart.txt = Linijski grafikon
+bird.types.needlePlot.txt = Igleni dijagram
+bird.types.numericSeries.txt = Dijagram numeričkog niza
+bird.types.parallelCoordinates.txt = Dijagram paralelnih koordinata
+bird.types.pieChart.txt = Tortni grafikon
+bird.types.scatterPlot.txt = Dijagram rasipanja
+bird.types.scheduleChart.txt = Grafikon rasporeda
+bird.types.stepPlot.txt = Dijagram s koracima
+bird.types.targetedBarChart.txt = Ciljani stupčasti grafikon
+bird.types.timeSeries.txt = Dijagram vremenskog niza
+bird.types.treemap.txt = Hijerarhijski ugniježđeni grafikon
+bird.types.vectorPlot.txt = Vektorski dijagram
+bird.types.waterfallChart.txt = Pozitivno-negativni grafikon
+bird.types.wordCloud.txt = Oblak riječi
+
+# DataItem format types (see also VAN's sas-van/src/main/openuilibs/sas.van/src/sas/van/messagebundle.properties)
+bird.data.format.COMMA.txt=Zarez
+bird.data.format.DOLLAR.txt=Dolar
+bird.data.format.EURO.txt=Euro
+bird.data.format.F.txt=Pomičan
+bird.data.format.BEST.txt=Numerički
+bird.data.format.PERCENT.txt=Postotak
+bird.data.format.POUND.txt=Funta
+bird.data.format.WON.txt=Von
+bird.data.format.YEN.txt=Jen
+bird.data.format.AED.txt=Ujedinjeni Arapski Emirati
+bird.data.format.AUD.txt=Australija
+bird.data.format.BGN.txt=Bugarska
+bird.data.format.BRL.txt=Brazil
+bird.data.format.CAD.txt=Kanada
+bird.data.format.CHF.txt=Lihtenštajn i Švicarska
+bird.data.format.CNY.txt=Kina
+bird.data.format.CZK.txt=Češka Republika
+bird.data.format.DKK.txt=Danska, Farski otoci i Grenland
+bird.data.format.EEK.txt=Estonija
+bird.data.format.EGP.txt=Egipat
+bird.data.format.EUR.txt=Europska unija
+bird.data.format.GBP.txt=Ujedinjeno Kraljevstvo
+bird.data.format.HKD.txt=Hong Kong
+bird.data.format.HRK.txt=Hrvatska
+bird.data.format.HUF.txt=Mađarska
+bird.data.format.IDR.txt=Indonezija
+bird.data.format.ILS.txt=Izrael
+bird.data.format.INR.txt=Indija
+bird.data.format.JPY.txt=Japan
+bird.data.format.KRW.txt=Južna Koreja
+bird.data.format.LTL.txt=Litva
+bird.data.format.LVL.txt=Latvija
+bird.data.format.MOP.txt=Makao
+bird.data.format.MXN.txt=Meksiko
+bird.data.format.MYR.txt=Malezija
+bird.data.format.NOK.txt=Norveška
+bird.data.format.NZD.txt=Novi Zeland
+bird.data.format.PLN.txt=Poljska
+bird.data.format.RUB.txt=Rusija
+bird.data.format.SEK.txt=Švedska
+bird.data.format.SGD.txt=Singapur
+bird.data.format.THB.txt=Tajland
+bird.data.format.TRY.txt=Turska
+bird.data.format.TWD.txt=Tajvan
+bird.data.format.USD.txt=Sjedinjene Američke Države i Portoriko
+bird.data.format.ZAR.txt=Južnoafrička Republika
+bird.data.format.DATEN.txt=Datum
+bird.data.format.DATE.txt=Datum s nazivom mjeseca
+bird.data.format.DAY.txt=Dan u mjesecu
+bird.data.format.DOWNAME.txt=Dan u tjednu
+bird.data.format.JULDAY.txt=Dan u godini
+bird.data.format.WEEKDATE.txt=Dan, datum
+bird.data.format.DDMMYY.txt=DDMMGGGG
+bird.data.format.JULIAN.txt=Julijanski
+bird.data.format.MMDDYY.txt=DDMMGGGG
+bird.data.format.MONYY.txt=MMMGGGG
+bird.data.format.MMYY.txt=MMGGGG
+bird.data.format.MONTH.txt=Mjesec
+bird.data.format.MONNAME.txt=Mjesec
+bird.data.format.WORDDATE.txt=Mjesec, dan, godina
+bird.data.format.YEAR.txt=Godina
+bird.data.format.YYQC.txt=Tromjesečje, godina
+bird.data.format.YYMM.txt=MMGGGG
+bird.data.format.YYMMDD.txt=DDMMGGGG
+bird.data.format.TIME.txt=Proteklo vrijeme
+bird.data.format.HOUR.txt=Sati
+bird.data.format.HHMM.txt=Sati, minute
+bird.data.format.MMSS.txt=Minute, sekunde
+bird.data.format.DTDATE.txt=Datum
+bird.data.format.DATETIME.txt=Datum, vrijeme
+bird.data.format.DTWKDATX.txt=Dan, datum
+bird.data.format.DTMONYY.txt=MMMGGGG
+bird.data.format.TIMEAMPM.txt=Vrijeme
+bird.data.format.QTR.txt=Tromjesečje
+bird.data.format.WEEKV.txt=Tjedan
+bird.data.format.WEEKVYW.txt=Godina, tjedan
+bird.data.format.WEEKVYWD.txt=Godina, tjedan, dan
+bird.data.format.DTYEAR.txt=Godina
+bird.data.format.DTYYQC.txt=Tromjesečje, godina
+bird.data.format.CHARACTER.txt=$
+bird.data.format.DURATION.txt=Trajanje
+bird.data.format.CURRENCY.txt=Valuta
+
+
+
+
+
+
+
+
+
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+# bird_warnings.properties
+#
+# en_US
+#
+
+#//////////////////////
+# 1.4.2013: reviewed for style, grammar and translatability by Karen Mobley
+#//////////////////////
+
+# FAILURE: An object has a failure status when the object cannot be rendered
+# successfully and there is no action the viewer can take to make the object
+# render successfully. In the viewer/SDK the failure messages are dispalyed in
+# an error pill overlay.
+
+#///////////////////////
+# WARNING: An object has a warning status when either 1) the object can be
+# rendered successfully but there are some limitations/caveats or 2) the object
+# cannot be rendered successfully but there is an action the viewer can take to
+# make the object render successfully. In the viewer/SDK the warning messages
+# are displayed as either 1) an info status badge or 2) an info pill overlay.
+
+#///////////////////////
+# (error pill): When shown in an error pill a message should be overlaid on
+# the object so that the pill covers the object and indicates that the object
+# should not be used. It should use the error status icons and colors
+# appropriate for the client.
+
+#///////////////////////
+# (info pill): When shown in an info pill a message should be overlaid on
+# the object so that the pill covers the object and indicates that the object
+# should not be used. It should use the informational status icons and colors
+# appropriate for the client.
+
+#///////////////////////
+# (info badge): When shown in an info badge a message should be shown in a
+# tooltip or popover accessible from a icon placed in a non-obtrusive place on
+# the object. It should use the informational status icons and colors
+# appropriate for the client.
+
+#///////////////////////
+# (validation): Control objects display messages differently and instead of
+# a pill or badge should use the validation most appropriate to the control
+# type.
+
+# FAILURE (error pill): Error message to display when an image from the server is missing.
+bird.error.image.imageNotFound.txt = Slika za ovaj objekt izvješća nedostaje ili nije valjana.
+
+# FAILURE (error pill): Generic failure message when we lack further details or do not recognized the server's statusReason.
+bird.error.data.serverDataFailure.txt = Pogreška podataka poslužitelja
+
+# WARNING (info pill): The result data was much too large, and so we recieved none instead.
+bird.error.data.transport.dataLimitsExceeded.txt = Upit je stvorio skup podataka koji je prevelik za obradu od strane aplikacije poslužitelja.
+
+# FAILURE (error pill): A data source used by this report object was not found.
+bird.error.data.transport.dataSourceNotFound.txt = Traženi izvor podataka nije pronađen na poslužitelju.
+
+# FAILURE (error pill): A backend server used for some of the data in this object was not found (but we did get a response from transport services).
+bird.error.data.transport.serverNotFound.txt = Poslužitelj nije pronađen.
+
+# FAILURE (error pill): The report object uses data for which the user is (no longer?) authorized to view
+bird.error.data.transport.unauthorized.txt = Niste ovlašteni prikazivati podatke koji se koriste u ovom objektu izvješća.
+
+# FAILURE (error pill): The query sent to the server was malformed or not understood by the server (statusReason=queryError OR unsupportedRequest) status=failure only .
+bird.error.data.transport.queryError.txt = Poslužitelj nije razumio zahtjev aplikacije za podacima.
+
+# FAILURE (error pill): The report object was malformed (i.e. failed to parse embedded StatGraph template)
+bird.error.report.malformedReportElement.txt = Aplikacija ne može prikazati objekt izvješća jer je objekt neispravan.
+
+# FAILURE (error pill): The the graph object was malformed (i.e. the graph refers a result that dose not exist in bird report)
+bird.error.graph.malformedResult.txt = Objekt grafikona ukazuje na nevaljani rezultat.
+
+# FAILURE (error pill): The required roles are not assigned.
+bird.error.data.allRolesNotAssigned.txt = Obaveznim ulogama nije dodijeljena podatkovna stavka.
+
+# FAILURE (error pill): StoredProcessElements are unsupported in R10+
+bird.warning.models.storedProcessUnsupported.txt = Spremljeni procesi više nisu podržani.
+
+# WARNING (info badge): User readable reason code for incompleteData.
+bird.error.data.transport.incompleteData.txt = Podaci koje upotrebljava ovaj objekt izvješća preveliki su. Prikazuje se samo podskup podataka.
+
+# WARNING (info badge): User readable reason code for limitedInteraction.
+bird.error.data.transport.limitedInteraction.txt = Podaci koje upotrebljava ovaj objekt izvješća preveliki su. Značajka interakcije ograničena je ili onemogućena.
+
+# FAILURE (error pill): Message displayed when a report object requires a live connection, and we do not have a connection or a live-request response was not received from the server.
+# Note: This message appears in help, so the help files need to be updated if this string changes.
+bird.error.data.noResponseFromServer.txt = Zahtjev poslužitelja za podacima nije ispunjen. Moguće je da podaci objekta izvješća nedostaju ili su nepotpuni. Provjerite je li dostupna mrežna veza, kao što je mobilna, bežična ili neka druga mreža.
+
+# FAILURE (error pill): Message displayed when a report object requests new data from the server, but the response is malformed or unrecognized.
+bird.error.data.unrecognizedResponse.txt = Zahtjev poslužitelja poslao je podatke koji nisu prepoznati ili su neispravni. Postoji mogućnost da su podaci objekta izvješća nepotpuni ili da nedostaju. Obratite se administratoru za SAS Visual Analytics svoje organizacije.
+
+# FAILURE (error pill): Message displayed in offline mode when data is not available because we cannot run queries to get it.
+bird.error.data.notAvailable.txt = Podaci nisu dostupni.
+
+# WARNING (info pill): Message that gets displayed when filtered data results in empty set.
+bird.error.data.filterProducedEmptyData.txt = Nijedan se podatak ne podudara s trenutnim filtrima.
+
+# WARNING (info badge): Message that gets displayed when the kpi grid is asked to show more than 100 kpis
+bird.error.data.transport.kpiLimitsExceeded.txt = Prikazuju se samo neki podaci jer postoji previše podataka za prikaz. Filtrirajte podatke da biste prikazali druge vrijednosti.
+
+# WARNING (info badge): Some interactive features (like brushing) are not supported on this object. (status=limited only)
+bird.warning.data.transport.unsupportedRequest.txt = Neke interaktivne značajke ovog objekta izvješća mogu biti ograničene ili onemogućene.
+
+# FAILURE (error pill): Comment Detail when the result status is failure 
+bird.error.data.contactAdministrator.txt = Obratite se administratoru za SAS Visual Analytics svoje organizacije.
+
+
+#//////////////////////////
+# Additional R5 result warnings (THESE NEED REVIEW)
+# See the "reason" attribute descriptions on saspedia: http://sww.sas.com/saspedia/Result_(Business_Intelligence_Report_Definition)
+
+
+# FAILURE (error pill): The report object is incomplete because data has not been assigned. Prior to R5, this condition was always reported as dataSourceNotFound.
+bird.error.data.transport.dataNotAssigned.txt = Podaci nisu dodijeljeni.
+
+# WARNING (info badge): Should not be a problem with VA producers, but essentially the problem here is that the BIDATA layer bins data based upon its format and the displayed value may have a different granularity than the bin size.
+# For example, users may see minutes displayed, but the data has actually been binned per hour.
+bird.error.data.transport.formatWarning.txt = Povezani format nije prepoznat, a moguće je da se razina agregacije podataka ne podudara s prikazanim vrijednostima.
+
+# WARNING (info badge): Truncation of rank ties.
+bird.error.data.transport.rankTiesTruncated.txt = Broj veza u filtru ranga prekoračio je ograničenje.  Neke su izostavljene.
+
+# ???: Message for exceeding allowed period calculations.
+bird.error.data.transport.maxPeriodCalculationsExceeded.txt = Prekomjerni izračuni razdoblja vraćaju vrijednosti koje nedostaju, dodajte filtar na vrijeme da biste smanjili broj izračuna razdoblja.
+
+# ???: Message for unresolved calculations on an object.
+bird.error.data.transport.unresolvedPeriodCalculations.txt = Za ovaj objekt izvješća pronađeni su neriješeni izračuni razdoblja.
+bird.error.data.transport.unresolvedCalculations.txt = Za ovaj objekt izvješća pronađeni su neriješeni izračuni.
+
+# ???: Message displayed when we receive status=limited result but do not recognize the reason code or reason=unknown
+bird.error.data.transport.unknown.txt = Došlo je do nepoznatog problema tijekom obrade podataka za ovaj objekt izvješća.
+
+# WARNING (info badge): Message for new measure rules on graphs. While there are some appropriate use-cases for the new rules, in many cases they will lead to misleading visualizations.
+bird.rules.graphMeasureRuleConflict.txt = Ovaj objekt izvješća koristi pravila koja bi mogla biti u sukobu s osnovnim mapiranjem boja.
+
+# WARNING (info badge): Message for disabled interactions.
+bird.warning.interactionDisabled.txt = Neke su interakcije koje uključuju ovaj objekt izvješća onemogućene.
+
+# WARNING (info badge): Messages shown when map data is not fully represented.
+bird.warning.missingMapCoordinates.txt = Neke značajke ne mogu se prikazati na karti zbog informacija o lokaciji koje nedostaju u podacima.
+bird.warning.missingGeometries.txt = Karta geografskog područja ne prikazuje neka područja jer se podaci nisu podudarili s poznatim geografskim područjima.
+bird.warning.noMatchesFound.txt = Nisu pronađeni rezultati za navedene vanjske geografske podatkovne stavke.
+
+
+#//////////////////////////
+# Transport/Result reason codes that are new in R7
+
+
+# WARNING (info badge): Percentage rank results were truncated.
+bird.error.data.transport.maxRankValuesExceeded.txt = Previše vrijednosti vraćeno je iz izračuna postotnog ranga te podaci mogu biti nepotpuni.
+
+# WARNING (info badge): Parameter value was clamped.
+bird.error.data.transport.parameterOutOfRange.txt = Parametar je bio izvan raspona i bio je omeđen granicama dopuštenim ograničenjem.
+
+
+#/////////////////////////
+# Warnings for report parameter validation.
+
+
+# FAILURE (validation): Value too small
+bird.error.parameter.valueTooSmall.fmt.txt = Nevažeća vrijednost parametra za parametar „{0}”: Vrijednost ({1}) manja je od minimalne dopuštene vrijednosti ({2}).
+
+# FAILURE (validation): Value too small or equal
+bird.error.parameter.valueTooSmallOrEqual.fmt.txt = Nevažeća vrijednost parametra za parametar „{0}”: Vrijednost ({1}) manja je ili jednaka minimalnoj dopuštenoj vrijednosti ({2}).
+
+# FAILURE (validation): Value too large
+bird.error.parameter.valueTooLarge.fmt.txt = Nevažeća vrijednost parametra za parametar „{0}”: Vrijednost ({1}) veća je od maksimalne dopuštene vrijednosti ({2}).
+
+# FAILURE (validation): Value too large or equal
+bird.error.parameter.valueTooLargeOrEqual.fmt.txt = Nevažeća vrijednost parametra za parametar „{0}”: Vrijednost ({1}) veća je ili jednaka maksimalnoj dopuštenoj vrijednosti ({2}).
+
+# FAILURE (validation): Invalid parameter value
+bird.error.parameter.invalidValue.fmt.txt = Nevažeća vrijednost parametra za parametar „{0}”: {1}.
+
+# FAILURE (validation): The Condition range model for a KPI definition is malformed or incomplete
+bird.error.kpi.invalidDisplayRules.txt = Obavezna pravila prikaza nisu dodijeljena ili stvorena.
+
+# WARNING (info badge): Maximum rows exceeded with truncation.
+bird.error.data.maxRowsExceededDataTruncated.txt = Skup podataka prekoračio je maksimalni dopušteni broj redaka ({0}). Prikazano je samo prvih {0} redaka.
+
+# WARNING (info pill): Maximum rows exceeded without truncation.
+bird.error.data.maxRowsExceededNoData.txt = Skup podataka prekoračio je maksimalni dopušteni broj redaka ({0}). Podaci se ne prikazuju.
+
+# FAILURE (error pill): Report Object incomplete
+bird.error.data.reportObjectIncomplete.txt = Objekt izvješća nepotpun je.
+
+# WARNING (info badge): No measure variable in R10 promptDefinition
+bird.warning.prompt.noMeasureVariable.txt = Upitnik koristi mjeru, no nijedna varijabla mjere nije definirana u definiciji upita.
+
+# WARNING (info badge): Mising dynamic default values.
+bird.warning.prompt.missingDynamicValue.txt = Nedostaju dinamične zadane vrijednosti.
+
+# FAILURE (validation): Warning message that gets displayed when the value entered into a prompt does not match the correct formatting
+bird.warning.data.incorrectFormat.fmt.txt = Unesena vrijednost ne odgovara formatu {0}.
+
+# FAILURE (error pill): Web Content objects can be disabled by system administrators for security
+bird.warning.elementNotSupported.fmt.txt = {0} nije moguće prikazati.
+
+# WARNING (info badge): Saved state is missing the report.xml file. Most likely the state was saved by an earlier version of the software.
+bird.warning.report.stateIsMissingModelFile.txt = Za spremljeno stanje nedostaje datoteka modela izvješća. Izvješće je učitano u zadanom stanju.
+
+# WARNING (toast?): Warning for dropped items when performing a visual conversion
+bird.warning.autoChartChanges.fmt.txt=Neki od ovih objekata uklonjeni su jer nisu podržani u novom grafikonu: {0}.
+bird.warning.removedIxn.txt=Akcije
+bird.warning.removedActions.txt=Veze
+bird.warning.removedConditions.txt=Pravila prikaza
+bird.warning.removedDataItems.txt=Podatkovne stavke
+bird.warning.removedRanks.txt=Rangovi
+bird.warning.removedFilters.txt=Filtri
+bird.warning.removedParameters.txt=Parametri
+bird.warning.allOtherRemovedOnRanks.txt=Sve drugo na rangovima
+
+# FAILURE (validation): Warning for invalid user input
+bird.warning.invalid.user.input.txt=Unos nije valjan
+
+# FAILURE (error pill): Job Contents warnings
+bird.warning.job.executionFailed.txt=Izvršavanje posla nije uspjelo.
+bird.warning.job.error.txt=Izvršavanje posla vratilo je pogrešku.
+
+# View Set warnings (SDK)
+bird.warning.viewset.multipleReferences.txt=Objekti izvješća ne mogu se koristiti u više konteksta.
+#Toolkit: BMC_properties
+#
+# NOTE TO TRANSLATORS: THIS IS A FLEX PROPERTY FILE. YOU DON'T NEED TO ESCAPE QUOTE SYMBOLS IN YOUR TRANSLATIONS
+# bird_auto_title.properties
+#
+# http://sww.sas.com/saspedia/Title_(Business_Intelligence_Report_Definition)
+#
+# en_US
+#
+
+bird.autotitle.exampleData.txt=Primjer podataka
+bird.autotitle.measure.txt=Mjera
+bird.autotitle.category.txt=Kategorija
+bird.autotitle.frequency.txt=Učestalost
+bird.autotitle.source.txt=Izvor
+bird.autotitle.response.txt=Odgovor
+bird.autotitle.documentCollection.txt=Zbirka dokumenata
+bird.autotitle.hierarchy.txt=Hijerarhija
+bird.autotitle.yAxis.txt=Os Y
+bird.autotitle.xAxis.txt=Os X
+bird.autotitle.bar.txt= (traka)
+bird.autotitle.bar2.txt= (traka 2)
+bird.autotitle.target.txt=Cilj
+bird.autotitle.color.txt=Boja
+bird.autotitle.size.txt=Veličina
+bird.autotitle.measureBar.txt=Mjera (stupac)
+bird.autotitle.measureBar2.txt=Mjera (stupac 2)
+bird.autotitle.measureLine.txt=Mjera (crta)
+bird.autotitle.measureLine2.txt=Mjera (crta 2)
+bird.autotitle.measureTimeSeries.txt=Mjera
+bird.autotitle.measureTimeSeries2.txt=Mjera
+bird.autotitle.timeAxis.txt=Vremenska os
+bird.autotitle.buttonBar.txt=Traka s gumbima
+bird.autotitle.dropDownList.txt=Padajući popis
+bird.autotitle.list.txt=Popis
+bird.autotitle.decisionTree.txt=Stablo odlučivanja
+bird.autotitle.bayesNet.txt=Bayesova mreža
+bird.autotitle.network.txt=Mreža
+bird.autotitle.textTopics.txt=Teme teksta
+bird.autotitle.glm.txt=Generalizirani linearni model
+bird.autotitle.linear.txt=Linearna regresija
+bird.autotitle.logistic.txt=Logistička regresija
+bird.autotitle.factMac.txt=Uređaj za faktorizaciju
+bird.autotitle.explAuto.txt=Automatizirano objašnjenje
+bird.autotitle.predAuto.txt=Automatizirano predviđanje
+bird.autotitle.scenarioAnalysis.txt=Automatizirano predviđanje
+bird.autotitle.forest.txt=Šuma
+bird.autotitle.gradientBoosting.txt=Stupnjevito pojačanje
+bird.autotitle.neuralNetwork.txt=Neuronska mreža
+bird.autotitle.svm.txt=Metoda potpornih vektora
+bird.autotitle.gam.txt=Generalizirani aditivni model
+bird.autotitle.nplr.txt=Neparametarska logistička regresija
+bird.autotitle.slider.txt=Klizač
+bird.autotitle.textInput.txt=Unos teksta
+bird.autotitle.measureDate.txt=Mjera/Datum
+bird.autotitle.axisItems.txt=Stavke osi
+bird.autotitle.task.txt=Zadatak
+bird.autotitle.start.txt=Početak
+bird.autotitle.finish.txt=Kraj
+bird.autotitle.template.one.fmt.txt={0}
+bird.autotitle.sankey.linkColor.dropOff.txt=Otpuštanje
+bird.autotitle.sankey.linkColor.event.txt=Događaj
+bird.autotitle.sankey.linkColor.path.txt=Put
+bird.autotitle.template.oneByTwo.fmt.txt={0} po {1}
+bird.autotitle.template.oneByTwoGroupedByThree.fmt.txt={0} po {1} grupirano prema {2}
+bird.autotitle.template.oneOfTwo.fmt.txt={0} od {1}
+bird.autotitle.template.oneOfTwoGroupedByThree.fmt.txt={0} od {1} grupirano po {2}
+bird.autotitle.template.oneByTwoSizedByThree.fmt.txt={0} po {1}, veličina određena prema {2}
+bird.autotitle.template.oneToTwo.fmt.txt={0} do {1}
+bird.autotitle.template.oneCommaTwoByThree.fmt.txt={0}, {1} po {2}
+bird.autotitle.template.oneByTwoToThree.fmt.txt={0} po {1} do {2}
+bird.autotitle.template.oneOfTwoParenThree.fmt.txt={0} od {1} ({2})
+bird.autotitle.template.oneFromTwoToThree.fmt.txt={0} od {1} do {2}
+bird.autotitle.template.correlationOfSelected.txt=Korelacija odabranih mjera
+bird.autotitle.template.scatterPlotOfSelected.txt=Dijagram rasipanja odabranih mjera
+bird.autotitle.template.bubbleChangeOfSelected.txt=Oblačić Promjena odabranih stavki
+bird.autotitle.template.vectorOfSelected.txt=Vektorski dijagram odabranih stavki
+bird.autotitle.template.parallelCoordinatesOfSelected.txt=Paralelne koordinate odabranih varijabli
+bird.autotitle.template.cluster.txt=Klaster odabranih varijabli
+bird.autotitle.template.sankey.1.fmt.txt=Put prema {0}
+bird.autotitle.template.sankey.fmt.txt=Put {0} za {1}
+bird.autotitle.template.two.fmt.txt={1} 
+bird.autotitle.template.twoParenThree.fmt.txt={1} ({2})
+bird.autotitle.template.relationships.fmt.txt=Kakav je odnos između stavki {0} i {1}?
+bird.autotitle.template.geo.coordinates.txt=Geografska karta za značajku Geografija
+bird.autotitle.template.geo.coordinates.fmt.txt=Geografska karta za značajku {0}
+bird.autotitle.template.geo.coordinates.size.txt=Geografska karta za značajku Geografija poredana prema veličini
+bird.autotitle.template.geo.coordinates.size.fmt.txt=Geografska karta za značajku {1}, veličina određena prema {0}
+bird.autotitle.template.geo.coordinates.color.size.fmt.txt={0} po {2}, veličina određena prema {1}
+bird.autotitle.template.geo.txt=Oboji prema značajci Geografija
+bird.autotitle.template.geo.multioverlay.txt=Geografska karta odabranih stavki
+bird.autotitle.template.network.txt=Mreža značajke Geografija
+bird.autotitle.template.network.fmt.txt=Mreža značajke {0}
